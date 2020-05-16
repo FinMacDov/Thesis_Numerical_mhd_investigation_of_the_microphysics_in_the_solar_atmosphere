@@ -1,0 +1,2 @@
+# Thesis_Numerical_mhd_investigation_of_the_microphysics_in_the_solar_atmosphere
+will contain the working of my PhD thesis.
