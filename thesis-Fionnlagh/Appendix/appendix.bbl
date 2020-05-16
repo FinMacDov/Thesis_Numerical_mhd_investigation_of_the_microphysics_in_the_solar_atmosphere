@@ -1,0 +1,9 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+
+\bibitem[{{Abramowitz} \& {Stegun}(1965)}]{Abramowitz1965}
+{Abramowitz}, M., \& {Stegun}, I.~A. 1965, {Handbook of mathematical functions
+  with formulas, graphs, and mathematical tables}
+
+\end{thebibliography}

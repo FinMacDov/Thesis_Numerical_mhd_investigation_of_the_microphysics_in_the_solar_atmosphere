@@ -1,0 +1,1424 @@
+
+\chapter{Magnetoacoustic Waves and the KHI in a Steady Slab Embedded in an Asymmetric Environment}
+
+%------------------------------------------------------------------------------
+\section*{Abstract}
+%------------------------------------------------------------------------------
+
+\let\thefootnote\relax\footnotetext{
+
+This chapter is based on the following refereed journal article:
+\begin{itemize}
+\item Barbulescu, M., Erd\'elyi, R. (2018); Magnetoacoustic Waves and the Kelvin-Helmholtz Instability in a Steady Asymmetric Slab. I: The Effects of Varying Density Ratios, \solphys, Volume 293, Issue 6
+\end{itemize}
+}
+
+Recent observations have shown that bulk flow motions in structured solar plasmas, most evidently in coronal mass ejections (CMEs), may lead to the formation of Kelvin-Helmholtz instabilities (KHIs).
+Analytical models are thus essential in understanding both how the flows affect the propagation of magnetohydrodynamic (MHD) waves, and what the critical flow speed is for the formation of the KHI.
+We investigate both these aspects in a novel way: in a steady magnetic slab embedded in an asymmetric environment.
+The exterior of the slab is defined as having different equilibrium values of the background density, pressure and temperature on either side.
+A steady flow and constant magnetic field are present in the slab interior.
+Approximate solutions to the dispersion relation are obtained analytically and classified with respect to mode and speed. General solutions and the KHI thresholds are obtained numerically.
+It is shown that, generally, both the KHI critical value and the cut-off speeds for magnetoacoustic waves are lowered by the external asymmetry.
+
+
+
+%------------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:c2intro}
+%------------------------------------------------------------------------------
+
+The propagation of linear MHD waves along magnetic slabs has long been a topic of study in the context of solar physics (see Section 1.4).
+The presence of a steady flow in the equilibrium state of the system affects the propagation in at least two important ways.
+First, perturbations may cause shearing motions in the flow, which then could lead to the KHI (see Section 1.5).
+Second, the phase speeds and the cut-off speeds of each mode of propagation are shifted proportional to the speed of the flow \citep{Nakariakov1995, Terra-Homem2003}.
+Interactions between propagating waves and flows are not limited to these two instances though.
+Other areas of study include negative energy wave instabilities, if dissipative effects are taken into account \citep{Cairns1979, Joarder1997}, or resonant flow instabilities, if the dissipation is due to resonant absorption \citep[see][]{Tirry1998, Taroyan2002}. More information on the above topics may be found in \cite{Taroyan2011} and \cite{Ryutova2015}.
+
+The effects of steady flows have been investigated in a number of different waveguide geometries and magnetic topologies.
+\cite{Nakariakov1995} studied the effect of a steady flow in an infinite slab of magnetised plasma in a magnetic environment.
+\cite{Terra-Homem2003} then explored the effects that a steady flow has on the propagation of both linear and nonlinear waves in a straight infinite cylindrical flux tube.
+This latter work expanded on the analysis of \cite{Somasundaram1999}.
+For a more general approach to analysing the stability of steady MHD flows see, for example, \cite{Goedbloed2009a, Goedbloed2009b, Goedbloed2018a, Goedbloed2018b}.
+
+\begin{figure}[t]
+\centering
+\subfloat[Quasi-sausage]
+{\includegraphics[width=0.5\textwidth]{figures/quasi-sausage}}
+\subfloat[Quasi-kink]
+{\includegraphics[width=0.5\textwidth]{figures/quasi-kink}}
+\caption{Schematic representation of the quasi-modes of a magnetic slab in an asymmetric non-magnetic environment, as depicted in \cite{Allcock2017}.
+The densities satisfy $\rho_1 > \rho_2$, the solid red lines represent the perturbed magnetic field, the thick solid black lines represent the perturbed slab boundaries, and the dashed gray lines illustrate the position of the slab boundaries after half a period.}
+\label{fig:quasimodes}
+\end{figure}
+
+More recently, \cite{Soler2010} described the effects of an azimuthally dependent flow on the stability of a straight flux tube, while \cite{Zaqarashvili2014a} investigated the stability of an incompressible, twisted cylindrical flux tube, subject to a straight flow, in a magnetic environment.
+Finally, \cite{Zaqarashvili2015} studied the stability of an incompressible, rotating, and twisted cylinder.
+The theoretical results of the latter two works were applied in \cite{Kuridze2016} to determine the stability of chromospheric jets, and to estimate the growth time of the KHI.
+
+Recent observational results have reinforced the idea that plasma flows are present throughout the solar atmosphere.
+\cite{Berger2010} and \cite{Ryutova2010} uncovered details about mass flows and the formation of the KHI in solar prominences.
+KHI formation in the corona has also received considerable attention \citep[see][]{Foullon2011, Ofman2011, Foullon2013}.
+For a recent review, see \cite{Zhelyazkov2015}.
+
+Of significant interest are the observations by \cite{Foullon2011} of a KHI on the flank of a CME.
+The authors interpret the system's configuration as consisting of three regions: the dense solar ejecta, the CME sheath, and the low density corona, with the KHI occurring in the region between the ejecta sheath and the corona.
+A similar three layer system is described by \cite{Mostl2013}.
+By interpreting the CME boundary as a steady magnetic slab embedded in an asymmetric magnetic environment, the authors demonstrated that through increasing the magnetic field strength on only one side of the slab, it provided a stabilising effect there only.
+This numerical study shows that exterior asymmetry may be an important factor when considering the physics of magnetic slabs.
+
+The magnetic slab embedded in an asymmetric environment, has recently been studied by a number of authors.
+\cite{Allcock2017} derived the dispersion relation of waves propagating along a magnetic slab embedded in a non-magnetic environment, in the absence of flows, while \cite{Allcock2018} showcased a number of applications of the model to helioseismology.
+\cite{Zsamberger2018} expanded upon the model of \cite{Allcock2017} by including asymmetric magnetic fields in the environment outside the slab.
+Finally, \cite{Barbulescu2018} derived the dispersion relation of waves propagating along a steady magnetic slab embedded in a non-magnetic environment and studied the impact of the density asymmetry upon the KHI threshold value.
+Also of significance is the finding of \cite{Allcock2017} that the modes of wave propagation along a magnetic slab in an asymmetric environment do not decouple into the well known sausage and kink modes.
+Rather, the modes are asymmetric and are better labelled as quasi-sausage and quasi-kink modes (see Figure \ref{fig:quasimodes}).
+
+In this Chapter, we expand upon the results in \cite{Barbulescu2018} concerning the effects that a steady flow within the slab has on the propagation of magnetoacoustic waves, and on how the asymmetry affects the KHI threshold values.
+In Section \ref{sec:disprelslab}, we derive the dispersion relation for waves propagating along the slab from the ideal compressible MHD equations, and classify the modes in terms of the characteristic speeds of the system.
+In Section \ref{sec:analytical}, we obtain approximate solutions to the dispersion relation using the thin slab approximation, wide slab approximation and incompressible limit.
+In Section \ref{sec:numerics}, we obtain general numerical solutions to the dispersion relation, as well as values for the KHI threshold in different parameter regimes.
+Section \ref{sec:c2app} contains an application of the described model with regard to estimating the magnetic field strength in a CME.
+Finally, Section \ref{sec:c2discussion} contains a summary and discussion of the results in the previous Sections.
+
+
+
+%------------------------------------------------------------------------------
+\section{The Dispersion Relation}
+\label{sec:disprelslab}
+%------------------------------------------------------------------------------
+
+We introduce a slab of plasma bounded by two interfaces at $\pm x_0$, of density, pressure, and temperature $\rho_0$, $p_0$, and $T_0$ respectively, and magnetic field $\mathbf{B}_0 = (0, 0, B_0)$, which is subject to a steady flow $\mathbf{U}_0 = (0, 0, U_0)$.
+The slab is embedded in an asymmetric environment, defined as having density, pressure, and temperature $\rho_1$, $p_1$ and $T_1$ on the left side, and $\rho_2$, $p_2$, and $T_2$, on the right side, as illustrated in Figure \ref{slab}.
+The exterior is neither subject to magnetic fields, nor to flows.
+It follows that the fluid in the interior region of the slab is governed by the ideal MHD equations, while the exterior regions are described using the gas equations.
+
+%
+\begin{figure}[ht]
+\centering
+ \includegraphics[width=0.8\textwidth]{figures/slab_asym_1.pdf}
+ \caption{The steady magnetic slab embedded in a static asymmetric non-magnetic environment.}
+ \label{slab}
+\end{figure}
+%
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Governing Equation for the Interior}
+\label{subsec:goveqint}
+%------------------------------------------------------------------------------
+
+We wish to obtain a governing equation describing the propagation of linear magnetoacoustic waves along the parallel interfaces.
+For this purpose, we employ the compressible ideal linear MHD equations, introduced in Subsection 1.3.6, subject to the previously defined background conditions,
+%
+\begin{align}
+\label{eq:MHDeqn1}
+& \frac{\mathrm{D} \rho}{\mathrm{D} t}
++ \rho_0 \nabla \cdot \mathbf{v}
+= 0,
+\\[0.3cm]
+\label{eq:MHDeqn2}
+\rho_0 & \frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}
+= - \nabla ( p + \frac{B_0}{\mu} b_z )
++ \frac{B_0}{\mu} \frac{\partial \mathbf{b}}{\partial z},
+\\[0.3cm]
+\label{eq:MHDeqn3}
+& \frac{\mathrm{D} p}{\mathrm{D} t}
+= c_0^2 \frac{\mathrm{D} \rho}{\mathrm{D} t},
+\\[0.3cm]
+\label{eq:MHDeqn4}
+& \frac{\mathrm{D} \mathbf{b}}{\mathrm{D} t}
+= - \mathbf{B}_0 ( \nabla \cdot \mathbf{v} )
++ B_0 \frac{\partial \mathbf{v}}{\partial z},
+\\[0.2cm]
+\nonumber
+& \nabla \cdot \mathbf{b} = 0.
+\end{align}
+%
+Here, $\rho, p, \mathbf{b} = (b_x, b_y, b_z)$, and $\mathbf{v} = (v_x, v_y, v_z)$ are small perturbations from the equilibrium, and 
+\[
+\frac{\mathrm{D}}{\mathrm{D} t} = \frac{\partial}{\partial t} + U_0 \frac{\partial}{\partial z}
+\]
+is the material derivative, and the sound speed is defined as $c_0^2 = \gamma p_0/\rho_0$.
+Equations \eqref{eq:MHDeqn1} - \eqref{eq:MHDeqn4} are only valid for the interior of the slab.
+
+Since we are only concerned with magnetoacoustic waves propagating along the slab, we may disregard all dependence on the $y$-component without loss of generality. 
+Equations \eqref{eq:MHDeqn1} - \eqref{eq:MHDeqn4} may, thus, be written as
+\begin{align}
+\label{eq:MHDeqn5}
+\rho_0 \frac{\mathrm{D} v_x}{\mathrm{D} t}
+& = - \frac{\partial}{\partial x} \left(p + \frac{B_0}{\mu_0} b_z \right)
++ \frac{B_0}{\mu_0} \frac{\partial b_x}{\partial z},
+\\[0.3cm]
+\label{eq:MHDeqn6}
+\rho_0 \frac{\mathrm{D} v_z}{\mathrm{D} t}
+& = - \frac{\partial p}{\partial z},
+\\[0.3cm]
+\label{eq:MHDeqn7}
+\frac{\mathrm{D} p}{\mathrm{D} t} &
+= - c_0^2 \rho_0 \nabla \cdot \mathbf{v},
+\\[0.3cm]
+\label{eq:MHDeqn8}
+\frac{\mathrm{D} b_x}{\mathrm{D} t}
+& = B_0 \frac{\partial v_x}{\partial z},
+\\[0.3cm]
+\label{eq:MHDeqn9}
+\frac{\mathrm{D} b_z}{\mathrm{D} t}
+& = - B_0 \frac{\partial v_x}{\partial x}.
+\end{align}
+Here, Equations \eqref{eq:MHDeqn5} and \eqref{eq:MHDeqn6} are the $x-$ and $z-$components of the momentum equation, Equation \eqref{eq:MHDeqn7} is the result of combining Equations \eqref{eq:MHDeqn1} and \eqref{eq:MHDeqn3}, and Equations \eqref{eq:MHDeqn8} and \eqref{eq:MHDeqn9} are the $x-$ and $z-$components of the induction equation.
+
+Let us Fourier decompose Equations \eqref{eq:MHDeqn5} - \eqref{eq:MHDeqn9} for waves propagating along the slab by assuming that $f(\mathbf{r}, t) = \hat{f}(x) \mathrm{e}^{i(k z - \omega t)}$, where $f$ stands for any of the small perturbations, and $\hat{f}$ is the amplitude of each perturbation.
+Here, $\omega$ is the angular frequency, and $k$ is the wavenumber in the $z$-direction.
+This procedure allows us to remove all differential terms in the linearised MHD equation, except for derivatives with respect to $x$, much like in Section 1.4.
+Equations \eqref{eq:MHDeqn5} - \eqref{eq:MHDeqn9} become
+\begin{align}
+\label{eq:MHDeqn10}
+i \rho_0 \Omega \hat v_x
+& = \frac{\mathrm{d}}{\mathrm{d} x} \left(\hat p + \frac{B_0}{\mu_0} \hat b_z \right)
+- ik \frac{B_0}{\mu_0} \hat b_x,
+\\[0.3cm]
+\label{eq:MHDeqn11}
+\rho_0 \Omega \hat v_z
+& = k \hat p,
+\\[0.3cm]
+\label{eq:MHDeqn12}
+\Omega \hat p
+& = c_0^2 \rho_0 (- i \frac{\mathrm{d} \hat v_x}{\mathrm{d} x} + k \hat v_z),
+\\[0.3cm]
+\label{eq:MHDeqn13}
+\Omega \hat b_x
+& = - B_0 k \hat v_x,
+\\[0.3cm]
+\label{eq:MHDeqn14}
+i \Omega \hat b_z
+& = B_0 \frac{\mathrm{d} \hat v_x}{\mathrm{d} x},
+\end{align}
+where $\Omega = \omega - k U_0$ is the Doppler-shifted frequency.
+
+In order to obtain a governing equation for the interior of the slab, we must combine Equations \eqref{eq:MHDeqn10} - \eqref{eq:MHDeqn14} so that we eliminate all but one dependent variable.
+While the governing equation may be written in terms of any of the dependent variables, we choose $\hat v_x (x)$ since it is most convenient.
+We begin by combining Equations \eqref{eq:MHDeqn11} and \eqref{eq:MHDeqn12} in order to eliminate $\hat v_z$, and obtain
+%
+\begin{equation}
+\label{eq:MHDeqn15}
+\hat p = i \frac{\Omega c_0^2 \rho_0}{k^2 c_0^2 - \Omega^2} \frac{\mathrm{d} \hat v_x}{\mathrm{d} x}.
+\end{equation}
+%
+%{\color{red}
+We then introduce Equation \eqref{eq:MHDeqn13} into Equation \eqref{eq:MHDeqn10}, in order to eliminate $\hat b_x$,
+%
+\begin{equation}
+\label{eq:MHDeqn16}
+(k^2 v_A^2 - \Omega^2) \hat v_x = - \frac{i \Omega}{\rho_0} \frac{\mathrm{d}}{\mathrm{d} x} \left(\hat p + \frac{B_0}{\mu_0} \hat b_z \right),
+\end{equation}
+where the Alfv\'en speed, $v_A$, is defined as
+%
+\[
+v_A^2 = \frac{B_0^2}{\mu_0 \rho_0},
+\]
+%
+similar to Equation \ref{eq:alfvenspeed}.
+%
+Substituting Equation \eqref{eq:MHDeqn14} into \eqref{eq:MHDeqn16}, we obtain
+%
+\begin{equation}
+\label{eq:MHDeqn17}
+(k^2 v_A^2 - \Omega^2) \hat v_x = - \frac{i \Omega}{\rho_0} \frac{\mathrm{d} \hat p}{\mathrm{d} x}
+- v_A^2 \frac{\mathrm{d}^2 \hat v_x}{\mathrm{d} x^2}.
+\end{equation}
+%
+Finally, we combine Equations \eqref{eq:MHDeqn15} and \eqref{eq:MHDeqn17} such that, except for $\hat{v}_x$, all other perturbed quantities have been eliminated, leaving us with the governing equation for the velocity amplitude:
+%
+\begin{equation}
+\label{eq:goveq1}
+\frac{\mathrm{d}^2 \hat v_x}{\mathrm{d} x^2} - m_0^2 \hat{v}_x = 0,
+\end{equation}
+%
+where
+%
+\begin{equation}
+\label{eq:m0slab}
+m_0^2 = \frac{(k^2 v_A^2 - \Omega^2)(k^2 c_0^2 - \Omega^2)}
+{(c_0^2 + v_A^2)( k^2 c_T^2 - \Omega^2)},
+\end{equation}
+%
+and the tube speed, $c_T$, is defined as
+%
+\[
+c_T^2 = \frac{c_0^2 v_A^2}{c_0^2 + v_A^2}.
+\]
+%
+similar to Equation \eqref{eq:tubespeed} %see Chapter 1.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Governing Equations for the Exterior}
+\label{subsec:goveqext}
+%------------------------------------------------------------------------------
+
+The same scheme that was used in Subsection \ref{subsec:goveqint} may be applied to the exterior layers, with the consideration that, in both semi-infinite layers, there are no magnetic fields or flows present.
+These regions are, therefore, governed by the gas equations,
+%
+\begin{align}
+\label{eq:gaseqn1}
+& \frac{\partial \rho}{\partial t}
++ \rho_j \nabla \cdot \mathbf{v}
+= 0,
+\\[0.3cm]
+\label{eq:gaseqn2}
+\rho_j & \frac{\partial \mathbf{v}}{\partial t}
+= - \nabla p,
+\\[0.3cm]
+\label{eq:gaseqn3}
+& \frac{\partial p}{\partial t}
+= c_j^2 \frac{\partial \rho}{\partial t},
+\end{align}
+%
+where the subscript $j$ is either 1, for $x < - x_0$, or 2, for $x > x_0$, and the exterior sound speeds are defined as $c_j^2 = \gamma p_j/\rho_j$.
+Substituting Equation \eqref{eq:gaseqn1} into \eqref{eq:gaseqn3} yields
+%
+\begin{equation}
+\label{eq:gaseqn4}
+\frac{\partial p}{\partial t} = - c_j^2 \rho_j \nabla \cdot \mathbf{v}.
+\end{equation}
+%
+We differentiate Equation \eqref{eq:gaseqn1} with respect to $t$, and combine it with Equation \eqref{eq:gaseqn4}, such that
+%
+\begin{equation}
+\label{eq:gaseqn5}
+\frac{\partial^2 \mathbf{v}}{\partial t^2} - c_j^2 \nabla ( \nabla \cdot \mathbf{v} ) = 0.
+\end{equation}
+%
+Equation \eqref{eq:gaseqn5} may be written in component form
+%
+\begin{align}
+\label{eq:gaseqn6}
+& \frac{\partial^2 v_x}{\partial t^2}
+- c_j^2 \left( \frac{\partial^2 v_x}{\partial x^2}
++ \frac{\partial^2 v_z}{\partial x \partial z} \right)
+= 0,
+\\[0.3cm]
+\label{eq:gaseqn7}
+& \frac{\partial^2 v_z}{\partial t^2}
+- c_j^2 \left( \frac{\partial^2 v_x}{\partial x \partial z}
++ \frac{\partial^2 v_z}{\partial z^2} \right)
+= 0,
+\end{align}
+%
+and Fourier decomposed $\sim \mathrm{e}^{i(k z - \omega t)}$,
+%
+\begin{align}
+\label{eq:gaseqn8}
+& \omega^2 \hat v_x
++ c_j^2 \left( \frac{\mathrm{d}^2 \hat v_x}{\mathrm{d} x^2}
++ i k \frac{\mathrm{d} \hat v_z}{\mathrm{d} x} \right)
+= 0,
+\\[0.3cm]
+\label{eq:gaseqn9}
+& \omega^2 \hat v_z
++ c_j^2 \left( i k \frac{\mathrm{d} \hat v_x}{\mathrm{d} x}
+- k^2 \hat v_z \right)
+= 0.
+\end{align}
+%
+By rearranging Equation \eqref{eq:gaseqn9} as
+%
+\begin{equation}
+\label{eq:gaseqn10}
+\hat v_z = - \frac{i k c_j^2}{\omega^2 - k^2 c_j^2} \frac{\mathrm{d} \hat v_x}{\mathrm{d} x},
+\end{equation}
+%
+and substituting Equation \eqref{eq:gaseqn10} into Equation \eqref{eq:gaseqn8},  the governing equations for the outer layers is obtained,
+%
+\begin{equation}
+\label{eq:goveq2}
+\frac{\mathrm{d}^2 \hat v_x}{\mathrm{d} x^2} - m_j^2 \hat{v}_x = 0,
+\end{equation}
+%
+where
+%
+\begin{equation}
+\label{eq:mj}
+m_j^2 = k^2 - \frac{\omega^2}{c_j^2}.
+\end{equation}
+%
+Equations \eqref{eq:goveq1} and \eqref{eq:goveq2} are analogous, as are Equations \eqref{eq:m0slab} and \eqref{eq:mj}.
+By removing all terms dependent on the magnetic field from Equations \eqref{eq:goveq1} and \eqref{eq:m0slab}, we obtain Equations of the form of \eqref{eq:goveq2} and \eqref{eq:mj}, respectively.
+
+Fourier decomposing Equation \eqref{eq:gaseqn4} yields
+%
+\begin{equation}
+\label{eq:gaseqn11}
+i \omega \hat p
+= c_j^2 \rho_j \left( \frac{\mathrm{d} \hat v_x}{\mathrm{d} x}
++ i k \hat v_z \right),
+\end{equation}
+%
+which, after substituting Equation \eqref{eq:gaseqn10} into Equation \eqref{eq:gaseqn11}, becomes
+%
+\begin{equation}
+\label{eq:gaseqn12}
+\hat p
+= i \frac{\omega \rho_j}{m_j^2} \frac{\mathrm{d} \hat v_x}{\mathrm{d} x}.
+\end{equation}
+%
+Equation \eqref{eq:gaseqn12} relates the exterior gas pressure perturbation amplitude to the velocity perturbation amplitude perpendicular to the interface, and will be of use later in the derivation.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Boundary Conditions and Dispersion Relation}
+\label{subsec:disprel}
+%------------------------------------------------------------------------------
+
+In order to find trapped wave solutions to Equations \eqref{eq:goveq1} and \eqref{eq:goveq2}, we require that solutions to Equations \eqref{eq:goveq2} be evanescent, i.e. that all perturbations vanish at $\pm \infty$.
+This implies that $m_j^2 > 0$ is required for $j = 1, 2$.
+The solutions to Equations \eqref{eq:goveq1} and \eqref{eq:goveq2} may, therefore, be written as
+\begin{equation}
+\label{eq:goveqsol}
+ \hat{v}_{xj} (x) =
+  \begin{cases}
+    A(\cosh m_1 x + \sinh m_1 x),    & x < - x_0,\\[0.3cm]
+    B \cosh m_0 x + C \sinh m_0 x,  & |x| \leq x_0,\\[0.3cm]
+    D(\cosh m_2 x - \sinh m_2 x),    & x > x_0,\\
+  \end{cases}
+\end{equation}
+where $A, B, C$, and $D$ are arbitrary constants.
+By inspection, we establish that two wave modes are allowed to propagate under the given constraints: one that is evanescent towards the center of the slab (for $m_0^2 > 0$), and one that is spatially oscillatory throughout the slab (for $m_0^2 < 0$).
+These modes of propagation are the so-called surface and body modes, respectively, which were introduced in Section 1.4.
+
+Equation \eqref{eq:goveqsol} is subject to boundary conditions at the interfaces, namely, the continuity of the Lagrangian displacement, and the continuity of total pressure:
+\begin{align}
+\begin{split}
+\label{eq:bcs}
+\frac{\hat v_{x1} (x = - x_0)}{\omega}
+& = \frac{\hat v_{x0} (x = - x_0)}{\Omega},
+\\[0.3cm]
+\frac{\hat v_{x2} (x = x_0)}{\omega}
+& = \frac{\hat v_{x0} (x = x_0)}{\Omega},
+\\[0.3cm]
+[p_T]_{x = -x_0}
+& = 0,
+\\[0.3cm]
+[p_T]_{x = x_0} 
+& = 0.
+\end{split}
+\end{align}
+Here, the total pressure is the sum of the gas and magnetic pressures, where the gas pressures are defined in Equations \eqref{eq:MHDeqn15}, and \eqref{eq:gaseqn12}.
+Since there is no magnetic field in the exterior regions, the total pressure is simply the gas pressure.
+In order to calculate the magnetic pressure within the slab, we make use of its definition from Equation \eqref{eq:lorentz}.
+Since the quantities in Equation \eqref{eq:lorentz} are nonlinear, we first linearise them, and obtain
+%
+\begin{align}
+\begin{split}
+\label{eq:MHDeqn18}
+p_m & = \frac{\mathbf{B}^2}{2 \mu}
+= \frac{1}{2 \mu_0} ( \mathbf{B}_0^2 + 2 \mathbf{B}_0 \cdot \mathbf{b} + \mathbf{b}^2 )
+\\[0.3cm]
+& \approx \frac{\mathbf{B}_0 \cdot \mathbf{b}}{\mu_0}
+= \frac{B_0 b_z}{\mu_0},
+\end{split}
+\end{align}
+%
+where $p_m$ is the magnetic pressure.
+The terms $\mathbf{B}_0^2$ and $\mathbf{b}^2$ in Equation \eqref{eq:MHDeqn18} vanish since we only keep the terms of order of the perturbations, i.e. $p_m$ and $\mathbf{B}_0 \cdot \mathbf{b}$.
+We Fourier decompose Equation \eqref{eq:MHDeqn18},
+%
+\begin{equation}
+\label{eq:MHDeqn19}
+\hat p_m = \frac{B_0 \hat b_z}{\mu_0},
+\end{equation}
+%
+and substitute Equation \eqref{eq:MHDeqn14} into Equation \eqref{eq:MHDeqn19} to obtain
+%
+\begin{equation}
+\label{eq:MHDeqn20}
+\hat p_m = - i \frac{v_A^2 \rho_0}{\Omega} \frac{\mathrm{d} \hat v_x}{\mathrm{d} x}.
+\end{equation}
+Combining Equations \eqref{eq:MHDeqn15}, \eqref{eq:gaseqn12}, and \eqref{eq:MHDeqn20}, we find that the total pressure is
+\begin{equation}
+\label{eq:totalpres}
+\hat p_{T} (x) = \frac{\mathrm{d} \hat v_x}{\mathrm{d} x}
+\begin{cases}
+\dfrac{i \rho_1 \omega}{m_1^2},    & x < - x_0,
+\\[0.3cm]
+-\dfrac{i \rho_0 (k^2 v_A^2 - \Omega^2)}{m_0^2 \Omega},  & |x| \leq x_0,
+\\[0.3cm]
+\dfrac{i \rho_2 \omega}{m_2^2},    & x > x_0.
+\end{cases}
+\end{equation}
+
+Using Equations \eqref{eq:goveqsol} and \eqref{eq:totalpres}, we may write the boundary conditions, \eqref{eq:bcs}, as a system of four simultaneous homogeneous algebraic equations,
+%
+\begin{align}
+\begin{split}
+\label{eq:system}
+A (\cosh m_1 x_0 - \sinh m_1 x_0)
+- B \dfrac{\omega}{\Omega} \cosh m_0 x_0
++ C \dfrac{\omega}{\Omega} \sinh m_0 x_0 & = 0,
+\\[0.3cm]
+B \dfrac{\omega}{\Omega} \cosh m_0 x_0
++ C \dfrac{\omega}{\Omega} \sinh m_0 x_0
++ D(\sinh m_2 x_0 - \cosh m_2 x_0) & = 0,
+\\[0.3cm]
+A \Lambda_1 (\cosh m_1 x_0 - \sinh m_1 x_0)
+- B \Lambda_0 \sinh m_0 x_0
++ C \Lambda_0 \cosh m_0 x_0 & = 0,
+\\[0.3cm]
+- B \Lambda_0 \sinh m_0 x_0
+- C \Lambda_0 \cosh m_0 x_0
++ D \Lambda_2 (\cosh m_2 x_0 - \sinh m_2 x_0) & = 0,
+\end{split}
+\end{align}
+%
+where
+%
+\begin{align}
+\begin{split}
+\label{eq:lambdas}
+\Lambda_0 
+& = \frac{i \rho_0 \left( k^2 v_A^2 - \Omega^2 \right)}{m_0 \Omega},
+\\[0.3cm]
+\Lambda_1 
+& = \frac{i \rho_1 \omega}{m_1},
+\\[0.3cm]
+\Lambda_2 
+& = \frac{i \rho_2 \omega}{m_2}.
+\end{split}
+\end{align}
+%
+Equations \eqref{eq:system} may be written in matrix form as
+%
+\begin{equation}
+\label{eq:matrix1}
+\begin{pmatrix}
+c_1 - s_1 
+& - \dfrac{\omega}{\Omega} c_0
+& \dfrac{\omega}{\Omega} s_0
+& 0
+\\[0.3cm]
+0
+& \dfrac{\omega}{\Omega} c_0
+& \dfrac{\omega}{\Omega} s_0
+& s_2 - c_2
+\\[0.3cm]
+\Lambda_1 (c_1 - s_1)
+& - \Lambda_0 s_0
+& \Lambda_0 c_0
+& 0
+\\[0.3cm]
+0
+& - \Lambda_0 s_0
+& - \Lambda_0 c_0
+& \Lambda_2 (c_2 - s_2)
+\end{pmatrix}
+\begin{pmatrix}
+A
+\\[0.3cm]
+B
+\\[0.3cm]
+C
+\\[0.3cm]
+D
+\end{pmatrix}
+=
+\begin{pmatrix}
+0
+\\[0.3cm]
+0
+\\[0.3cm]
+0
+\\[0.3cm]
+0
+\end{pmatrix},
+\end{equation}
+%
+where, for brevity, we introduced $c_j = \cosh m_j x_0$, $s_j = \sinh m_j x_0$, for $j = 0,1,2$.
+We denote the matrix in Equation \eqref{eq:matrix1} as $M_0$ and row reduce it to obtain
+%
+\begin{equation}
+\label{eq:matrix2}
+M_1 = 
+\begin{pmatrix}
+c_1 - s_1 
+& - \dfrac{\omega}{\Omega} c_0
+& \dfrac{\omega}{\Omega} s_0
+& 0
+\\[0.3cm]
+0
+& \dfrac{\omega}{\Omega} c_0
+& \dfrac{\omega}{\Omega} s_0
+& s_2 - c_2
+\\[0.3cm]
+0
+& - \Lambda_0 s_0 + \Lambda_1 \dfrac{\omega}{\Omega} c_0
+& \Lambda_0 c_0 - \Lambda_1 \dfrac{\omega}{\Omega} s_0
+& 0
+\\[0.3cm]
+0
+& 0
+& \Lambda
+& 0
+\end{pmatrix},
+\end{equation}
+%
+where
+%
+\begin{align}
+\begin{split}
+\label{eq:lambda}
+\Lambda = & \left(\Lambda_0 s_0 - \Lambda_1 c_0 \omega/\Omega \right)
+\left(\Lambda_0 c_0 - \Lambda_2 s_0 \omega/\Omega \right)
+\\
++ & \left(\Lambda_0 c_0 - \Lambda_1 s_0 \omega/\Omega \right)
+\left( \Lambda_0 s_0 - \Lambda_2 c_0 \omega/\Omega \right).
+\end{split}
+\end{align}
+%
+
+For the system of Equations \eqref{eq:system} to have non-trivial solutions, we require the determinant of $M_0$ to be equal to zero.
+We may write the determinant of $M_0$ as
+%
+\begin{align}
+\begin{split}
+\label{eq:det}
+\det M_0 & = (- \Lambda_0 s_0 + \Lambda_1 c_0 \omega/\Omega)^{-1} \det M_1
+\\
+& = (c_1 - s_1) (s_2 - c_2) \Lambda.
+\end{split}
+\end{align}
+%
+It follows that the system of Equations \eqref{eq:system} has non-trivial solutions if $\Lambda = 0$.
+Explicitly, this may be written as
+%
+\begin{align}
+\begin{split}
+\label{eq:lambda2}
+& \left(\Lambda_0 s_0 - \Lambda_1 c_0 \omega/\Omega \right)
+\left(\Lambda_0 c_0 - \Lambda_2 s_0 \omega/\Omega \right) +
+\\
+& \left(\Lambda_0 c_0 - \Lambda_1 s_0 \omega/\Omega \right)
+\left( \Lambda_0 s_0 - \Lambda_2 c_0 \omega/\Omega \right) = 0,
+\end{split}
+\end{align}
+%
+which, after some algebra, becomes
+%
+\begin{equation}
+\label{eq:lambda3}
+2 \left( \Lambda_0^2 + \Lambda_1 \Lambda_2 \frac{\omega^2}{\Omega^2} \right)
+- \Lambda_0 (\Lambda_1 + \Lambda_2) \frac{\omega}{\Omega} ( \tanh m_0 x_0 + \coth m_0 x_0 ) = 0.
+\end{equation}
+%
+Substituting Equation \eqref{eq:lambdas} into Equation \eqref{eq:lambda3} yields
+%
+\begin{align}
+\label{eq:disprelslabc2}
+\begin{split}
+m_0^2 \omega^4
+& + \frac{\rho_0}{\rho_1} m_1 \frac{\rho_0}{\rho_2} m_2 ( k^2 v_A^2 - \Omega^2 )^2
+\\[0.3cm]
+& - \frac{1}{2} m_0 \omega^2 ( k^2 v_A^2 - \Omega^2) \left( \frac{\rho_0}{\rho_1} m_1 + \frac{\rho_0}{\rho_2} m_2 \right) \left( \tanh m_0 x_0 + \coth m_0 x_0 \right) = 0.
+\end{split}
+\end{align}
+%
+Equation \eqref{eq:disprelslabc2} is the dispersion relation for the propagation of magnetoacoustic waves in a steady magnetic slab embedded in an asymmetric non-magnetic environment.
+It is a generalization of the dispersion relation for waves propagating along a static slab in a non-magnetic asymmetric environment \citep{Allcock2017}.
+The dispersion relation of \cite{Allcock2017} may be immediately recovered by removing the background flow, i.e. setting $U_0 = 0$.
+Equation \eqref{eq:disprelslabc2} is also related to the dispersion relation found in \cite{Nakariakov1995} for the propagation of waves in a steady slab embedded in a magnetic environment.
+If we consider the model of \cite{Nakariakov1995} with no exterior magnetic field, we obtain the same result as when considering Equation \eqref{eq:disprelslabc2} with equal exterior densities.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Comparison with Previous Models}
+\label{subsec:comparison}
+%------------------------------------------------------------------------------
+
+Due to the fact that the properties of magnetoacoustic waves propagating along a slab in a symmetric environment are qualitatively different from those propagating along a slab in an asymmetric environment, it is useful to compare Equation \eqref{eq:disprelslabc2} to the dispersion relations of other similar models.
+
+The dispersion relation for magnetoacoustic waves propagating along a slab in a symmetric environment, Equation \eqref{eq:disprelslab}, was described in the previous Chapter.
+Equation \eqref{eq:disprelslab} has two sets of solutions: oscillations which are symmetric about $x=0$ (called sausage modes), and oscillations which are anti-symmetric about $x=0$ (called kink modes).
+The sausage modes are described by the $\tanh$ variant of Equation \eqref{eq:disprelslab}, while the kink modes are described by the $\coth$ variant.
+
+In contrast, Equation \eqref{eq:disprelslabc2} describes two modes of oscillation which are not fully independent.
+Equation \eqref{eq:disprelslabc2} does not factorise into an equation containing $\tanh$ and one containing $\coth$, rather each hyperbolic function has a contribution in determining the solution.
+
+It may be shown that, if the exterior densities only differ by a constant $\alpha \ll 1$, Equation \eqref{eq:lambda3} factorizes into two equations, one describing the quasi-kink mode and one the quasi-sausage.
+We first note that, since the total pressure must be continuous at the boundaries, the exterior pressures are equal, i.e. $p_1 = p_2$.
+It follows that, if $\rho_2 = \rho_1 + \alpha$, then
+%
+\begin{equation}
+m_2^2 = m_1^2 - \frac{\omega^2}{c_1^2 \rho_1} \alpha,
+\end{equation}
+%
+and
+%
+\begin{equation}
+\Lambda_2 = \Lambda_1 + i \omega \frac{c_2^2 + \omega^2 / m_2^2}{c_2^2 m_2^2} \alpha.
+\end{equation}
+%
+We introduce $\epsilon \ll 1$, such that $\Lambda_2 = \Lambda_1 + \epsilon$ and we introduce the fraction
+%
+\begin{align}
+\begin{split}
+\label{eq:lambdafrac}
+\frac{(\Lambda_1 + \Lambda_2)^2}{4 \Lambda_1 \Lambda_2}
+& = \frac{(2 \Lambda_1 + \epsilon)^2}{\Lambda_1^2 ( 1 + \epsilon/\Lambda_1)}
+\\
+& = \frac{1}{4 \Lambda_1^2} (4 \Lambda_1^2 + 4 \epsilon \Lambda_1 + \epsilon^2)
+(1 - \epsilon / \Lambda_1 + \mathcal{O}(\epsilon^2))
+\\
+& = \frac{1}{4 \Lambda_1^2} (4 \Lambda_1^2 + 4 \epsilon \Lambda_1 - 4 \epsilon \Lambda_1 + \mathcal{O}(\epsilon^2)).
+\end{split}
+\end{align}
+%
+Discarding terms of $\mathcal{O}(\epsilon^2)$ and higher in Equation \eqref{eq:lambdafrac}, we obtain
+%
+\begin{equation}
+\frac{(\Lambda_1 + \Lambda_2)^2}{4 \Lambda_1 \Lambda_2} \approx 1.
+\end{equation}
+%
+This allows us to write Equation \eqref{eq:lambda3} as
+%
+\begin{equation}
+\label{eq:lambda4}
+2 \left( \Lambda_0^2 \frac{(\Lambda_1 + \Lambda_2)^2}{4 \Lambda_1 \Lambda_2} + \Lambda_1 \Lambda_2 \frac{\omega^2}{\Omega^2} \right)
+- \Lambda_0 (\Lambda_1 + \Lambda_2) \frac{\omega}{\Omega} ( \tanh m_0 x_0 + \coth m_0 x_0 ) = 0.
+\end{equation}
+%
+Multiply Equation \eqref{eq:lambda4} by $\Lambda_1 \Lambda_2$ and factorise it such that we obtain two equations,
+%
+\begin{align}
+\begin{split}
+\label{eq:lambda5}
+\Lambda_0(\Lambda_1 + \Lambda_2) + 2 \Lambda_1 \Lambda_2 \tanh m_0 x_0 = 0,
+\\
+\Lambda_0(\Lambda_1 + \Lambda_2) + 2 \Lambda_1 \Lambda_2 \coth m_0 x_0 = 0,
+\end{split}
+\end{align}
+%
+or, using a more familiar format,
+%
+\begin{align}
+\begin{split}
+\label{eq:disprelslabfact}
+\rho_0 (k^2 v_A^2 - \omega^2) \left( \frac{m_1}{\rho_1} + \frac{m_2}{\rho_2} \right)
++ 2 m_0 \omega \Omega \tanh m_0 x_0 = 0,
+\\
+\rho_0 (k^2 v_A^2 - \omega^2) \left( \frac{m_1}{\rho_1} + \frac{m_2}{\rho_2} \right)
++ 2 m_0 \omega \Omega \coth m_0 x_0 = 0.
+\end{split}
+\end{align}
+%
+Equations \eqref{eq:disprelslabfact} are a generalization of the factorised dispersion relation of waves propagating along a static slab in a non-magnetic asymmetric environment, first described in \cite{Allcock2017}.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Mode Classification}
+\label{subsec:modes}
+%------------------------------------------------------------------------------
+
+Information about the nature of the wave solutions may be obtained from the parameters of the dispersion relation, Equation \eqref{eq:disprelslabc2}.
+We have already established that in order for waves to be trapped, the exterior parameters $m_1^2$ and $m_2^2$ must be positive.
+Modes that do not meet this condition are referred to as leaky and are excluded from the analysis in the present work.
+As in Chapter 1, we operate in terms of the phase speed, $c_{ph} = \omega / k$, and deduce that for modes to be trapped they must satisfy
+%
+\begin{equation}
+\textrm{max}(-c_1, -c_2) < c_{ph} < \textrm{min}(c_1, c_2).
+\end{equation}
+%
+It is also worth noting that the sign of the phase speed, $c_{ph}$, determines whether modes are forward or backward propagating, a positive sign corresponding to the former, and a negative to the latter.
+
+The parameter $m_0^2$ offers a means of classifying the general solutions to Equation \eqref{eq:disprelslabc2}, which will later be obtained numerically.
+We have already established that surface modes satisfy the condition $m_0^2 > 0$, while body modes require $m_0^2 < 0$.
+We may therefore categorize all solutions to equation \eqref{eq:disprelslabc2} with respect to the signs of $c_{ph}, m_0^2, m_1^2,$ and $m_2^2$.
+Solutions that satisfy
+%
+\begin{equation}
+\textrm{max}(c_0, v_A) < |c_{ph} - U_0| < \textrm{min}(c_1 - U_0, c_2 - U_0)
+\end{equation}
+%
+are fast surface or body modes, depending on the sign of $m_0^2$, which is determined by the ordering of the characteristic speeds.
+Slow body and surface modes have phase speeds within the interval 
+%
+\begin{equation}
+c_T < |c_{ph} - U_0| < \textrm{min}(c_0, v_A),
+\end{equation}
+%
+and
+%
+\begin{equation}
+|c_{ph} - U_0| < c_T,
+\end{equation}
+%
+respectively.
+
+
+
+%------------------------------------------------------------------------------
+\section{Approximate Analytical Solutions}
+\label{sec:analytical}
+%------------------------------------------------------------------------------
+
+The dispersion relation, Equation \eqref{eq:disprelslabc2} is insoluble analytically (to the best of our knowledge), without the use of simplifying approximations.
+In this Section, we use a number of analytical approximations to obtain explicit solutions to Equation \eqref{eq:disprelslabc2}.
+We consider the \emph{thin-slab}, \emph{wide-slab}, and \emph{incompressible} approximations.
+These approximate analytical solutions will be used to confirm that the numerical solutions obtained in section \ref{sec:numerics} are correct, while also helping to interpret the results in \ref{sec:c2app}.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Incompressible Limit}
+\label{subsec:incompressible}
+%------------------------------------------------------------------------------
+
+We consider the dispersion relation, Equation \eqref{eq:disprelslabc2}, in the incompressible limit, where $\gamma \to \infty$.
+Using this approximation, the sound speeds in all sections of the system are unbounded, and the tube speed behaves like $c_T \to v_A$.
+The effective wavenumbers satisfy $m_j \to k$ for $j = 0, 1, 2$, so that Equation \eqref{eq:disprelslabc2} reduces to
+%
+\begin{align}
+\label{eq:disprelslabinc}
+\begin{split}
+\omega^4
+& + \frac{\rho_0^2}{\rho_1 \rho_2} ( k^2 v_A^2 - \Omega^2 )^2
+\\
+& - \frac{1}{2} \omega^2 ( k^2 v_A^2 - \Omega^2)
+\left( \frac{\rho_0}{\rho_1} + \frac{\rho_0}{\rho_2} \right)
+\left( \tanh k x_0 + \coth k x_0 \right) = 0.
+\end{split}
+\end{align}
+%
+Since Equation \eqref{eq:disprelslabinc} is still insoluble analytically, we require an additional approximation.
+We introduce the phase speed normalised with respect to the Alfv\'en speed
+%
+\begin{equation}
+\label{eq:cphbar}
+\bar c_{ph} = \frac{c_{ph}}{v_A},
+\end{equation}
+%
+and the Alfv\'en Mach number,
+%
+\begin{equation}
+\label{eq:MA}
+M_A = \frac{U_0}{v_A},
+\end{equation}
+%
+and assume that $c_{ph} \gg U_0$, or equivalently, $\bar c_{ph} \gg M_A$.
+Equation \eqref{eq:disprelslabinc} becomes a quadratic equation in $\bar c_{ph}$,
+%
+\begin{align}
+\label{eq:disprelslabinc2}
+\begin{split}
+\bar c_{ph}^4
+& + \frac{\rho_0^2}{\rho_1 \rho_2} ( 1 - \bar c_{ph}^2 )^2
+- \frac{1}{2} \bar c_{ph}^2 ( 1 - \bar c_{ph}^2)
+\left( \frac{\rho_0}{\rho_1} + \frac{\rho_0}{\rho_2} \right)
+\left( \tanh k x_0 + \coth k x_0 \right) = 0.
+\end{split}
+\end{align}
+%
+Equation \eqref{eq:disprelslabinc2} has solutions given by
+%
+\begin{align}
+\label{eq:disprelslabincsol}
+\begin{split}
+\bar c_{ph}^2 
+& = \frac
+{2 + \sigma \pm \sqrt{\sigma^2 - \dfrac{4\rho_1 \rho_2}{\rho_0^2} } }
+{2 \left( 1 + \sigma + \dfrac{\rho_1 \rho_2}{\rho_0^2} \right) },
+\\[0.3cm]
+\sigma
+& = \frac{1}{2} \left( \frac{\rho_1}{\rho_0} + \frac{\rho_2}{\rho_0} \right)
+(\tanh k x_0 + \coth k x_0).
+\end{split}
+\end{align}
+%
+An equation analogous to Equation \eqref{eq:disprelslabincsol} was previously obtained by \cite{Allcock2017} in the context of a model of a static slab embedded in an asymmetric non-magnetic environment.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Thin-slab Approximation}
+\label{subsec:thin}
+%------------------------------------------------------------------------------
+
+We assume that the wavelength of the propagating wave solution is much longer than the width of the slab, i.e. that $k x_0 \ll 1$.
+This is called the long-wavelength approximation, or thin-slab approximation.
+For surface modes, we may assume that $m_0 x_0 \to 0$ as $k x_0 \to 0$ and, hence, that
+\begin{equation}
+\tanh m_0 x_0 \approx m_0 x_0, \qquad \coth m_0 x_0 \approx \frac{1}{m_0 x_0},
+\end{equation}
+for $k x_0 \ll 1$.
+This assumption may be verified \emph{a posteriori}, and was proved in several works including \cite{Roberts1981b} and \cite{Allcock2017}.
+The dispersion relation, Equation \eqref{eq:disprelslabc2}, may then be written as
+\begin{align}
+\label{eq:disprelslabthin}
+\begin{split}
+m_0^2 \omega^4 
+& + \frac{\rho_0}{\rho_1} m_1 \frac{\rho_0}{\rho_2} m_2 ( k^2 v_A^2 - \Omega^2 )^2 
+\\[0.3cm]
+& - \frac{1}{2} m_0 \omega^2
+(k^2 v_A^2 - \Omega^2)
+\left( \frac{\rho_0}{\rho_1} m_1 + \frac{\rho_0}{\rho_2} m_2 \right)
+\left( m_0 x_0 + \frac{1}{m_0 x_0} \right)
+= 0.
+\end{split}
+\end{align}
+In order to find approximate solutions, we also assume that the densities on either side of the slab are of the same order such that Equation \eqref{eq:disprelslabthin} may be factorised into two equations, one for the sausage mode
+%
+\begin{equation}
+\label{eq:disprelslabthinsaus}
+\rho_0 (k^2 v_A^2 - \omega^2) \left( \frac{m_1}{\rho_1} + \frac{m_2}{\rho_2} \right)
++ 2 m_0^2 x_0 \omega \Omega = 0,
+\end{equation}
+%
+and one for the kink mode
+%
+\begin{equation}
+\label{eq:disprelslabthinkink}
+\rho_0 x_0 (k^2 v_A^2 - \omega^2) \left( \frac{m_1}{\rho_1} + \frac{m_2}{\rho_2} \right)
++ 2 \omega \Omega = 0.
+\end{equation}
+%
+
+In order to find sausage wave solutions, we rewrite Equation \eqref{eq:disprelslabthinsaus} as
+%
+\begin{equation}
+\label{eq:disprelslabthinsaus2}
+( k^2 c_T^2 - \Omega^2) \left( \frac{m_1}{\rho_1} + \frac{m_2}{\rho_2} \right)
+= - 2 \frac{(k^2 c_0^2 - \Omega^2) x_0 \omega \Omega}{\rho_0 (c_0^2 + v_A^2)},
+\end{equation}
+%
+and we look for surface mode solutions to the form
+%
+\begin{equation}
+\label{eq:omegapert}
+\omega = \omega_{0} + k x_0 \omega_{1} + \mathcal{O}(k^2 x_0^2).
+\end{equation}
+%
+We find that
+%
+\begin{equation}
+\label{eq:omega00}
+\omega_{0} = k(c_T + U_0),
+\end{equation}
+%
+for forward propagating waves, and by taking the terms of order $k x_0$ in Equation \eqref{eq:disprelslabthinsaus2}, we find the first order terms in the perturbation expansion, and hence obtain the approximate solution with $\Omega^2 \approx k^2 c_T^2$:
+%
+\begin{equation}
+\label{eq:disprelslabthinsaussol}
+\Omega^2
+\approx k^2 c_T^2 \left(1
+- \frac{2 k x_0 (c_0^2 - c_T^2) (c_T + U_0)^2}
+{(c_0^2 + v_A^2) c_T^2
+\left[ \frac{\rho_0}{\rho_1} \frac{(c_1^2 - (c_T + U_0)^2)^{1/2}}{c_1}
++ \frac{\rho_0}{\rho_2} \frac{(c_2^2 - (c_T + U_0)^2)^{1/2}}{c_2}
+\right]} \right).
+\end{equation}
+%
+Equation \eqref{eq:disprelslabthinsaussol} reduces to Equation (31) in \cite{Allcock2017} if $U_0 = 0$.
+From Equation \eqref{eq:disprelslabthinkink} we see that there is a solution with $\omega_{0} = 0$, and so the quasi-kink mode with $\omega^2 \to 0$ as $k x_0 \to 0$ is
+\begin{equation}
+\label{eq:disprelslabthinkinksol}
+\omega^2 \approx k x_0 \frac{2 \rho_0}{\rho_1 + \rho_2} (k^2 v_A^2 - k^2 U_0^2). 
+\end{equation}
+Equation \eqref{eq:disprelslabthinkinksol} simplifies to Equation (33) in \cite{Allcock2017} if $U_0 = 0$.
+\cite{Roberts1981b} also found a surface sausage mode solution with $\omega^2 \approx k^2 c_e^2$, however, this solution no longer exists unless a single exterior sound speed $c_1 = c_2 = c_e$ exists.
+
+The solutions obtained above do not constitute the full set of solutions for a thin slab since we assumed that $m_0 x_0 \to 0$ as $k x_0 \to 0$.
+We now wish to find solutions for which $m_0 x_0$ is non-zero and finite as $k x_0$ tends to zero.
+This only occurs if $|m_0^2| \to \infty$ as $k x_0 \to 0$, and consequently, $\Omega \to k^2 c_T^2$ as $k x_0 \to 0$.
+We see that in this case $m_0^2 < 0$ such that all solutions are body modes, and we introduce $n_0^2 = - m_0^2$.
+For these solutions to exist, we require that $n_0 \tan(n_0 x_0)$ and $n_0 \cot(n_0 x_0)$ in Equations \eqref{eq:disprelslabfact} are finite.
+For this to be the case, we require $n_0 x_0 \to \pi n$ for sausage modes, and $n_0 x_0 \to \pi ( n - 1/2)$ for kink modes, where $n$ is an integer.
+
+
+\begin{equation}
+\label{disprelslabthinsausbody}
+\Omega^2
+\approx k^2 c_T^2
+\left(1 + k^2 x_0^2 \dfrac{(v_A^2 - (c_T - U_0)^2 )(c_0^2 - (c_T - U_0)^2)}
+{c_0^2 v_A^2 \pi^2 n^2} \right),
+\end{equation}
+and one describing the set of quasi-kink modes
+\begin{equation}
+\label{disprelslabthinkinkbody}
+\Omega^2
+\approx k^2 c_T^2
+\left( 1 + k^2 x_0^2 \dfrac{(v_A^2 - (c_T - U_0)^2 )(c_0^2 - (c_T - U_0)^2)}
+{c_0^2 v_A^2 \pi^2 (n- \frac{1}{2})^2} \right),
+\end{equation}
+where $n = 1, 2, 3 \dots$.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Wide-slab Approximation}
+\label{subsec:wide}
+%------------------------------------------------------------------------------
+
+In the case of a wide slab, when the slab width is much larger than the wavelength, we demonstrate that the two interfaces that define the slab cease interacting.
+We begin by taking $k x_0 \gg 1$, which implies that, for surface modes, $m_0 x_0 \gg 1$ \citep[verified by][]{Roberts1981b}.
+In this approximation, $\tanh m_0 x_0 \approx \coth m_0 x_0 \approx 1$, which, when applied to Equation \eqref{eq:disprelslabc2}, allows us to factorise the dispersion relation into two equations,
+%
+\begin{equation}
+\label{eq:disprelwide}
+\frac{\rho_0 m_j}{\rho_j m_0} \left( k^2 v_A^2 - \Omega^2 \right) - \omega^2 = 0,
+\end{equation}
+%
+for $j=1,2$.
+Equation \eqref{eq:disprelwide} may be rearranged as
+%
+\begin{equation}
+\label{eq:disprelwide2}
+(R+1) c_{ph}^2 - 2 U_0 c_{ph} + U_0^2 - v_A^2 = 0,
+\end{equation}
+%
+where $c_{ph} = \omega / k$ is the phase speed, as introduced in Chapter 1, and
+%
+\begin{equation}
+\label{eq:Rdef}
+R = \frac{\rho_1 m_0}{\rho_0 m_1}.
+\end{equation}
+%
+Since $R$ depends on $c_{ph}$ we may not immediately solve Equation \eqref{eq:disprelwide2}.
+However, taking the incompressible limit, we obtain $R \to \rho_1 / \rho_0$, and
+%
+\begin{equation}
+\label{eq:disprelwidesol}
+c_{ph} = \frac{\rho_0}{ \rho_0 + \rho_j} U_0
+\pm \sqrt{\frac{\rho_0 + \rho_j}{\rho_0} v_A^2
+- \frac{\rho_j}{\rho_0} U_0^2}.
+\end{equation}
+%
+Using Equation \eqref{eq:disprelwidesol}, we recover the KHI criterion, Equation \eqref{eq:khiint}, where only one side of the interface is magnetic,
+%
+\begin{equation}
+\label{eq:khiwide}
+U_0^2 > \frac{\rho_0 + \rho_j}{\rho_j} v_A^2.
+\end{equation}
+%
+We, therefore, see that when a surface wave propagates along a wide slab, it behaves identically to two waves propagating on two independent interfaces.
+As a consequence, the KHI threshold is unchanged.
+Equation \eqref{eq:khiwide} will be employed in Section \ref{sec:numerics} to compare the analytical and numerical solutions to the dispersion relation.
+
+Body wave solutions in a wide slab also exist and are qualitatively different from surface waves.
+Since the velocity amplitude of the wave does not decay within the slab, but rather oscillates, the two interfaces that constitute the slab may not be independent.
+%We do not address the body mode solutions here since we do not require the explicit solutions for applications.
+\cite{Allcock2017} obtained formulas for the body mode solutions in a static slab in an asymmetric environment, which would only be changed by a Doppler-shift term in a steady slab.
+
+%For body mode solutions, the analysis is not as simple as for surface modes.
+%Since the velocity amplitude of the wave does not decay within the slab, but rather oscillates, the two interfaces that constitute the slab may not be independent.
+%In order to find body mode solutions we take the further approximation of the exterior densities being of the same order, such that we may write the dispersion relations for sausage and kink modes as
+
+%We look for solutions that satisfy $c_{ph} \to \min(c_0, v_A)$
+
+
+
+%------------------------------------------------------------------------------
+\section{General Numerical Solutions}
+\label{sec:numerics}
+%------------------------------------------------------------------------------
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Method}
+\label{subsec:nummethod}
+%------------------------------------------------------------------------------
+
+Let us find the general solutions to the dispersion relation, Equation \eqref{eq:disprelslabc2}.
+Since, to the best of our knowledge, the general solutions cannot be obtained analytically, we employ a numerical scheme.
+We begin by nondimensionalising all quantities with respect to the Alfv\'en speed and, beside using the already defined Alfv\'en Mach number $M_A = U_0/v_A$, and normalised phase speed $\bar c_{ph} = c_{ph} / v_A$, we also introduce the normalised sound speeds $\bar c_j = \sqrt{ c_j^2 / v_A^2 }$ (for j = 0, 1, 2), and normalised tube speed $\bar c_T = \sqrt{ c_T^2 / v_A^2 }$.
+
+In order to obtain general solutions to Equation \eqref{eq:disprelslabc2} we write it in nondimensional form by introducing the parameters defined above.
+The dispersion relation may then be written as
+%
+\begin{align}
+\label{eq:disprelnum}
+\begin{split}
+& R_1 R_2 M_1 M_2 \bar c_{ph}^4
++ \left[ 1 - ( \bar c_{ph} - M_A )^2 \right]^2
+\\[0.3cm]
+& - \frac{1}{2} \bar c_{ph}^2 \left[ 1 - ( \bar c_{ph} - M_A )^2 \right]
+\left( R_1 M_1 + R_2 M_2 \right)
+\big[ \tanh ( M_0 K ) + \coth ( M_0 K ) \big] = 0
+\end{split}
+\end{align}
+%
+where $R_1 = \rho_1/\rho_0$, $R_2 = \rho_2/\rho_0$, $K = k x_0$, and
+%
+\begin{align}
+\label{eq:Mj}
+\begin{split}
+M_0^2
+& = \frac{\big[1 - ( \bar c_{ph} - M_A )^2 \big] \big[\bar c_0^2 - ( \bar c_{ph} - M_A )^2 \big] }
+{ (1 + \bar c_0^2) \big[\bar c_T^2 - ( \bar c_{ph} - M_A )^2 \big] }
+\\[0.3cm]
+M_j^2 & = \frac{m_0^2}{m_j^2}
+= \frac{\bar c_j^2 \big[1 - ( \bar c_{ph} - M_A )^2 \big] \big[\bar c_0^2 - ( \bar c_{ph} - M_A )^2 \big] }
+{(\bar c_j^2 - \bar c_{ph} ) (1 + \bar c_0^2) \big[\bar c_T^2 - ( \bar c_{ph} - M_A )^2 \big] },
+\end{split}
+\end{align}
+%
+for $j = 1, 2$.
+
+%
+\begin{figure}[ht]
+\centering
+ \includegraphics[width=0.9\textwidth]{figures/wavenumber_example.png}
+ \caption{Example for finding solutions in terms of $K = k x_0$, for $M_A=0$, $R_1=R_2=1.4$, and $\bar c_0 = 0.6$.}
+ \label{fig:num_example}
+\end{figure}
+%
+
+We wish to solve Equation \eqref{eq:disprelnum} for $\bar c_{ph}$ with respect to the parameters $K$, $M_A$, $R_1$, $R_2$, $\bar c_0$.
+Note that $\bar c_T$, $\bar c_1$ and $\bar c_2$ are defined in terms of the parameters $R_1$, $R_2$, and $\bar c_0$.
+For the purposes of this Thesis, we will solve Equation \eqref{eq:disprelnum} for $\bar c_{ph}$ in terms of arbitrary $K$ or $M_A$, while keeping the other variable, as well as $R_1$, $R_2$, $\bar c_0$, fixed.
+
+Suppose we wish to find solutions to Equation \eqref{eq:disprelnum} for arbitrary $K$.
+Our method is as follows.
+We begin by defining two sets,
+%
+\begin{align}
+\begin{split}
+X & = \left\{ K^{(0)}, K^{(1)}, \dots, K^{(\hat x)} \right\},
+\\
+Y & = \left\{ \bar c_{ph}^{(0)}, \bar c_{ph}^{(1)}, \dots, \bar c_{ph}^{(\hat y)} \right\},
+\end{split}
+\end{align}
+%
+such that their Cartesian product,
+%
+\begin{equation}
+X \times Y = \left\{ (K, \bar c_{ph}) | K \in X,  \bar c_{ph} \in Y \right\},
+\end{equation}
+%
+forms a grid in the $K \bar c_{ph}$-plane.
+We use Newton's method to solve Equation \eqref{eq:disprelnum} with $\bar c_{ph} \in Y$ as starting points, and $K \in X$ constant.
+Note that this method may be used with any of the other parameters, $M_A$, $R_1$, $R_2$, $\bar c_0$, instead of $K$.
+
+Figure \ref{fig:num_example} is a rudimentary dispersion diagram of Equation \eqref{eq:disprelnum} which illustrates the method described above.
+We defined a $51 \times 51$ point grid, with $K^{(0)} = 0$, $K^{(50)} = 2$, $\bar c_{ph}^{(0)} = 0$ and $\bar c_{ph}^{(50)} = 0.9$, which appears in solid gray lines in the background of the figure.
+We define $M_A=0$, $R_1=R_2=1.4$, and $\bar c_0 = 0.6$ and apply our numerical scheme to find the solutions, which appear as blue dots.
+
+In order to obtain more elegant dispersion diagrams, we also employ the technique known as \emph{numerical continuation}.
+Using the method described above, we obtain a set of solutions, $S$, of Equation \eqref{eq:disprelnum}.
+We, then, select individual points, $(K, \bar c_{ph}) \in S$,  and use Newton's method to find solutions for $(K + \delta K, \bar c_{ph} + \delta \bar c_{ph})$.
+Here, $\delta K$ and $\delta \bar c_{ph}$ are small quantities, typically at least one order of magnitude smaller than $K$ and $\bar c_{ph}$, respectively.
+Employing this procedure allows us to obtain a line in the $K \bar c_{ph}$-plane, which represents the solution to Equation \eqref{eq:disprelnum} for variable $K$ and, although discrete, may be represented as a continuous line.
+We use this technique to obtain Figures \ref{fig:dense0} to \ref{fig:flow}.
+
+
+
+%------------------------------------------------------------------------------
+\subsection{Numerical Results}
+\label{subsec:numresults}
+%------------------------------------------------------------------------------
+
+Dispersion diagrams displaying general solutions to Equation \eqref{eq:disprelslabc2} may be found in Figures \ref{fig:dense0} to \ref{fig:flow}.
+They illustrate the behaviour of surface and body, quasi-sausage and quasi-kink modes, under the effect of a number of different values of $k x_0$ and $M_A$.
+Figures \ref{fig:dense0} to \ref{fig:evacuated3} contain four types of equilibrium conditions.
+Figures \ref{fig:dense0} to \ref{fig:dense3}, represent the case where $c_T < c_0 < v_A$ and the interior of the slab is denser than the exterior, while Figures \ref{fig:evacuated0} to \ref{fig:evacuated3} represent the case where $v_A < c_T < c_0$ and the exterior densities are greater than or equal to the interior.
+In order to better visualise the differences between the symmetric and asymmetric environments, we have included side-by-side phase diagrams that illustrate the change in behaviour due to the break in symmetry.
+Thus, the four types of equilibria are defined by the density of the interior of the slab as compared to the exterior regions (dense/sparse), and the symmetry of the exterior (symmetric/asymmetric).
+
+The imaginary part of the solutions to Equation \eqref{eq:disprelslabc2} is displayed in the dispersion diagrams where flow is present ($M_A \neq 0$) in order to make a distinction between stable and unstable modes.
+Stable modes correspond to purely real solutions, while unstable modes will have a non-zero imaginary component which will act as a growth factor since we assumed that all perturbations are proportional to $\mathrm{e}^{-i (\omega t - k z)}$.
+
+In Figure \ref{fig:dense0}a, we have recreated the dispersion diagram from \cite{Roberts1981b} for the slab in a symmetric environment with $c_T < c_0 < v_A$, while in Figure \ref{fig:dense0}b we introduced a density asymmetry.
+As established in Subsection \ref{subsec:modes}, slow surface modes have phase speed in the range $(0, c_T)$, slow body modes have phase speed in $(c_T, c_0)$, and fast surface modes propagate with phase speed in $(c_0, \min(c_1, c_2))$.
+Due to the asymmetry, the fast sausage mode is pushed into the hatched region and is not present in \ref{fig:dense0}b.
+
+Figures \ref{fig:dense1} illustrates how a background flow of $M_A = 0.4$ affects the phase diagrams for both the symmetric and asymmetric exteriors.
+We observe that this flow speed has broken the symmetry between forward and backward propagating solutions in both cases.
+Because of this, the set of forward propagating modes has been reduced to just the slow surface waves, but backward-propagating fast body modes now exist.
+Note that in \ref{fig:dense1}b, the asymmetry is not large enough for the forward propagating slow surface quasi-sausage mode to not be trapped.
+
+Figures \ref{fig:dense2} display the effects of a background flow of $M_A = 0.6$.
+This flow strength is strong enough to cause the slow body modes, which would have been backward propagating for lesser speeds, to now become forward propagating.
+We notice that the behaviour is identical in the two panels, meaning that the asymmetry in the equilibrium profiles does not affect the change in direction with increasing $M_A$.
+
+Figures \ref{fig:dense3} illustrate the behaviour of the system subject to a flow of $M_A = 0.9$, which is strong enough for the KHI to occur.
+We see that in the case of symmetric equilibrium profiles, the instability is restricted to a short range of values of $k x_0$ around 0.5.
+However, if the exterior parameters are asymmetric, the mode which was previously unstable in only that small interval, is now unstable for any value of $k x_0$ greater than the instability onset value.
+
+In Figure \ref{fig:evacuated0}a, we have recreated the dispersion diagram from \cite{Roberts1981b} for the slab in a symmetric environment with $v_A < c_T < c_0$, while in Figure \ref{fig:evacuated0}b we introduced a density asymmetry.
+As established in Subsection \ref{subsec:modes}, slow surface modes have phase speed in the range $(0, c_T)$, slow body modes have phase speed in $(c_T, v_A)$, and fast body modes propagate with phase speed in $(c_0, \min(c_1, c_2))$.
+In order for the fast body modes to no longer be trapped in the asymmetric system, we would require $\min(c_1, c_2) < c_0$.
+
+Figures \ref{fig:evacuated1} to \ref{fig:evacuated3} showcase the effects of a non-zero flow on the symmetric and asymmetric system for $v_A < c_T < c_0$.
+In order for the backward propagating slow body modes to become forward propagating, we require $M_A > 1$, as may be seen in Figure \ref{fig:evacuated2}.
+Figure \ref{fig:evacuated3} illustrates the fact that the slow kink mode is unstable for any value of $k x_0$ in the case of an asymmetric density profile.
+
+In Figures \ref{fig:flow}, the phase speed has been plotted with respect to $M_A$, for $k x_0 = 0.5$ and two different density ratios.
+Panel (a) represents a symmetric density profile, panel (b) an asymmetric one, and both satisfy $c_T < c_0 < v_A$.
+Comparing the two panels, it is immediately apparent that by increasing $\rho_2$, both the cut-off at $\bar c_2$ and the KHI threshold are lowered.
+Furthermore, the lowered cut-off introduces the possibility that modes are no longer trapped for some ranges of $M_A$.
+It is also worth noting that modes with $c_{ph} > \textrm{min}(c_1, c_2)$ may exist as long as they are unstable since they satisfy the condition that $c_{ph}^2 > \textrm{min}(c_1^2, c_2^2)$ and are thus trapped.
+The behaviour of the system is not qualitatively different if the characteristic speeds are ordered as $v_A < c_T < c_0$.
+
+Figures \ref{fig:threshold_wavenumber} showcase the effect of having an asymmetric density profile on the KHI threshold value.
+Throughout the panels, the green and red curves (plotted for $\rho_1 = \rho_2 =  \rho_0$ and $\rho_1 = \rho_2 = 2 \rho_0$, respectively) represent the symmetric density profiles.
+In the left panel, the blue curve also represents a symmetric density profile, corresponding to a lower density ratio of $\rho_1 = \rho_2 = 0.5 \rho_0$.
+This panel illustrates how, for symmetric density profiles, the KHI threshold increases, both with increasing values of $k x_0$, but also with decreasing values of the density ratios.
+As suggested by Equation \eqref{eq:disprelwide}, the threshold value for a wide slab tends to that of a single interface.
+The middle and right panels illustrate the effect of increasing asymmetry in the density ratios.
+Due to the lack of interaction between the interface when $k x_0 \gg 1$, the greater density ratio will determine the threshold value. However, if $k x_0 \lessapprox 1$, the densities on either side will play a role.
+
+Figure \ref{fig:threshold_density} compares the effects of increasing density ratios in the case of symmetric (left) and asymmetric slabs (centre).
+In both cases, three slab widths are considered: a thin slab (red), with $k x_0 = 0.1$, an ``intermediate" value of $k x_0 = 1$ (green), and a wide slab (blue), with $k x_0 = 10$.
+In the left panel, the exterior densities are assumed to be equal ($\rho_1 = \rho_2 = \rho_e$), while in the centre, we only assumed that $\rho_2/\rho_0 = 2$. 
+The effect of the asymmetry is most intense for small $k x_0$, when there is most interaction between the interfaces.
+The panel on the right illustrates how the wide asymmetric slab becomes unstable when the interface corresponding to the highest density ratio becomes unstable.
+For $\rho_1 < \rho_2$, the threshold corresponds to the interface with the constant density ratio (represented by the horizontal dotted line), while for $\rho_1 > \rho_2$, the threshold values tend to that of the interface with variable density ratio (represented by the dot-dashed curve).
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 2.5$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense0-1}}
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = 1.25, \rho_2 / \rho_0 = 2.5$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense0-2}}
+}
+\caption{The dispersion diagrams considering an interior that is dense, and no background flow ($M_A = 0$).
+Panel (a) illustrates the solutions obtained for symmetric exterior density profiles, while (b)illustrates the effects of breaking this symmetry.
+The shaded areas represent regions for which body modes propagate.
+The hatched regions contain no stable trapped solutions ($m_1^2 < 0$ or $m_2^2 < 0$).}
+\label{fig:dense0}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/3$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense1}}
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = 5/3, \rho_2 / \rho_0 = 5/2$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense2}}
+}
+\caption{The same as Figure \ref{fig:dense0}, but including a background flow of Alfv\'en Mach number $M_A = 0.4$.
+The flow has removed the forward propagating fast surface modes, and slow body modes.}
+\label{fig:dense1}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/3$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense3}}
+\hspace{3pt}
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = 5/3, \rho_2 / \rho_0 = 5/2$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense4}}
+}
+\caption{The same as Figure \ref{fig:dense0}, but including a background flow of Alfv\'en Mach number $M_A = 0.6$.
+The bulk flow is now strong enough to have caused the backward propagating slow body modes to become forward propagating.
+The asymmetric density profile does not affect the threshold value at which this happens.}
+\label{fig:dense2}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/3$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense5}}
+\hspace{3pt}
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = 5/3, \rho_2 / \rho_0 = 5/2$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/dense6}}
+}
+\caption{The same as Figure \ref{fig:dense0}, but including background flows of Alfv\'en Mach number $M_A = 0.9$.
+In the symmetric case, the KHI occurs for a small interval of $k x_0$.
+If the exterior density profile is sufficiently asymmetric, the slow kink mode becomes KH unstable for any value of $k x_0$ greater than some threshold value.}
+\label{fig:dense3}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/9$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated0-1}}
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = 5/9, \rho_2 / \rho_0 = 1$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated0-2}}
+}
+\caption{The dispersion diagrams considering an interior that is sparse, and no background flow ($M_A = 0$).
+Panel (a) illustrates the solutions obtained for a symmetric exterior density profile, while (b) illustrates the effects of breaking this symmetry.
+The shaded areas represent regions for which body modes propagate.
+The hatched regions contain no stable trapped solutions ($m_1^2 < 0$ or $m_2^2 < 0$).}
+\label{fig:evacuated0}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/9$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated1}}
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = 5/9, \rho_2 / \rho_0 = 5/7$.]
+{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated2}}
+}
+\caption{The same as Figure \ref{fig:evacuated0}, but including background flows of Alfv\'en Mach number $M_A = 0.4$.
+The flow has shifted the phase speed, but unlike in Figure \ref{fig:dense1} where the interior is dense, it has not removed any of the forward propagating modes.}
+\label{fig:evacuated1}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/9$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated3}}
+\hspace{3pt}
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = 5/9, \rho_2 / \rho_0 = 1$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated4}}
+}
+\caption{The same as Figure \ref{fig:evacuated0}, but including background flows of Alfv\'en Mach number $M_A = 1$.
+The bulk flow is now strong enough to have caused the backward propagating slow body modes to become forward propagating.
+As in the case of the dense interior, the asymmetric density profile does not affect the threshold value at which this happens.}
+\label{fig:evacuated2}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 5/9$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated5}}
+\hspace{3pt}
+\subfloat[$\bar c_0 = 1.3, \rho_1 / \rho_0 = 5/9, \rho_2 / \rho_0 = 5/6$.]{\includegraphics[width=0.4\textheight, height=0.9\textwidth]{figures/evacuated6}}
+}
+\caption{The same as Figure \ref{fig:evacuated0}, but including background flows of Alfv\'en Mach number $M_A = 1.4$.
+In the symmetric case, the KHI occurs for a small interval of $k x_0$.
+If the exterior density profile is sufficiently asymmetric, the slow kink mode becomes KH unstable for any value of $k x_0$.}
+\label{fig:evacuated3}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+%\vspace{2cm}
+\rotatebox[origin=c]{90}{
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = \rho_2 / \rho_0 = 1.4$.]
+{\includegraphics[width=0.8\textheight, height=0.9\textwidth]{figures/flow1}}
+}
+%\vspace{2cm}
+\end{figure}
+\begin{figure}[!ht]%\ContinuedFloat
+\centering
+\rotatebox[origin=c]{90}{
+\renewcommand{\thesubfigure}{b}
+\subfloat[$\bar c_0 = 0.6, \rho_1 / \rho_0 = 1.4, \rho_2 / \rho_0 = 3.4$.]{\includegraphics[width=0.8\textheight, height=0.9\textwidth]{figures/flow2}}
+}
+\caption{The normalised phase speed, $\bar c_{ph}$, plotted with respect to the Alfv\'en Mach number $M_A$, for $k x_0 = 0.5$.
+The density profile is symmetric in Panel (a), and asymmetric in Panel (b).
+The shaded areas represent regions where body modes propagate.
+The hatched regions contain no stable trapped solutions ($m_1^2 < 0$ or $m_2^2 < 0$). Increasing the density on just one side of the slab decreases the KH threshold and lowers cut-off speeds.}
+\label{fig:flow}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[keepaspectratio=true, width=\textwidth]{figures/threshold_wavenumber}
+\caption{The KHI threshold values of $M_A$, calculated for values of $k x_0$ from 0.05 to 2, for symmetric and asymmetric density profiles. The dashed lines represent the threshold values of a single interface and correspond to the density ratios of their respective colour.}
+\label{fig:threshold_wavenumber}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[keepaspectratio=true, width=\textwidth]{figures/threshold_density}
+\caption{The KHI threshold values of $M_A$, calculated for symmetric (left) and asymmetric density profiles (center, $\rho_2/\rho_0=2$).
+The panel on the right compares the threshold values obtained for the wide asymmetric slab to that of two non-interacting interfaces.
+The dotted horizontal line and the dot-dashed curve represent the threshold values for the interfaces with constant and variable density ratios, respectively.}
+\label{fig:threshold_density}
+\end{figure}
+
+
+
+%------------------------------------------------------------------------------
+\section{Applications}
+\label{sec:c2app}
+%------------------------------------------------------------------------------
+
+In the previous sections, we have derived the dispersion relation for a steady slab embedded in an asymmetric environment and obtained approximate and general solutions.
+We now wish to discuss possible applications of this model and how it compares to previous formulations.
+
+We will primarily focus on the observations described in \cite{Foullon2011} of a KHI at a CME flank.
+The event observed by the Atmospheric Imaging Assembly on board the \textit{Solar Dynamics Observatory} on November 3, 2010 was described as a series of Kelvin-Helmholtz vortices propagating at the flank of a CME.
+The region including the flank may be interpreted as a three-layer waveguide, with the dense CME core on one side, the CME flank in the middle, and the low density solar corona on the other side, as in Figure \ref{CME}.
+Since the core ejecta is much slower than the flank on the time scale of the instability, it is reasonable to approximate it as being static.
+
+Using the parameters measured by \cite{Foullon2011} and Equation \ref{eq:disprelslabc2} we wish to estimate the densities of the CME core and flank in relation to the coronal background density.
+We begin by assuming a background Alfv\'en speed $v_A = 800$ km s$^{-1}$, and sound speed $c_0 = 0.6 v_A$.
+The speeds of the ejecta flow and of the perturbations at the interface were measured to be $U_0 = 833 \pm 5 \, \mathrm{km \, s}^{-1}$, and $c_{ph} = 417 \pm 7 \, \mathrm{km \, s}^{-1}$, respectively.
+Using these values, we calculate the Alfv\'en Mach number of the flow, $M_A \approx 1.05$, and the non-dimensionalised phase speed, $\bar c_{ph} = 0.521 + \pm 0.009$.
+The wavenumber is measured as $k \approx 0.35$ Mm, and the width of the shear layer is estimated to be $2 x_0 \approx 2.25 \pm 1.5$ Mm, making $k x_0 \approx 0.394 \pm 0.263$.
+Since $k x_0 < 1$, there will be interactions between the boundaries of the shear layer, meaning that the density asymmetry will play an important roll in the formation of the KHI.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[keepaspectratio=true, width=\textwidth]{figures/CME}
+\caption{The KHI detected on the flank of the CME is displayed on the \textit{left}. The \textit{box on the right} is a schematic representation of the unstable region. For more details about the spatial and temporal evolution of this event, see \citet{Foullon2011}.}
+\label{CME}
+\end{figure}
+
+Before we start our analysis, we must first note that when the density contrast between the three regions is such that $\min\{\bar c_1, \bar c_2\} < \min\{\bar c_0 + M_A, 1 + M_A\}$, there exist no trapped fast modes (as is the case in Figure \ref{fig:flow}).
+Since we expect this to be the case, we immediately discount the fast modes.
+We interpret the observation as that of a slow kink mode propagating along a highly asymmetric steady slab.
+It has been shown by \cite{Allcock2017} that, for both slow and fast modes, the transverse component of the displacement is highly sensitive to the density asymmetry.
+The slow mode interpretation is therefore reasonable despite the fact that one would expect little transverse displacement in the low-beta coronal plasma.
+
+The results of the numerical analysis are presented in Figure \ref{flow_app}, where we assumed density ratios of $\rho_1/\rho_0 = 1.7$, and $\rho_2/\rho_0 = 10^{-6}$.
+For $M_A \approx 1.05$, we obtain $\bar c_{ph} = 0.526$, which matches the observed phase speed estimate of $\bar c_{ph} = 0.521 + \pm 0.009$.
+The growth rate of the instability, \textit{i.e.} the imaginary part of $\omega$, is calculated to be $\gamma \approx 0.023$ s$^{-1}$, which compares reasonably well with the observed growth rate of $\gamma = 0.05 \pm 0.03$ s$^{-1}$.
+
+We note that the choice of density ratios is significantly more sensitive on the interface separating the core from the flank.
+We were able to obtain values of $\bar c_{ph}$ and $\gamma$ in close agreement with the observations for values of $\rho_1/\rho_0$ in the range $(1.6 , 1.8)$.
+On the other hand, $\rho_2/\rho_0$ may be as high $10^{-3}$, with values lower than $10^{-6}$ having very little further effect.
+Our model is, therefore, in good agreement with the observations, and estimates the density of the CME ejecta to be at least 6 orders of magnitude higher than the background coronal density of $\approx 10^{-12}$ kg m$^{-3}$.
+
+Our interpretation is significantly more accurate than one by means of a single interface model.
+In such a model, one would have to assume an unrealistically low Alfv\'en speed in order to match the observed phase speed with a high density contrast.
+Otherwise, assuming a realistic Alfv\'en speed $v_A = 800$ km s$^{-1}$ would yield a density ratio of $\rho_2 / \rho_0 = 1/3$ between the flank and the corona, which would significantly underestimate the density of the CME.
+Similarly, the high density contrast could also not be obtained from a model of a slab in a symmetric environment.
+
+One limitation of our model is that it does not adequately explain the absence of the KHI on the inner interface, between the core and the flank.
+It is likely that the core is permeated by a strong magnetic field which inhibits the formation of the instability.
+This effect would have to be included in a more realistic interpretation.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[keepaspectratio=true, width=\textwidth]{figures/flow_app}
+\caption{The slow kink mode plotted for $c_0 = 0.6 v_A$, $\rho_1/\rho_0 = 1.7$, $\rho_2/\rho_0 = 10^{-6}$, and $k x_0 = 0.5$. The \textit{upper} and \textit{lower} panels contains the real and imaginary parts of the non-dimensionalised phase speed, respectively.}
+\label{flow_app}
+\end{figure}
+
+
+
+%------------------------------------------------------------------------------
+\section{Summary and Discussion}
+\label{sec:c2discussion}
+%------------------------------------------------------------------------------
+
+In this Chapter, we studied the effects of a steady flow on the propagation of magnetoacoustic waves in a magnetic slab in an asymmetric environment, and we examined the effects of the asymmetry on the KHI threshold value.
+In order to accomplish this, we derived the dispersion relation, Equation \eqref{eq:disprelslabc2}, from the ideal MHD equations (Subsections \ref{subsec:goveqint}, \ref{subsec:goveqext} and \ref{subsec:disprel}).
+Since our analysis is only concerned with trapped mode solutions, we first obtained necessary and sufficient conditions for their existence.
+We, then, classified them as surface or body, quasi-sausage or quasi-kink modes (Subsection \ref{subsec:modes}), and obtained analytical solutions using the incompressible, thin slab , and wide slab approximations (Section \ref{sec:analytical}).
+We also obtained general solutions to the dispersion relation and values for the KHI threshold under various parameter regimes (Section \ref{sec:numerics}).
+Finally, we present an application for the model with the aim of estimating the magnetic field strength of a KH unstable CME flank in Section \ref{sec:c2app}.
+
+The general numerical results, including the dispersion diagrams and KHI threshold values, are presented in Figures \ref{fig:dense0} to \ref{fig:threshold_density}.
+We found that the flow causes the symmetry between forward propagating ($c_{ph} > 0$) and backward propagating ($c_{ph} <0$) modes to break, causing various modes to no longer be trapped.
+Furthermore, it causes backward propagating modes to become forward propagating after some threshold value particular to the mode.
+Finally, flow speeds past a critical value will cause the KHI to occur.
+In terms of the solutions to Equation \eqref{eq:disprelslabc2}, this occurs when $\omega^2 < 0$, where the imaginary part of the solution acts as the growth rate in the time evolution of the wave, causing it to steepen.
+
+We wish to establish the qualitative effects of the asymmetry on the KHI in order to generalise the results of \cite{Allcock2017} on wave propagation.
+The authors found that asymmetry in the density profile asymmetrically modifies the amplitudes of the sausage and kink modes.
+In a symmetric slab, these modes would have anti-symmetric and symmetric amplitudes about the $z$-axis, respectively.
+However, the asymmetric density profile causes the quasi-sausage mode to increase in amplitude about the interface separating the interior from the lower density region, and decrease in amplitude about the other.
+The converse is true for the quasi-kink mode.
+
+While it is clear that the slab is asymmetrically unstable for $k x_0 \gg 1$, as shown by the analysis of Subsection \ref{subsec:wide}, we should consider the asymmetry for intermediate and low values of $k x_0$ as well.
+Considering the results of \cite{Allcock2017} described above, we suggest that for asymmetric density profiles and for intermediate or large values of $k x_0$, the slab may become asymmetrically unstable.
+A quasi-sausage wave would render KH unstable the boundary separating the sparser region from the interior, while the converse would be true for the quasi-kink due to the asymmetry in the wave amplitude (see also Figure \ref{fig:quasimodes}).
+It is unlikely that this is true for thin slabs since the boundaries interact strongly for both quasi-kink and quasi-sausage modes.
+This hypothesis should be checked by performing a more detailed analysis of the eigenfunctions which is beyond the scope of this Thesis.
+
+Highly asymmetric systems, such as the CME flank in \cite{Foullon2011}, are likely prone to KHIs as long as the boundaries of the slab interact.
+In that example, the low density of the corona stabilises the CME flank, while the high density core destabilises it, and we observe the KHI.
+Due to this configuration of CMEs not being uncommon, we suggest that the limited number of observations are not indicative of the number of instances of the KHI in these phenomena.
+Further study is need in order to determine its prevalence.
+Applications of this model are in no way limited to CME flanks, even though they received much attention in this Chapter.
+Any analysis of a steady configuration, whether solar or magnetospheric, that may be modelled using the ideal MHD equations and approximated by a slab geometry, would likely benefit from the inclusion of asymmetry.
