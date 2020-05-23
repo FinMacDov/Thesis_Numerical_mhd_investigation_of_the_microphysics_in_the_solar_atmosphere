@@ -1,234 +1,155 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Allcock and Erd{\'e}lyi(2017)]{Allcock2017}
-Matthew Allcock and Robert Erd{\'e}lyi.
-\newblock Magnetohydrodynamic waves in an asymmetric magnetic slab.
-\newblock \emph{Solar Physics}, 292\penalty0 (2):\penalty0 35, 2017.
-\newblock \doi{10.1007/s11207-017-1054-y}.
+\bibitem[{Belan} et~al.(2011){Belan}, {de Ponte}, {Tordella}, {Massaglia},
+  {Mignone}, {Bodenschatz}, and {Ferrari}]{Belan2011}
+Marco {Belan}, Sergio {de Ponte}, Daniela {Tordella}, Silvano {Massaglia},
+  Andrea {Mignone}, Eberhard {Bodenschatz}, and Attilio {Ferrari}.
+\newblock {Hydrodynamics of hypersonic jets: experiments and numerical
+  simulations}.
+\newblock \emph{\apss}, 336\penalty0 (1):\penalty0 9--14, November 2011.
+\newblock \doi{10.1007/s10509-011-0600-6}.
 
-\bibitem[{Allcock} and {Erd{\'e}lyi}(2018)]{Allcock2018}
-Matthew {Allcock} and Robert {Erd{\'e}lyi}.
-\newblock {Solar Magnetoseismology with Magnetoacoustic Surface Waves in
-  Asymmetric Magnetic Slab Waveguides}.
-\newblock \emph{\apj}, 855:\penalty0 90, March 2018.
-\newblock \doi{10.3847/1538-4357/aaad0c}.
+\bibitem[{Birkinshaw}(1996)]{Birkinshaw1996}
+M.~{Birkinshaw}.
+\newblock {Instabilities in Astrophysical Jets}.
+\newblock \emph{\apss}, 242\penalty0 (1-2):\penalty0 17--91, March 1996.
+\newblock \doi{10.1007/BF00645111}.
 
-\bibitem[Barbulescu and Erd{\'e}lyi(2018)]{Barbulescu2018}
-M.~Barbulescu and R.~Erd{\'e}lyi.
-\newblock Magnetoacoustic waves and the kelvin--helmholtz instability in a
-  steady asymmetric slab.
-\newblock \emph{Solar Physics}, 293\penalty0 (6):\penalty0 86, May 2018.
-\newblock ISSN 1573-093X.
-\newblock \doi{10.1007/s11207-018-1305-6}.
+\bibitem[{Blandford} et~al.(2019){Blandford}, {Meier}, and
+  {Readhead}]{Blandford2019}
+Roger {Blandford}, David {Meier}, and Anthony {Readhead}.
+\newblock {Relativistic Jets from Active Galactic Nuclei}.
+\newblock \emph{\araa}, 57:\penalty0 467--509, August 2019.
+\newblock \doi{10.1146/annurev-astro-081817-051948}.
 
-\bibitem[{Berger} et~al.(2010){Berger}, {Slater}, {Hurlburt}, {Shine},
-  {Tarbell}, {Title}, {Lites}, {Okamoto}, {Ichimoto}, {Katsukawa}, {Magara},
-  {Suematsu}, and {Shimizu}]{Berger2010}
-T.~E. {Berger}, G.~{Slater}, N.~{Hurlburt}, R.~{Shine}, T.~{Tarbell},
-  A.~{Title}, B.~W. {Lites}, T.~J. {Okamoto}, K.~{Ichimoto}, Y.~{Katsukawa},
-  T.~{Magara}, Y.~{Suematsu}, and T.~{Shimizu}.
-\newblock {Quiescent Prominence Dynamics Observed with the Hinode Solar Optical
-  Telescope. I. Turbulent Upflow Plumes}.
-\newblock \emph{The Astrophysical Journal}, 716:\penalty0 1288--1307, June
-  2010.
-\newblock \doi{10.1088/0004-637X/716/2/1288}.
+\bibitem[{\v{C}}ada and Torrilhon(2009)]{CADA20094118}
+Miroslav {\v{C}}ada and Manuel Torrilhon.
+\newblock {Compact third-order limiter functions for finite volume methods}.
+\newblock \emph{Journal of Computational Physics}, 228\penalty0 (11):\penalty0
+  4118--4145, 2009.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1016/j.jcp.2009.02.020}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021999109000953}.
 
-\bibitem[Cairns(1979)]{Cairns1979}
-R.~A. Cairns.
-\newblock The role of negative energy waves in some instabilities of parallel
-  flows.
-\newblock \emph{Journal of Fluid Mechanics}, 92\penalty0 (1):\penalty0 1–14,
-  1979.
-\newblock \doi{10.1017/S0022112079000495}.
+\bibitem[Chakrabarti(1988)]{Chakrabarti1988}
+S.~K. Chakrabarti.
+\newblock {On the dynamics of fluid in the working surface of a supersonic
+  jet}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  235\penalty0 (1):\penalty0 33--49, nov 1988.
+\newblock ISSN 0035-8711.
+\newblock \doi{10.1093/mnras/235.1.33}.
+\newblock URL
+  \url{https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/235.1.33}.
 
-\bibitem[{Foullon} et~al.(2011){Foullon}, {Verwichte}, {Nakariakov}, {Nykyri},
-  and {Farrugia}]{Foullon2011}
-C.~{Foullon}, E.~{Verwichte}, V.~M. {Nakariakov}, K.~{Nykyri}, and C.~J.
-  {Farrugia}.
-\newblock {Magnetic Kelvin-Helmholtz Instability at the Sun}.
-\newblock \emph{The Astrophysical Journal Letters}, 729:\penalty0 L8, March
-  2011.
-\newblock \doi{10.1088/2041-8205/729/1/L8}.
+\bibitem[{de Gouveia Dal Pino}(2005)]{DeGouveiaDalPino2005}
+Elisabete~M. {de Gouveia Dal Pino}.
+\newblock {Astrophysical jets and outflows}.
+\newblock \emph{Advances in Space Research}, 35\penalty0 (5):\penalty0
+  908--924, January 2005.
+\newblock \doi{10.1016/j.asr.2005.03.145}.
 
-\bibitem[{Foullon} et~al.(2013){Foullon}, {Verwichte}, {Nykyri}, {Aschwanden},
-  and {Hannah}]{Foullon2013}
-C.~{Foullon}, E.~{Verwichte}, K.~{Nykyri}, M.~J. {Aschwanden}, and I.~G.
-  {Hannah}.
-\newblock {Kelvin-Helmholtz Instability of the CME Reconnection Outflow Layer
-  in the Low Corona}.
-\newblock \emph{The Astrophysical Journal}, 767:\penalty0 170, April 2013.
-\newblock \doi{10.1088/0004-637X/767/2/170}.
+\bibitem[Dedner et~al.(2002)Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer, and
+  Wesenberg]{DEDNER2002645}
+A~Dedner, F~Kemm, D~Kr{\"{o}}ner, C.-D. Munz, T~Schnitzer, and M~Wesenberg.
+\newblock {Hyperbolic Divergence Cleaning for the MHD Equations}.
+\newblock \emph{Journal of Computational Physics}, 175\penalty0 (2):\penalty0
+  645--673, 2002.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1006/jcph.2001.6961}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S002199910196961X}.
 
-\bibitem[{Goedbloed}(2009{\natexlab{a}})]{Goedbloed2009a}
-J.~P. {Goedbloed}.
-\newblock {New construction of the magnetohydrodynamic spectrum of stationary
-  plasma flows. I. Solution path and alternator}.
-\newblock \emph{Physics of Plasmas}, 16\penalty0 (12):\penalty0 122110,
-  December 2009{\natexlab{a}}.
-\newblock \doi{10.1063/1.3271164}.
+\bibitem[Edgington-Mitchell et~al.(2014)Edgington-Mitchell, Honnery, and
+  Soria]{Edgington-Mitchell2014}
+Daniel Edgington-Mitchell, Damon~R. Honnery, and Julio Soria.
+\newblock {The underexpanded jet Mach disk and its associated shear layer}.
+\newblock \emph{Physics of Fluids}, 26\penalty0 (9):\penalty0 096101, sep 2014.
+\newblock ISSN 10897666.
+\newblock \doi{10.1063/1.4894741}.
+\newblock URL \url{http://aip.scitation.org/doi/10.1063/1.4894741}.
 
-\bibitem[{Goedbloed}(2009{\natexlab{b}})]{Goedbloed2009b}
-J.~P. {Goedbloed}.
-\newblock {New construction of the magnetohydrodynamic spectrum of stationary
-  plasma flows. II. Rayleigh-Taylor and Kelvin-Helmholtz instability}.
-\newblock \emph{Physics of Plasmas}, 16\penalty0 (12):\penalty0 122111,
-  December 2009{\natexlab{b}}.
-\newblock \doi{10.1063/1.3271166}.
+\bibitem[Harten et~al.(1983)Harten, Lax, and van. Leer]{hll_1983}
+Amiram. Harten, Peter~D Lax, and Bram van. Leer.
+\newblock {On Upstream Differencing and Godunov-Type Schemes for Hyperbolic
+  Conservation Laws}.
+\newblock \emph{SIAM Review}, 25\penalty0 (1):\penalty0 35--61, 1983.
+\newblock \doi{10.1137/1025002}.
+\newblock URL \url{https://doi.org/10.1137/1025002}.
 
-\bibitem[{Goedbloed}(2018{\natexlab{a}})]{Goedbloed2018a}
-J.~P. {Goedbloed}.
-\newblock {The Spectral Web of stationary plasma equilibria. I. General
-  theory}.
-\newblock \emph{Physics of Plasmas}, 25:\penalty0 032109, March
-  2018{\natexlab{a}}.
-\newblock \doi{10.1063/1.5019831}.
+\bibitem[{Keppens} et~al.(2012){Keppens}, {Meliani}, {van Marle}, {Delmont},
+  {Vlasis}, and {van der Holst}]{Keppens_2012}
+R.~{Keppens}, Z.~{Meliani}, A.~J. {van Marle}, P.~{Delmont}, A.~{Vlasis}, and
+  B.~{van der Holst}.
+\newblock {Parallel, grid-adaptive approaches for relativistic hydro and
+  magnetohydrodynamics}.
+\newblock \emph{Journal of Computational Physics}, 231:\penalty0 718--744,
+  February 2012.
+\newblock \doi{10.1016/j.jcp.2011.01.020}.
 
-\bibitem[{Goedbloed}(2018{\natexlab{b}})]{Goedbloed2018b}
-J.~P. {Goedbloed}.
-\newblock {The Spectral Web of stationary plasma equilibria. II. Internal
-  modes}.
-\newblock \emph{Physics of Plasmas}, 25:\penalty0 032110, March
-  2018{\natexlab{b}}.
-\newblock \doi{10.1063/1.5019838}.
+\bibitem[{Ku{\'z}ma} et~al.(2017){Ku{\'z}ma}, {Murawski}, {Kayshap},
+  {W{\'o}jcik}, {Srivastava}, and {Dwivedi}]{kuz2017ApJ}
+B.~{Ku{\'z}ma}, K.~{Murawski}, P.~{Kayshap}, D.~{W{\'o}jcik}, A.~K.
+  {Srivastava}, and B.~N. {Dwivedi}.
+\newblock {Two-fluid Numerical Simulations of Solar Spicules}.
+\newblock \emph{\apj}, 849:\penalty0 78, November 2017.
+\newblock \doi{10.3847/1538-4357/aa8ea1}.
 
-\bibitem[{Joarder} et~al.(1997){Joarder}, {Nakariakov}, and
-  {Roberts}]{Joarder1997}
-P.~S. {Joarder}, V.~M. {Nakariakov}, and B.~{Roberts}.
-\newblock {A Manifestation of Negative Energy Waves in the Solar Atmosphere}.
-\newblock \emph{Solar Physics}, 176:\penalty0 285--297, December 1997.
-\newblock \doi{10.1023/A:1004977928351}.
+\bibitem[Menon and Skews(2010)]{Menon2010}
+Nandkishore Menon and Beric~William Skews.
+\newblock {Shock wave configurations and flow structures in non-axisymmetric
+  underexpanded sonic jets}.
+\newblock \emph{Shock Waves}, 20\penalty0 (3):\penalty0 175--190, may 2010.
+\newblock ISSN 09381287.
+\newblock \doi{10.1007/s00193-010-0257-z}.
 
-\bibitem[{Kuridze} et~al.(2016){Kuridze}, {Zaqarashvili}, {Henriques},
-  {Mathioudakis}, {Keenan}, and {Hanslmeier}]{Kuridze2016}
-D.~{Kuridze}, T.~V. {Zaqarashvili}, V.~{Henriques}, M.~{Mathioudakis}, F.~P.
-  {Keenan}, and A.~{Hanslmeier}.
-\newblock {Kelvin-Helmholtz Instability in Solar Chromospheric Jets: Theory and
-  Observation}.
-\newblock \emph{The Astrophysical Journal}, 830:\penalty0 133, October 2016.
-\newblock \doi{10.3847/0004-637X/830/2/133}.
+\bibitem[{Norman} et~al.(1982){Norman}, {Winkler}, {Smarr}, and
+  {Smith}]{Norman1982}
+M.~L. {Norman}, K.~H.~A. {Winkler}, L.~{Smarr}, and M.~D. {Smith}.
+\newblock {Structure and dynamics of supersonic jets.}
+\newblock \emph{\aap}, 113:\penalty0 285--302, Sep 1982.
 
-\bibitem[{M{\"o}stl} et~al.(2013){M{\"o}stl}, {Temmer}, and
-  {Veronig}]{Mostl2013}
-U.~V. {M{\"o}stl}, M.~{Temmer}, and A.~M. {Veronig}.
-\newblock {The Kelvin-Helmholtz Instability at Coronal Mass Ejection Boundaries
-  in the Solar Corona: Observations and 2.5D MHD Simulations}.
-\newblock \emph{The Astrophysical Journal Letters}, 766:\penalty0 L12, March
-  2013.
-\newblock \doi{10.1088/2041-8205/766/1/L12}.
+\bibitem[Ono et~al.(2014)Ono, Yamamoto, and Koike]{Ono2014}
+Norifumi Ono, Masami Yamamoto, and Kazuo Koike.
+\newblock {Detection of shock structure around Mach disk in axisymmetric plasma
+  jet}.
+\newblock \emph{Vacuum}, 110:\penalty0 149--153, dec 2014.
+\newblock ISSN 0042207X.
+\newblock \doi{10.1016/j.vacuum.2014.05.010}.
 
-\bibitem[Nakariakov and Roberts(1995)]{Nakariakov1995}
-V.~M. Nakariakov and B.~Roberts.
-\newblock {Magnetosonic Waves in Structured Atmospheres with Steady Flows, I}.
-\newblock \emph{Solar Physics}, 159:\penalty0 213--228, 1995.
+\bibitem[{Porth} et~al.(2014){Porth}, {Xia}, {Hendrix}, {Moschou}, and
+  {Keppens}]{Porth_2014}
+O.~{Porth}, C.~{Xia}, T.~{Hendrix}, S.~P. {Moschou}, and R.~{Keppens}.
+\newblock {MPI-AMRVAC for Solar and Astrophysics}.
+\newblock \emph{\apjs}, 214:\penalty0 4, September 2014.
+\newblock \doi{10.1088/0067-0049/214/1/4}.
 
-\bibitem[{Ofman} and {Thompson}(2011)]{Ofman2011}
-L.~{Ofman} and B.~J. {Thompson}.
-\newblock {SDO/AIA Observation of Kelvin-Helmholtz Instability in the Solar
-  Corona}.
-\newblock \emph{The Astrophysical Journal Letters}, 734:\penalty0 L11, June
-  2011.
-\newblock \doi{10.1088/2041-8205/734/1/L11}.
+\bibitem[Shibata et~al.(1982)Shibata, Nishikawa, Kitai, and
+  Suematsu]{Shibata1982}
+Kazunari Shibata, Takara Nishikawa, Reizaburo Kitai, and Yoshinori Suematsu.
+\newblock {Numerical hydrodynamics of the jet phenomena in the solar atmosphere
+  - II. Surges}.
+\newblock \emph{Solar Physics}, 77\penalty0 (1-2):\penalty0 121--151, apr 1982.
+\newblock ISSN 00380938.
+\newblock \doi{10.1007/BF00156100}.
 
-\bibitem[{Roberts}(1981)]{Roberts1981b}
-B.~{Roberts}.
-\newblock {Wave Propagation in a Magnetically Structured Atmosphere. II: Waves
-  in a Magnetic Slab}.
-\newblock \emph{Solar Physics}, 69:\penalty0 39--56, January 1981.
-\newblock \doi{10.1007/BF00151254}.
+\bibitem[Singh et~al.(2019)Singh, Sharma, and Srivastava]{Singh2019}
+Balveer Singh, Kushagra Sharma, and Abhishek~K. Srivastava.
+\newblock {On modelling the kinematics and evolutionary properties of pressure
+  pulse driven impulsive solar jets}.
+\newblock aug 2019.
+\newblock URL \url{http://arxiv.org/abs/1908.11560}.
 
-\bibitem[{Ryutova}(2015)]{Ryutova2015}
-M.~{Ryutova}.
-\newblock \emph{{Physics of Magnetic Flux Tubes}}.
-\newblock 2015.
-\newblock \doi{10.1007/978-3-662-45243-1}.
-
-\bibitem[{Ryutova} et~al.(2010){Ryutova}, {Berger}, {Frank}, {Tarbell}, and
-  {Title}]{Ryutova2010}
-M.~{Ryutova}, T.~{Berger}, Z.~{Frank}, T.~{Tarbell}, and A.~{Title}.
-\newblock {Observation of Plasma Instabilities in Quiescent Prominences}.
-\newblock \emph{Solar Physics}, 267:\penalty0 75--94, November 2010.
-\newblock \doi{10.1007/s11207-010-9638-9}.
-
-\bibitem[{Soler} et~al.(2010){Soler}, {Terradas}, {Oliver}, {Ballester}, and
-  {Goossens}]{Soler2010}
-R.~{Soler}, J.~{Terradas}, R.~{Oliver}, J.~L. {Ballester}, and M.~{Goossens}.
-\newblock {Kelvin-Helmholtz Instability in Coronal Magnetic Flux Tubes due to
-  Azimuthal Shear Flows}.
-\newblock \emph{The Astrophysical Journal}, 712:\penalty0 875--882, April 2010.
-\newblock \doi{10.1088/0004-637X/712/2/875}.
-
-\bibitem[{Somasundaram} et~al.(1999){Somasundaram}, {Venkatraman}, and
-  {Sengottuvel}]{Somasundaram1999}
-K.~{Somasundaram}, S.~{Venkatraman}, and M.~P. {Sengottuvel}.
-\newblock {Hydromagnetic surface waves along compressible cylindrical flux
-  tubes with steady flows}.
-\newblock \emph{Plasma Physics and Controlled Fusion}, 41:\penalty0 1421--1428,
-  November 1999.
-\newblock \doi{10.1088/0741-3335/41/11/308}.
-
-\bibitem[{Taroyan} and {Erd{\'e}lyi}(2002)]{Taroyan2002}
-Y.~{Taroyan} and R.~{Erd{\'e}lyi}.
-\newblock {Resonant and Kelvin-Helmholtz instabilities on the magnetopause}.
-\newblock \emph{Physics of Plasmas}, 9:\penalty0 3121--3129, July 2002.
-\newblock \doi{10.1063/1.1481746}.
-
-\bibitem[Taroyan and Ruderman(2011)]{Taroyan2011}
-Y.~Taroyan and M.~S. Ruderman.
-\newblock Mhd waves and instabilities in space plasma flows.
-\newblock \emph{Space Science Reviews}, 158\penalty0 (2):\penalty0 505--523,
-  Jul 2011.
-\newblock \doi{10.1007/s11214-010-9737-9}.
-
-\bibitem[{Terra-Homem} et~al.(2003){Terra-Homem}, {Erd{\'e}lyi}, and
-  {Ballai}]{Terra-Homem2003}
-M.~{Terra-Homem}, R.~{Erd{\'e}lyi}, and I.~{Ballai}.
-\newblock {Linear and non-linear MHD wave propagation in steady-state magnetic
-  cylinders}.
-\newblock \emph{Solar Physics}, 217:\penalty0 199--223, November 2003.
-\newblock \doi{10.1023/B:SOLA.0000006901.22169.59}.
-
-\bibitem[{Tirry} et~al.(1998){Tirry}, {Cadez}, {Erdelyi}, and
-  {Goossens}]{Tirry1998}
-W.~J. {Tirry}, V.~M. {Cadez}, R.~{Erdelyi}, and M.~{Goossens}.
-\newblock {Resonant flow instability of MHD surface waves}.
-\newblock \emph{Astronomy and Astrophysics}, 332:\penalty0 786--794, April
-  1998.
-
-\bibitem[{Zaqarashvili} et~al.(2014){Zaqarashvili}, {V{\"o}r{\"o}s}, and
-  {Zhelyazkov}]{Zaqarashvili2014a}
-T.~V. {Zaqarashvili}, Z.~{V{\"o}r{\"o}s}, and I.~{Zhelyazkov}.
-\newblock {Kelvin-Helmholtz instability of twisted magnetic flux tubes in the
-  solar wind}.
-\newblock \emph{\aap}, 561:\penalty0 A62, January 2014.
-\newblock \doi{10.1051/0004-6361/201322808}.
-
-\bibitem[{Zaqarashvili} et~al.(2015){Zaqarashvili}, {Zhelyazkov}, and
-  {Ofman}]{Zaqarashvili2015}
-T.~V. {Zaqarashvili}, I.~{Zhelyazkov}, and L.~{Ofman}.
-\newblock {Stability of Rotating Magnetized Jets in the Solar Atmosphere. I.
-  Kelvin-Helmholtz Instability}.
-\newblock \emph{\apj}, 813:\penalty0 123, November 2015.
-\newblock \doi{10.1088/0004-637X/813/2/123}.
-
-\bibitem[{Zhelyazkov}(2015)]{Zhelyazkov2015}
-I.~{Zhelyazkov}.
-\newblock {On Modeling the Kelvin-Helmholtz Instability in Solar Atmosphere}.
-\newblock \emph{Journal of Astrophysics and Astronomy}, 36:\penalty0 233--254,
-  March 2015.
-\newblock \doi{10.1007/s12036-015-9332-2}.
-
-\bibitem[{Zs{\'a}mberger} et~al.(2018){Zs{\'a}mberger}, {Allcock}, and
-  {Erd{\'e}lyi}]{Zsamberger2018}
-No{\'e}mi~Kinga {Zs{\'a}mberger}, Matthew {Allcock}, and R{\'o}bert
-  {Erd{\'e}lyi}.
-\newblock {Magneto-acoustic Waves in a Magnetic Slab Embedded in an Asymmetric
-  Magnetic Environment: The Effects of Asymmetry}.
-\newblock \emph{\apj}, 853:\penalty0 136, February 2018.
-\newblock \doi{10.3847/1538-4357/aa9ffe}.
+\bibitem[{Xia} et~al.(2017){Xia}, {Teunissen}, {El Mellah}, {Chane}, and
+  {Keppens}]{Xia_2017}
+C.~{Xia}, J.~{Teunissen}, I.~{El Mellah}, E.~{Chane}, and R.~{Keppens}.
+\newblock {MPI-AMRVAC 2.0 for Solar and Astrophysical Applications}.
+\newblock \emph{ArXiv e-prints}, October 2017.
 
 \end{thebibliography}
