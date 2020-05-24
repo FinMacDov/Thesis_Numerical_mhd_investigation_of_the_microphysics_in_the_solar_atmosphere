@@ -1,4 +1,4 @@
-\begin{thebibliography}{100}
+\begin{thebibliography}{114}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -115,6 +115,13 @@ T.~{Cragg}, R.~{Howard}, and H.~{Zirin}.
 \newblock {Vertical Structures in the Chromosphere.}
 \newblock \emph{\apj}, 138:\penalty0 303, July 1963.
 \newblock \doi{10.1086/147643}.
+
+\bibitem[{De Moortel} et~al.(2003){De Moortel}, {Parnell}, and
+  {Hood}]{De_Moortel_2003SoPh}
+I.~{De Moortel}, C.~E. {Parnell}, and A.~W. {Hood}.
+\newblock {Determination of coronal loop properties from trace observations}.
+\newblock \emph{\solphys}, 215:\penalty0 69--86, July 2003.
+\newblock \doi{10.1023/A:1024856300248}.
 
 \bibitem[{De Pontieu}(2007)]{Pontieu2007ASPC}
 B.~{De Pontieu}.
@@ -248,6 +255,18 @@ A.~A. {Georgakilas}, S.~{Koutchmy}, and C.~E. {Alissandrakis}.
   and He BT II 304 Angstroms observations}.
 \newblock \emph{\aap}, 341:\penalty0 610--616, January 1999.
 
+\bibitem[Goedbloed and Poedts(2004)]{goedbloed2004principles}
+Johan~Peter Goedbloed and Stefaan Poedts.
+\newblock \emph{Principles of magnetohydrodynamics: with applications to
+  laboratory and astrophysical plasmas}.
+\newblock Cambridge university press, 2004.
+
+\bibitem[{Griffiths} et~al.(2013){Griffiths}, {Fedun}, {Mumford}, and
+  {Gent}]{Griffiths2013}
+M.~{Griffiths}, V.~{Fedun}, S.~{Mumford}, and F.~{Gent}.
+\newblock {SAC: Sheffield Advanced Code}.
+\newblock Astrophysics Source Code Library, June 2013.
+
 \bibitem[{Grossmann-Doerth} and {Schmidt}(1992)]{Grossmann1992AA264236G}
 U.~{Grossmann-Doerth} and W.~{Schmidt}.
 \newblock {Chromospheric fine structure revisited}.
@@ -275,6 +294,14 @@ L.~{Heggland}, B.~{De Pontieu}, and V.~H. {Hansteen}.
 \newblock {Numerical Simulations of Shock Wave-driven Chromospheric Jets}.
 \newblock \emph{\apj}, 666\penalty0 (2):\penalty0 1277--1283, September 2007.
 \newblock \doi{10.1086/518828}.
+
+\bibitem[{Henriques} et~al.(2016){Henriques}, {Kuridze}, {Mathioudakis}, and
+  {Keenan}]{Henriques2016}
+V.~M.~J. {Henriques}, D.~{Kuridze}, M.~{Mathioudakis}, and F.~P. {Keenan}.
+\newblock {Quiet-Sun H{$\alpha$} Transients and Corresponding Small-scale
+  Transition Region and Coronal Heating}.
+\newblock \emph{\apj}, 820:\penalty0 124, April 2016.
+\newblock \doi{10.3847/0004-637X/820/2/124}.
 
 \bibitem[{Ichimoto} et~al.(2008){Ichimoto}, {Lites}, {Elmore}, {Suematsu},
   {Tsuneta}, {Katsukawa}, {Shimizu}, {Shine}, {Tarbell}, {Title}, {Kiyohara},
@@ -314,6 +341,16 @@ Margarita {Karovska} and Shadia~Rifai {Habbal}.
 \newblock {Dynamical Structure of Extreme Ultraviolet Macrospicules}.
 \newblock \emph{\apjl}, 431:\penalty0 L59, August 1994.
 \newblock \doi{10.1086/187472}.
+
+\bibitem[{Keppens} et~al.(2012){Keppens}, {Meliani}, {van Marle}, {Delmont},
+  {Vlasis}, and {van der Holst}]{Keppens_2012}
+R.~{Keppens}, Z.~{Meliani}, A.~J. {van Marle}, P.~{Delmont}, A.~{Vlasis}, and
+  B.~{van der Holst}.
+\newblock {Parallel, grid-adaptive approaches for relativistic hydro and
+  magnetohydrodynamics}.
+\newblock \emph{Journal of Computational Physics}, 231:\penalty0 718--744,
+  February 2012.
+\newblock \doi{10.1016/j.jcp.2011.01.020}.
 
 \bibitem[{Kiss} et~al.(2017){Kiss}, {Gyenge}, and
   {Erd{\'e}lyi}]{Kiss2017ApJ83547K}
@@ -362,6 +399,11 @@ B.~J. {Labonte}.
   Halpha and D$_{3}$.}
 \newblock \emph{\solphys}, 61\penalty0 (2):\penalty0 283--296, March 1979.
 \newblock \doi{10.1007/BF00150413}.
+
+\bibitem[{Lang}(2006)]{Lang_2006ses}
+K.~R. {Lang}.
+\newblock \emph{{Sun, Earth and Sky}}.
+\newblock 2006.
 
 \bibitem[{Langangen} et~al.(2008{\natexlab{a}}){Langangen}, {De Pontieu},
   {Carlsson}, {Hansteen}, {Cauzzi}, and {Reardon}]{Langangen2008ApJ}
@@ -431,6 +473,13 @@ Sarah~A. {Matthews}, Manuel {Collados}, Mihalis {Mathioudakis}, and Robertus
 \newblock 2016.
 \newblock \doi{10.1117/12.2234145}.
 
+\bibitem[{McWhirter} et~al.(1975){McWhirter}, {Thonemann}, and
+  {Wilson}]{McWhirter1975}
+R.~W.~P. {McWhirter}, P.~C. {Thonemann}, and R.~{Wilson}.
+\newblock {The heating of the solar corona. II - A model based on energy
+  balance}.
+\newblock \emph{\aap}, 40:\penalty0 63--73, April 1975.
+
 \bibitem[{Morton} et~al.(2012){Morton}, {Verth}, {Jess}, {Kuridze}, {Ruderman},
   {Mathioudakis}, and {Erd{\'e}lyi}]{Morton2012NatCo31315M}
 Richard~J. {Morton}, Gary {Verth}, David~B. {Jess}, David {Kuridze}, Michael~S.
@@ -439,6 +488,27 @@ Richard~J. {Morton}, Gary {Verth}, David~B. {Jess}, David {Kuridze}, Michael~S.
   chromosphere}.
 \newblock \emph{Nature Communications}, 3:\penalty0 1315, December 2012.
 \newblock \doi{10.1038/ncomms2324}.
+
+\bibitem[{Mullan}(2009)]{mullan2009physics}
+D.J. {Mullan}.
+\newblock \emph{{Physics of the Sun: A First Course}}.
+\newblock Pure and Applied Physics. CRC Press, 2009.
+\newblock ISBN 9781420083088.
+\newblock URL \url{https://books.google.be/books?id=owTMBQAAQBAJ}.
+
+\bibitem[{Nakariakov} and {Ofman}(2001)]{Nakariakov_2001}
+V.~M. {Nakariakov} and L.~{Ofman}.
+\newblock {Determination of the coronal magnetic field by coronal loop
+  oscillations}.
+\newblock \emph{\aap}, 372:\penalty0 L53--L56, June 2001.
+\newblock \doi{10.1051/0004-6361:20010607}.
+
+\bibitem[Narayanan(2014)]{narayanan2014introduction}
+A.S. Narayanan.
+\newblock \emph{An Introduction to Waves and Oscillations in the Sun}.
+\newblock Astronomy and Astrophysics Library. Springer New York, 2014.
+\newblock ISBN 9781489995964.
+\newblock URL \url{https://books.google.be/books?id=Wm3woQEACAAJ}.
 
 \bibitem[{Parenti} et~al.(2002){Parenti}, {Bromage}, and
   {Bromage}]{Parenti2002AA384303P}
@@ -515,6 +585,13 @@ G.~A. {Porfir'eva} and G.~V. {Yakunina}.
 \newblock {Chromospheric spicules and solar corona}.
 \newblock \emph{Astronomical and Astrophysical Transactions}, 29\penalty0
   (4):\penalty0 567--580, December 2016.
+
+\bibitem[Priest(2014)]{priest2014magnetohydrodynamics}
+E.~Priest.
+\newblock \emph{Magnetohydrodynamics of the Sun}.
+\newblock Cambridge University Press, 2014.
+\newblock ISBN 9780521854719.
+\newblock URL \url{https://books.google.co.uk/books?id=BrbSAgAAQBAJ}.
 
 \bibitem[Raouafi et~al.(2016)Raouafi, Patsourakos, Pariat, Young, Sterling,
   Savcheva, Shimojo, Moreno-Insertis, DeVore, Archontis, T{\"{o}}r{\"{o}}k,
@@ -605,6 +682,14 @@ Goran~B. {Scharmer}, Peter~M. {Dettori}, Mats~G. {Lofdahl}, and Mark {Shand}.
   (SPIE) Conference Series}, pages 370--380.
 \newblock 2003{\natexlab{b}}.
 \newblock \doi{10.1117/12.460387}.
+
+\bibitem[{Scullion} et~al.(2011){Scullion}, {Erd{\'e}lyi}, {Fedun}, and
+  {Doyle}]{Scullion2011}
+E.~{Scullion}, R.~{Erd{\'e}lyi}, V.~{Fedun}, and J.~G. {Doyle}.
+\newblock {The Response of A Three-dimensional Solar Atmosphere to Wave-driven
+  Jets}.
+\newblock \emph{\apj}, 743:\penalty0 14, December 2011.
+\newblock \doi{10.1088/0004-637X/743/1/14}.
 
 \bibitem[{Sekse} et~al.(2012){Sekse}, {Rouppe van der Voort}, and {De
   Pontieu}]{Sekse2012ApJ}
@@ -762,6 +847,21 @@ Michiel {van Noort}, Luc {Rouppe van der Voort}, and Mats~G. {L{\"o}fdahl}.
   With Multiple Objects And Phase Diversity}.
 \newblock \emph{\solphys}, 228\penalty0 (1-2):\penalty0 191--215, May 2005.
 \newblock \doi{10.1007/s11207-005-5782-z}.
+
+\bibitem[{Vernazza} et~al.(1981){Vernazza}, {Avrett}, and
+  {Loeser}]{Vernazza_1981ApJS}
+J.~E. {Vernazza}, E.~H. {Avrett}, and R.~{Loeser}.
+\newblock {Structure of the solar chromosphere. III - Models of the EUV
+  brightness components of the quiet-sun}.
+\newblock \emph{\apjs}, 45:\penalty0 635--725, April 1981.
+\newblock \doi{10.1086/190731}.
+
+\bibitem[{Verwichte} et~al.(2013){Verwichte}, {Van Doorsselaere}, {White}, and
+  {Antolin}]{Verwichte_2013A_A}
+E.~{Verwichte}, T.~{Van Doorsselaere}, R.~S. {White}, and P.~{Antolin}.
+\newblock {Statistical seismology of transverse waves in the solar corona}.
+\newblock \emph{\aap}, 552:\penalty0 A138, April 2013.
+\newblock \doi{10.1051/0004-6361/201220456}.
 
 \bibitem[{von der Luehe}(1993)]{von1993AA268374V}
 O.~{von der Luehe}.
