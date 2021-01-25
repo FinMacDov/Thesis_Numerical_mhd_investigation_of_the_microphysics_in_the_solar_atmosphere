@@ -96,7 +96,7 @@
   \end{figure}}
 \newcommand{\kms}{~\rm{km ~s^{-1}}}
 \newcommand{\kgm}{~\rm{kg ~m^{-3}}}
-
+\newcommand{\np}{\\ \\}
 \begin{document}
 
 \baselineskip=18pt
@@ -111,11 +111,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{The Dynamics of Straight Jets in a Solar Atmosphere}
-
-%------------------------------------------------------------------------------
-\section*{Abstract}
-%------------------------------------------------------------------------------
-
+%-------------------------------------------------------------------------------
 \let\thefootnote\relax\footnotetext{
 
 This chapter is based on the following refereed journal article:
@@ -123,12 +119,11 @@ This chapter is based on the following refereed journal article:
 \item Barbulescu, M., Erd\'elyi, R. (2018); Magnetoacoustic Waves and the Kelvin-Helmholtz Instability in a Steady Asymmetric Slab. I: The Effects of Varying Density Ratios, \solphys, Volume 293, Issue 6
 \end{itemize}
 }
-Todo
 %------------------------------------------------------------------------------
 \section{Introduction}
 \label{sec:c2intro}
 %------------------------------------------------------------------------------
-
+Despite the numerous numerical simulation, very few papers simulating solar jets include an investigation of a parameter space.
 %------------------------------------------------------------------------------
 \section{Numerical Recipe}
 \label{sec:Numerical}
@@ -223,9 +218,44 @@ where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ 
 %------------------------------------------------------------------------------      
 \subsection{Parameter Space}
 \label{subsec:paramater_space}
-%------------------------------------------------------------------------------      
-The parameter space chosen for investigation is $P=50,~200$ and $300~\rm{s}$ (driver times), $B_y=20,~40,~60,~80,~100~\rm{G}$ (magnetic filed strength) and $A=20,~40,~60$ and $80 \kms$ (initial amplitudes). These values are based around typical values for classical spicules. The driver times based on the $5$ minute oscillation of the p-mode \citep{Leighton1962ApJ135474L}, as they are potential driver for multiple solar features (spicules, mottles  and dynamic fibrils) \citep{Pontieu2004Natur}. The magnetic field strength are in the ranges observed values for spicules which is consistent with spectropolarimetric estimates for limb spicules \citep{centeno2010, suarez2015}. The range of velocities are chosen based on the energy need to lift near photospheric mass ($?\kgm$) and observsed sppeds seen in spicules which have a range of $?-?\kms$ !Need to get a group of citations!.
+%------------------------------------------------------------------------------
+The parameter space chosen for investigation is $P=50,~200$ and $300~\rm{s}$ (driver times), $B_y=20,~40,~60,~80,~100~\rm{G}$ (magnetic filed strength) and $A=20,~40,~60$ and $80 \kms$ (initial amplitudes). These values are based around typical values for classical spicules. The driver times based on the $5$ minute oscillation of the p-mode \citep{Leighton1962ApJ135474L}, as they are potential driver for multiple solar features (spicules, mottles  and dynamic fibrils) \citep{Pontieu2004Natur}. The magnetic field strength are in the ranges observed values for spicules which is consistent with spectropolarimetric estimates for limb spicules \citep{centeno2010, suarez2015}. The range of velocities are chosen based on the energy need to lift near photospheric mass ($?\kgm$) and observed speeds seen in spicules which have a range of $?-?\kms$ !Need to get a group of citations!. \np
 % may include a summarry table in the intro that is used in presenations, then we could refere to it in text.
+%
+%fffffffffffffffffffffffffff
+\mfig{1}{figures/jet_P300_B60A_60T_0103.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
+%fffffffffffffffffffffffffff
+To understand the jet dynamics we need to quantify important aspects of the jet, e.g. speed, life time, trajectory and jet boundary deformation. This is achieved by temporally tracking the jets width (solid blue dots) and apex (yellow triangle), using jet tracking software (see \fref{j_track_example}). The jet tracking software we developed uses the tracer quantity developed by \cite{Porth_2014}, to locate each data point. The tracer follows the mass flow of jet as it enters the computational domain and is assigned a non-physical value of $100$ (jet value). To separate jet pixels from non-jet pixels we use a threshold of tracer value being greater than $15\%$ of the jet value to convert into binary array where $1$ belongs jet cell and $0$ is assumed to be ambient medium. At specified height intervals (our case every $1 \rm{Mm}$) horizontal slices are taken to identify jet side boundaries and the the apex is located by finding the highest vertical index belonging to the jet.
+%fffffffffffffffffffffffffff
+\mfig{1}{figures/jet_traj.png}{The effect of the parameter space on the jet trajectory. Each panel is grouped together by initial amplitude and from top left to bottom right they are group by $A= 20, ~40, ~60$ and $80 \kms$. Units are omitted from legend for readability, the units for $P,~B$ and $A$ are $\rm{s}~, \rm{G}$ and $\kms$, respectively.}{pscan_traj}
+%fffffffffffffffffffffffffff
+% !possibley add figs for these!!!!!!!!!!
+By temporally tracking (see \fref{pscan_traj}) the apex data we seen that the jets have parabolic trajectories. These trajectories have been compared to expected ballistic trajectories and found to be non-ballistic. Solar jet-like features such as spicules, mottles and dynamic fibrils have been shown to have non-ballistic parabolic trajectories e.g. mottles, dynamic fibrils and TI spicules \citep{ Hansteen2006ApJ,Rouppe2007ApJ660L169R,Pontieu2007PASJ}, which is in agreement with our simulations. In \fref{pscan_traj} exhibits that for driver $<40 \kms$ then we are reaching the limits of spicules heights. In each panel there is a subgroup reaching lower heights due reduced driving time. \np  
+%
+These jet-like events are predicted to have linear correlation between deceleration and maximum velocity and if the jet is initiated with shock waves the relationship is defined by the following \citep{Heggland2007ApJ6661277H},
+\begin{equation}
+d = \frac{v_{max}}{P_{w}/2},
+\end{equation}
+where $d$ is declaration, $v_{max}$ is the maximum velocity during the lifetime of the jet and $P_{wave}$ is the period of the wave. In !fig (todo)! !1! we show that our jets have a linear relationship, by that found in \citep{Heggland2007ApJ6661277H}, but this is due to the nature in which these jets are driven as it is not a short pulse like event, the parameter $P_{w}=P$, which in our cases is linked to the life time of the jet rather than the period of a wave. While we find that we match observation with a linear correlation, its not with the same gradient of line as theoretically predicted for these jet-like events. \np
+%fffffffffffffffffffffffffff
+\mfig{1}{figures/test_combine_image.png}{The effects of the parameter space on both the max apex (panels on the left) and mean jet widths (panels on right). Units are omitted from legend for readability, $P,~B$ and $A$ are in $\rm{s},~\rm{G}$ and $\kms$, respectively}{pscan_full}
+%fffffffffffffffffffffffffff
+%--------------
+To obtain a global understanding of the impact of the key parameters investigated, we compared how each parameter effect the max apex height and average width of the jet over its entire lift cycle. In \fref{pscan_full}, the panels to the left, top to bottom show the impact of changing $B$, $P$ and $A$ on the maximum apex reached during the jets lifetime. Varying the magnetic field strength has little impact on the heights reached by a jet as all the line have fairly shallow gradients. The driver time has small effect on the jet heights, we see a slight decrease in height for $p=50$, but then peaks for $P=200~\rm{s}$ and $P=300~\rm{s}$. In both previously mentioned parameters, there group of colors and line styles for $B$ and $P$ scans, respectively indicating that as shown in that last panel on the left, that the initial amplitude is the most import parameter in determine the max apex reached by solar jets. \np     
+% need to edit
+The impact of the parameter scan on the apex jet heights (panels to the left) and the mean jet widths (panels to the right) as displayed in \fref{parameter_scan_lines}. For apex heights the strength of the magnetic has minimal impact with field aligned flow, however it is important to note that the magnetic field could play a significant role in jet heights if the launching direction was not in-line with the magnetic field. The driver time has impacts on maximum height where for a short driver time of $50$ s there is a reduction in heights reached by the jets, but plateaus once it reaches $200$ s. For both the magnetic field strength and driver time the data is grouped by line color and line style, respectively. This corresponds to them having the same amplitude of driver, implying that the amplitude of the driver is the main parameter in determining the jets apex. The apex height of the jet is mainly determined by the maximum amplitude reached by the driver and it shows a parabolic trend. By making the assumption based on our data that $B$ and $P$ have minimal impact on maximum jet height, then it possible to model the jet height with a power law,
+\begin{equation}
+h_{max} = C v_j^{n},
+\end{equation} 
+by collapsing the data by taking a average at each velocity data point and then fit an optimal curve using least squares obtaining values of $C= 10^{-2.21}$ and $n= 1.72$ as shown in lowest panel on the LHS in \fref{parameter_scan_lines}. Visually and from the power law, both clearly show that for our choice of driver it doesn't have a linear trend between apex jet height and pulse strength as reported in \cite{Singh2019}. We should take note that in \cite{Singh2019} an instant pressure pulse close to the TR was used as a driver, which may not be directly comparable to our study. \np 
+%
+The effect of the parameter space on the jet widths are show on the panels on the right hand side \fref{parameter_scan_lines}. To obtain the width data, it is measured at every megameter the jet reaches and the mean value is calculated over the whole life of the jet. This is by no means a perfect method, but does give useful insight into the global deformation of the jet boundary and returns result that make physical sense. For example by varying the magnetic field strength we observe that the weaker the field strength the less collimated the jet is. This is because as the jet rises it has a higher pressure than the ambient medium cause it to expand and bend surrounding field lines. The stronger the magnetic field lines, the greater tension they have and thus greater collimation of the jet. This parameter scan suggests that for regions with strong magnetic field the jet widths should be reduced and this trend should be noticeable in observations {\color{green} Can you think of any study that has reported this or looked into this?}. By increasing the driving time, it increases the jet widths and we observe a linear trend in the data. This is because with a longer driver more material is supplied to the jet, thus increasing the jet widths. The lines are grouped together based on their magnetic field strength represent by matching colors due to collimation from the magnetic field. This parameter scan indicates the amplitude of the driver has minimal effect on jet widths for magnetic field aligned flow. With non-field aligned flow we suspect this parameter would have a greater effect on jet widths, but this needs to be confirmed. \np
+%
+Based on the results of the parameter scan we define a ``standard'' jet, the one we believe most reflective of classical spicules. This is depicted in \fref{standard_jet}, with $P=300$ s, $B=60$ G and $A=60$ km s$^{-1}$ where the top, middle and bottom panels show changes in the density, temperature and numerical Schlieren shown in terms of normalized density gradient magnitude. The numerical Schlieren is defined as follows,
+\begin{equation}
+    S_{ch} = \exp{\left( -c_0 \left[ \frac{|\boldsymbol{\nabla} \rho|-c_1 |\boldsymbol{\nabla} \rho|_{max}}{c_2 |\boldsymbol{\nabla} \rho|_{max}-c_1|\boldsymbol{\nabla} \rho|_{max}} \right] \right)}, 
+\end{equation}
+
 %------------------------------------------------------------------------------      
 \subsection{Jet Head}
 \label{subsec:j_head}
@@ -253,12 +283,6 @@ From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that spe
 \par We have developed software to track the max jet heights (!get image example!) as it evolves and to measure the widths of the jet every megameter. The software tracts the jet using the tracer quantity that was set in simulation. A tracer tracks the density evoultion of th simaultion as described in \cite{Porth_2014}, we assign the jet with a vlaue 100 and everthing else as 0. We then set a threshold of $15\%$ of the jet value and convert into binary image (1 belong to jet and 0 not belonging to jet). To find the edges we take a horizontal slice every mega meter and look for changes and peak of the jet by taking the highest index value in the vertical. From this we create a data set which is used to produce Figs. (\ref{max_h_vs_b}-\ref{hight_dt}). We study how the different driver times, magnetic and drive amplitude effect the max height and average widths of the jet to see what effect this has on the jet morphology. From \fref{max_h_vs_b} it shows that strength of the magnetic has minimal impact on the max height reach by the jet. It important to note that the magnetic field may play a significant role in max jet heights if jets direction was not in-line with the magnetic field. As we can see from the color bands which corresponds to max amplitude reached by driver, this suggest that this is a key parameter for the max jet height. In \fref{max_h_vs_a} we conclude that max height is the jet mainly determined by the max amplitude reached by the driver with a parabolic trend. We observe that for our driver which is a momentum pulse we don't not get a linear trend between max jet height and pulse strength as reported in \cite{Singh2019}. \cite{Singh2019} used a a single instantaneous pressure pulse placed $1.8$ Mm. This suggests that height at which the driver is placed, its amplitude and its duration of driving is driven important to jet evolution. For example the longer distance that a pulse has to travel through the chromosphere to the TR the stronger the shocks the grow and the higher the jets will reach \citep{Shibata1982}. In \fref{max_h_vs_a} wee see that the driver time has some impact on max height. It shows that for short driver time of $50$ s there is a reduction in heights reached by the jets and there is no significant different between jet heights for a 200 and 300 s driver. We can see that the lines are banded together with matching line styles which again corresponds to matching velocities of the driver and reinforces that initial velocity is the main factor in determining max jet height if jet direction is inline with the magnetic field direction.
 %------------------------
 \par In \fref{mean_w_vs_A} we observe that the initial amplitude has little effect on jet widths. We a see pairing between drivers with $200$ and $300$ s, indicated by matching line styles, which is expected based on \fref{mean_w_vs_A}. The only parameter this doesn't apply is for $B=20 G$, this is due to the jet being weakly confined by the magentic feild. In \fref{mean_w_vs_dt} shows a linear trend between driving time, this is because with a longer driver more material will be supplied to the jet. There can also be a pile up in the jet beam as falling material interacts with raising material causing the jet to slighly ballon. We can see that the lines are grouped together based on their magnetic field strength represent by matching colors. This is an expected result as for weaker magnetic fields we get much larger jets widths, this is due to the magnetic field not being strong enough to compress the jet as it raises. Where as where the magnetic feild is stronger we observe that the jet widths are significantly reduced. This interpretation is evidenced by \fref{mean_w_vs_b} where we see larger jet widths for weaker magnetic field. We observe that they are group by there driver times as they have matching line styles. In \fref{hight_dt} we take use a the following paramters $P=300$ s, $B=50$ G and $A=60$ km s$^{-1}$ and run it with a much higher cadence in output. Each line in this \fref{hight_dt} represents a different height in the jet. We clearly the boundary of the jet are osculating over time. We don't see this phenomenon in simulations with a jet driven with a single instant pulse (!double check this claim! such as \citep{kuz2017ApJ,Singh2019}) we don't observe oscillations in there jet simulations, even though clearly in observations solar jets they oscillate (get refs). In Figs. (\ref{A20}-\ref{A80}) we have plotted the trajector of the max height of the jet over time, each Fig. is a displays all jets with the same driving amplitude. We find that our jets have a asymmetric parabolic path as reported in \cite{Singh2019}. We believe this is due to a piling of jet material as the jet begins to falls as falling matter will interact with raising matter. This will slow the jets decent. It is possible the magnetic field could impede the jets decent if the direction of falling material was at an angle with respect the magnetic field. We can see that heights reached are within the limits of what is expected for spicules. 
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/jet_P300_B60A_60T_0103.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/jet_traj.png}{The effect of the parameter space on the jet trajectory. Each panel is grouped together by initial amplitude and from top left to bottom right they are group by $A= 20, ~40, ~60$ and $80 \kms$. }{pscan_traj}
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/h_and_width_multi_image.eps}{The effects of the parameter space on both the max apex (panels ont he left) and mean jet widths (panels on right).}{pscan_full}
 %fffffffffffffffffffffffffff
 \mfig{0.8}{figures/jet_P300_B60A_60_t_1_10_13_19.png}{Simulation of jet in Stratified atmosphere with uniform magnetic field in vertical direction. This is the ``standard" jet with parameter $P=300$ s, $B=60$ G, $A=60$ km s$^{-1}$. Top, middle and bottom panels show density, temperature and numerical Schlieren respectively.}{jet_simulation}
 %fffffffffffffffffffffffffff
