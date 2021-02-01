@@ -1,8 +1,10 @@
 \documentclass[12pt, twoside]{uosthesis}
-
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{multirow}
 \usepackage{amssymb}
 \usepackage{titlesec}
 \usepackage{amsmath}
+\DeclareMathOperator{\arcsec}{arcsec}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -18,6 +20,9 @@
 \usepackage{siunitx}
 \usepackage{combelow}
 \usepackage{afterpage}
+\usepackage{xfrac}
+\usepackage{ulem}       % To use \sout
+\usepackage{enumitem}
 
 \usepackage{geometry}
  \geometry{
@@ -68,14 +73,41 @@
 \newcommand{\caa}{{\it Chinese Astron. Astrohpys.}} 
 \newcommand{\apjs}{    {\it Astrophys. J. Suppl.}}
 
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\bn}{\boldsymbol{\nabla}}
+\newcommand{\rgas}{\mathcal{R}}
+\newcommand{\eref}[1]{Eq. \eqref{#1}}
+\newcommand{\fref}[1]{Fig. \eqref{#1}}
+\newcommand\encircle[1]{%
+  \tikz[baseline=(X.base)] 
+    \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
+\newcommand{\Alfven}{Alfv\'{e}n } 
+\newcommand{\Alfvenic}{Alfv\'{e}nic }
+\newcommand{\size}{0.75}
+\newcommand\measureISpecification{4ex}% not defined in mwe
+\newcommand{\ctab}[1]{\raisebox{\dimexpr \measureISpecification/2 -.748ex}{#1}}% vertically centers numbers
+\newcommand{\mfig}[4]{
+  \begin{figure}
+  \begin{center}
+  \includegraphics[width=#1\linewidth]{#2}
+  \caption{#3}
+  \label{#4}
+  \end{center}
+  \end{figure}}
+\newcommand{\kms}{~\rm{km ~s^{-1}}}
+\newcommand{\kgm}{~\rm{kg ~m^{-3}}}
+\newcommand{\np}{\\ \\}
+%y amstext
+\newcommand{\angstrom}{\textup{\AA}}
+
 \def\UrlFont{\sf}
 
-\title{Models of Magnetohydrodynamic Flow Instabilities with Applications to the Solar Atmosphere}   %note \\[1ex] is a line break in the title
+\title{Numerical Magnetohydrodynamic Investigation of the Microphysics in the Solar Atmosphere}   %note \\[1ex] is a line break in the title
 
-\author{Mihai Barbulescu}
+\author{Fionnlagh Iain Mackenzie Dover}
 
 \degree{Doctor of Philosophy}
-\degreedate{July 2018}
+\degreedate{April 2021}
 
 \begin{document}
 
@@ -113,7 +145,8 @@
 \include{1.0_Chapter_I/chapter1}
 \include{2.0_Chapter_II/chapter2}
 \include{3.0_Chapter_III/chapter3}
-\include{4.0_Conclusions/conclusions}
+\include{4.0_Chapter_IV/chapter4}
+\include{5.0_Conclusions/conclusions}
 
 %now enable appendix numbering format and include any appendices
 \appendix

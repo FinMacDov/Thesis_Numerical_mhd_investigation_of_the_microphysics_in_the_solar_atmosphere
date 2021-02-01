@@ -108,12 +108,10 @@
 {
 \large
 \vspace*{20mm}
-{\huge \textsc{\@author}}
+{\LARGE \textsc{\@author}}
 \par
 \vspace*{5mm}
-{\Large Professor \textsc{R\'obert Erd\'elyi},
-\\
-Professor \textsc{Michael S. Ruderman}}
+{\Large Professor \textsc{R\'obert Erd\'elyi}}
 \par
 }
 {

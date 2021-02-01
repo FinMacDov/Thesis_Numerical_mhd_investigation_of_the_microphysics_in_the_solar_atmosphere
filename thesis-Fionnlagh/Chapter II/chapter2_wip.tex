@@ -110,7 +110,7 @@
 % START COPYING HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{The Dynamics of Straight Jets in a Solar Atmosphere}
+\chapter{The Dynamics of Filed-aligned Jets in a Solar Atmosphere}
 %-------------------------------------------------------------------------------
 \let\thefootnote\relax\footnotetext{
 
@@ -124,99 +124,8 @@ This chapter is based on the following refereed journal article:
 \label{sec:c2intro}
 %------------------------------------------------------------------------------
 Despite the numerous numerical simulation, very few papers simulating solar jets include an investigation of a parameter space.
-%------------------------------------------------------------------------------
-\section{Numerical Recipe}
-\label{sec:Numerical}
-%------------------------------------------------------------------------------
-We present numerical simulations of solar jets in a 2D setting. We use the grid-adaptive MPI-AMRVAC version 2.0 software developed at KU Leuven \citep{Xia_2017,Keppens_2012,Porth_2014}, which solves the MHD equations in the following form (included gravity as an additional source term),
-\begin{equation} \label{eq1}
-\partial_t \rho + \bn \cdot (\bs{v} \rho) = 0 ,
-\end{equation}   
-\begin{equation}\label{eq2}
-\partial_t (\rho \bs{v})  + \bn \cdot ( \bs{v} \rho \bs{v} - \bs{BB}) + \bn p_{tot} = \rho \bs{g},
-\end{equation}
-\begin{equation}\label{eq3}
-\partial_t e + \bn \cdot (\bs{v} e - \bs{BB}\cdot\bs{v}+\bs{v}p_{tot}) = \rho \bs{g} \cdot \bs{v} ,
-\end{equation}
-\begin{equation}\label{eq4}
-\partial_t \bs{B} + \bn \cdot (\bs{vB}-\bs{Bv} ) = 0 .
-\end{equation}
-This is the full system of the MHD equations, with the following variables: time ($t$), mass density ($\rho$), plasma velocity $\bs{v}$, magnetic field ($\bs{B}$). The total pressure ($p_{tot}$) and total energy density ($e$) is given respectively by,
-\begin{equation}
-p_{tot} = p+\frac{\bs{B}^2}{2},
-\end{equation}
-\begin{equation}
-e = \frac{p}{\gamma-1}+ \frac{\rho \bs{v}^2+\bs{B}^2}{2},
-\end{equation}
-where $\gamma=5/3$ denoted the ratio of specific heats. Solar gravitational acceleration is given by,
-\begin{equation}
-\bs{g}=-\frac{GM_{\astrosun}}{r^2}\hat{r},
-\end{equation}
-where $G$ is the gravitational constant and $M_{\astrosun}$ denotes the solar mass. 
-%------------------------------------------------------------------------------
-\section{Atmospheric Equilibrium}
-\label{sec:atmos_equil}
-%------------------------------------------------------------------------------
-The transition region is located at $2$ Mm where the temperature smoothly connects an $8000$ K photosphere to $1.5$ MK corona as shown in \fref{atoms_profile}. The temperature of the atmosphere as a function of height is mathematically represented as,   
-\begin{equation}\label{te_pro}
-T_0(y>0) = T_{ch}+\frac{T_{c} - T_{ch}}{2} \left[ \tanh \left( \frac{y-y_{tr}}{w_{tr}} \right)+1 \right],
-\end{equation}
-where $y$ is the vertical position, $T_0(0)=T_{ch}=8\times10^3 \ \rm{K}$ ($T_{c}=1.8\times10^6 \ \rm{K}$) is the chromospheric (coronal) temperature and $y_{tr}=2$ Mm ($w_{tr}=0.02$ Mm) is the TR height (width). As there is a uniform vertical magnetic, hence $\bs{J} \times \bs{B}=0$ and magnetohydrostatic equilibrium is achieved with,
-\begin{equation}
-\frac{dp}{dy} = - \rho g.
-\end{equation}
-Temperature and pressure are related through the ideal gas law,
-\begin{equation}
-p = \frac{ \rho \rgas T}{M},
-\end{equation} 
-where $M$ is the mean atomic weight, $T$ is the temperature and $\rgas$ is the universal gas constant. Therefore, one can obtain the $\rho$ and $p$ in the following form,  
-\begin{equation}\label{p_pro}
-p(y) = p_0 \exp \left( - \int_0^y  \frac{1}{H(y')} dy' \right), 
-\end{equation} 
-\begin{equation}\label{rho_pro}
-\rho(y) = \rho_0 \frac{T_0}{T(y)} \exp \left( \int_0^y \frac{1}{H(y') }dy' \right),
-\end{equation}
-where $\rho_0$ and $p_0$ are the initial mass density and pressure equilibrium, respectively, at the lower boundary of the computational domain, and the pressure scale heights are given by,
-\begin{equation}
-H(y) = \frac{\rgas T(y)}{Mg}.
-\end{equation}
-Using the temperature profile given by \eref{te_pro} and taking $\rho_0 = 2.34e-4\times10^{-4}\;\rm{kg}\;\rm{m^{-3}}$ we construct pressure and mass density as function of height by means of \eref{p_pro} and \eref{rho_pro}.
-%------------------------------------------------------------------------------
-\section{Numerical Method}
-\label{sec:Numerical_Method}
-%------------------------------------------------------------------------------
-We use the open source MPI-AMRVAC software version 2.0 \cite{Xia_2017} to simulation solar jets in a simple solar atmosphere. We set the domain size to $50$ Mm $\times$ $30$ Mm with a level one resolution of $32$ $\times$ $24$ (giving a physical resolution of $\sim$ $1.56$ Mm $\times$ $1.25$ Mm). This coarse level one resolution was chosen to allow the dissipation of shocks as they travel towards the boundaries. To accurately capture the sharpness of the TR we applied 7 levels of AMR giving a spatial resolution of $\sim$ $12$ km$\times$ $10$ km. We use unidirectional grid stretching in the horizontal direction, where from the origin the grid cells change by a constant factor of $1.1$ from cell to cell. Due to the choice of discretisation scheme for the boundary conditions, we employ ghost cells of 2 grid layers encasing the physical domain in each direction, which have a physical size of $3 \ \rm{Mm}$. The numerical scheme applied for spatial discretisation is HLL (Harten-Lax-van Leer) \cite{hll_1983} and a third order \u{C}ada limiter \citep{CADA20094118} for the time discretisation. We use CFL number of $0.8$ and GLM-MHD method to maintain $\bs{\nabla} \cdot \bs{B}=0$ \citep{DEDNER2002645}. The initial magneto-hydrostatics stratification places the TR at $2$ Mm where the temperature smoothly links $8000$ K chromosphere to a $1.8$ Mm corona (see Fig. 1). For the left and right boundary we utilise a periodic boundary condition. In the  ghost cells of the lower boundary we fix $\rho$, $e$ and $\bs{B}$ to their initial values. In the ghost cells for the upper boundary the values for $\rho$, $e$ are determined by the gravitational stratification and $\bs{B}$ was extrapolated assuming zero normal gradient. For both upper and lower boundary we take an antisymmetric boundary for the velocity components.
-%fffffffffffffffffffffff
-\mfig{1}{figures/combine_1.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
-%fffffffffffffffffffffffff
 %------------------------------------------------------------------------------      
-\subsection{Driver}
-\label{subsec:driver}
-%------------------------------------------------------------------------------
-To drive the jet we us a momentum pulse at the base of computational domain for a specified period of time (ranging from $50-300s$). The jet is launched symmetrically by a driver in the center of the computational domain which varies both spatially and temporally. In the x-direction the jet vertical velocity is Gaussian with the FHWM of $350 \ \rm{km}$ ($j_w$) and as the jet evolves in time it will reach a switch off phase in which it will shut off with a hyperbolic tangent,
-\begin{equation}
-v_{j}(x) = -\frac{A}{2} \left( \tanh \left( \frac{\pi (t-t_{d})}{t_d}+ \pi \right) +1 \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
-\end{equation}    
-where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ is time, $t_{d}$ is the time for $v_j=0$ , $P$ is the period of the driver and $x_0$ is central location of the jet injection. The driver the width of the Gaussian is determined by $\Delta x$ which is the FWHM based of the jet width (see \fref{atoms_profile}),
-\begin{equation}
-\Delta x = \dfrac{j_w}{4 \sqrt{2 \log{2}}},
-\end{equation}  
-%fffffffffffffffffffff
-%\begin{figure}
-%\hspace{-1.5cm}
-%\captionsetup[subfigure]{labelformat=empty}
-%\subfloat[]{\includegraphics[width=0.6\linewidth]{figures/driver_dt_off.png}} 
-%\subfloat[]{\includegraphics[width=0.6\linewidth]{figures/driver_dx.png}} 
-%\caption{Example of driver velocity with $A=60$ km s$^{-1}$, $P$ and switch off time of $300$ s (LHS) and Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points (RHS).}
-%\label{fig4}
-%\end{figure}
-%ffffffffffffffffffffff
-%------------------------------------------------------------------------------      
-\section{Simulation data}
-\label{sec:sim_data}
-%------------------------------------------------------------------------------    
-%------------------------------------------------------------------------------      
-\subsection{Parameter Space}
+\section{Parameter Space}
 \label{subsec:paramater_space}
 %------------------------------------------------------------------------------
 The parameter space chosen for investigation is $P=50,~200$ and $300~\rm{s}$ (driver times), $B_y=20,~40,~60,~80,~100~\rm{G}$ (magnetic filed strength) and $A=20,~40,~60$ and $80 \kms$ (initial amplitudes). These values are based around typical values for classical spicules. The driver times based on the $5$ minute oscillation of the p-mode \citep{Leighton1962ApJ135474L}, as they are potential driver for multiple solar features (spicules, mottles  and dynamic fibrils) \citep{Pontieu2004Natur}. The magnetic field strength are in the ranges observed values for spicules which is consistent with spectropolarimetric estimates for limb spicules \citep{centeno2010, suarez2015}. The range of velocities are chosen based on the energy need to lift near photospheric mass ($?\kgm$) and observed speeds seen in spicules which have a range of $?-?\kms$ !Need to get a group of citations!. \np
@@ -226,6 +135,9 @@ The parameter space chosen for investigation is $P=50,~200$ and $300~\rm{s}$ (dr
 \mfig{1}{figures/jet_P300_B60A_60T_0103.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
 %fffffffffffffffffffffffffff
 To understand the jet dynamics we need to quantify important aspects of the jet, e.g. speed, life time, trajectory and jet boundary deformation. This is achieved by temporally tracking the jets width (solid blue dots) and apex (yellow triangle), using jet tracking software (see \fref{j_track_example}). The jet tracking software we developed uses the tracer quantity developed by \cite{Porth_2014}, to locate each data point. The tracer follows the mass flow of jet as it enters the computational domain and is assigned a non-physical value of $100$ (jet value). To separate jet pixels from non-jet pixels we use a threshold of tracer value being greater than $15\%$ of the jet value to convert into binary array where $1$ belongs jet cell and $0$ is assumed to be ambient medium. At specified height intervals (our case every $1 \rm{Mm}$) horizontal slices are taken to identify jet side boundaries and the the apex is located by finding the highest vertical index belonging to the jet.
+\subsection{Jet Tracking}
+\subsection{Jet Trajectories}
+\subsection{Effects on Jet Apex and Widths}
 %fffffffffffffffffffffffffff
 \mfig{1}{figures/jet_traj.png}{The effect of the parameter space on the jet trajectory. Each panel is grouped together by initial amplitude and from top left to bottom right they are group by $A= 20, ~40, ~60$ and $80 \kms$. Units are omitted from legend for readability, the units for $P,~B$ and $A$ are $\rm{s}~, \rm{G}$ and $\kms$, respectively.}{pscan_traj}
 %fffffffffffffffffffffffffff
@@ -236,19 +148,18 @@ These jet-like events are predicted to have linear correlation between decelerat
 \begin{equation}
 d = \frac{v_{max}}{P_{w}/2},
 \end{equation}
-where $d$ is declaration, $v_{max}$ is the maximum velocity during the lifetime of the jet and $P_{wave}$ is the period of the wave. In !fig (todo)! !1! we show that our jets have a linear relationship, by that found in \citep{Heggland2007ApJ6661277H}, but this is due to the nature in which these jets are driven as it is not a short pulse like event, the parameter $P_{w}=P$, which in our cases is linked to the life time of the jet rather than the period of a wave. While we find that we match observation with a linear correlation, its not with the same gradient of line as theoretically predicted for these jet-like events. \np
+where $d$ is declaration, $v_{max}$ is the maximum velocity during the lifetime of the jet and $P_{wave}$ is the period of the wave. In !fig (todo)! !!1! we show that our jets have a linear relationship, by that found in \citep{Heggland2007ApJ6661277H}, but this is due to the nature in which these jets are driven as it is not a short pulse like event, the parameter $P_{w}=P$, which in our cases is linked to the life time of the jet rather than the period of a wave. While we find that we match observation with a linear correlation, its not with the same gradient of line as theoretically predicted for these jet-like events. \np
 %fffffffffffffffffffffffffff
 \mfig{1}{figures/test_combine_image.png}{The effects of the parameter space on both the max apex (panels on the left) and mean jet widths (panels on right). Units are omitted from legend for readability, $P,~B$ and $A$ are in $\rm{s},~\rm{G}$ and $\kms$, respectively}{pscan_full}
 %fffffffffffffffffffffffffff
-%--------------
-To obtain a global understanding of the impact of the key parameters investigated, we compared how each parameter effect the max apex height and average width of the jet over its entire lift cycle. In \fref{pscan_full}, the panels to the left, top to bottom show the impact of changing $B$, $P$ and $A$ on the maximum apex reached during the jets lifetime. Varying the magnetic field strength has little impact on the heights reached by a jet as all the line have fairly shallow gradients. The driver time has small effect on the jet heights, we see a slight decrease in height for $p=50$, but then peaks for $P=200~\rm{s}$ and $P=300~\rm{s}$. In both previously mentioned parameters, there group of colors and line styles for $B$ and $P$ scans, respectively indicating that as shown in that last panel on the left, that the initial amplitude is the most import parameter in determine the max apex reached by solar jets. \np     
-% need to edit
-The impact of the parameter scan on the apex jet heights (panels to the left) and the mean jet widths (panels to the right) as displayed in \fref{parameter_scan_lines}. For apex heights the strength of the magnetic has minimal impact with field aligned flow, however it is important to note that the magnetic field could play a significant role in jet heights if the launching direction was not in-line with the magnetic field. The driver time has impacts on maximum height where for a short driver time of $50$ s there is a reduction in heights reached by the jets, but plateaus once it reaches $200$ s. For both the magnetic field strength and driver time the data is grouped by line color and line style, respectively. This corresponds to them having the same amplitude of driver, implying that the amplitude of the driver is the main parameter in determining the jets apex. The apex height of the jet is mainly determined by the maximum amplitude reached by the driver and it shows a parabolic trend. By making the assumption based on our data that $B$ and $P$ have minimal impact on maximum jet height, then it possible to model the jet height with a power law,
+To understand the global impact of the key parameters investigated, we compared how each parameter effects the max apex height and average width of the jet over its entire lift cycle. In \fref{pscan_full}, the panels to the left, top to bottom show the influence of changing $B$, $P$ and $A$ on the maximum apex reached during the jets lifetime. Varying the magnetic field strength has little impact on the heights reached by a jet as all lines have shallow gradients. This parameter could potentially have a larger effect of jet heights if the flow of the jet is not aligned with he magnetic field. This particular aspect is investigated in chapter !!(?)!.  The driver time has small effect on the jet heights, there is a slight decrease in height for $p=50$, but then peaks for $P=200~\rm{s}$ and $P=300~\rm{s}$. This suggested to transport mass from lower in the atmosphere through the solar atmosphere then a instantaneous pulse will not be sufficient, there needs to be longer driver time. In both previously mentioned parameters, they are grouped by colors and line styles for $B$ and $P$ scans, which corresponds to matching initial amplitudes. This alludes to initial amplitude being the most important parameter for determining jet heights, as indicated by the last leftmost panel in \fref{pscan_full}. The maximum height reached by a solar jet is mainly determined by the initial Amplitude of the driver and has a parabolic trend. As the magnetic field plays small role in jet heioghts and as the driver time flattens at $200~\rm{s}$, our best chance of observing a jet is with longer driving times, therefore we can model that jet heights with a simple power law of the form, 
 \begin{equation}
 h_{max} = C v_j^{n},
 \end{equation} 
-by collapsing the data by taking a average at each velocity data point and then fit an optimal curve using least squares obtaining values of $C= 10^{-2.21}$ and $n= 1.72$ as shown in lowest panel on the LHS in \fref{parameter_scan_lines}. Visually and from the power law, both clearly show that for our choice of driver it doesn't have a linear trend between apex jet height and pulse strength as reported in \cite{Singh2019}. We should take note that in \cite{Singh2019} an instant pressure pulse close to the TR was used as a driver, which may not be directly comparable to our study. \np 
+by collapsing the data by taking a average at each velocity data point and then fit an optimal curve using least squares obtaining values of $C= 10^{-2.21}$ and $n= 1.72$ as shown in leftmost lowest panel in \fref{pscan_full} as a solid red line with solid data markers. The light blue shading gives and error range of . Visually and from the power law, both clearly show that for our choice of driver it doesn't have a linear trend between apex jet height and pulse strength, which contradicts results in \cite{Singh2019}. We should take note that in \cite{Singh2019} an instant pressure pulse close to the TR was used as a driver, which may not be directly comparable to our study. \np     
 %
+On the panels to the right of \fref{pscan_full} shows the effect of the parameter space on the mean widths. The means widths are calculated measure the width of the jet for every $1~\rm{Mm}$ over the entire life time of the jet. This metric is not perfect, but gives useful overview of the impact of these parameters that make physical sense.     
+% need to edit ---------------------
 The effect of the parameter space on the jet widths are show on the panels on the right hand side \fref{parameter_scan_lines}. To obtain the width data, it is measured at every megameter the jet reaches and the mean value is calculated over the whole life of the jet. This is by no means a perfect method, but does give useful insight into the global deformation of the jet boundary and returns result that make physical sense. For example by varying the magnetic field strength we observe that the weaker the field strength the less collimated the jet is. This is because as the jet rises it has a higher pressure than the ambient medium cause it to expand and bend surrounding field lines. The stronger the magnetic field lines, the greater tension they have and thus greater collimation of the jet. This parameter scan suggests that for regions with strong magnetic field the jet widths should be reduced and this trend should be noticeable in observations {\color{green} Can you think of any study that has reported this or looked into this?}. By increasing the driving time, it increases the jet widths and we observe a linear trend in the data. This is because with a longer driver more material is supplied to the jet, thus increasing the jet widths. The lines are grouped together based on their magnetic field strength represent by matching colors due to collimation from the magnetic field. This parameter scan indicates the amplitude of the driver has minimal effect on jet widths for magnetic field aligned flow. With non-field aligned flow we suspect this parameter would have a greater effect on jet widths, but this needs to be confirmed. \np
 %
 Based on the results of the parameter scan we define a ``standard'' jet, the one we believe most reflective of classical spicules. This is depicted in \fref{standard_jet}, with $P=300$ s, $B=60$ G and $A=60$ km s$^{-1}$ where the top, middle and bottom panels show changes in the density, temperature and numerical Schlieren shown in terms of normalized density gradient magnitude. The numerical Schlieren is defined as follows,
@@ -267,7 +178,12 @@ Based on the results of the parameter scan we define a ``standard'' jet, the one
 %------------------------------------------------------------------------------      
 \subsection{Jet boundary deformation}
 \label{subsec:j_boundary_Def}
-%------------------------------------------------------------------------------      
+%------------------------------------------------------------------------------ 
+%------------------------------------------------------------------------------
+\section{Summary and Discussion}
+\label{sec:c2discussion}
+%------------------------------------------------------------------------------
+     
 %------------------------------------------------------------------------------      
 \section{Stuff to go somewhere}
 %------------------------------------------------------------------------------      
@@ -294,17 +210,6 @@ From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that spe
 \mfig{0.5}{figures/diagram_of_ssj.png}{A schematic diagram giving an overview of the expected structures found in an HD super sonic jet dran in frame of the bow shock. Diagram taken from \cite{Chakrabarti1988}.}{ssj}
 %fffffffffffffffffffffffffff
 \mfig{1}{figures/combine_zoom.png}{todo.}{jet_head}
-%------------------------------------------------------------------------------
-\section{Applications}
-\label{sec:c2app}
-%------------------------------------------------------------------------------
-
-
-%------------------------------------------------------------------------------
-\section{Summary and Discussion}
-\label{sec:c2discussion}
-%------------------------------------------------------------------------------
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % STOP COPYING HERE

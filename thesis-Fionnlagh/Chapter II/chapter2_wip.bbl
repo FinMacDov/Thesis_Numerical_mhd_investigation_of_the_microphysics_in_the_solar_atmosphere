@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{21}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -27,15 +27,12 @@ Roger {Blandford}, David {Meier}, and Anthony {Readhead}.
 \newblock \emph{\araa}, 57:\penalty0 467--509, August 2019.
 \newblock \doi{10.1146/annurev-astro-081817-051948}.
 
-\bibitem[{\v{C}}ada and Torrilhon(2009)]{CADA20094118}
-Miroslav {\v{C}}ada and Manuel Torrilhon.
-\newblock {Compact third-order limiter functions for finite volume methods}.
-\newblock \emph{Journal of Computational Physics}, 228\penalty0 (11):\penalty0
-  4118--4145, 2009.
-\newblock ISSN 0021-9991.
-\newblock \doi{https://doi.org/10.1016/j.jcp.2009.02.020}.
-\newblock URL
-  \url{http://www.sciencedirect.com/science/article/pii/S0021999109000953}.
+\bibitem[{Centeno} et~al.(2010){Centeno}, {Trujillo Bueno}, and {Asensio
+  Ramos}]{centeno2010}
+Rebecca {Centeno}, Javier {Trujillo Bueno}, and Andr{\'e}s {Asensio Ramos}.
+\newblock {On the Magnetic Field of Off-limb Spicules}.
+\newblock \emph{\apj}, 708\penalty0 (2):\penalty0 1579--1584, January 2010.
+\newblock \doi{10.1088/0004-637X/708/2/1579}.
 
 \bibitem[Chakrabarti(1988)]{Chakrabarti1988}
 S.~K. Chakrabarti.
@@ -55,16 +52,24 @@ Elisabete~M. {de Gouveia Dal Pino}.
   908--924, January 2005.
 \newblock \doi{10.1016/j.asr.2005.03.145}.
 
-\bibitem[Dedner et~al.(2002)Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer, and
-  Wesenberg]{DEDNER2002645}
-A~Dedner, F~Kemm, D~Kr{\"{o}}ner, C.-D. Munz, T~Schnitzer, and M~Wesenberg.
-\newblock {Hyperbolic Divergence Cleaning for the MHD Equations}.
-\newblock \emph{Journal of Computational Physics}, 175\penalty0 (2):\penalty0
-  645--673, 2002.
-\newblock ISSN 0021-9991.
-\newblock \doi{https://doi.org/10.1006/jcph.2001.6961}.
-\newblock URL
-  \url{http://www.sciencedirect.com/science/article/pii/S002199910196961X}.
+\bibitem[{De Pontieu} et~al.(2004){De Pontieu}, {Erd{\'e}lyi}, and
+  {James}]{Pontieu2004Natur}
+B.~{De Pontieu}, R.~{Erd{\'e}lyi}, and S.~P. {James}.
+\newblock {Solar chromospheric spicules from the leakage of photospheric
+  oscillations and flows}.
+\newblock \emph{\nat}, 430:\penalty0 536--539, July 2004.
+\newblock \doi{10.1038/nature02749}.
+
+\bibitem[{De Pontieu} et~al.(2007){De Pontieu}, {McIntosh}, {Hansteen},
+  {Carlsson}, {Schrijver}, {Tarbell}, {Title}, {Shine}, {Suematsu}, {Tsuneta},
+  {Katsukawa}, {Ichimoto}, {Shimizu}, and {Nagata}]{Pontieu2007PASJ}
+B.~{De Pontieu}, S.~{McIntosh}, V.~H. {Hansteen}, M.~{Carlsson}, C.~J.
+  {Schrijver}, T.~D. {Tarbell}, A.~M. {Title}, R.~A. {Shine}, Y.~{Suematsu},
+  S.~{Tsuneta}, Y.~{Katsukawa}, K.~{Ichimoto}, T.~{Shimizu}, and S.~{Nagata}.
+\newblock {A Tale of Two Spicules: The Impact of Spicules on the Magnetic
+  Chromosphere}.
+\newblock \emph{\pasj}, 59:\penalty0 S655--S662, November 2007.
+\newblock \doi{10.1093/pasj/59.sp3.S655}.
 
 \bibitem[Edgington-Mitchell et~al.(2014)Edgington-Mitchell, Honnery, and
   Soria]{Edgington-Mitchell2014}
@@ -75,23 +80,20 @@ Daniel Edgington-Mitchell, Damon~R. Honnery, and Julio Soria.
 \newblock \doi{10.1063/1.4894741}.
 \newblock URL \url{http://aip.scitation.org/doi/10.1063/1.4894741}.
 
-\bibitem[Harten et~al.(1983)Harten, Lax, and van. Leer]{hll_1983}
-Amiram. Harten, Peter~D Lax, and Bram van. Leer.
-\newblock {On Upstream Differencing and Godunov-Type Schemes for Hyperbolic
-  Conservation Laws}.
-\newblock \emph{SIAM Review}, 25\penalty0 (1):\penalty0 35--61, 1983.
-\newblock \doi{10.1137/1025002}.
-\newblock URL \url{https://doi.org/10.1137/1025002}.
+\bibitem[{Hansteen} et~al.(2006){Hansteen}, {De Pontieu}, {Rouppe van der
+  Voort}, {van Noort}, and {Carlsson}]{Hansteen2006ApJ}
+V.~H. {Hansteen}, B.~{De Pontieu}, L.~{Rouppe van der Voort}, M.~{van Noort},
+  and M.~{Carlsson}.
+\newblock {Dynamic Fibrils Are Driven by Magnetoacoustic Shocks}.
+\newblock \emph{\apjl}, 647\penalty0 (1):\penalty0 L73--L76, August 2006.
+\newblock \doi{10.1086/507452}.
 
-\bibitem[{Keppens} et~al.(2012){Keppens}, {Meliani}, {van Marle}, {Delmont},
-  {Vlasis}, and {van der Holst}]{Keppens_2012}
-R.~{Keppens}, Z.~{Meliani}, A.~J. {van Marle}, P.~{Delmont}, A.~{Vlasis}, and
-  B.~{van der Holst}.
-\newblock {Parallel, grid-adaptive approaches for relativistic hydro and
-  magnetohydrodynamics}.
-\newblock \emph{Journal of Computational Physics}, 231:\penalty0 718--744,
-  February 2012.
-\newblock \doi{10.1016/j.jcp.2011.01.020}.
+\bibitem[{Heggland} et~al.(2007){Heggland}, {De Pontieu}, and
+  {Hansteen}]{Heggland2007ApJ6661277H}
+L.~{Heggland}, B.~{De Pontieu}, and V.~H. {Hansteen}.
+\newblock {Numerical Simulations of Shock Wave-driven Chromospheric Jets}.
+\newblock \emph{\apj}, 666\penalty0 (2):\penalty0 1277--1283, September 2007.
+\newblock \doi{10.1086/518828}.
 
 \bibitem[{Ku{\'z}ma} et~al.(2017){Ku{\'z}ma}, {Murawski}, {Kayshap},
   {W{\'o}jcik}, {Srivastava}, and {Dwivedi}]{kuz2017ApJ}
@@ -100,6 +102,13 @@ B.~{Ku{\'z}ma}, K.~{Murawski}, P.~{Kayshap}, D.~{W{\'o}jcik}, A.~K.
 \newblock {Two-fluid Numerical Simulations of Solar Spicules}.
 \newblock \emph{\apj}, 849:\penalty0 78, November 2017.
 \newblock \doi{10.3847/1538-4357/aa8ea1}.
+
+\bibitem[{Leighton} et~al.(1962){Leighton}, {Noyes}, and
+  {Simon}]{Leighton1962ApJ135474L}
+Robert~B. {Leighton}, Robert~W. {Noyes}, and George~W. {Simon}.
+\newblock {Velocity Fields in the Solar Atmosphere. I. Preliminary Report.}
+\newblock \emph{\apj}, 135:\penalty0 474, March 1962.
+\newblock \doi{10.1086/147285}.
 
 \bibitem[Menon and Skews(2010)]{Menon2010}
 Nandkishore Menon and Beric~William Skews.
@@ -130,6 +139,14 @@ O.~{Porth}, C.~{Xia}, T.~{Hendrix}, S.~P. {Moschou}, and R.~{Keppens}.
 \newblock \emph{\apjs}, 214:\penalty0 4, September 2014.
 \newblock \doi{10.1088/0067-0049/214/1/4}.
 
+\bibitem[{Rouppe van der Voort} et~al.(2007){Rouppe van der Voort}, {De
+  Pontieu}, {Hansteen}, {Carlsson}, and {van Noort}]{Rouppe2007ApJ660L169R}
+L.~H.~M. {Rouppe van der Voort}, B.~{De Pontieu}, V.~H. {Hansteen},
+  M.~{Carlsson}, and M.~{van Noort}.
+\newblock {Magnetoacoustic Shocks as a Driver of Quiet-Sun Mottles}.
+\newblock \emph{\apjl}, 660\penalty0 (2):\penalty0 L169--L172, May 2007.
+\newblock \doi{10.1086/518246}.
+
 \bibitem[Shibata et~al.(1982)Shibata, Nishikawa, Kitai, and
   Suematsu]{Shibata1982}
 Kazunari Shibata, Takara Nishikawa, Reizaburo Kitai, and Yoshinori Suematsu.
@@ -146,10 +163,13 @@ Balveer Singh, Kushagra Sharma, and Abhishek~K. Srivastava.
 \newblock aug 2019.
 \newblock URL \url{http://arxiv.org/abs/1908.11560}.
 
-\bibitem[{Xia} et~al.(2017){Xia}, {Teunissen}, {El Mellah}, {Chane}, and
-  {Keppens}]{Xia_2017}
-C.~{Xia}, J.~{Teunissen}, I.~{El Mellah}, E.~{Chane}, and R.~{Keppens}.
-\newblock {MPI-AMRVAC 2.0 for Solar and Astrophysical Applications}.
-\newblock \emph{ArXiv e-prints}, October 2017.
+\bibitem[Su{\'{a}}rez et~al.(2015)Su{\'{a}}rez, Ramos, and Bueno]{suarez2015}
+D.~Orozco Su{\'{a}}rez, A.~Asensio Ramos, and J.~Trujillo Bueno.
+\newblock {HEIGHT} {VARIATION} {OF} {THE} {VECTOR} {MAGNETIC} {FIELD} {IN}
+  {SOLAR} {SPICULES}.
+\newblock \emph{The Astrophysical Journal}, 803\penalty0 (2):\penalty0 L18, apr
+  2015.
+\newblock \doi{10.1088/2041-8205/803/2/l18}.
+\newblock URL \url{https://doi.org/10.1088%2F2041-8205%2F803%2F2%2Fl18}.
 
 \end{thebibliography}
