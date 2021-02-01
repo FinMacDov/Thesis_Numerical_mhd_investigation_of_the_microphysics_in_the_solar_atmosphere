@@ -1,4 +1,4 @@
-\begin{thebibliography}{114}
+\begin{thebibliography}{123}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -91,6 +91,16 @@ H.~A. {Bruck}.
 G.~E. {Brueckner}.
 \newblock {A high-resolution view of the solar chromosphere and corona.}
 \newblock \emph{Highlights of Astronomy}, 5:\penalty0 557--569, January 1980.
+
+\bibitem[{\v{C}}ada and Torrilhon(2009)]{CADA20094118}
+Miroslav {\v{C}}ada and Manuel Torrilhon.
+\newblock {Compact third-order limiter functions for finite volume methods}.
+\newblock \emph{Journal of Computational Physics}, 228\penalty0 (11):\penalty0
+  4118--4145, 2009.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1016/j.jcp.2009.02.020}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021999109000953}.
 
 \bibitem[{Christopoulou} et~al.(2001){Christopoulou}, {Georgakilas}, and
   {Koutchmy}]{Christopoulou2001SoPh19961C}
@@ -186,17 +196,33 @@ B.~{De Pontieu}, I.~{De Moortel}, J.~{Martinez-Sykora}, and S.~W. {McIntosh}.
 \newblock \emph{\apjl}, 845\penalty0 (2):\penalty0 L18, August 2017.
 \newblock \doi{10.3847/2041-8213/aa7fb4}.
 
-\bibitem[{De Pontieu} et~al.(2009){De Pontieu}, McIntosh, Hansteen, and
-  Schrijver]{DePontieu2009}
-Bart {De Pontieu}, Scott~W. McIntosh, Viggo~H. Hansteen, and Carolus~J.
-  Schrijver.
-\newblock {Observing the Roots of Solar Coronal Heating - in the Chromosphere}.
-\newblock \emph{The Astrophysical Journal Letters, Volume 701, Issue 1, pp.
-  L1-L6 (2009).}, 701:\penalty0 L1--L6, jun 2009.
-\newblock ISSN 0004-637X.
+\bibitem[{De Pontieu} et~al.(2007{\natexlab{d}}){De Pontieu}, {Hansteen},
+  {Rouppe van der Voort}, {van Noort}, and {Carlsson}]{Pontieu2007astroph2081D}
+Bart {De Pontieu}, Viggo~H. {Hansteen}, Luc {Rouppe van der Voort}, Michiel
+  {van Noort}, and Mats {Carlsson}.
+\newblock {Observations and Simulations of Fibrils and Mottles}.
+\newblock \emph{ArXiv e-prints}, art. astro-ph/0702081, February
+  2007{\natexlab{d}}.
+
+\bibitem[{De Pontieu} et~al.(2009){De Pontieu}, {McIntosh}, {Hansteen}, and
+  {Schrijver}]{DePontieu2009}
+Bart {De Pontieu}, Scott~W. {McIntosh}, Viggo~H. {Hansteen}, and Carolus~J.
+  {Schrijver}.
+\newblock {Observing the Roots of Solar Coronal Heating{\textemdash}in the
+  Chromosphere}.
+\newblock \emph{\apjl}, 701\penalty0 (1):\penalty0 L1--L6, August 2009.
 \newblock \doi{10.1088/0004-637X/701/1/L1}.
-\newblock URL \url{http://arxiv.org/abs/0906.5434
-  http://dx.doi.org/10.1088/0004-637X/701/1/L1}.
+
+\bibitem[Dedner et~al.(2002)Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer, and
+  Wesenberg]{DEDNER2002645}
+A~Dedner, F~Kemm, D~Kr{\"{o}}ner, C.-D. Munz, T~Schnitzer, and M~Wesenberg.
+\newblock {Hyperbolic Divergence Cleaning for the MHD Equations}.
+\newblock \emph{Journal of Computational Physics}, 175\penalty0 (2):\penalty0
+  645--673, 2002.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1006/jcph.2001.6961}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S002199910196961X}.
 
 \bibitem[{Demastus} et~al.(1973){Demastus}, {Wagner}, and
   {Robinson}]{Demastus1973}
@@ -235,18 +261,31 @@ Peter {Foukal}.
   1971{\natexlab{b}}.
 \newblock \doi{10.1007/BF00159759}.
 
-\bibitem[{Gafeira} et~al.(2017){Gafeira}, {Jafarzadeh}, {Solanki}, {Lagg}, {van
-  Noort}, {Barthol}, {Blanco Rodr{\'\i}guez}, {del Toro Iniesta}, {Gandorfer},
-  {Gizon}, {Hirzberger}, {Kn{\"o}lker}, {Orozco Su{\'a}rez}, {Riethm{\"u}ller},
-  and {Schmidt}]{Gafeira2017ApJS2297G}
+\bibitem[{Gafeira} et~al.(2017{\natexlab{a}}){Gafeira}, {Jafarzadeh},
+  {Solanki}, {Lagg}, {van Noort}, {Barthol}, {Blanco Rodr{\'\i}guez}, {del Toro
+  Iniesta}, {Gandorfer}, {Gizon}, {Hirzberger}, {Kn{\"o}lker}, {Orozco
+  Su{\'a}rez}, {Riethm{\"u}ller}, and {Schmidt}]{Gafeira2017ApJS2297G}
 R.~{Gafeira}, S.~{Jafarzadeh}, S.~K. {Solanki}, A.~{Lagg}, M.~{van Noort},
   P.~{Barthol}, J.~{Blanco Rodr{\'\i}guez}, J.~C. {del Toro Iniesta},
   A.~{Gandorfer}, L.~{Gizon}, J.~{Hirzberger}, M.~{Kn{\"o}lker}, D.~{Orozco
   Su{\'a}rez}, T.~L. {Riethm{\"u}ller}, and W.~{Schmidt}.
 \newblock {Oscillations on Width and Intensity of Slender Ca II H Fibrils from
   Sunrise/SuFI}.
-\newblock \emph{\apjs}, 229\penalty0 (1):\penalty0 7, March 2017.
+\newblock \emph{\apjs}, 229\penalty0 (1):\penalty0 7, March 2017{\natexlab{a}}.
 \newblock \doi{10.3847/1538-4365/229/1/7}.
+
+\bibitem[{Gafeira} et~al.(2017{\natexlab{b}}){Gafeira}, {Lagg}, {Solanki},
+  {Jafarzadeh}, {van Noort}, {Barthol}, {Blanco Rodr{\'\i}guez}, {del Toro
+  Iniesta}, {Gandorfer}, {Gizon}, {Hirzberger}, {Kn{\"o}lker}, {Orozco
+  Su{\'a}rez}, {Riethm{\"u}ller}, and {Schmidt}]{Gafeira2017ApJS2296G}
+R.~{Gafeira}, A.~{Lagg}, S.~K. {Solanki}, S.~{Jafarzadeh}, M.~{van Noort},
+  P.~{Barthol}, J.~{Blanco Rodr{\'\i}guez}, J.~C. {del Toro Iniesta},
+  A.~{Gandorfer}, L.~{Gizon}, J.~{Hirzberger}, M.~{Kn{\"o}lker}, D.~{Orozco
+  Su{\'a}rez}, T.~L. {Riethm{\"u}ller}, and W.~{Schmidt}.
+\newblock {Morphological Properties of Slender Ca II H Fibrils Observed by
+  SUNRISE II}.
+\newblock \emph{\apjs}, 229\penalty0 (1):\penalty0 6, March 2017{\natexlab{b}}.
+\newblock \doi{10.3847/1538-4365/229/1/6}.
 
 \bibitem[{Georgakilas} et~al.(1999){Georgakilas}, {Koutchmy}, and
   {Alissandrakis}]{Georgakilas1999AA341610G}
@@ -261,11 +300,12 @@ Johan~Peter Goedbloed and Stefaan Poedts.
   laboratory and astrophysical plasmas}.
 \newblock Cambridge university press, 2004.
 
-\bibitem[{Griffiths} et~al.(2013){Griffiths}, {Fedun}, {Mumford}, and
-  {Gent}]{Griffiths2013}
-M.~{Griffiths}, V.~{Fedun}, S.~{Mumford}, and F.~{Gent}.
-\newblock {SAC: Sheffield Advanced Code}.
-\newblock Astrophysics Source Code Library, June 2013.
+\bibitem[{Gonz{\'a}lez-Avil{\'e}s} et~al.(2017){Gonz{\'a}lez-Avil{\'e}s},
+  {Guzm{\'a}n}, and {Fedun}]{Gonz2017ApJ}
+J.~J. {Gonz{\'a}lez-Avil{\'e}s}, F.~S. {Guzm{\'a}n}, and V.~{Fedun}.
+\newblock {Jet Formation in Solar Atmosphere due to Magnetic Reconnection}.
+\newblock \emph{\apj}, 836:\penalty0 24, February 2017.
+\newblock \doi{10.3847/1538-4357/836/1/24}.
 
 \bibitem[{Grossmann-Doerth} and {Schmidt}(1992)]{Grossmann1992AA264236G}
 U.~{Grossmann-Doerth} and W.~{Schmidt}.
@@ -287,6 +327,14 @@ V.~H. {Hansteen}, B.~{De Pontieu}, L.~{Rouppe van der Voort}, M.~{van Noort},
 \newblock {Dynamic Fibrils Are Driven by Magnetoacoustic Shocks}.
 \newblock \emph{\apjl}, 647\penalty0 (1):\penalty0 L73--L76, August 2006.
 \newblock \doi{10.1086/507452}.
+
+\bibitem[Harten et~al.(1983)Harten, Lax, and van. Leer]{hll_1983}
+Amiram. Harten, Peter~D Lax, and Bram van. Leer.
+\newblock {On Upstream Differencing and Godunov-Type Schemes for Hyperbolic
+  Conservation Laws}.
+\newblock \emph{SIAM Review}, 25\penalty0 (1):\penalty0 35--61, 1983.
+\newblock \doi{10.1137/1025002}.
+\newblock URL \url{https://doi.org/10.1137/1025002}.
 
 \bibitem[{Heggland} et~al.(2007){Heggland}, {De Pontieu}, and
   {Hansteen}]{Heggland2007ApJ6661277H}
@@ -473,12 +521,13 @@ Sarah~A. {Matthews}, Manuel {Collados}, Mihalis {Mathioudakis}, and Robertus
 \newblock 2016.
 \newblock \doi{10.1117/12.2234145}.
 
-\bibitem[{McWhirter} et~al.(1975){McWhirter}, {Thonemann}, and
-  {Wilson}]{McWhirter1975}
-R.~W.~P. {McWhirter}, P.~C. {Thonemann}, and R.~{Wilson}.
-\newblock {The heating of the solar corona. II - A model based on energy
-  balance}.
-\newblock \emph{\aap}, 40:\penalty0 63--73, April 1975.
+\bibitem[{Moreno-Insertis} et~al.(2008){Moreno-Insertis}, {Galsgaard}, and
+  {Ugarte-Urra}]{Moreno2008ApJ673L211M}
+F.~{Moreno-Insertis}, K.~{Galsgaard}, and I.~{Ugarte-Urra}.
+\newblock {Jets in Coronal Holes: Hinode Observations and Three-dimensional
+  Computer Modeling}.
+\newblock \emph{\apjl}, 673\penalty0 (2):\penalty0 L211, February 2008.
+\newblock \doi{10.1086/527560}.
 
 \bibitem[{Morton} et~al.(2012){Morton}, {Verth}, {Jess}, {Kuridze}, {Ruderman},
   {Mathioudakis}, and {Erd{\'e}lyi}]{Morton2012NatCo31315M}
@@ -622,6 +671,13 @@ Walter~Orr {Roberts}.
 \newblock \emph{\apj}, 101:\penalty0 136, March 1945.
 \newblock \doi{10.1086/144699}.
 
+\bibitem[{Rouppe van der Voort} and {de la Cruz
+  Rodr{\'\i}guez}(2013)]{Rouppe2013ApJ77656R}
+L.~{Rouppe van der Voort} and J.~{de la Cruz Rodr{\'\i}guez}.
+\newblock {Short Dynamic Fibrils in Sunspot Chromospheres}.
+\newblock \emph{\apj}, 776\penalty0 (1):\penalty0 56, October 2013.
+\newblock \doi{10.1088/0004-637X/776/1/56}.
+
 \bibitem[{Rouppe van der Voort} et~al.(2009){Rouppe van der Voort},
   {Leenaarts}, {De Pontieu}, {Carlsson}, and {Vissers}]{Rouppe2009ApJ}
 L.~{Rouppe van der Voort}, J.~{Leenaarts}, B.~{De Pontieu}, M.~{Carlsson}, and
@@ -716,6 +772,15 @@ D.~H. {Sekse}, L.~{Rouppe van der Voort}, B.~{De Pontieu}, and E.~{Scullion}.
   II Spicules: Upflow, Transversal, and Torsional Motions}.
 \newblock \emph{\apj}, 769\penalty0 (1):\penalty0 44, May 2013{\natexlab{b}}.
 \newblock \doi{10.1088/0004-637X/769/1/44}.
+
+\bibitem[Shibata et~al.(1982)Shibata, Nishikawa, Kitai, and
+  Suematsu]{Shibata1982}
+Kazunari Shibata, Takara Nishikawa, Reizaburo Kitai, and Yoshinori Suematsu.
+\newblock {Numerical hydrodynamics of the jet phenomena in the solar atmosphere
+  - II. Surges}.
+\newblock \emph{Solar Physics}, 77\penalty0 (1-2):\penalty0 121--151, apr 1982.
+\newblock ISSN 00380938.
+\newblock \doi{10.1007/BF00156100}.
 
 \bibitem[{Shibata} et~al.(1992){Shibata}, {Ishido}, {Acton}, {Strong},
   {Hirayama}, {Uchida}, {McAllister}, {Matsumoto}, {Tsuneta}, {Shimizu},
@@ -848,14 +913,6 @@ Michiel {van Noort}, Luc {Rouppe van der Voort}, and Mats~G. {L{\"o}fdahl}.
 \newblock \emph{\solphys}, 228\penalty0 (1-2):\penalty0 191--215, May 2005.
 \newblock \doi{10.1007/s11207-005-5782-z}.
 
-\bibitem[{Vernazza} et~al.(1981){Vernazza}, {Avrett}, and
-  {Loeser}]{Vernazza_1981ApJS}
-J.~E. {Vernazza}, E.~H. {Avrett}, and R.~{Loeser}.
-\newblock {Structure of the solar chromosphere. III - Models of the EUV
-  brightness components of the quiet-sun}.
-\newblock \emph{\apjs}, 45:\penalty0 635--725, April 1981.
-\newblock \doi{10.1086/190731}.
-
 \bibitem[{Verwichte} et~al.(2013){Verwichte}, {Van Doorsselaere}, {White}, and
   {Antolin}]{Verwichte_2013A_A}
 E.~{Verwichte}, T.~{Van Doorsselaere}, R.~S. {White}, and P.~{Antolin}.
@@ -896,6 +953,27 @@ L.~{Woltjer}.
 \newblock {A photometric investigation of the spicules and the structure of the
   chromosphere}.
 \newblock \emph{\bain}, 12:\penalty0 165, September 1954.
+
+\bibitem[{Xia} et~al.(2017){Xia}, {Teunissen}, {El Mellah}, {Chane}, and
+  {Keppens}]{Xia_2017}
+C.~{Xia}, J.~{Teunissen}, I.~{El Mellah}, E.~{Chane}, and R.~{Keppens}.
+\newblock {MPI-AMRVAC 2.0 for Solar and Astrophysical Applications}.
+\newblock \emph{ArXiv e-prints}, October 2017.
+
+\bibitem[{Yamauchi} et~al.(2005){Yamauchi}, {Wang}, {Jiang}, {Schwadron}, and
+  {Moore}]{Yamauchi2005ApJ629572Y}
+Y.~{Yamauchi}, H.~{Wang}, Y.~{Jiang}, N.~{Schwadron}, and R.~L. {Moore}.
+\newblock {Study of H{\ensuremath{\alpha}} Macrospicules in Coronal Holes:
+  Magnetic Structure and Evolution in Relation to Photospheric Magnetic
+  Setting}.
+\newblock \emph{\apj}, 629\penalty0 (1):\penalty0 572--581, August 2005.
+\newblock \doi{10.1086/431664}.
+
+\bibitem[{Young}(2015)]{Young2015ApJ801124Y}
+Peter~R. {Young}.
+\newblock {Dark Jets in Solar Coronal Holes}.
+\newblock \emph{\apj}, 801\penalty0 (2):\penalty0 124, March 2015.
+\newblock \doi{10.1088/0004-637X/801/2/124}.
 
 \bibitem[{Zaqarashvili} and {Erd{\'e}lyi}(2009)]{Zaqarashvili_2009SSRv}
 T.~V. {Zaqarashvili} and R.~{Erd{\'e}lyi}.

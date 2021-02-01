@@ -1,0 +1,708 @@
+\documentclass[12pt]{ociamthesis}
+
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{natbib}
+\usepackage[section]{placeins}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{stmaryrd}
+\usepackage[utf8]{inputenc}
+
+\titleformat{\chapter}[display]
+  {\bfseries\Large}
+  {\filright\MakeUppercase{\chaptertitlename} \Large\thechapter}
+  {1ex}
+  {}
+  [\vspace{1ex} \hrule \vspace{1pt} \hrule]
+
+\newcommand{\adv}{    {\it Adv. Space Res.}} 
+\newcommand{\annG}{   {\it Ann. Geophys.}} 
+\newcommand{\aap}{    {\it Astron. Astrophys.}}
+\newcommand{\aaps}{   {\it Astron. Astrophys. Suppl.}}
+\newcommand{\aapr}{   {\it Astron. Astrophys. Rev.}}
+\newcommand{\ag}{     {\it Ann. Geophys.}}
+\newcommand{\aj}{     {\it Astron. J.}} 
+\newcommand{\apj}{    {\it Astrophys. J.}}
+\newcommand{\apjl}{   {\it Astrophys. J. Lett.}}
+\newcommand{\apss}{   {\it Astrophys. Space Sci.}} 
+\newcommand{\cjaa}{   {\it Chin. J. Astron. Astrophys.}} 
+\newcommand{\gafd}{   {\it Geophys. Astrophys. Fluid Dyn.}}
+\newcommand{\grl}{    {\it Geophys. Res. Lett.}}
+\newcommand{\ijga}{   {\it Int. J. Geomagn. Aeron.}}
+\newcommand{\jastp}{  {\it J. Atmos. Solar-Terr. Phys.}} 
+\newcommand{\jgr}{    {\it J. Geophys. Res.}}
+\newcommand{\mnras}{  {\it Mon. Not. Roy. Astron. Soc.}}
+\newcommand{\nat}{    {\it Nature}}
+\newcommand{\pasp}{   {\it Pub. Astron. Soc. Pac.}}
+\newcommand{\pasj}{   {\it Pub. Astron. Soc. Japan}}
+\newcommand{\pre}{    {\it Phys. Rev. E}}
+\newcommand{\solphys}{{\it Solar Phys.}}
+\newcommand{\sovast}{ {\it Soviet  Astron.}} 
+\newcommand{\ssr}{    {\it Space Sci. Rev.}}
+\newcommand{\caa}{{\it Chinese Astron. Astrohpys.}} 
+\newcommand{\apjs}{    {\it Astrophys. J. Suppl.}}
+
+\def\UrlFont{\sf}
+
+\def\Xint#1{\mathchoice
+{\XXint\displaystyle\textstyle{#1}}%
+{\XXint\textstyle\scriptstyle{#1}}%
+{\XXint\scriptstyle\scriptscriptstyle{#1}}%
+{\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+\!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$ }
+\vcenter{\hbox{$#2#3$ }}\kern-.6\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
+
+\begin{document}
+
+\baselineskip=18pt
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\setcounter{chapter}{2}
+\chapter{Periodic Counter Streaming Flows as a Model of Transverse Coronal Loop Oscillations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% START COPYING HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Transverse coronal loop oscillations have been a subject of extensive study since their original observation on 14 July 1998 by the \textit{Transition Region and Coronal Explorer} (TRACE) \citep{Aschwanden1999, Nakariakov1999}.
+For a review on the topic, see \cite{Ruderman2009}.
+
+In terms of theoretical modelling, the damping mechanism of these oscillations has received much attention during the years since \citep[see, for example,][]{Ruderman2002, TVD2004, Williamson2014}, with the caveat that many studies have relied on the assumption that the oscillations are in the linear regime.
+%However, restricting studies to this assumption may exclude important effects, such as the ponderomotive force \citep{Terradas2004}, and the presence of the Kelvin-Helmholtz instability (KHI) at the loop boundaries \citep{Magyar2016a}.
+%This idea is reinforced by the analysis of \cite{Goddard2016}.
+
+\begin{figure*}[t]
+\centering
+ \includegraphics[width=0.95\textwidth]{3.0_Chapter_III/tube_1.pdf}
+ \caption{A representation of a straight magnetic flux tube with stationary footpoints undergoing transverse (kink) motion. The panel on the right represents the velocity field in the plane perpendicular to the tube axis, at half the length of the tube. The greatest shearing occurs between the vectors coloured in red.}
+ \label{tube1}
+\end{figure*}
+
+\cite{Terradas2008} suggested that a nonlinear kink oscillation may render a flux tube unstable due to the shear motions at the boundaries.
+The authors found that, for a smooth transition layer, the instability developed rapidly where the difference between the internal and external flow amplitudes was greatest.
+Introducing a smooth transition layer, however, significantly decreased the growth rate of the instability.
+It is worth noting that shear instabilities in smooth transition layers via other nonlinear mechanisms (e.g. phase mixing, resonant absorption) had also received attention previously \citep[see, for example,][]{Ofman1994,Poedts1997}.
+
+The topic of the Transverse Wave Induced Kelvin-Helmholtz (TWIKH) instability was subsequently investigated by \cite{Antolin2014}, who suggested that this phenomenon may be responsible for the fine strand-like structure observed in some coronal loops.
+However, different interpretation of such observations was provided by \cite{Magyar2016b}, who showed that a multi-stranded loop system is immediately unstable due to nonlinear transverse oscillations, and that it also forms a strand-like pattern when forward modelled.
+Furthermore, the TWIKH instability may explain the apparent decay-less oscillations in coronal loops \citep{Antolin2016}, and their heating via Ohmic dissipation \citep{Karampelas2017, Howson2017b}.
+Viscosity and resistivity may also play an important role when studying these phenomena, as they may impede the formation of the instability, or even prevent it from forming entirely \citep{Howson2017a}.
+
+The configuration of the magnetic field is another important aspect of TWIKH instabilities.
+It was suggested by \cite{Terradas2008} that a twisted magnetic field may suppress the instability, due to the fact that a component of the magnetic field along the flow will work to stabilise it.
+Although all aforementioned studies have considered straight magnetic fields, the effect of twist on the stability of nonlinear transverse oscillations has also recently received some attention.
+\cite{Howson2017b} numerically studied the energetics of the instability of a magnetically twisted coronal loop and found that its evolution is affected by the strength of the azimuthal component of the magnetic field.
+The authors also found that, when a twist is present, the KHI leads to greater Ohmic dissipation as a result of the production of larger currents.
+Furthermore, \cite{Terradas2018} studied the evolution of the instability and found that the twisted magnetic field always delays its onset.
+
+Numerical simulations have provided ample information about the development of the KHI, but have not thoroughly established what the conditions are for its formation.
+Here, we attempt to find these requirements analytically, by modelling the boundary of the flux tube where the shearing is greatest as a single interface, separating regions of different density.
+We emulate the effect of the transverse oscillation by subjecting either region to periodic counter-streaming flows.
+
+In Section \ref{straight}, we study the interface embedded in a straight magnetic field, while in Section \ref{inclined}, we analyse the effect of an inclined magnetic field on one side of the interface has on the stability.
+In both cases, the governing equation is Mathieu's equation \citep{McLachlan1946}.
+A brief general description of the stability of solutions to the governing equations is outlined in Section \ref{straight}.
+Specific applications to transverse coronal loop oscillations are present in Sections \ref{straight} and \ref{inclined}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Stability of a Straight Tube}
+\label{straight}
+
+It is well established that a magnetic flux tube undergoing nonlinear transverse (kink) oscillation is prone to the Kelvin-Helmholtz instability due to the shearing motions at the boundaries \citep{Terradas2008}.
+Considering only the fundamental mode of oscillation, we wish to model the region of least stability.
+Longitudinally, we determine this to be at its half length ($L/2$ for a tube of length $L$) since it is where the amplitude of the oscillation is greatest.
+In the radial plane, it occurs directly above and below the central axis of the tube, in the direction of motion, as may be seen in Figure \ref{tube1}.
+
+\begin{figure}[t]
+\centering
+ \includegraphics[width=0.7\textwidth]{3.0_Chapter_III/interface_1}
+ \caption{A schematic representation of the system. A constant vertical magnetic field permeates both sides of the $x-z$ interface, which separates areas of time dependent counter streaming flows.}
+ \label{interface1}
+\end{figure}
+
+In order to study the effect of the shearing motions around this region, we choose to model it as a single interface separating periodic counter-streaming flows (Figure \ref{interface1}).
+We consider the $x-, y-$, and $z-$axes to be along the direction of motion, in the radial direction, and along the tube, respectively.
+The flows have the form
+\begin{align*}
+\mathbf{U_i} & = (U \cos(\Omega t), 0, 0), \qquad y < 0,
+\\[0.3cm]
+\mathbf{U_e} & = (- U \cos(\Omega t), 0, 0), \qquad y > 0,
+\end{align*}
+where the period of the flows, $2\pi / \Omega$, corresponds to the period of oscillation of the tube.
+Both the internal and external regions are permeated by a background magnetic field $\mathbf{B} = (0, 0, B_z)$.
+
+We assume that the dynamics are governed by the linear ideal incompressible MHD equations
+\begin{align}
+\begin{split}
+\label{eq2}
+\frac{\mathrm{D} \mathbf{v}}{\mathrm{D} t}
+& = - \frac{1}{\rho_{i, e}} \nabla p_T
++ \frac{1}{\mu \rho_{i, e}}( \mathbf{B} \cdot \nabla )\mathbf{b},
+\\[0.3cm]
+\frac{\mathrm{D} \mathbf{b}}{\mathrm{D} t}
+& = ( \mathbf{B} \cdot \nabla ) \mathbf{v},
+\\[0.3cm]
+\nabla \cdot \mathbf{v} & = 0,
+\\[0.3cm]
+\nabla \cdot \mathbf{b} & = 0,
+\end{split}
+\end{align}
+where $\mathbf v, \mathbf b$ and $p_T$ are the perturbations of the velocity, magnetic field and total pressure, $\rho_{i,e}$ are the background internal and external densities, and $\mu$ is the magnetic permeability of free space.
+Here,
+\[
+\dfrac{\mathrm{D}}{\mathrm{D} t} = \dfrac{\partial}{\partial t} \pm U \cos(\Omega t) \dfrac{\partial}{\partial x},
+\]
+is the advective derivative, where the $\pm$ sign corresponds to $y < 0$, or $y > 0$, respectively.
+
+We, now, introduce the Lagrangian displacement $\bm \xi = \bm \xi(\mathbf{x}, t)$, which is linked to the velocity perturbation by the formula $\mathbf v (\mathbf{x}, t) = \mathrm{D} \bm \xi / \mathrm{D} t$.
+Combining the momentum and induction equations and substituting $\mathbf v$ for the displacement yields
+\begin{equation}
+\label{eq3}
+\frac{\mathrm{D}^2 \bm \xi}{\mathrm{D} t^2}
+- \frac{1}{\mu \rho_i} ( \mathbf{B} \cdot \nabla )^2 \bm \xi
+= - \frac{1}{\rho_i} \nabla p_T.
+\end{equation}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{3.0_Chapter_III/stability_diagram}
+\caption{The stability diagram for solutions to Mathieu's equation for arbitrary $q$ and $a$.
+Stable/unstable solutions occur for values of the parameters in the white/hatched regions.
+The eigenvalues $a_j$ and $b_j$ are represented by solid and dashed lines, respectively.}
+\label{stability_diagram}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{3.0_Chapter_III/growth_diagram}
+\caption{The real part of $\mu$ is plotted for $q > 0$.}
+\label{growth_diagram}
+\end{figure}
+
+Applying the divergence operator $\nabla \cdot$ to Equation \eqref{eq3} results in the left hand side vanishing since the advective derivative commutes with the divergence operator, and the displacement is divergence-free.
+We, therefore, obtain Laplace's equation for the total pressure
+\begin{equation}
+\label{eq4}
+\nabla^2 p_T = 0.
+\end{equation}
+By Fourier decomposing all variables $\sim \mathrm{e}^{i (k_x x + k_z z)}$, we obtain the solutions to Equation \eqref{eq4}:
+\begin{equation}
+\label{eq5}
+\hat p_T(y) = 
+\begin{cases}
+p_{0 i} \mathrm{e}^{\sqrt{k_x^2 + k_z^2} y}, & \quad y < 0,
+\\[0.3cm]
+p_{0 e} \mathrm{e}^{-\sqrt{k_x^2 + k_z^2} y}, & \quad y > 0,
+\end{cases}
+\end{equation}
+where $k_{x, z}$ are the wavenumbers in the $x$ and $z$ directions, and $p_{0i,e}$ are arbitrary constants.
+The boundary conditions that must be satisfied at the interface are the continuity of the Lagrangian displacement and the continuity of total pressure:
+\begin{align}
+\label{eq6}
+\llbracket \hat \xi_y \rrbracket_{y = 0} = 0,
+\\[0.3cm]
+\label{eq7}
+\llbracket \hat p_T \rrbracket_{y = 0} = 0.
+\end{align}
+
+Using Equation \eqref{eq7}, we deduce that the arbitrary constants in Equation \eqref{eq5} are equal, i.e. that $p_{0 i} = p_{0 e} = p_0$.
+By combining Equation \eqref{eq5} with the $y$-component of Equation \eqref{eq3}, and applying the boundary condition \eqref{eq6}, we obtain a single equation for the displacement from the interface
+\begin{align}
+\begin{split}
+\label{eq8}
+\bigg\{ \frac{\mathrm{d}^2}{\mathrm{d} t^2}
++ 2 i A \cos(\Omega t) \frac{\mathrm{d}}{\mathrm{d} t}
+& - i \Omega A \sin(\Omega t)
+- B \cos^2(\Omega t) 
++ C \bigg\} \hat \xi_y
+= 0,
+\\[0.3cm]
+A & = \frac{(\rho_i - \rho_e) k_x U}{\rho_i + \rho_e},
+\\[0.3cm]
+B & = k_x^2 U^2,
+\\[0.3cm]
+C & = \frac{2 \rho_i v_{A i}^2 k_z^2}{\rho_i + \rho_e},
+\end{split}
+\end{align}
+where $v_{Ai}^2 = B_z^2 / \mu \rho_i$ is the Alfv\'en speed in the region $y < 0$.
+
+Let us introduce a rescaling for Equation \eqref{eq8} in order to bring it to the canonical form of Mathieu's equation \citep{McLachlan1946}.
+We begin by writing $\hat \xi_y (t) = g(t) \eta(t)$, so that Equation \eqref{eq8} becomes
+\begin{align}
+\begin{split}
+\label{eq9}
+\frac{\mathrm{d}^2 g}{\mathrm{d} t^2} \eta
++ 2 \frac{\mathrm{d} g}{\mathrm{d} t} \frac{\mathrm{d} \eta}{\mathrm{d} t}
+& + g \frac{\mathrm{d}^2 \eta}{\mathrm{d} t^2}
++ 2 i A \cos(\Omega t) ( \frac{\mathrm{d} g}{\mathrm{d} t} \eta
++ g \frac{\mathrm{d} \eta}{\mathrm{d} t})
+\\[0.3cm]
+& - i \Omega A \sin(\Omega t) g \eta 
+- B \cos^2(\Omega t) g \eta
++ C g \eta
+= 0.
+\end{split}
+\end{align}
+To achieve our goal, we require there be no first order derivatives in Equation \eqref{eq9}, i.e.
+\begin{equation}
+\label{eq10}
+\left( \frac{\mathrm{d} g}{\mathrm{d} t}
++ i A \cos(\Omega t) g \right) \frac{\mathrm{d} \eta}{\mathrm{d} t}
+= 0.
+\end{equation}
+Solving for $g(t)$ in Equation \eqref{eq10}, we obtain
+\begin{equation}
+\label{eq11}
+g(t) = \exp\left\{- \frac{i A}{\Omega} \sin(\Omega t)\right\}.
+\end{equation}
+Using this rescaling function, we obtain the canonical form of Mathieu's equation for $\eta$, i.e.
+\begin{align}
+\begin{split}
+\label{eq12}
+\frac{\mathrm{d}^2 \eta}{\mathrm{d} \tau^2}
+& + [a - 2 q \cos(2 \tau)] \eta = 0,
+\\[0.3cm]
+q & = \frac{1}{4} (B - A^2),
+\\[0.3cm]
+a & = \frac{1}{2} (A^2 - B) + C,
+\end{split}
+\end{align}
+where $\tau = \Omega t$ has been introduced in order to non-dimensionalise the equation.
+We may write the parameters $q$ and $a$ explicitly as
+\begin{align}
+\begin{split}
+\label{eq13}
+q = \frac{r M_A^2 \kappa_x^2}{(1 + r)^2}, \quad
+a = \alpha - 2 q, \quad
+\alpha = \frac{2 \kappa_z^2}{1 + r}
+\end{split}
+\end{align}
+where $r = \rho_e / \rho_i$ is the density ratio, $M_A = U / v_{Ai}$ is the Alfv\'en Mach number, and $\kappa_x = k_x v_{Ai} / \Omega$, and $\kappa_z = k_z v_{Ai} /\Omega$ are the non-dimensionalised wavenumbers.
+
+In this section, we have assumed that all variables are dependent on the coordinates both parallel and perpendicular to the magnetic field, although initially one may have assumed that a magnetic field perpendicular to a flow would not affect its stability.
+Omitting $z$-dependence would yield $\alpha = 0$, meaning that the magnetic field would indeed have no effect on the stability, and that all solutions would be unstable.
+Hence, it is worth noting that, in the configuration described so far, the stabilising factor originates from perturbations along the magnetic field.
+
+\begin{figure*}[t]
+\centering
+\subfloat[]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/stability_diagram_m}}
+\hspace{3pt}
+\subfloat[]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/growth_rates}}
+\caption{Left: The stability diagram for Equation \eqref{eq12}, with $q$ and $a$ defined using Equations \eqref{eq13} and \eqref{loop_params}, for two different values of $\Omega$. The growth times of each mode are displayed on the right.}
+\label{stability_growth}
+\end{figure*}
+
+One of the properties of the stability of solutions of Mathieu's equation is due to Floquet's theorem. We may write solutions to Equations \eqref{eq12} and \eqref{eq13} as
+\begin{equation}
+\label{eq14}
+\eta(\tau) = \mathrm{e}^{\mu \tau} P(a, q, \tau),
+\end{equation}
+where $\mu = \mu(a, q)$ is called the characteristic exponent, and $P(a, q, t)$ is a periodic function of period $\pi$ \citep{McLachlan1946}.
+
+The parameter $\mu$ determines the nature of solutions to Mathieu's equation.
+Since we may write 
+\[
+\mathrm e^{\mu \tau} = \mathrm e^{\mathrm{Re}(\mu) \Omega t} \mathrm e^{i \mathrm{Im}(\mu) \Omega t},
+\]
+it follows that purely imaginary values of $\mu$ correspond to stable oscillatory solutions, while real and complex values correspond to unstable solutions.
+The term $\mathrm{Re}(\mu) \Omega$ corresponds to the growth rate of the shear instability.
+Unfortunately, $\mu$ cannot be easily computed analytically, and, for this reason, we shall make use of a numerical approach to gain further insight.
+
+Following \cite{McLachlan1946}, we plot the stability diagram of Equation \eqref{eq12} for arbitrary $q$ and $a$ in Figure \ref{stability_diagram}a.
+The white and hatched regions correspond to purely imaginary and real/complex values of $\mu$, respectively, and thus, to stable and unstable solutions of Equation \eqref{eq12}.
+The contours defining the regions are the eigenvalues (or characteristic values) of Mathieu's equation, denoted here as $a_j(q)$ and $b_j(q)$, that satisfy $a_j < b_{j+1}$, for integer $j \geq 0$.
+These are represented in Figure \ref{stability_diagram}a by solid and dotted lines, respectively.
+
+Complementary to the above, Figure \ref{stability_diagram}b illustrates the nature of the characteristic exponent $\mu$.
+Purely imaginary solutions are plotted in white, and are separated from real/complex solutions by the characteristic curves, while the real part of $\mu$ is plotted in contours in the unstable regions.
+It is important to note that $\mathrm{Re}(\mu) \to \infty$ for $a \to -\infty$ and $q \to \pm \infty$, but not for $a \to \infty$.
+Solutions with large values of $a$ are typically stable.
+
+The general stability condition may be obtained by studying the nature of $\mu$ in relation to the eigenvalues $a_j$ and $b_j$.
+Since, from Equation \eqref{eq13}, we know that $q \geq 0$, we only need to consider that half of the $q-a$ plane.
+As $q$ and $a$ vary, $\mu$ describes curves in the $q-a$ plane.
+The characteristic exponent $\mu$ is purely imaginary when $(q, a)$ lies in the regions between $a_j(q)$ and $b_{j+1} (q)$, meaning that all solutions of Equation \eqref{eq12} are bounded as $t \to \infty$, and therefore stable.
+Unbounded solutions occur in the regions between $b_j$ and $a_j$, where $\mu$ has a non-zero real part.
+Although power series expressions may be obtained for $a_j$ and $b_j$ \citep{McLachlan1946}, these are unwieldy, rendering the general stability condition difficult to utilise.
+
+For applications to transverse coronal loop oscillations, we may introduce 
+\begin{align}
+\begin{split}
+\label{loop_params}
+k_x & = m / R,
+\\[0.3cm]
+k_z & = \pi / L,
+\end{split}
+\end{align}
+where $R$ is the radius of the loop, $L$ is the length, and $m$ is the azimuthal wavenumber.
+Let us, now, obtain a more practical stability criterion than the general one outlined above.
+It is readily visible in Figure \ref{stability_diagram}a that solutions to Equations \eqref{eq12} and \eqref{eq13} are unstable in the lower half-plane, with exceptions occurring for very thin regions of stability.
+The condition $a < 0$ is satisfied if $2q > \alpha$, which may be written explicitly as
+\begin{equation}
+\label{eq15}
+M_A > \frac{\pi R}{m L} \sqrt{1 + r^{-1}}.
+\end{equation}
+This condition is the same as the one used by \cite{Antolin2014}.
+Unstable solutions in the upper half-plane also exist, but obtaining an analytical stability condition for $a > 0$ is mathematically difficult and beyond the scope of this work.
+
+The stability of perturbations of different azimuthal wavenumbers $m$ is plotted in Figure \ref{stability_growth}a for parameter values similar to those of \cite{Terradas2008}, namely $r = 1/3$, $v_A = 10^3 \, \mathrm{km}\, \mathrm{s}^{-1}$, $R = 4 \times 10^3 \, \mathrm{km}$, $L = 40 \times 10^3 \, \mathrm{km}$,  $M_A = 1/10$, and $\Omega = 0.1 \, \mathrm{s}$ (in blue) and $\Omega = 0.05 \, \mathrm{s}$ (in red).
+The values of $q$ and $a$ are calculated using Equations \eqref{eq13} and \eqref{loop_params} and plotted in the $q-a$ plane for different values of $m$.
+The perturbations with $m=0$ will always be stable for positive $a$., since $q$ will be null in this case and $a$ will always be purely imaginary \citep{McLachlan1946}.
+We must also note that, from the definition of $a$ in Equation \eqref{eq13}, all points will be on a line of slope $-2$, and that increasing $m$ leads to a decrease in $\alpha$, and thus to a decrease in $a$.
+
+The growth times of the unstable modes in \ref{stability_growth}a are displayed in \ref{stability_growth}b.
+For the two chosen parameter regimes, modes with $m < 5$ and $m < 7$, respectively, are stable, and thus omitted.
+The decrease in the growth time is due to the fact that, as $-a$ increases, so does $\mathrm{Re}(\mu)$, as may be seen in Figure \ref{stability_diagram}b.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Stability of a Twisted Tube}
+\label{inclined}
+
+\begin{figure*}[t]
+\centering
+\subfloat[]{\includegraphics[width=0.45\textwidth]{3.0_Chapter_III/tube_2}}
+\hfill
+\subfloat[]{\includegraphics[width=0.45\textwidth]{3.0_Chapter_III/interface_2}}
+\caption{Left: a schematic representation of a twisted magnetic tube embedded in a straight magnetic field. Right: a diagram of the flows on either side of the boundary during transverse oscillation.}
+\label{stability_growth}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\subfloat[(a)]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/MA0}}
+\hspace{3pt}
+\subfloat[(b)]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/MA0_min}}
+\caption{The panel on the left represents $M_{A0}$ plotted for $\phi$ and $\theta$ in the range $(0, 2\pi)$. The dashed lines represent the values for which $M_{A0}$ is singular. The panel on the right displays the minimum value of $M_{A0}$, obtained from Equation \eqref{eq21}. Plotted for $r = 1/3$ and $\bar v_A^2 = r^{-1}$.}
+\label{MA0}
+\end{figure*}
+
+In the previous section we modelled the boundary of a straight magnetic flux tube undergoing transverse motion using an interface separating time dependent counter-streaming flows.
+It has been suggested that if the magnetic field permeating the tube is twisted, it may inhibit the formation of the KHI, or increase its growth time \citep{Terradas2008}.
+
+In this section, we assume that the magnetic field for $y < 0$ is at an angle $\theta$ to the $y-z$ plane, in order to model the boundary of a magnetically twisted flux tube (see Figure 5).
+Here, $\theta$ corresponds to the degree of twist, and should typically be a small angle (since highly twisted flux tubes are prone to other instabilities with which we are not concerned in the present study).
+Since the displacement of a flux tube's boundary is primarily perpendicular to the magnetic field \citep[see, for example,][]{Ruderman2008}, we assume flows and magnetic fields of the form
+\begin{align*}
+& \mathbf{B_i} = (B_i \sin \theta, 0, B_i \cos \theta),
+\\[0.3cm]
+& \mathbf{B_e} = (0, 0, B_e),
+\\[0.3cm]
+& \mathbf{U_i} = (U \cos(\Omega t) \cos \theta, 0, - U \cos(\Omega t) \sin \theta),
+\\[0.3cm]
+& \mathbf{U_e} = (- U \cos(\Omega t), 0, 0),
+\end{align*}
+as illustrated in Figure 5(b).
+
+Following the same method used in the previous section, the governing equation will be Equation \eqref{eq3}, where the advective derivative for $y < 0$ is now defined as
+\[
+\dfrac{\mathrm{D}}{\mathrm{D} t}
+= \dfrac{\partial}{\partial t}
++ U \cos(\Omega t) \cos \theta \dfrac{\partial}{\partial x}
+- U \cos(\Omega t) \sin \theta \dfrac{\partial}{\partial z}.
+\]
+This may be used to determine the $y$-component of the displacement, assuming a Fourier decomposition of the form $\sim \mathrm{e}^{i (k_x x + k_z z)}$ to obtain
+\begin{align}
+\label{eq16-1}
+\begin{split}
+& \left( \frac{\partial}{\partial t}
++ i k_x U \cos(\Omega t) \cos\theta
+- i k_z U \cos(\Omega t) \sin\theta \right)^2 \hat \xi_y
+\\[0.3cm]
+& + v_{A i}^2 \left( k_x \sin\theta
++ k_z \cos\theta \right)^2 \hat \xi_y
+= - \frac{1}{\rho_i} \frac{\partial p_T}{\partial y},
+\end{split}
+\end{align}
+for $y < 0$, and
+\begin{equation}
+\label{eq16-2}
+\left( \frac{\partial}{\partial t}
+- i k_x U \cos(\Omega t) \right)^2 \hat \xi_y
++ v_{A e}^2 k_z^2 \hat \xi_y
+= - \frac{1}{\rho_e} \frac{\partial p_T}{\partial y},
+\end{equation}
+for $y > 0$.
+The total pressure is, once again, described by Equation \eqref{eq5} with equal arbitrary constants.
+We introduce Equation \eqref{eq5} into Equations \eqref{eq16-1} and \eqref{eq16-2}, and apply continuity of displacement to obtain the governing equation for $\hat \xi_y(t)$:
+%\begin{align}
+%\begin{split}
+%\label{eq17}
+%\bigg\{ & (\rho_i + \rho_e) \frac{\mathrm{d}^2}{\mathrm{d} t^2}
+%+ 2 i U \cos(\Omega t)
+%\big[ \rho_i ( k_x \cos\theta - k_z \sin\theta ) 
+%- \rho_e k_x \big] \frac{\mathrm{d}}{\mathrm{d} t}
+%\\
+%- & i U \Omega \sin(\Omega t) 
+%\big[ \rho_i ( k_x \cos\theta - k_z \sin\theta )
+%- \rho_e k_x \big]
+%\\
+%- & U^2 \cos^2(\Omega t) 
+%\big[ \rho_i \left( k_x \cos\theta
+%- k_z \sin\theta \right)^2
+%+ \rho_e k_x^2 \big]
+%\\
+%+ & \big[ \rho_i v_{A i}^2 \left( k_x \sin\theta
+%+ k_z \cos\theta \right)^2
+%+ \rho_e v_{A e}^2 k_z^2 \big] \bigg\} \hat \xi_y
+%= 0.
+%\end{split}
+%\end{align}
+\begin{align}
+\begin{split}
+\label{eq17}
+& \bigg\{ \frac{\mathrm{d}^2}{\mathrm{d} t^2}
++ 2 i A \cos(\Omega t) \frac{\mathrm{d}}{\mathrm{d} t}
+- i \Omega A \sin(\Omega t)
+\\[0.3cm]
+& - B \cos^2(\Omega t) 
++ C \bigg\} \hat \xi_y
+= 0,
+\\[0.3cm]
+& A
+= \frac{U \big[ \rho_i ( k_x \cos\theta - k_z \sin\theta ) 
+- \rho_e k_x \big]}{\rho_i + \rho_e},
+\\[0.3cm]
+& B
+= \frac{U^2 \big[ \rho_i \left( k_x \cos\theta
+- k_z \sin\theta \right)^2
++ \rho_e k_x^2 \big]}{\rho_i + \rho_e},
+\\[0.3cm]
+& C
+= \frac{\rho_i v_{A i}^2 \left( k_x \sin\theta
++ k_z \cos\theta \right)^2
++ \rho_e v_{A e}^2 k_z^2}{\rho_i + \rho_e}.
+\end{split}
+\end{align}
+
+In examining Equation \eqref{eq17}, it is useful to first examine the system with a steady configuration.
+Setting $\Omega = 0$ in Equation \eqref{eq17} renders it independent of $t$ and allows us to Fourier decompose the equation $\sim \mathrm{e}^{-i \omega t}$.
+\begin{align}
+\begin{split}
+\label{eq18}
+(\rho_i & + \rho_e) \omega^2
+- 2 U \big[ \rho_i ( k_x \cos\theta - k_z \sin\theta ) 
+- \rho_e k_x \big] \omega
+\\[0.3cm]
++ & U^2 \big[ \rho_i \left( k_x \cos\theta
+- k_z \sin\theta \right)^2
++ \rho_e k_x^2 \big]
+\\[0.3cm]
+- & \rho_i v_{A i}^2 \left( k_x \sin\theta
++ k_z \cos\theta \right)^2
+- \rho_e v_{A e}^2 k_z^2
+= 0.
+\end{split}
+\end{align}
+
+\begin{figure}[t]
+\centering
+ \includegraphics[width=0.8\textwidth]{3.0_Chapter_III/MA0_m}
+ \caption{$M_{A0}$ plotted for $m$ between 1 and 10, for $\theta=0, 0.1, 0.2, 0.3, 0.4$. The continuous lines connecting the points were added for clarity. Here, $r = 1/3$ and $L/R = 10$.}
+ \label{MA0_m}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\subfloat[$\theta = 0.05$]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/stability_diagram_tilt_fig1}}
+\hspace{3pt}
+\subfloat[$\theta = 0.2$]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/stability_diagram_tilt_fig2}}
+\caption{Stability diagram for Equation \eqref{eq32}, with parameters defined in Equation \eqref{eq33}, for two values of the field inclination.}
+\label{stability_diagram_tilt}
+\end{figure*}
+
+In order to determine the conditions for the stability of the system, we need to establish for what range of values of the other parameters $\omega$ is complex.
+Using the quadratic formula on Equation \eqref{eq18}, we find that the system is unstable for $M_A > M_{A0}$, where
+\begin{align}
+\begin{split}
+\label{eq18-1}
+M_{A0}^2 = \frac{
+(1 + r)
+\big[ \left( k_x \sin\theta
++ k_z \cos\theta \right)^2
++ r \bar v_{A}^2 k_z^2 \big]
+}{
+r \left( k_x \cos\theta - k_z \sin\theta + k_x \right)^2
+},
+\end{split}
+\end{align}
+Since the wave vector $\mathbf{k}$ is arbitrary, it is advantageous to rewrite its components in trigonometric form.
+We, thus, introduce $k_x = k \cos\phi$, and $k_z = k \sin\phi$, where $k$ is the magnitude, and $\phi$ is the angle between $\mathbf{k}$ and the $x$-axis.
+\begin{align}
+\begin{split}
+\label{eq19}
+M_{A0}^2 = \frac{
+(1 + r)
+\big[ \left( \tan\phi \cos\theta
++ \sin\theta \right)^2 + r \bar v_{A}^2 \tan^2\phi \big]
+}{
+r
+\left( \cos\theta - \tan\phi \sin\theta + 1 \right)^2
+},
+\end{split}
+\end{align}
+where $\bar v_A = v_{Ae} / v_{Ai}$ is the ratio of Alfv\'en speeds.
+We note that the right hand side of Equation \eqref{eq19} is singular for $\theta=(2n+1)\pi$ and $\phi = [(2n+1)\pi - \theta] / 2$. 
+We also find that the minimum value of $M_{A0}$ is dependent on $\theta$ and occurs for
+\begin{equation}
+\label{eq20}
+\phi = 
+- \arctan \left(
+\frac{ \sin\theta
+}{
+\cos\theta
++ r \bar v_{A}^2}
+\right).
+\end{equation}
+We introduce Equation \eqref{eq20} into \eqref{eq19} to obtain the minimum critical Alfv\'en Mach number
+\begin{equation}
+\label{eq21}
+\min \{ M_{A0}^2 \} = \frac{
+\bar v_{A}^2 (1 + r) (1 - \cos\theta)}{
+(1 + r \bar v_{A}^2) (1 + \cos\theta)}.
+\end{equation}
+It follows that the system is stable for any value of $M_A$ below this value.
+
+\begin{figure*}[t]
+\centering
+\subfloat[(a) $\theta = 0.05$]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/stability_diagram_m_tilt}}
+\hspace{3pt}
+\subfloat[(b) $\theta = 0.2$]{\includegraphics[width=0.49\textwidth]{3.0_Chapter_III/growth_rates_tilt}}
+\caption{The stability diagram for Equation \eqref{eq32}, with $q$ and $a$ defined using Equation \eqref{loop_params}, is presented on the left, for two different values of $\Omega$ and $M_A$, and $\theta=0.1$. The growth times of each mode are displayed in a logarithmic plot on the right.}
+\label{stability_growth_tilt}
+\end{figure*}
+
+For applications to transverse coronal loop oscillations, let us combine Equations \eqref{loop_params} and \eqref{eq18-1}, and investigate the stability of perturbations of azimuthal wavenumber $m$.
+The results are presented in Figure \ref{MA0_m}. As $m$ increases, lower values of $M_A$ are required for the system to become unstable.
+Increasing the tilt of the magnetic field stabilises the system, causing $M_{A0}$ to increase approximately linearly with $\theta$.
+The highest value of $\theta$ chosen of $0.4$ radians corresponds to approximately $22.9^\circ$.
+The values of $M_{A0}$ for $m=0$ were intentionally omitted since they are much greater than unity, and can generally be considered stable.
+It is worth noting here that, in Figure \ref{MA0_m}, we have chosen a particularly low value of $L/R$, and that increasing it will make $M_{A0}$ tend to $\theta$ (for $m > 0$).
+
+We have, thus far, obtained the singular points and minimum critical velocities in terms of the inclination $\theta$ for a steady flow (i.e. $\Omega = 0$).
+If we are to fulfil the aim of this study, however, we must also determine the stability of the system for arbitrary values of $\Omega$.
+
+Our intention is to obtain an equation analogous to Equation \eqref{eq12}, but in the case of a tilted magnetic field.
+We accomplish this by rescaling Equation \eqref{eq17} using
+\begin{align}
+\begin{split}
+\label{eq31}
+\hat \xi_y(t) = \exp\left\{- \frac{i A}{\Omega} \sin(\Omega t)\right\} \tilde \eta(t),
+\end{split}
+\end{align}
+which we obtained using the same method as we used to obtain Equation \eqref{eq11}.
+Combining Equations \eqref{eq31} and \eqref{eq17}, and simplifying the extra terms, we obtain
+\begin{align}
+\begin{split}
+\label{eq32}
+\frac{\mathrm{d}^2 \tilde \eta}{\mathrm{d} \tau^2}
+& + [\tilde a - 2 \tilde q \cos(2 \tau)] \tilde \eta = 0,
+\\[0.3cm]
+\tilde q 
+= & \frac{r M_A^2 \left( \kappa_x \cos\theta - \kappa_z \sin\theta
++ \kappa_x \right)^2}{4 (1 + r)^2},
+\\[0.3cm]
+\tilde \alpha 
+= & \frac{\left( \kappa_x \sin\theta
++ \kappa_z \cos\theta \right)^2
++ r \bar v_A^2 \kappa_z^2}
+{1 + r},
+\\[0.3cm]
+\tilde a = & \tilde \alpha - 2 \tilde q,
+\end{split}
+\end{align}
+or, in terms of $k$ and $\phi$,
+\begin{align}
+\begin{split}
+\label{eq33}
+\tilde q = &
+\frac{r M_A^2 \kappa^2 \left[ \cos\phi \cos\theta
+- \sin\phi \sin\theta
++ \cos\phi \right]^2}
+{4 (1 + r)^2},
+\\[0.3cm]
+\tilde \alpha = &
+\frac{\kappa^2 \big[ \left( \cos\phi \sin\theta
++ \sin\phi \cos\theta \right)^2
++ r \bar v_A^2 \sin^2\phi \big]}{1 + r}
+\\[0.3cm]
+\tilde a = & \tilde \alpha
+- 2 \tilde q,
+\end{split}
+\end{align}
+where, again, $\tau = \Omega t$, and $\kappa^2 = v_{A i}^2 k^2 / \Omega^2$.
+Setting $\theta = 0$ and $\bar v_A^2 = r^{-1}$ in Equation \eqref{eq32} allows us to immediately recover the parameters in Equation \eqref{eq13}.
+
+Knowing that $\tilde q$ is always positive, we obtain the condition for which $\tilde a$ will be negative and the solution will, typically, be unstable.
+This occurs for $2 \tilde q > \tilde \alpha$, and, using Equation \eqref{eq32}, we find that this condition may be written explicitly as $M_A^2 > 2 M_{A0}^2$.
+Written in terms of coronal loop parameters, this becomes
+\begin{equation}
+\label{eq40}
+M_A^2 > 2 (1 + r^{-1}) 
+\frac{\pi^2 R^2}{m^2 L^2}
+\frac{1 + \left[(m L)/(\pi R) \sin\theta + \cos\theta \right]^2}
+{[1 + \cos\theta - (m L)/(\pi R) \sin\theta]^2},
+\end{equation}
+where we assumed that $\bar v_{A}^2 = r^{-1}$.
+Setting $\theta = 0$, we recover the condition found for the straight tube, Equation \eqref{eq15}.
+
+The stability diagram for two values of $\phi$ and $\theta$ are presented in Figure \ref{stability_diagram_tilt}, for $r=1/3$, $M_A=0.1$, and arbitrary $\kappa$.
+Because our intention is to show the stabilising effect of the magnetic field, we purposely chose small values of $\phi$ since perturbations perpendicular to the magnetic field are the least stable.
+Here, $\kappa$ is taken as arbitrary so as to define a region in the $\tilde q - \tilde a$ plane bounded by two semi-infinite straight lines.
+We observe that increasing the inclination, even by a small amount, places the range of solutions primarily in the stable regions of the $\tilde q - \tilde a$ plane.
+
+In Figure \ref{stability_growth_tilt}, we illustrate the stability and growth times for a set of coronal loop parameters, similarly to Figure \ref{stability_growth}, i.e. $r = 1/3$, $v_A = 10^3 \, \mathrm{km}\, \mathrm{s}^{-1}$, $R = 4 \times 10^3 \, \mathrm{km}$, $L = 40 \times 10^3 \, \mathrm{km}$.
+We find that, for even a small inclination, say $\theta = 0.1$, higher flow speeds are required at the boundary in order for the system to become unstable for low values of $m$, namely $M_A = 0.2$ in the case of $\Omega = 0.05 s^{-1}$, and $M_A = 0.3$ in the case of $\Omega = 0.1 s^{-1}$.
+This corroborates the result obtained in Equation \eqref{eq18-1} and illustrated in Figure \ref{MA0_m}.
+We also note that the growth times have significantly increased for low values of $m$ (by nearly an order of magnitude), but are largely unaffected otherwise.
+It is worth noting here that the stability is highly sensitive to the chosen parameters, and that setting a larger value of $L/R$ would have reduced the stability considerably, as in \cite{Howson2017a}.
+
+\section{Conclusion}
+
+In this work, we have conducted a theoretical study of the transverse wave induced Kelvin-Helmholtz instability in coronal loops, by modelling the region of least stability as a straight interface separating periodic counter-streaming flows.
+The plasmas either side of the interface are assumed to be incompressible, and described by the set of ideal MHD Equations \eqref{eq2}.
+We reduced these to a single equation governing the displacement at the interface (Equation \ref{eq3}), in terms of the prescribed flows and magnetic field.
+Using the appropriate boundary conditions, as well as a rescaling of the displacement, we were able to reduce the governing equation to the canonical form of Mathieu's equation, in the case of both straight and twisted magnetic fields, Equations \eqref{eq12} and \eqref{eq32}.
+
+Mathieu's equation describes the linear stability of oscillatory dynamical systems, a simple example being a pendulum with a vertically oscillating suspension point.
+The parametric stability of such a system has been studied in the context of oscillatory flows in both hydrodynamics and MHD.
+\cite{Greenspan1963}, and \cite{Kelly1965}, were first to investigate the stability of time-periodic counter-streaming flows at an interface separating inviscid fluids.
+Subsequently, \cite{Roberts1973} studied the problem in the context of MHD flows and found that a magnetic field parallel to the flows suppresses the instability.
+Our study generalises the results of \cite{Roberts1973} by allowing for different angles of the magnetic fields and flows.
+More recently, \cite{Zaqarashvili2000}, \cite{Zaqarashvili2002}, and \cite{Zaqarashvili2005}, studied the parametric stability of various oscillatory solar MHD phenomena.
+
+We studied the stability of the solutions for both arbitrary parameters, and parameters specific to conditions in the solar corona, using the substitutions in Equation \eqref{loop_params}.
+In the case of the straight magnetic field, for typical coronal conditions, we found that perturbations of small azimuthal wavenumber $m$ are typically stable, and that the growth rate of unstable perturbations is increased as $m$ increases.
+In the case of the magnetically twisted tube, we have shown that the twist may significantly increase the KHI critical value, but that the instability may still develop for a range of physical parameters.
+
+The single interface model presented in this study is a significant step towards establishing the properties of the TWIKH instability (and possibly a wider class of time-dependent flow instabilities), and has proven to be in general accord with numerical simulations.
+However, one must be aware of its limitations.
+Such a model must assume that the azimuthal length scales are much smaller than the longitudinal ones, and may omit some important physics.
+\cite{Howson2017a} have shown that even a weak degree of magnetic twist may introduce flows in the longitudinal direction of a nonlinearly transverse oscillating magnetic flux tube.
+A natural next step would then be to study a fully cylindrical three dimensional model of the flow at the interface.
+Another aspect to consider would be the smooth transition layer between the dense interior of the loop and the sparse corona.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STOP COPYING HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{aasjournal}
+\bibliography{references}  
+
+\end{document}
