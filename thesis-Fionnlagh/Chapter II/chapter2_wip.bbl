@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{46}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,6 +28,30 @@ Markus~J. {Aschwanden}, Amy {Winebarger}, David {Tsiklauri}, and Hardi {Peter}.
 \newblock {The Coronal Heating Paradox}.
 \newblock \emph{\apj}, 659\penalty0 (2):\penalty0 1673--1681, April 2007.
 \newblock \doi{10.1086/513070}.
+
+\bibitem[{Bale} et~al.(2019){Bale}, {Badman}, {Bonnell}, {Bowen}, {Burgess},
+  {Case}, {Cattell}, {Chandran}, {Chaston}, {Chen}, {Drake}, {de Wit},
+  {Eastwood}, {Ergun}, {Farrell}, {Fong}, {Goetz}, {Goldstein}, {Goodrich},
+  {Harvey}, {Horbury}, {Howes}, {Kasper}, {Kellogg}, {Klimchuk}, {Korreck},
+  {Krasnoselskikh}, {Krucker}, {Laker}, {Larson}, {MacDowall}, {Maksimovic},
+  {Malaspina}, {Martinez-Oliveros}, {McComas}, {Meyer-Vernet}, {Moncuquet},
+  {Mozer}, {Phan}, {Pulupa}, {Raouafi}, {Salem}, {Stansby}, {Stevens}, {Szabo},
+  {Velli}, {Woolley}, and {Wygant}]{Bale2019Natur}
+S.~D. {Bale}, S.~T. {Badman}, J.~W. {Bonnell}, T.~A. {Bowen}, D.~{Burgess},
+  A.~W. {Case}, C.~A. {Cattell}, B.~D.~G. {Chandran}, C.~C. {Chaston}, C.~H.~K.
+  {Chen}, J.~F. {Drake}, T.~Dudok {de Wit}, J.~P. {Eastwood}, R.~E. {Ergun},
+  W.~M. {Farrell}, C.~{Fong}, K.~{Goetz}, M.~{Goldstein}, K.~A. {Goodrich},
+  P.~R. {Harvey}, T.~S. {Horbury}, G.~G. {Howes}, J.~C. {Kasper}, P.~J.
+  {Kellogg}, J.~A. {Klimchuk}, K.~E. {Korreck}, V.~V. {Krasnoselskikh},
+  S.~{Krucker}, R.~{Laker}, D.~E. {Larson}, R.~J. {MacDowall}, M.~{Maksimovic},
+  D.~M. {Malaspina}, J.~{Martinez-Oliveros}, D.~J. {McComas},
+  N.~{Meyer-Vernet}, M.~{Moncuquet}, F.~S. {Mozer}, T.~D. {Phan}, M.~{Pulupa},
+  N.~E. {Raouafi}, C.~{Salem}, D.~{Stansby}, M.~{Stevens}, A.~{Szabo},
+  M.~{Velli}, T.~{Woolley}, and J.~R. {Wygant}.
+\newblock {Highly structured slow solar wind emerging from an equatorial
+  coronal hole}.
+\newblock \emph{\nat}, 576\penalty0 (7786):\penalty0 237--242, December 2019.
+\newblock \doi{10.1038/s41586-019-1818-7}.
 
 \bibitem[{Beckers}(1968)]{Beckers1968}
 J.~M. {Beckers}.
@@ -86,13 +110,32 @@ B.~{De Pontieu}, S.~{McIntosh}, V.~H. {Hansteen}, M.~{Carlsson}, C.~J.
 \newblock \emph{\pasj}, 59:\penalty0 S655--S662, November 2007.
 \newblock \doi{10.1093/pasj/59.sp3.S655}.
 
-\bibitem[{De Pontieu} et~al.(2017){De Pontieu}, {Mart{\'\i}nez-Sykora}, and
-  {Chintzoglou}]{depontieu2017}
+\bibitem[{De Pontieu} et~al.(2017{\natexlab{a}}){De Pontieu}, {De Moortel},
+  {Martinez-Sykora}, and {McIntosh}]{Pontieu2017ApJ}
+B.~{De Pontieu}, I.~{De Moortel}, J.~{Martinez-Sykora}, and S.~W. {McIntosh}.
+\newblock {Observations and Numerical Models of Solar Coronal Heating
+  Associated with Spicules}.
+\newblock \emph{\apjl}, 845\penalty0 (2):\penalty0 L18, August
+  2017{\natexlab{a}}.
+\newblock \doi{10.3847/2041-8213/aa7fb4}.
+
+\bibitem[{De Pontieu} et~al.(2017{\natexlab{b}}){De Pontieu},
+  {Mart{\'\i}nez-Sykora}, and {Chintzoglou}]{depontieu2017}
 Bart {De Pontieu}, Juan {Mart{\'\i}nez-Sykora}, and Georgios {Chintzoglou}.
 \newblock {What Causes the High Apparent Speeds in Chromospheric and Transition
   Region Spicules on the Sun?}
-\newblock \emph{\apjl}, 849\penalty0 (1):\penalty0 L7, November 2017.
+\newblock \emph{\apjl}, 849\penalty0 (1):\penalty0 L7, November
+  2017{\natexlab{b}}.
 \newblock \doi{10.3847/2041-8213/aa9272}.
+
+\bibitem[{Dover} et~al.(2020){Dover}, {Sharma}, {Kors{\'o}s}, and
+  {Erd{\'e}lyi}]{Dover2020ApJ90572D}
+Fionnlagh~Mackenzie {Dover}, Rahul {Sharma}, Marianna~B. {Kors{\'o}s}, and
+  Robertus {Erd{\'e}lyi}.
+\newblock {Signatures of Cross-sectional Width Modulation in Solar Spicules due
+  to Field-aligned Flows}.
+\newblock \emph{\apj}, 905\penalty0 (1):\penalty0 72, December 2020.
+\newblock \doi{10.3847/1538-4357/abc349}.
 
 \bibitem[Edgington-Mitchell et~al.(2014)Edgington-Mitchell, Honnery, and
   Soria]{Edgington-Mitchell2014}
@@ -134,6 +177,14 @@ V.~H. {Hansteen}, B.~{De Pontieu}, L.~{Rouppe van der Voort}, M.~{van Noort},
 \newblock \emph{\apjl}, 647\penalty0 (1):\penalty0 L73--L76, August 2006.
 \newblock \doi{10.1086/507452}.
 
+\bibitem[{He} et~al.(2009){He}, {Tu}, {Marsch}, {Guo}, {Yao}, and
+  {Tian}]{He2009AA497525H}
+J.~S. {He}, C.~Y. {Tu}, E.~{Marsch}, L.~J. {Guo}, S.~{Yao}, and H.~{Tian}.
+\newblock {Upward propagating high-frequency Alfv{\'e}n waves as identified
+  from dynamic wave-like spicules observed by SOT on Hinode}.
+\newblock \emph{\aap}, 497\penalty0 (2):\penalty0 525--535, April 2009.
+\newblock \doi{10.1051/0004-6361/200810777}.
+
 \bibitem[{Heggland} et~al.(2007){Heggland}, {De Pontieu}, and
   {Hansteen}]{Heggland2007ApJ6661277H}
 L.~{Heggland}, B.~{De Pontieu}, and V.~H. {Hansteen}.
@@ -150,12 +201,36 @@ D.~B. {Jess}, R.~J. {Morton}, G.~{Verth}, V.~{Fedun}, S.~D.~T. {Grant}, and
 \newblock \emph{\ssr}, 190\penalty0 (1-4):\penalty0 103--161, July 2015.
 \newblock \doi{10.1007/s11214-015-0141-3}.
 
+\bibitem[{Kudoh} and {Shibata}(1999)]{Kudoh1999ApJ514493K}
+Takahiro {Kudoh} and Kazunari {Shibata}.
+\newblock {Alfv{\'e}n Wave Model of Spicules and Coronal Heating}.
+\newblock \emph{\apj}, 514\penalty0 (1):\penalty0 493--505, March 1999.
+\newblock \doi{10.1086/306930}.
+
+\bibitem[{Kukhianidze} et~al.(2006){Kukhianidze}, {Zaqarashvili}, and
+  {Khutsishvili}]{Kukhianidze2006AA449L35K}
+V.~{Kukhianidze}, T.~V. {Zaqarashvili}, and E.~{Khutsishvili}.
+\newblock {Observation of kink waves in solar spicules}.
+\newblock \emph{\aap}, 449\penalty0 (2):\penalty0 L35--L38, April 2006.
+\newblock \doi{10.1051/0004-6361:200600018}.
+
 \bibitem[{Leighton} et~al.(1962){Leighton}, {Noyes}, and
   {Simon}]{Leighton1962ApJ135474L}
 Robert~B. {Leighton}, Robert~W. {Noyes}, and George~W. {Simon}.
 \newblock {Velocity Fields in the Solar Atmosphere. I. Preliminary Report.}
 \newblock \emph{\apj}, 135:\penalty0 474, March 1962.
 \newblock \doi{10.1086/147285}.
+
+\bibitem[Mart{\'{i}}nez-Sykora et~al.(2017)Mart{\'{i}}nez-Sykora, {De Pontieu},
+  Hansteen, {Rouppe van der Voort}, Carlsson, and Pereira]{Martinez-Sykora2017}
+J~Mart{\'{i}}nez-Sykora, B~{De Pontieu}, V~H Hansteen, L~{Rouppe van der
+  Voort}, M~Carlsson, and T~M~D Pereira.
+\newblock {On the generation of solar spicules and Alfv{\'{e}}nic waves.}
+\newblock \emph{Science (New York, N.Y.)}, 356\penalty0 (6344):\penalty0
+  1269--1272, jun 2017.
+\newblock ISSN 1095-9203.
+\newblock \doi{10.1126/science.aah5412}.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pubmed/28642434}.
 
 \bibitem[Menon and Skews(2010)]{Menon2010}
 Nandkishore Menon and Beric~William Skews.
@@ -164,6 +239,15 @@ Nandkishore Menon and Beric~William Skews.
 \newblock \emph{Shock Waves}, 20\penalty0 (3):\penalty0 175--190, may 2010.
 \newblock ISSN 09381287.
 \newblock \doi{10.1007/s00193-010-0257-z}.
+
+\bibitem[{Moore} et~al.(2011){Moore}, {Sterling}, {Cirtain}, and
+  {Falconer}]{Moore2011ApJ731L18M}
+Ronald~L. {Moore}, Alphonse~C. {Sterling}, Jonathan~W. {Cirtain}, and David~A.
+  {Falconer}.
+\newblock {Solar X-ray Jets, Type-II Spicules, Granule-size Emerging Bipoles,
+  and the Genesis of the Heliosphere}.
+\newblock \emph{\apjl}, 731\penalty0 (1):\penalty0 L18, April 2011.
+\newblock \doi{10.1088/2041-8205/731/1/L18}.
 
 \bibitem[{Narain} and {Ulmschneider}(1990)]{Narain1990}
 U.~{Narain} and P.~{Ulmschneider}.
@@ -214,6 +298,25 @@ L.~H.~M. {Rouppe van der Voort}, B.~{De Pontieu}, V.~H. {Hansteen},
 \newblock {Magnetoacoustic Shocks as a Driver of Quiet-Sun Mottles}.
 \newblock \emph{\apjl}, 660\penalty0 (2):\penalty0 L169--L172, May 2007.
 \newblock \doi{10.1086/518246}.
+
+\bibitem[{Samanta} et~al.(2019){Samanta}, {Tian}, {Yurchyshyn}, {Peter}, {Cao},
+  {Sterling}, {Erd{\'e}lyi}, {Ahn}, {Feng}, {Utz}, {Banerjee}, and
+  {Chen}]{Samanta2019Sci}
+Tanmoy {Samanta}, Hui {Tian}, Vasyl {Yurchyshyn}, Hardi {Peter}, Wenda {Cao},
+  Alphonse {Sterling}, Robertus {Erd{\'e}lyi}, Kwangsu {Ahn}, Song {Feng},
+  Dominik {Utz}, Dipankar {Banerjee}, and Yajie {Chen}.
+\newblock {Generation of solar spicules and subsequent atmospheric heating}.
+\newblock \emph{Science}, 366\penalty0 (6467):\penalty0 890--894, November
+  2019.
+\newblock \doi{10.1126/science.aaw2796}.
+
+\bibitem[{Scullion} et~al.(2011){Scullion}, {Erd{\'e}lyi}, {Fedun}, and
+  {Doyle}]{Scullion2011ApJ74314S}
+E.~{Scullion}, R.~{Erd{\'e}lyi}, V.~{Fedun}, and J.~G. {Doyle}.
+\newblock {The Response of A Three-dimensional Solar Atmosphere to Wave-driven
+  Jets}.
+\newblock \emph{\apj}, 743\penalty0 (1):\penalty0 14, December 2011.
+\newblock \doi{10.1088/0004-637X/743/1/14}.
 
 \bibitem[{Sharma} et~al.(2018){Sharma}, {Verth}, and
   {Erd{\'e}lyi}]{Sharma2018ApJ85361S}
@@ -271,5 +374,18 @@ T.~V. {Zaqarashvili} and R.~{Erd{\'e}lyi}.
 \newblock {Oscillations and Waves in Solar Spicules}.
 \newblock \emph{\ssr}, 149:\penalty0 355--388, December 2009.
 \newblock \doi{10.1007/s11214-009-9549-y}.
+
+\bibitem[{Zaqarashvili} et~al.(2007){Zaqarashvili}, {Khutsishvili},
+  {Kukhianidze}, and {Ramishvili}]{Zaqarashvili2007AA474627Z}
+T.~V. {Zaqarashvili}, E.~{Khutsishvili}, V.~{Kukhianidze}, and G.~{Ramishvili}.
+\newblock {Doppler-shift oscillations in solar spicules}.
+\newblock \emph{\aap}, 474\penalty0 (2):\penalty0 627--632, November 2007.
+\newblock \doi{10.1051/0004-6361:20077661}.
+
+\bibitem[{Zuo} et~al.(2019){Zuo}, {Li}, {Sha}, and {Zhou}]{Zuo2019AcASn}
+Z.~H. {Zuo}, Y.~{Li}, J.~H. {Sha}, and T.~H. {Zhou}.
+\newblock {A Solar Jet Triggered by a Decaying Satellite Sunspot}.
+\newblock \emph{Acta Astronomica Sinica}, 60\penalty0 (6):\penalty0 56,
+  November 2019.
 
 \end{thebibliography}
