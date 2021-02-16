@@ -5,15 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{2017AnA606A103H} et~al.(2017){2017AnA606A103H}, {Meliani}, {Zech},
-  {Boisson}, {Cayatte}, {Sauty}, and {Sol}]{Hervet2017AnA606A103H}
-O.~{2017AnA606A103H}, Z.~{Meliani}, A.~{Zech}, C.~{Boisson}, V.~{Cayatte},
-  C.~{Sauty}, and H.~{Sol}.
-\newblock {Shocks in relativistic transverse stratified jets. A new paradigm
-  for radio-loud AGN}.
-\newblock \emph{\aap}, 606:\penalty0 A103, October 2017.
-\newblock \doi{10.1051/0004-6361/201730745}.
-
 \bibitem[{Antolin} et~al.(2018){Antolin}, {Schmit}, {Pereira}, {De Pontieu},
   and {De Moortel}]{Antolin2018ApJ85644A}
 P.~{Antolin}, D.~{Schmit}, T.~M.~D. {Pereira}, B.~{De Pontieu}, and I.~{De
@@ -191,6 +182,15 @@ L.~{Heggland}, B.~{De Pontieu}, and V.~H. {Hansteen}.
 \newblock {Numerical Simulations of Shock Wave-driven Chromospheric Jets}.
 \newblock \emph{\apj}, 666\penalty0 (2):\penalty0 1277--1283, September 2007.
 \newblock \doi{10.1086/518828}.
+
+\bibitem[{Hervet} et~al.(2017){Hervet}, {Meliani}, {Zech}, {Boisson},
+  {Cayatte}, {Sauty}, and {Sol}]{Hervet2017AnA606A103H}
+O.~{Hervet}, Z.~{Meliani}, A.~{Zech}, C.~{Boisson}, V.~{Cayatte}, C.~{Sauty},
+  and H.~{Sol}.
+\newblock {Shocks in relativistic transverse stratified jets. A new paradigm
+  for radio-loud AGN}.
+\newblock \emph{\aap}, 606:\penalty0 A103, October 2017.
+\newblock \doi{10.1051/0004-6361/201730745}.
 
 \bibitem[{Jess} et~al.(2015){Jess}, {Morton}, {Verth}, {Fedun}, {Grant}, and
   {Giagkiozis}]{Jess2015}
