@@ -1,4 +1,4 @@
-\begin{thebibliography}{46}
+\begin{thebibliography}{50}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -56,6 +56,12 @@ J.~M. {Beckers}.
 \newblock {Solar Spicules}.
 \newblock \emph{\araa}, 10:\penalty0 73, 1972.
 \newblock \doi{10.1146/annurev.aa.10.090172.000445}.
+
+\bibitem[{Berger} and {Berdyugina}(2003)]{Berger2003ApJ}
+T.~E. {Berger} and S.~V. {Berdyugina}.
+\newblock {The Observation of Sunspot Light-Bridge Structure and Dynamics}.
+\newblock \emph{\apjl}, 589\penalty0 (2):\penalty0 L117--L121, June 2003.
+\newblock \doi{10.1086/376494}.
 
 \bibitem[{Centeno} et~al.(2010){Centeno}, {Trujillo Bueno}, and {Asensio
   Ramos}]{centeno2010}
@@ -128,14 +134,13 @@ Fionnlagh~Mackenzie {Dover}, Rahul {Sharma}, Marianna~B. {Kors{\'o}s}, and
 \newblock \emph{\apj}, 905\penalty0 (1):\penalty0 72, December 2020.
 \newblock \doi{10.3847/1538-4357/abc349}.
 
-\bibitem[Edgington-Mitchell et~al.(2014)Edgington-Mitchell, Honnery, and
-  Soria]{Edgington-Mitchell2014}
-Daniel Edgington-Mitchell, Damon~R. Honnery, and Julio Soria.
+\bibitem[{Edgington-Mitchell} et~al.(2014){Edgington-Mitchell}, {Honnery}, and
+  {Soria}]{Edgington-Mitchell2014}
+Daniel {Edgington-Mitchell}, Damon~R. {Honnery}, and Julio {Soria}.
 \newblock {The underexpanded jet Mach disk and its associated shear layer}.
-\newblock \emph{Physics of Fluids}, 26\penalty0 (9):\penalty0 096101, sep 2014.
-\newblock ISSN 10897666.
+\newblock \emph{Physics of Fluids}, 26\penalty0 (9):\penalty0 096101, September
+  2014.
 \newblock \doi{10.1063/1.4894741}.
-\newblock URL \url{http://aip.scitation.org/doi/10.1063/1.4894741}.
 
 \bibitem[{Edl{\'e}n}(1943)]{Edl1943}
 Bengt {Edl{\'e}n}.
@@ -291,6 +296,85 @@ O.~{Porth}, C.~{Xia}, T.~{Hendrix}, S.~P. {Moschou}, and R.~{Keppens}.
 \newblock \emph{\apjs}, 214:\penalty0 4, September 2014.
 \newblock \doi{10.1088/0067-0049/214/1/4}.
 
+\bibitem[{Rast} et~al.(2020){Rast}, {Bello Gonz{\'a}lez}, {Bellot Rubio},
+  {Cao}, {Cauzzi}, {DeLuca}, {De Pontieu}, {Fletcher}, {Gibson}, {Judge},
+  {Katsukawa}, {Kazachenko}, {Khomenko}, {Landi}, {Mart{\'\i}nez Pillet},
+  {Petrie}, {Qiu}, {Rachmeler}, {Rempel}, {Schmidt}, {Scullion}, {Sun},
+  {Welsch}, {Andretta}, {Antolin}, {Ayres}, {Balasubramaniam}, {Ballai},
+  {Berger}, {Bradshaw}, {Carlsson}, {Casini}, {Centeno}, {Cranmer}, {DeForest},
+  {Deng}, {Erd{\'e}lyi}, {Fedun}, {Fischer}, {Gonz{\'a}lez Manrique}, {Hahn},
+  {Harra}, {Henriques}, {Hurlburt}, {Jaeggli}, {Jafarzadeh}, {Jain},
+  {Jefferies}, {Keys}, {Kowalski}, {Kuckein}, {Kuhn}, {Liu}, {Liu}, {Longcope},
+  {McAteer}, {McIntosh}, {McKenzie}, {Miralles}, {Morton}, {Muglach}, {Nelson},
+  {Panesar}, {Parenti}, {Parnell}, {Poduval}, {Reardon}, {Reep}, {Schad},
+  {Schmit}, {Sharma}, {Socas-Navarro}, {Srivastava}, {Sterling}, {Suematsu},
+  {Tarr}, {Tiwari}, {Tritschler}, {Verth}, {Vourlidas}, {Wang}, {Wang}, {NSO},
+  {project}, {instrument scientists}, {the DKIST Science Working Group}, and
+  {DKIST Critical Science Plan Community}]{Rast2020arXiv}
+Mark~P. {Rast}, Nazaret {Bello Gonz{\'a}lez}, Luis {Bellot Rubio}, Wenda {Cao},
+  Gianna {Cauzzi}, Edward {DeLuca}, Bart {De Pontieu}, Lyndsay {Fletcher},
+  Sarah~E. {Gibson}, Philip~G. {Judge}, Yukio {Katsukawa}, Maria~D.
+  {Kazachenko}, Elena {Khomenko}, Enrico {Landi}, Valentin {Mart{\'\i}nez
+  Pillet}, Gordon J.~D. {Petrie}, Jiong {Qiu}, Laurel~A. {Rachmeler}, Matthias
+  {Rempel}, Wolfgang {Schmidt}, Eamon {Scullion}, Xudong {Sun}, Brian~T.
+  {Welsch}, Vincenzo {Andretta}, Patrick {Antolin}, Thomas~R. {Ayres}, K.~S.
+  {Balasubramaniam}, Istvan {Ballai}, Thomas~E. {Berger}, Stephen~J.
+  {Bradshaw}, Mats {Carlsson}, Roberto {Casini}, Rebecca {Centeno}, Steven~R.
+  {Cranmer}, Craig {DeForest}, Yuanyong {Deng}, Robertus {Erd{\'e}lyi}, Viktor
+  {Fedun}, Catherine~E. {Fischer}, Sergio~J. {Gonz{\'a}lez Manrique}, Michael
+  {Hahn}, Louise {Harra}, Vasco M.~J. {Henriques}, Neal~E. {Hurlburt}, Sarah
+  {Jaeggli}, Shahin {Jafarzadeh}, Rekha {Jain}, Stuart~M. {Jefferies}, Peter~H.
+  {Keys}, Adam~F. {Kowalski}, Christoph {Kuckein}, Jeffrey~R. {Kuhn}, Jiajia
+  {Liu}, Wei {Liu}, Dana {Longcope}, R.~T.~James {McAteer}, Scott~W.
+  {McIntosh}, David~E. {McKenzie}, Mari~Paz {Miralles}, Richard~J. {Morton},
+  Karin {Muglach}, Chris~J. {Nelson}, Navdeep~K. {Panesar}, Susanna {Parenti},
+  Clare~E. {Parnell}, Bala {Poduval}, Kevin~P. {Reardon}, Jeffrey~W. {Reep},
+  Thomas~A. {Schad}, Donald {Schmit}, Rahul {Sharma}, Hector {Socas-Navarro},
+  Abhishek~K. {Srivastava}, Alphonse~C. {Sterling}, Yoshinori {Suematsu},
+  Lucas~A. {Tarr}, Sanjiv {Tiwari}, Alexandra {Tritschler}, Gary {Verth},
+  Angelos {Vourlidas}, Haimin {Wang}, Yi-Ming {Wang}, {NSO}, DKIST {project},
+  DKIST {instrument scientists}, {the DKIST Science Working Group}, and the
+  {DKIST Critical Science Plan Community}.
+\newblock {Critical Science Plan for the Daniel K. Inouye Solar Telescope
+  (DKIST)}.
+\newblock \emph{arXiv e-prints}, art. arXiv:2008.08203, August 2020.
+
+\bibitem[{Rimmele} et~al.(2020){Rimmele}, {Warner}, {Keil}, {Goode},
+  {Kn{\"o}lker}, {Kuhn}, {Rosner}, {McMullin}, {Casini}, {Lin}, {W{\"o}ger},
+  {von der L{\"u}he}, {Tritschler}, {Davey}, {de Wijn}, {Elmore}, {Fehlmann},
+  {Harrington}, {Jaeggli}, {Rast}, {Schad}, {Schmidt}, {Mathioudakis},
+  {Mickey}, {Anan}, {Beck}, {Marshall}, {Jeffers}, {Oschmann}, {Beard},
+  {Berst}, {Cowan}, {Craig}, {Cross}, {Cummings}, {Donnelly}, {de Vanssay},
+  {Eigenbrot}, {Ferayorni}, {Foster}, {Galapon}, {Gedrites}, {Gonzales},
+  {Goodrich}, {Gregory}, {Guzman}, {Guzzo}, {Hegwer}, {Hubbard}, {Hubbard},
+  {Johansson}, {Johnson}, {Liang}, {Liang}, {McQuillen}, {Mayer}, {Newman},
+  {Onodera}, {Phelps}, {Puentes}, {Richards}, {Rimmele}, {Sekulic}, {Shimko},
+  {Simison}, {Smith}, {Starman}, {Sueoka}, {Summers}, {Szabo}, {Szabo},
+  {Wampler}, {Williams}, and {White}]{Rimmele2020SoPh}
+Thomas~R. {Rimmele}, Mark {Warner}, Stephen~L. {Keil}, Philip~R. {Goode},
+  Michael {Kn{\"o}lker}, Jeffrey~R. {Kuhn}, Robert~R. {Rosner}, Joseph~P.
+  {McMullin}, Roberto {Casini}, Haosheng {Lin}, Friedrich {W{\"o}ger}, Oskar
+  {von der L{\"u}he}, Alexandra {Tritschler}, Alisdair {Davey}, Alfred {de
+  Wijn}, David~F. {Elmore}, Andr{\'e} {Fehlmann}, David~M. {Harrington},
+  Sarah~A. {Jaeggli}, Mark~P. {Rast}, Thomas~A. {Schad}, Wolfgang {Schmidt},
+  Mihalis {Mathioudakis}, Donald~L. {Mickey}, Tetsu {Anan}, Christian {Beck},
+  Heather~K. {Marshall}, Paul~F. {Jeffers}, Jacobus~M. {Oschmann}, Andrew
+  {Beard}, David~C. {Berst}, Bruce~A. {Cowan}, Simon~C. {Craig}, Eric {Cross},
+  Bryan~K. {Cummings}, Colleen {Donnelly}, Jean-Benoit {de Vanssay}, Arthur~D.
+  {Eigenbrot}, Andrew {Ferayorni}, Christopher {Foster}, Chriselle~Ann
+  {Galapon}, Christopher {Gedrites}, Kerry {Gonzales}, Bret~D. {Goodrich},
+  Brian~S. {Gregory}, Stephanie~S. {Guzman}, Stephen {Guzzo}, Steve {Hegwer},
+  Robert~P. {Hubbard}, John~R. {Hubbard}, Erik~M. {Johansson}, Luke~C.
+  {Johnson}, Chen {Liang}, Mary {Liang}, Isaac {McQuillen}, Christopher
+  {Mayer}, Karl {Newman}, Brialyn {Onodera}, LeEllen {Phelps}, Myles~M.
+  {Puentes}, Christopher {Richards}, Lukas~M. {Rimmele}, Predrag {Sekulic},
+  Stephan~R. {Shimko}, Brett~E. {Simison}, Brett {Smith}, Erik {Starman},
+  Stacey~R. {Sueoka}, Richard~T. {Summers}, Aimee {Szabo}, Louis {Szabo},
+  Stephen~B. {Wampler}, Timothy~R. {Williams}, and Charles {White}.
+\newblock {The Daniel K. Inouye Solar Telescope - Observatory Overview}.
+\newblock \emph{\solphys}, 295\penalty0 (12):\penalty0 172, December 2020.
+\newblock \doi{10.1007/s11207-020-01736-7}.
+
 \bibitem[{Rouppe van der Voort} et~al.(2007){Rouppe van der Voort}, {De
   Pontieu}, {Hansteen}, {Carlsson}, and {van Noort}]{Rouppe2007ApJ660L169R}
 L.~H.~M. {Rouppe van der Voort}, B.~{De Pontieu}, V.~H. {Hansteen},
@@ -309,6 +393,17 @@ Tanmoy {Samanta}, Hui {Tian}, Vasyl {Yurchyshyn}, Hardi {Peter}, Wenda {Cao},
 \newblock \emph{Science}, 366\penalty0 (6467):\penalty0 890--894, November
   2019.
 \newblock \doi{10.1126/science.aaw2796}.
+
+\bibitem[{Scharmer} et~al.(2003){Scharmer}, {Bjelksjo}, {Korhonen}, {Lindberg},
+  and {Petterson}]{Scharmer2003SPIE4853341S}
+Goran~B. {Scharmer}, Klas {Bjelksjo}, Tapio~K. {Korhonen}, Bo~{Lindberg}, and
+  Bertil {Petterson}.
+\newblock {The 1-meter Swedish solar telescope}.
+\newblock In Stephen~L. {Keil} and Sergey~V. {Avakyan}, editors,
+  \emph{Innovative Telescopes and Instrumentation for Solar Astrophysics},
+  volume 4853 of \emph{Society of Photo-Optical Instrumentation Engineers
+  (SPIE) Conference Series}, pages 341--350, February 2003.
+\newblock \doi{10.1117/12.460377}.
 
 \bibitem[{Scullion} et~al.(2011){Scullion}, {Erd{\'e}lyi}, {Fedun}, and
   {Doyle}]{Scullion2011ApJ74314S}
