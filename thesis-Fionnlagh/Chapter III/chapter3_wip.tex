@@ -15,7 +15,6 @@
 \usepackage{bm}
 \usepackage{stmaryrd}
 \usepackage[utf8]{inputenc}
-
 \usepackage{geometry}
  \geometry{
  a4paper,
@@ -105,51 +104,71 @@
 % START COPYING HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{The Effects of Non-filed aligned flow on Spicular-jets}
+\chapter{The Effects of Non-field aligned flow on Spicular-jets}
 %==============================================================================
 \section{Introduction}
 \label{sec:c3intro}
 %==============================================================================
-\citep{Abramowitz1965}
-
+This chapter builds upon the work in \cite{?}\textbackslash Chapter~\ref{chap:sj}, by investigating the effect of non-field aligned flow has on the jet dynamics and morphology. Spicules have been measured to have typical inclinations of $20^{\circ}$ !!get cite!! \citep{Abramowitz1965}. If spicules tend to be inclined then, what would happen if there is a small inclination introduced between the direction of the magnetic field and the flow of the jet? How would this change the dynamics and morphology of the jet? How does this factor impact the metrics taken in previous chapters e.g. (trajectory, apex, widths etc.)?
 %=============================================================
 \section{Traced Jet Tracking}
 \label{sec:tjt}
 %=============================================================
-\mfig{1}{figures/jet_P300_B60A_60T_0039.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
-
+To keep the results comparable between both studies, extra steps have been introduced into the jet tracking software. To accurately measure the width of the jet we can longer take horizontal slits, as done in Section~\ref{subsec:jet_tracking}, to estimate the widths as this could artificially alter results. For example, imagine a rectangle with a slit across it in a fix position that finishes on the opposite ends. If you rotate this shape, the slit would change in size, hence changing the width measurement of the rectangle. In this case, a slit needs to placed perpendicular to the central axis of the rectangle to correct this tilt factor. \np
+%
+The jet tracking software has been further modified to track the central axis of the jet (see yellow stars in Fig.~\ref{imporved_j_track_example}). The yellow stars are the midpoints of horizontal slits taken at $0.1~\rm{Mm}$ intervals. To keep the position of the slits consistent, they are placed at every $1~\rm{Mm}$ based on the jet length, rather than the height (see green solid lines in Fig.~\ref{imporved_j_track_example}). The slit is placed perpendicular, to the angle of the central jets axis, determined by the angle between the data point at each megameter of jet length ($j_{ln}$) and its upper neighbour ($j_{ln+1}$). The edges are identified by first converting the tracer into a binary image as outline in Section~\ref{subsec:jet_tracking}. A region of $1~\rm{Mm}$ by $0.75~\rm{Mm}$, with $j_{ln}$ as the centre point. The values along the slit are interpolated from the grid and then a gradient is taken to identify the edges. If only one edge is found then the search box is increased approx. $60\times 50~\rm{km}$ {\color{green} !! add more figs so this makes sense!!} and the process is repeated until 2 edges are found. The solid blue dots in  Fig.~\ref{imporved_j_track_example} show the method of horizontal slits at every $1~\rm{Mm}$ of height as outlined in Section~\ref{subsec:jet_tracking}. The analysis carried out in this chapter shows the measurement of both methods of taking slits. 
+%fffffffffffffffff
+\mfig{1}{figures/jet_P300_B60A_60T_0039.png}{Example of extended jet tracking software. Solid blue dots mark the jet edges of the original method and the red solid dot marks the jets apex. The green solid line corrects for the tilt and is the data sampled to find the edges (solid red squares). The yellow stars give the central axis of the jet.}{imporved_j_track_example}
+%fffffffffffffffffff
+%=============================================================
+\section{Jet Trajectory}
+\label{sec:j_traj_t}
+%=============================================================
+To study the effect of tilts on the jet, we applied titling angles over a range of $0^{\circ}-60^{\circ}$ in increments of $5^{\circ}$. The apex height and length of the jet are temporal track and displayed in Fig.~\ref{tilt_effect_traj}. The height (top left panel) and length (bottom left panel) are shown to be reduced with increasing tilt angle with approx. $50\%$ reduction in height from $0^{\circ}$ to $60^{\circ}$. As the jet becomes more tilted the maxim jet length tends to be higher than the apex height, because with increased tilt angle the jets transverse displacement becomes larger. Both trajectories of the jet (panels to the right) show a decrease in max height\textbackslash length and a slight decrease in total jet lifetimes. The results indicate that once the tilted up to $50^{\circ}$, the trajectories deviate from the parabolically that is typically seen in spicular jets. A similar pattern is seen if the jet length is tracked, but the trajectory is less smooth, this is because the jet is undergoing transverse motion and is constantly changing in length.      
+%ffffffffffffffff
+\mfig{0.8}{figures/image823.png}{Plots shows the effect of non-filed aligned flow on apex (top panels), length (bottom panels) and trajectories (rightmost panels).}{tilt_effect_traj}
+%ffffffffffffffff
 %=============================================================
 \section{Parameter scan}
 \label{sec:stab}
 %=============================================================
-\mfig{1}{figures/image823.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
-
-\mfig{1}{figures/horizontal_slit_pscan.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
-
-\mfig{1}{figures/traced_slit_pscan.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
+As done in Chapter~\ref{chap:sj}, to investigate a parameter space is studied to determine how the launch direction with respect to magnetic field affects the key parameters, the jet trajectory, apex heights, and widths. For the parameter scan we use; lifetimes with a fixed value of $P=300~\rm{s}$; initial amplitudes range from $A=20,~40,~60~\kms$; magnetic field strength covers $B=20,~40,~60,~80~\rm{G}$; tilt angels $T=0,5,15^{\circ}$. The parameter scan for this chapter is less extensive than Chapter~\ref{chap:sj} because the addition of the tilt parameter significantly increases the number of simulations. The initial amplitude of $80 \kms$ is near the upper limit of spicule speeds (see Table~\ref{!!?!!}) therefore omitted.  As shown in Fig. ~\ref{parameter_scan_lines} the range of driver time investigated had minimal impact on the jet heights and had subtle effects both on the jet widths and morphology.  Therefore, we took the drive time and lowered the upper limit of the initial amplitude to match that of the standard jet. \np
+%
+The results of the parameter scan for horizontal slits are shown in Fig.~\ref{p_scan_t_apex}. For each panel, the colour (line style) corresponds to the tilt angle (initial amplitude for top panels or magnetic strength for bottom panels). The panel to left (right) shows the impact of tilt angels on the apex heights (mean width). The greater the initial amplitude the more notable the effect the magnetic strength has on reducing apex heights. The relation between maxim heights and initial amplitude shows that with greater initial amplitude the greater the heights reached. With increased tilt angle the max heights are slightly reduced. For the tilted jets, we see a similar trend across all tilting angles. For the top right panel, we see that with increasing magnetic field strength the jets become more collimated. The bottom right panel shows that the mean width is increased with an increased tilt angle. We see that the mean widths are banded together based on the magnetic field strength.
+%fffffffffffff
+\mfig{1}{figures/horizontal_slit_pscan.png}{Focused parameter scans how the effect of tilt over a variety of jet configurations. Panels on the left (right) are based on the maximum apex (mean width) of the jet.{\color{green} !!Missing $A=20$ from RHS panels!!}}{p_scan_t_apex}
+%ffffffffffffffff
+In Fig.~\ref{p_scan_t_len} the same parameter scan is investigated, but using a traced slit to account for the tilting of the jet. The top left panel shows the effect of maximum length against the magnetic field strength. We see that that magnetic field strength in most case doesn’t affect the max length of the jet. For $P=300,~A=60,~T=15$, increasing magnetic field reduces its length. For the panel in the bottom left, one $A>40 \kms$  the tilt begins to reduce the maxim length of the jet. We see that for greater the initial velocity the longer the jet length. The panels on the right show the effects of the mean with again change in the magnetic field strength, and initial velocity, top and bottom respectively. To top right panel shows the same trend as before, with increased magnetic filed straight there is more collimation of the jet. From to bottom left the increased initial amplitude the great the jet width. The trends that we have seen in Chapter~\ref{?} hold when the jet is launch at an angle.  \np
+%
+To study the effect of the tilt on the width measurements the standard jet is investigated over a range of $T=0-60^{\circ}$ as shown in Fig.~\ref{width_measure}. For increasing tilt angle up to $45^{\circ}$ the widths are increased. After this point the trend stops, this is because as the tilt angle increases the more nebulous the jet becomes, particularly in the falling phase, when the jet no longer as one neat defined column.        
+%ffffffffffffffff
+\mfig{1}{figures/traced_slit_pscan.png}{Focused parameter scans how the effect of tilt over a variety of jet configurations. Panels on the left (right) are based on the maximum length (mean width) of the jet. {\color{green}!!max len is smaller than apex heights in prev fig. This doesn’t make sense!!}}{p_scan_t_len}
+%ffffffffffffffff
 %------------------------------------------------------------------------------
 \subsection{Tilted Jet Morphology}
 \label{subsec:steady}
 %------------------------------------------------------------------------------
-\mfig{1}{figures/jet_P300_B60_A60_T0_t_110_129.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
+\mfig{1}{figures/tj_den_plot_1.png}{Example of the temporal evolution of different tilts angles for jets from $0,~10,~20^{\circ}$ from top to bottom, respectively.}{tj_morph}
 
 %------------------------------------------------------------------------------
 \subsection{Effect of Tilt on Cross-sectional width variation}
 \label{subsec:oscillating}
 %------------------------------------------------------------------------------
-\mfig{1}{figures/mean_w_vs_tilt.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
+\mfig{1}{figures/mean_w_vs_tilt.png}{Effect of tile on the mean width measurement, comparing traced slit (red solid line with data markers) and horizontal slit (blue dashed line with data markers).}{width_measure}
 
+\mfig{1}{figures/test_td_plot_1Mm.png}{Time distant plot with horizontal slit at $1~\rm{Mm}$ for tilt values $0-55^{\circ}$.}{td_1Mm}
 
-\mfig{1}{figures/test_td_plot_1Mm.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
+\mfig{1}{figures/test_td_plot_2Mm.png}{Same as fig.~\ref{td_1Mm}, but at $2~\rm{Mm}$.!!need to bulk up font!!}{td_2Mm}
 
-\mfig{1}{figures/test_td_plot_2Mm.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
-
-\mfig{1}{figures/test_td_plot_3Mm.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
+\mfig{1}{figures/test_td_plot_3Mm.png}{Same as fig.~\ref{td_1Mm}, but at $3~\rm{Mm}$.!!bulk up font!!}{td_3Mm}
 
 %============================================================
 \section{Summary and Discussion}
 \label{sec:sum}
 %============================================================
+\begin{itemize}
+\item Over the range of parameters, space studied the tilt-only has a minor effect on max apex heights. 
+\end{itemize}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
