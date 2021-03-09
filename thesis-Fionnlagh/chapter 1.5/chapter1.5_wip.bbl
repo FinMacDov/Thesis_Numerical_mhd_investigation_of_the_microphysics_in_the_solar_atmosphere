@@ -1,0 +1,59 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{\v{C}}ada and Torrilhon(2009)]{CADA20094118}
+Miroslav {\v{C}}ada and Manuel Torrilhon.
+\newblock {Compact third-order limiter functions for finite volume methods}.
+\newblock \emph{Journal of Computational Physics}, 228\penalty0 (11):\penalty0
+  4118--4145, 2009.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1016/j.jcp.2009.02.020}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021999109000953}.
+
+\bibitem[Dedner et~al.(2002)Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer, and
+  Wesenberg]{DEDNER2002645}
+A~Dedner, F~Kemm, D~Kr{\"{o}}ner, C.-D. Munz, T~Schnitzer, and M~Wesenberg.
+\newblock {Hyperbolic Divergence Cleaning for the MHD Equations}.
+\newblock \emph{Journal of Computational Physics}, 175\penalty0 (2):\penalty0
+  645--673, 2002.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1006/jcph.2001.6961}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S002199910196961X}.
+
+\bibitem[Goedbloed and Poedts(2004)]{goedbloed2004principles}
+Johan~Peter Goedbloed and Stefaan Poedts.
+\newblock \emph{Principles of magnetohydrodynamics: with applications to
+  laboratory and astrophysical plasmas}.
+\newblock Cambridge university press, 2004.
+
+\bibitem[Harten et~al.(1983)Harten, Lax, and van. Leer]{hll_1983}
+Amiram. Harten, Peter~D Lax, and Bram van. Leer.
+\newblock {On Upstream Differencing and Godunov-Type Schemes for Hyperbolic
+  Conservation Laws}.
+\newblock \emph{SIAM Review}, 25\penalty0 (1):\penalty0 35--61, 1983.
+\newblock \doi{10.1137/1025002}.
+\newblock URL \url{https://doi.org/10.1137/1025002}.
+
+\bibitem[{Keppens} et~al.(2012){Keppens}, {Meliani}, {van Marle}, {Delmont},
+  {Vlasis}, and {van der Holst}]{Keppens_2012}
+R.~{Keppens}, Z.~{Meliani}, A.~J. {van Marle}, P.~{Delmont}, A.~{Vlasis}, and
+  B.~{van der Holst}.
+\newblock {Parallel, grid-adaptive approaches for relativistic hydro and
+  magnetohydrodynamics}.
+\newblock \emph{Journal of Computational Physics}, 231:\penalty0 718--744,
+  February 2012.
+\newblock \doi{10.1016/j.jcp.2011.01.020}.
+
+\bibitem[{Xia} et~al.(2017){Xia}, {Teunissen}, {El Mellah}, {Chane}, and
+  {Keppens}]{Xia_2017}
+C.~{Xia}, J.~{Teunissen}, I.~{El Mellah}, E.~{Chane}, and R.~{Keppens}.
+\newblock {MPI-AMRVAC 2.0 for Solar and Astrophysical Applications}.
+\newblock \emph{ArXiv e-prints}, October 2017.
+
+\end{thebibliography}
