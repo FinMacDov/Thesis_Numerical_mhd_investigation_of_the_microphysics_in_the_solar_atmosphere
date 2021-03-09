@@ -2,8 +2,73 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\href{#1}{#1}}
 
-\bibitem[{{Abramowitz} \& {Stegun}(1965)}]{Abramowitz1965}
-{Abramowitz}, M., \& {Stegun}, I.~A. 1965, {Handbook of mathematical functions
-  with formulas, graphs, and mathematical tables}
+\bibitem[{{Antolin} {et~al.}(2018){Antolin}, {Schmit}, {Pereira}, {De Pontieu},
+  \& {De Moortel}}]{Antolin2018ApJ85644A}
+{Antolin}, P., {Schmit}, D., {Pereira}, T.~M.~D., {De Pontieu}, B., \& {De
+  Moortel}, I. 2018, \apj, 856, 44
+
+\bibitem[{{Barbulescu} \& {Erd{\'e}lyi}(2018)}]{Barbulescu2018SoPh29386B}
+{Barbulescu}, M., \& {Erd{\'e}lyi}, R. 2018, \solphys, 293, 86
+
+\bibitem[{{Beckers}(1968)}]{Beckers1968}
+{Beckers}, J.~M. 1968, \solphys, 3, 367
+
+\bibitem[{{Berger} {et~al.}(2010){Berger}, {Slater}, {Hurlburt}, {Shine},
+  {Tarbell}, {Title}, {Lites}, {Okamoto}, {Ichimoto}, {Katsukawa}, {Magara},
+  {Suematsu}, \& {Shimizu}}]{Berger2010ApJ7161288B}
+{Berger}, T.~E., {Slater}, G., {Hurlburt}, N., {et~al.} 2010, \apj, 716, 1288
+
+\bibitem[{{Chandrasekhar}(1961)}]{Chandrasekhar1961hhsbookC}
+{Chandrasekhar}, S. 1961, {Hydrodynamic and hydromagnetic stability}
+
+\bibitem[{{Drazin}(2002)}]{Drazin2002ihsbookD}
+{Drazin}, P.~G. 2002, {Introduction to Hydrodynamic Stability}
+
+\bibitem[{{Filippov} {et~al.}(2015){Filippov}, {Srivastava}, {Dwivedi},
+  {Masson}, {Aulanier}, {Joshi}, \& {Uddin}}]{Filippov2015MNRAS4511117F}
+{Filippov}, B., {Srivastava}, A.~K., {Dwivedi}, B.~N., {et~al.} 2015, \mnras,
+  451, 1117
+
+\bibitem[{{Foullon} {et~al.}(2011){Foullon}, {Verwichte}, {Nakariakov},
+  {Nykyri}, \& {Farrugia}}]{Foullon2011ApJ729L8F}
+{Foullon}, C., {Verwichte}, E., {Nakariakov}, V.~M., {Nykyri}, K., \&
+  {Farrugia}, C.~J. 2011, \apjl, 729, L8
+
+\bibitem[{{Foullon} {et~al.}(2013){Foullon}, {Verwichte}, {Nykyri},
+  {Aschwanden}, \& {Hannah}}]{Foullon2013ApJ767170F}
+{Foullon}, C., {Verwichte}, E., {Nykyri}, K., {Aschwanden}, M.~J., \& {Hannah},
+  I.~G. 2013, \apj, 767, 170
+
+\bibitem[{{Kuridze} {et~al.}(2016){Kuridze}, {Zaqarashvili}, {Henriques},
+  {Mathioudakis}, {Keenan}, \& {Hanslmeier}}]{Kuridze2016ApJ830133K}
+{Kuridze}, D., {Zaqarashvili}, T.~V., {Henriques}, V., {et~al.} 2016, \apj,
+  830, 133
+
+\bibitem[{{Li} {et~al.}(2018){Li}, {Zhang}, {Yang}, {Hou}, \&
+  {Erd{\'e}lyi}}]{Li2018NatSR88136L}
+{Li}, X., {Zhang}, J., {Yang}, S., {Hou}, Y., \& {Erd{\'e}lyi}, R. 2018,
+  Scientific Reports, 8, 8136
+
+\bibitem[{{Liang} {et~al.}(2019){Liang}, {Hu}, {Huang}, \&
+  {Xu}}]{Liang2019PhFl31k2104L}
+{Liang}, H., {Hu}, X., {Huang}, X., \& {Xu}, J. 2019, Physics of Fluids, 31,
+  112104
+
+\bibitem[{{Ryutova} {et~al.}(2010){Ryutova}, {Berger}, {Frank}, {Tarbell}, \&
+  {Title}}]{Ryutova2010SoPh26775R}
+{Ryutova}, M., {Berger}, T., {Frank}, Z., {Tarbell}, T., \& {Title}, A. 2010,
+  \solphys, 267, 75
+
+\bibitem[{{Sharma} {et~al.}(2018){Sharma}, {Verth}, \&
+  {Erd{\'e}lyi}}]{Sharma2018ApJ85361S}
+{Sharma}, R., {Verth}, G., \& {Erd{\'e}lyi}, R. 2018, \apj, 853, 61
+
+\bibitem[{{Tsiropoula} {et~al.}(2012){Tsiropoula}, {Tziotziou}, {Kontogiannis},
+  {Madjarska}, {Doyle}, \& {Suematsu}}]{Tsiropoula2012}
+{Tsiropoula}, G., {Tziotziou}, K., {Kontogiannis}, I., {et~al.} 2012, \ssr,
+  169, 181
+
+\bibitem[{{Zaqarashvili}(2020)}]{Zaqarashvili2020ApJ893L46Z}
+{Zaqarashvili}, T.~V. 2020, \apjl, 893, L46
 
 \end{thebibliography}

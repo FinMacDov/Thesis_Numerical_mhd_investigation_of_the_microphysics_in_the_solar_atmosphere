@@ -90,6 +90,7 @@
 \newcommand{\kms}{~\rm{km ~s^{-1}}}
 \newcommand{\kgm}{~\rm{kg ~m^{-3}}}
 \newcommand{\np}{\\ \\}
+\newcommand{\degs}{^{\circ}}
 
 \begin{document}
 
@@ -108,71 +109,173 @@
 \section{Introduction}
 \label{sec:c3intro}
 %==============================================================================
-This chapter builds upon the work in \cite{?}\textbackslash Chapter~\ref{chap:sj}, by investigating the effect of non-field aligned flow has on the jet dynamics and morphology. Spicules have been measured to have typical inclinations of $20^{\circ}$ !!get cite!!. If spicules tend to be inclined then, what would happen if there is a small inclination introduced between the direction of the magnetic field and the flow of the jet? How would this change the dynamics and morphology of the jet? How does this factor impact the metrics taken in previous chapters e.g. (trajectory, apex, widths etc.)?
+This chapter builds upon the work in \cite{?}\textbackslash Chapter~\ref{chap:sj}, by investigating the effect of non-field aligned flow has on the jet dynamics and morphology. Spicules have been measured to have typical inclinations of $20^{\circ}$ !!get cite!!. If spicules tend to be inclined then, what would happen if there is a small inclination introduced between the direction of the magnetic field and the flow of the jet? How would this change the dynamics and morphology of the jet? How does this factor impact the metrics taken in previous chapters e.g. (trajectory, apex, widths etc.)? The observed median inclination of angle from the vertical is $20-40\degs$ \citep{Beckers1968,Tsiropoula2012}.  
 %=============================================================
 \section{Traced Jet Tracking}
 \label{sec:tjt}
 %=============================================================
-To keep the results comparable between both studies, extra steps have been introduced into the jet tracking software. To accurately measure the width of the jet we can longer take horizontal slits, as done in Section~\ref{subsec:jet_tracking}, to estimate the widths as this could artificially alter results. For example, imagine a rectangle with a slit across it in a fix position that finishes on the opposite ends. If you rotate this shape, the slit would change in size, hence changing the width measurement of the rectangle. In this case, a slit needs to placed perpendicular to the central axis of the rectangle to correct this tilt factor. \np
+To keep the results comparable between both studies, extra steps have been introduced into the jet tracking software. To accurately measure the width of the jet we can longer take horizontal slits, as done in Section~\ref{subsec:jet_tracking}, to estimate the widths as this could artificially alter results. For example, imagine a rectangle with a slit across it in a fixed position that finishes on the opposite ends. If you rotate this shape, the slit would change in size, hence changing the width measurement of the rectangle. In this case, a slit needs to be placed perpendicular to the central axis of the rectangle to correct this tilt factor. \np
 %
-The jet tracking software has been further modified to track the central axis of the jet (see yellow stars in Fig.~\ref{imporved_j_track_example}). The yellow stars are the midpoints of horizontal slits taken at $0.1~\rm{Mm}$ intervals. To keep the position of the slits consistent, they are placed at every $1~\rm{Mm}$ based on the jet length, rather than the height (see green solid lines in Fig.~\ref{imporved_j_track_example}). The slit is placed perpendicular, to the angle of the central jets axis, determined by the angle between the data point at each megameter of jet length ($j_{ln}$) and its upper neighbour ($j_{ln+1}$). The edges are identified by first converting the tracer into a binary image as outline in Section~\ref{subsec:jet_tracking}. A region of $1~\rm{Mm}$ by $0.75~\rm{Mm}$, with $j_{ln}$ as the centre point. The values along the slit are interpolated from the grid and then a gradient is taken to identify the edges. If only one edge is found then the search box is increased approx. $60\times 50~\rm{km}$ {\color{green} !! add more figs so this makes sense!!} and the process is repeated until 2 edges are found. The solid blue dots in  Fig.~\ref{imporved_j_track_example} show the method of horizontal slits at every $1~\rm{Mm}$ of height as outlined in Section~\ref{subsec:jet_tracking}. The analysis carried out in this chapter shows the measurement of both methods of taking slits. 
+Modification have been made to the jet tracking software have been made to account for this, by tracking the central axis (see yellow stars in Fig.~\ref{imporved_j_track_example}). The yellow stars are the midpoints of horizontal slits taken at $0.1~\rm{Mm}$ intervals. To keep the position of the slits consistent, they are placed at every $1~\rm{Mm}$ based on the jet length, rather than the height (see green solid lines in Fig.~\ref{imporved_j_track_example}). The slit is placed perpendicular, to the angle of the central jets axis, determined by the angle between the data point at each megameter of jet length ($j_{ln}$) and its upper neighbor ($j_{ln+1}$) and which is referred to as the traced slit. Only two data points are used to calculate the angle of the central axis, as it returned stable results for a fully autonomous method. The edges are identified by first converting the tracer into a binary image as outlined in Section~\ref{subsec:jet_tracking}. A region of $1~\rm{Mm}$ by $0.75~\rm{Mm}$, with $j_{ln}$ as the centre point. The values along the slit are interpolated from the grid and then a gradient is taken to identify the edges. If only one edge is found then the search box is increased approximately $60\times 50~\rm{km}$ (see Fig.~\ref{search_box_j_track_example}) and the process is repeated until 2 edges are found. The solid blue dots in  Fig.~\ref{imporved_j_track_example} show the method of horizontal slits at every $1~\rm{Mm}$ of height as outlined in Section~\ref{subsec:jet_tracking}. The analysis carried out in this chapter shows the measurement of both methods of taking slits. They are referred to as traced slits when correcting for tilt angles and horizontal slits to match the earlier method.
 %fffffffffffffffff
 \mfig{1}{figures/jet_P300_B60A_60T_0039.png}{Example of extended jet tracking software. Solid blue dots mark the jet edges of the original method and the red solid dot marks the jets apex. The green solid line corrects for the tilt and is the data sampled to find the edges (solid red squares). The yellow stars give the central axis of the jet.}{imporved_j_track_example}
 %fffffffffffffffffff
+%fffffffffffffffff
+\mfig{1}{figures/example_of_tilt_jet_code.png}{Example of binary image used for the search area (colored box) used in the jet tracking. Markers have the same representation as Fig.~\ref{imporved_j_track_example}}{search_box_j_track_example}
+%fffffffffffffffffff
+%=============================================================
+\section{Parameter scans}
+\label{sec:pscansII}
+%=============================================================
+Based on the results in Chapter~\ref{chap:sj}, two focused parameter spaces are set up to investigate how the jet trajectory, apex heights, and widths are changed by tilting angles, in combination with comparing methods of slits. A smaller range of parameters are investigated to reduce computational cost and the clipped ranges are chosen to highlight the main effects based on the results of Chapter~\ref{chap:sj}. The parameter spaces are as follows: \np
+\begin{enumerate}
+\item The main goal of this scan is to test the trends observed in Chapter~\ref{chap:sj}, still hold with the changes in flow direction. The range of values used are; lifetimes with $P=300~\rm{s}$, this parameter was not important in determine jet heights over investigated range, therefore we stick with the value for the standard jet; initial amplitudes range from $A=20,~40,~60~\kms$, the  velocity upper limit matches the standard jet and as $80~\kms$ is near the upper end of observed spicule velocity, it has been omitted; magnetic field strength covers the same range $B=20,~40,~60,~80~\rm{G}$; tilt angels $T=0,5,15^{\circ}$, this range is to show a small tilt and a value closer to typical titling angles of approximately $!!?!!double check value$.  
+
+\item The purpose of this parameter space is to study how the trajectories, widths and morphology are affected by the tilting angle of the standard jet ($P=300~\rm{s}, ~B=60~\rm{G}, ~A=60~\kms$). A range of tilts $T=0-60^{\circ}$, in increments of $5^{\circ}$ is investigated.   
+\end{enumerate}
+%
+%-----------------------------------
+\subsection{Parameter Scan 1}
+\label{subsec:pscansII_I}
+%-------------------------
+The results of parameter scan (1) with a horizontal slit are displayed in Fig. ~\ref{p_scan_t_apex}. For each panel, the colour (line style) corresponds to the tilt angle (initial amplitude for top panels or magnetic strength for bottom panels). From the $T=0^{\circ}$ data it is clear that in each panel the general trends and groupings are retained. Overall, by introducing a tilt into the flow has a subtle effect on jet heights and mean widths. From the relation between maximum heights and magnetic field, the greater the initial amplitude the more notable the effect the magnetic strength has on reducing apex heights. This trend is seen in the relation of initial amplitude and maximum height where again the greater the tilt angle and initial velocity the more prominent the reduction in height as the range of values fan out around $A>40~\kms$. For both mean width panels there is not a a clear trend on how the tilt effects the means widths. \np
+%
+This process it repeated again, but using the maximum length in place of jet apex and using the traced slits for calculating the mean widths. For the maximum length there similar trends as seen in Fig.~\ref{p_scan_t_apex} where the magnetic field doesn't have a significant impact on jet lengths (with the exception of $P=300~\rm{s},~A=60~\kms,~T=15^{\circ}$ data) and there is a positive correlation between maximum length and initial amplitude. In the bottom left panel it shows that the maximum length is varies more for $A>40~\kms$ for increasing tilt angles. In general it appears that increasing the tilt reduces the length of the jets, expect in case of $P=300,~A=20,~T=15$, where the length is increased. This might be due to the combination of a higher velocity jet, with a weaker magnetic field. Int his setup the transverse motion would be larger, thus increasing the length, but maintaining a shorter height. From the parameter space covered, it is not clear whether the increased tilt. The traced slits return the familiar tends, i.e. jets increasingly collimated with stronger magnetic field (top right panel), and greater mean width with larger initial amplitudes. the main difference between he traced and horizontal slits, is the traced slits return slightly larger jet widths.  \np
+%fffffffffffff
+\mfig{1}{figures/horizontal_slit_pscan_fixing.png}{Focused parameter scans how the effect of tilt over a variety of jet configurations. Panels on the left (right) are based on the maximum apex (mean width) of the jet.}{p_scan_t_apex}
+%ffffffffffffffff
+%
+%ffffffffffffffff
+\mfig{1}{figures/traced_slit_pscan_fixing.png}{Focused parameter scans how the effect of tilt over a variety of jet configurations. Panels on the left (right) are based on the maximum length (mean width) of the jet.}{p_scan_t_len}
+%ffffffffffffffff
+%
+%-----------------------------------
+\subsection{Parameter Scan 2}
+\label{subsec:pscansII_I}
+%-------------------------
+For the parameter scan (2) the effect of the tilt on the width measurements and the difference in widths measures using both slits are investigated (see Fig.~\ref{width_measure}). In this paramter scan it gives a clear indication that increasing tilt angle increases the jet widths. At $45^{\circ}$ this trend stops, this is because as the tilt angle increases the more nebulous the jet becomes, particularly in the falling phase, when the jet no longer falls as one clear defined column, making it challenge to identify jet boundaries (see. (c),(g), and (k) in Fig.~\ref{tj_morph_4}). Both slits display the same trend, but the traced slit (red solid line) consistently measure higher jet widths, which in agreement with parameter scan (1). The analogous trends for both slits originates from the method of angle selection for the traced slits. This is due to the central axis of the jet being based on horizontal slits with small intervals and/or as two data points are used to determine the tilt angle, therefore,it may not deviant much from the original slit method utilised. It's possible with a different method of identifying the central axis and/or more data points used for angle determination would modify the trend for the traced slits. Overall, the less sophisticated method currently used gives a good indication of the expected results.  
+%
+%
+%
+In Fig.~\ref{p_scan_t_len} the same parameter scan is investigated, but using a traced slit to account for the tilting of the jet. The top left panel shows the effect of maximum length against the magnetic field strength. We see that that magnetic field strength in most cases doesn’t affect the max length of the jet. For $P=300,~A=60,~T=15$, increasing magnetic field reduces its length. For the panel in the bottom left, one $A>40 \kms$  the tilt begins to reduce the maximum length of the jet. We see that for greater the initial velocity the longer the jet length. The panels on the right show the effects of the mean with again change in the magnetic field strength, and initial velocity, top and bottom respectively. To the top right panel shows the same trend as before, with increased magnetic field straight there is more collimation of the jet. From the bottom left the increased initial amplitude the greater the jet width. The trends that we have seen in Chapter~\ref{chap:sj} hold when the jet is launched at an angle.  \np
+%ffffffffffffffff
+\mfig{1}{figures/mean_w_vs_tilt.png}{Effect of tile on the mean width measurement, comparing traced slit (red solid line with data markers) and horizontal slit (blue dashed line with data markers).}{width_measure}
+%ffffffffffffffff
 %=============================================================
 \section{Jet Trajectory}
 \label{sec:j_traj_t}
 %=============================================================
-To study the effect of tilts on the jet, we applied titling angles over a range of $0^{\circ}-60^{\circ}$ in increments of $5^{\circ}$. The apex height and length of the jet are temporal track and displayed in Fig.~\ref{tilt_effect_traj}. The height (top left panel) and length (bottom left panel) are shown to be reduced with increasing tilt angle with approx. $50\%$ reduction in height from $0^{\circ}$ to $60^{\circ}$. As the jet becomes more tilted the maxim jet length tends to be higher than the apex height, because with increased tilt angle the jets transverse displacement becomes larger. Both trajectories of the jet (panels to the right) show a decrease in max height\textbackslash length and a slight decrease in total jet lifetimes. The results indicate that once the tilted up to $50^{\circ}$, the trajectories deviate from the parabolically that is typically seen in spicular jets. A similar pattern is seen if the jet length is tracked, but the trajectory is less smooth, this is because the jet is undergoing transverse motion and is constantly changing in length.      
-%ffffffffffffffff
-\mfig{0.8}{figures/image823.png}{Plots shows the effect of non-filed aligned flow on apex (top panels), length (bottom panels) and trajectories (rightmost panels).}{tilt_effect_traj}
-%ffffffffffffffff
-%=============================================================
-\section{Parameter scan}
-\label{sec:stab}
-%=============================================================
-As done in Chapter~\ref{chap:sj}, to investigate a parameter space is studied to determine how the launch direction with respect to magnetic field affects the key parameters, the jet trajectory, apex heights, and widths. For the parameter scan we use; lifetimes with a fixed value of $P=300~\rm{s}$; initial amplitudes range from $A=20,~40,~60~\kms$; magnetic field strength covers $B=20,~40,~60,~80~\rm{G}$; tilt angels $T=0,5,15^{\circ}$. The parameter scan for this chapter is less extensive than Chapter~\ref{chap:sj} because the addition of the tilt parameter significantly increases the number of simulations. The initial amplitude of $80 \kms$ is near the upper limit of spicule speeds (see Table~\ref{!!?!!}) therefore omitted.  As shown in Fig. ~\ref{parameter_scan_lines} the range of driver time investigated had minimal impact on the jet heights and had subtle effects both on the jet widths and morphology.  Therefore, we took the drive time and lowered the upper limit of the initial amplitude to match that of the standard jet. \np
-%
-The results of the parameter scan for horizontal slits are shown in Fig.~\ref{p_scan_t_apex}. For each panel, the colour (line style) corresponds to the tilt angle (initial amplitude for top panels or magnetic strength for bottom panels). The panel to left (right) shows the impact of tilt angels on the apex heights (mean width). The greater the initial amplitude the more notable the effect the magnetic strength has on reducing apex heights. The relation between maxim heights and initial amplitude shows that with greater initial amplitude the greater the heights reached. With increased tilt angle the max heights are slightly reduced. For the tilted jets, we see a similar trend across all tilting angles. For the top right panel, we see that with increasing magnetic field strength the jets become more collimated. The bottom right panel shows that the mean width is increased with an increased tilt angle. We see that the mean widths are banded together based on the magnetic field strength.
-%fffffffffffff
-\mfig{1}{figures/horizontal_slit_pscan.png}{Focused parameter scans how the effect of tilt over a variety of jet configurations. Panels on the left (right) are based on the maximum apex (mean width) of the jet.{\color{green} !!Missing $A=20$ from RHS panels!!}}{p_scan_t_apex}
-%ffffffffffffffff
-In Fig.~\ref{p_scan_t_len} the same parameter scan is investigated, but using a traced slit to account for the tilting of the jet. The top left panel shows the effect of maximum length against the magnetic field strength. We see that that magnetic field strength in most case doesn’t affect the max length of the jet. For $P=300,~A=60,~T=15$, increasing magnetic field reduces its length. For the panel in the bottom left, one $A>40 \kms$  the tilt begins to reduce the maxim length of the jet. We see that for greater the initial velocity the longer the jet length. The panels on the right show the effects of the mean with again change in the magnetic field strength, and initial velocity, top and bottom respectively. To top right panel shows the same trend as before, with increased magnetic filed straight there is more collimation of the jet. From to bottom left the increased initial amplitude the great the jet width. The trends that we have seen in Chapter~\ref{?} hold when the jet is launch at an angle.  \np
-%
-To study the effect of the tilt on the width measurements the standard jet is investigated over a range of $T=0-60^{\circ}$ as shown in Fig.~\ref{width_measure}. For increasing tilt angle up to $45^{\circ}$ the widths are increased. After this point the trend stops, this is because as the tilt angle increases the more nebulous the jet becomes, particularly in the falling phase, when the jet no longer falls as one clear defined column. Similar trends are seen in both the traced (red solid line) and horizontal (blue dashed line) slits, but the traced slits consistently measure higher jet widths.  
-%ffffffffffffffff
-\mfig{1}{figures/traced_slit_pscan.png}{Focused parameter scans how the effect of tilt over a variety of jet configurations. Panels on the left (right) are based on the maximum length (mean width) of the jet. {\color{green}!!max len is smaller than apex heights in prev fig. This doesn’t make sense!!}}{p_scan_t_len}
-%ffffffffffffffff
+To study the effect of tilts on the jet, follow the steps outline in parameter scan (2). The apex height and length of the jet are temporally tracked and displayed in left panel of Fig.~\ref{tilt_effect_traj}. There is clear trend in both the maximum height (solid black marked line) and length (dashed red marked line) are decreased with tilting angle. The max length is larger than height, and there is difference widens above $20^{\circ}$. The increased difference between height and length can be attributed to larger traversal displacement with increasing tilt. Both trajectories of the jet (right hand panels) show a decrease in max height\textbackslash length and a slight decrease in jet lifetimes of roughly $150~\rm{s}$, over the range of tilt angles. The results indicate that once tilted up to $50^{\circ}$, the trajectories deviate from the parabolically that is typically seen in spicular jets. A similar pattern is seen if the jet length is tracked, but the trajectory is less smooth, this is because the jet is undergoing transverse motion and is constantly changing in length. These results indicate that the magnetic field or strong horizontal perturbations could alter the trajectory of the jet. An interesting aspect of the results is that by simply introducing a small tilt in the flow has achieved in producing spicules with differing heights and lifetimes. By taking a spicule with energy and applying different tilts, achieves different heights. This could be another avenue in showing why spicules appear and disappear over a variety of heights. Although, unlike the case with TII spicules, there appearance would be similar to there higher propagating counter parts. In both case the trajectories show that only in extreme case of tilt angles (approx. $50^{\circ}$) the trajectory significantly deviants from parabolic flight.  
 %
 %ffffffffffffffff
-\mfig{1}{figures/mean_w_vs_tilt.png}{Effect of tile on the mean width measurement, comparing traced slit (red solid line with data markers) and horizontal slit (blue dashed line with data markers).}{width_measure}
+\mfig{1}{figures/combine_L_h_comp.png}{Plots shows the effect of non-filed aligned flow on apex (top panels), length (bottom panels) and trajectories (rightmost panels).}{tilt_effect_traj}
 %ffffffffffffffff
 %------------------------------------------------------------------------------
 \subsection{Tilted Jet Morphology}
 \label{subsec:steady}
 %------------------------------------------------------------------------------
-In Fig.~\ref{tj_morph} shows the density evolution for the standard jet at various tilt angles. The row serves as reference to the standard jets descried in Chapter~\ref{}. Even for small tilting angles of $5-10^{\circ}$ the morphology of the jet is significantly changes. For $5^{\circ}$ of tilt its evolution is very similar to the standard jet unit approximately $t=202~\rm{s}$. The main noticeable difference is the knots are denser and deformed. At roughly $t=253~\rm{s}$ for $0^{\circ}$ and $10^{\circ}$, the jet experience an instability (possibly KHI or kink), almost a whiplash effect and mixes back into itself (see panel g for aftermath). For increase level of the tilt, we can see that the transverse motion of the jet is more. in column containing panel (d) we seen that with more tilt the jet has a lower apex, this suggest that with increasing tilt it reduces the jet lifetimes. When above $20^{\circ}$ of tilt there is no longer this whiplash effect. This could be due to the more tilt the more the magnetic field dampens any kind of instability. As the jet falls it becomes more top have then in $0^{\circ}$ case. For higher degrees ($> 10^{\circ}$) of the tilt the knots are no longer easily identified. The edges of reigns of the jet with the greatest transverse displacement are become more dense than the rest of the jet beam. In each tilted example the clear structure seen int he jet head is not longer presents, as some mixing occurs since the jet beam. As the jet is no longer being directly channels by the magnetic field, as it bends it will encounter more resistance from the magnetic field, meaning that this will impede jet propagation. This leads to more interaction of upward flowing jet material into fall/impede plasma, this causes a mixing with the jet particularly located at the jet/working surface of the jet. \np
-By introducing tilt into mix the jets not only undergo CSW variations, but also transverse motions, these are two key dynamical ingredients that need to be captured in spicular models. Spicules are not just vertically dynamic plasma sticks, they display complex motion all through the body of the jet \citep{Sharma2018ApJ85361S}. These simulations shows that even a slight misalignment between flow and magnetic field produces noticeable traversal displacement.       
+Figs.~\ref{tj_morph_1} to \ref{tj_morph_4} shows the density evolution for the standard jet at various tilt angles. The first row of Fig.~\ref{tj_morph_1} serves as a reference to the standard jets described in Chapter~\ref{chap:sj}. Note the in Figs.~\ref{tj_morph_1} to~\ref{tj_morph_3} the time steps selected are the same as in simulation snap shots in in Chapter~\ref{chap:sj}, this is purposefully chosen for easy comparison. \np
+%
+An interesting aspect of the simulation is even for small tilting angles of $5-10^{\circ}$ the morphology of the jet is significantly changed, particularly in the falling phase of the jet (columns containing (c-d)). At roughly $t=253~\rm{s}$ for $5^{\circ}$ and $10^{\circ}$, the jet experience an instability, causing a kinking motion to travel through the jet beam, like a whiplash effect (see panel g for aftermath). This whiplash effect causes significant mixing to occur in the jet beam (see panels (g) and (k) in Fig.~\ref{tj_morph_1}). It is also observed for higher degrees of tilt, but doesn't cause significant mixing in the jet beam. Another phenomena observers in jet with higher degrees of tilt ($>20^{\circ}$) is finger like structures occurring in the down-flow of the jet, both in the jet beam and its right hand side boundary. All these dynamics are probably produce by instabilities, but to determine precisely which ones is not trivial task, hence requiring further investigation. Despite this, from there appearance and manifestation with the data available it is possible to narrow down to three potential candidates:
+\begin{enumerate}
+    \item Rayleigh-Taylor instability (RTI) is the instability of an interface between two fluid of differing densities, where the heavy fluid is on top. If this system is subjected to gravity and any slight perturbation, this leads to the denser fluid to fall through the lighter fluid, forming finger-like structures as shown in Fig.~\ref{RT_example}.
+    \item Kelvin Helmholtz instability (KHI) occurs if there is a velocity shear in a single continuous fluid, or at the interface of two fluids with differing velocities. The shearing between these two fluids, once above a critical threshold, causes the interface to form swirl-like patterns, see Fig.\ref{KHI_example}.    
+    \item Dynamic kink instability (DKI) occurs when a plasma flow on a curved trajectory. There are two opposing forces acting on the jet, the centripetal force is trying to destabilise the flow and the lorentz force which is acting to stabilise the flow as shown in see Fig.~\ref{DKI_example}. If the flow is super \Alfvenic then the centripetal can overpower the Lorentz force, enhancing the transverse displacement. This instability occurs in HD, but is called a kink instability (KI) (not be to be confused with MHD KI), which like the DKI is caused by centripetal force in curved flows \citep{Drazin2002ihsbookD}. Note that this is different from a MHD kink instability which arises due to the Lorentz force enhancing kink motion.
+\end{enumerate}
+From the list of potential instabilities the two candidates for the whiplash effect is KHI or DKI. KHI is observed in many instances in nature e.g. from clouds, waves in the ocean, and Jupiter's eddies \textit{etc.}.  They are present in numerous solar features; coronal mass ejections \citep{Foullon2011ApJ729L8F, Foullon2013ApJ767170F}, prominence's \citep{Berger2010ApJ7161288B, Ryutova2010SoPh26775R}, solar jets \citep{Filippov2015MNRAS4511117F,Li2018NatSR88136L}  and including spicules \citep{Kuridze2016ApJ830133K, Antolin2018ApJ85644A}. As there is significant difference velocities between the jet and ambient medium, KHI can force at the interface between these two regions. This can lead to deformation of the jet bounadary and if shearing is strong enough, it possible to destabilise the whole jet. However,  \cite{Chandrasekhar1961hhsbookC} has shown that a magnetic field aligned with the flow will impede the development of KHI, which is the case of the simulation showcased. Another aspect to consider, is that KHI would be localised to the the jet boundary, it wouldn't propagate through the jet beam. Due to these factors, it unlikely to KHI that responsible for the whiplash effect occurring in the simulations. A strong candidate to explain the whiplash effect is the DKI. \cite{Zaqarashvili2020ApJ893L46Z} proposed a model to showing DKI could cause transverse motions in spicules. If a spicule is traveling at an angle (in their case curve is introduced due to expanding flux tube) and the flow is super \Alfvenic, which is akin to the simulation, then its possible for DKI to create transverse motions. A DKI can explain the presence the of the whiplash motion going through the jet. However, why at $5-10\degs$ is the DKI causes more dramatic mixing in the jet beam during the falling phase, is currently unanswered and would require further investigation. One possibility is when above $15^{\circ}$ horizontal motion is sufficient to dampen the instability due to the magnetic field. The magnetic field is acting like a brake to the jet flow, so more tilt the more impeded the jet will be therefore smaller up-flows and a reduction in the effect of the DKI. Interestingly, the whiplash effect can also be seen in Fig.~\ref{paramter_scan_one} for $A=80 \kms$, which doesn't fully fit in with the DKI the flow is not on a curved trajectory for centripetal force to enhance transverse motions. \np
+%
+Two possible instabilities to account for finger-like structures in the falling phase of the jet for tilts $>20^{\circ}$ are RTI and KHI. !!need to finish this!!  \np
+%
+The tilt has an important impact on the structuring of the beam. The main noticeable difference is the appearance of knots, as seen in columns containing (b) in Figs.~\ref{tj_morph_1} to~\ref{tj_morph_4}. For tilt $<15\degs$ the knots are denser and deformed, but for higher degrees of the tilt ($> 10^{\circ}$) the knots are no longer easily identified. This would mean only slight horizontal disturbance to the jets would make it even more challenge to identify knots if present observations. The tilt causes the densest parts of the jet to change from being contain to the head and knots as seen in Chapter~\ref{chap:sj}, to the edges where the most traversal displacement is. The greater tilt the more the edges of traversal displacement become densest party of the jet and the rest of the jet beam dwindles in density. In the column containing panel (d) reaffirms earlier result that the jet has a lower apex and reduces the jet lifetimes for increasing tilt.
+%
+%%ffffffffffffffffffff
+%\mfig{1}{figures/tj_den_plot_1.png}{Example of the temporal evolution of different tilts angles for jets from $0,~10,~20^{\circ}$ from top to bottom, respectively.}{tj_morph}
+%%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=\linewidth]{figures/KHI_example.png}}
+\caption{Example of the formation of a KHI taken from \cite{Barbulescu2018SoPh29386B}. Stage (a) shows the interface between two fluids where $U_0$ and $U_1$ are arbitrary flows speeds, before they are subject to a perturbation shown in stage (b). In stage (c) the perturbation is enhanced by the flows creating non-linear wave steepening. This lead to stage (d) where a vortex forms mixing together both fluids. }
+\label{KHI_example}
+\end{figure}
 %ffffffffffffffffffff
-\mfig{1}{figures/tj_den_plot_1.png}{Example of the temporal evolution of different tilts angles for jets from $0,~10,~20^{\circ}$ from top to bottom, respectively.}{tj_morph}
+%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=0.8\linewidth]{figures/RT_example.png}}
+\caption{Example of the formation of a RT instability at various time steps. These are results from a simulation shown in \cite{Liang2019PhFl31k2104L}. The red colored fluid represents more dense fluid than its blue counterpart and gravity is directed downwards leading to the formation of RTI.}
+\label{RT_example}
+\end{figure}
+%ffffffffffffffffffff
+%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=0.8\linewidth]{figures/DKI.jpg}}
+\caption{Cartoon of dynamic kink instability taken from \cite{Zaqarashvili2020ApJ893L46Z}. The blue (red) lines represent the magnetic field (jet). The blue (red) arrow show the direction for the Lorentz (centripetal) force.}
+\label{DKI_example}
+\end{figure}
+%ffffffffffffffffffff
+%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_0_5_10.png}}
+\caption{Example of the temporal evolution of different tilts angles for jets from $0,~5,~10^{\circ}$ from top to bottom, respectively.}
+\label{tj_morph_1}
+\end{figure}
+%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_15_20_25.png}}
+\caption{Example of the temporal evolution of different tilts angles for jets from $15,~20,~25^{\circ}$ from top to bottom, respectively.}
+\label{tj_morph_2}
+\end{figure}
+%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_30_35_40.png}}
+\caption{Example of the temporal evolution of different tilts angles for jets from $30,~35,~40^{\circ}$ from top to bottom, respectively.}
+\label{tj_morph_3}
+\end{figure}
+%ffffffffffffffffffff
+\begin{figure}
+\captionsetup[subfigure]{labelformat=empty}
+\centering
+\subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_45_50_55.png}}
+\caption{Example of the temporal evolution of different tilts angles for jets from $45,~50,~55^{\circ}$ from top to bottom, respectively.}
+\label{tj_morph_4}
+\end{figure}
 %ffffffffffffffffffff
 %------------------------------------------------------------------------------
 \subsection{Effect of Tilt on Cross-sectional width variation}
 \label{subsec:oscillating}
 %------------------------------------------------------------------------------
-
-\mfig{1}{figures/test_td_plot_1Mm.png}{Time distant plot with horizontal slit at $1~\rm{Mm}$ for tilt values $0-55^{\circ}$.}{td_1Mm}
-
-\mfig{1}{figures/test_td_plot_2Mm.png}{Same as fig.~\ref{td_1Mm}, but at $2~\rm{Mm}$.!!need to bulk up font!!}{td_2Mm}
-
-\mfig{1}{figures/test_td_plot_3Mm.png}{Same as fig.~\ref{td_1Mm}, but at $3~\rm{Mm}$.!!bulk up font!!}{td_3Mm}
-
+Using the horizontal slits time-distance plots where created at $1-3~\rm{Mm}$ heights (see Figs.~\ref{td_plot_1Mm} to \ref{td_plot_3Mm}), over the range of tilts. These plots give a window into the dynamics of the jet. From Fig.~\fref{td_plot_1Mm} for $\theta=0^{\circ}$ there are clear sausage-like motions in the CSW variations. It show that there is a cavity inside the jet, which due to the process that creates the knots. It highlights for $1\rm{Mm}$  the knots would be observable. With $\theta=5^{\circ}$, shows with a small change in alignment between flow and magnetic field that it makes substantial changes to the CSW variations of the jet beam. For $\theta=5^{\circ}$ appears to be the only example where the combination of both CSW variations and traversal displacement can be cleanly observed at this height. With increasing tilt the sausage-like CSW variations become less noticeable at the height of $1~\rm{Mm}$. Basically, the main dynamics shift from symmetrically CSW variations, to traversal displacement that reach up to approximately a $1\rm{Mm}$ in width. For tilt $>25\degs$ the most horizontally displaced regions have much denser edges. This could be regions where material is building up due to the magnetic field redirecting flow as it is perturbed. The magnetic tension would causing a breaking of the jet hence jet material would compress more together. With increasing amounts of horizontal velocity, the more into the magnetic field the jet will travel, hence the denser regions in the edge of the jet boundary. Once we are past $40\degs$ of tilt, there is less of a clear jet structure. Similar behavior is seen at $2~\rm{Mm}$ and $3~\rm{Mm}$ (Fig.~\ref{td_plot_2Mm}). \np
+Td plots: For the tilted jets the large scale transverse motions in the simulations are due to the restoring forces of the ambient magnetic field, which are trying to reestablish an equilibrium. There appears to typically one-two global sways of the jet during its lifetime.   
+By introducing tilt into the jets, they not only undergo CSW variations but also transverse motions. These are two key dynamical ingredients that need to be captured in spicular models. Spicules are not just vertically dynamic plasma sticks, they display complex motion all through the body of the jet \citep{Sharma2018ApJ85361S}.
+%
+%fffffffffffffffffffff
+\mfig{1}{figures/td_plot_1Mm.png}{Time distant plot with horizontal slit at $1~\rm{Mm}$ for tilt values $0-55^{\circ}$.}{td_plot_1Mm}
+%fffffffffffffffffffff
+%
+\mfig{1}{figures/td_plot_2Mm.png}{Same as fig.~\ref{td_plot_1Mm}, but at $2~\rm{Mm}$.}{td_plot_2Mm}
+\mfig{1}{figures/td_plot_3Mm.png}{Same as fig.~\ref{td_plot_1Mm}, but at $3~\rm{Mm}$.}{td_plot_3Mm}
+%fffffffffffffffffffff
 %============================================================
 \section{Summary and Discussion}
 \label{sec:sum}
 %============================================================
+These simulations show that even a slight misalignment between flow and magnetic field produces noticeable traversal displacement and has major effects on the morphology of the jet. Even with simple models complex dynamics have been identified. The dynamics in real spicules is likely to be more complex than shown in these simulations. In regions of complex  magnetic field configurations and interactions of potentially multiple spicules and other solar features. the main results of this chapter: 
 \begin{itemize}
-\item Over the range of parameters, space studied the tilt-only has a minor effect on max apex heights. 
+\item Over the range of parameters, space studied the tilt-only has a minor effect on max apex heights.
+\item It is highly probable that DKI is response for the whiplash effect seen in the jets, but more anaylsis of the simulations is required to confirm this.
+\item Regardless of the tilt angle the synthetic jets undergo $1-2$ sways of transverse motion.
+\item Knots may not be observable in solar objects that are highly inclined.
+\item By introducing tilt into the jets, they not only undergo CSW variations but also transverse motions. These are two key dynamical ingredients that need to be captured in spicular models.
 \end{itemize}
 
 
