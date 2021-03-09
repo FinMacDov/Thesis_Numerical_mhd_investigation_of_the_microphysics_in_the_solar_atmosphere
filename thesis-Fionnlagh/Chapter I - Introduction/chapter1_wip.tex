@@ -17,6 +17,7 @@
 \usepackage{rotating}
 \usepackage[utf8]{inputenc}
 \usepackage[round]{natbib}
+\usepackage{epigraph}
 
 \usepackage{geometry}
  \geometry{
@@ -134,6 +135,9 @@ $\eta$ $\rightarrow$ magnetic diffusivity of the plasma
 \chapter{Introduction}
 \label{chap:intro}
 %------------------------------------------------------------------------------
+%\epigraphfontsize{\small\itshape}
+\epigraph{``We're going to explore the outside world someday, right? Far beyond these walls, there's flaming water, land made of ice, and fields of sand spread wide."}{--- \textup{Hajime Isayama}, Vol. 2  Attack on Titian}
+%------------------------------------------------------------------------------
 \section{Overview and Motivation}
 \label{sec:overview}
 %------------------------------------------------------------------------------
@@ -204,6 +208,27 @@ RREs/RBEs & \multicolumn{1}{c|}{disk}  & \multicolumn{1}{c|}{$20-120$} & \multic
 %------------------------
 The motivation for my work is to conduct numerical model to research into the effects of spicules on the transition region, particularly focusing on whether spicules are the drivers of TRQs \citep{Scullion2011}. We are interested in spicules (solar jets) as these jets are ubiquitous ($100,000$  at  any  time \citep{Beckers1968}) on the Sun, thus are a good candidate for coronal heating. These jets could perturb the transition region (a thin region of approximately $100$ km between the chromosphere and corona where the temperature raises from $10^4$ K to $1$-$2$ MK) causing it to oscillate (akin to when a drum is struck), thus possibly being the cause of Transition Region Quakes (TRQ). TRQ are energetic waves in the transition region that evolves in a similar manner to waves on 2D elastic waveguides. When a solar jet rises up from the photosphere to corona it will cause the Transition region to ripple and thus perturb the surrounding magnetic fields. The goal is to analyse the waves and the energy involved in these waves to investigate if they could significantly contribute to coronal heating. \\ \\ The discovery of a link between these TRQ and Rapid Blueshifted Excursions (RBE) identified in CRISP H-alpha data is potentially very far reaching. Work by \cite{Henriques2016} has already found convincing evidence of links between RBEs and coronal transient events, however they did not study whether their coronal features corresponded to coherent waves (i.e. TRQ manifesting as propagating wave fronts). This task is vital for expanding our knowledge of the coupling between the lower solar atmosphere and the transition region. \\ \\ The importance of small-scale jets is well known as they are suggested to contribute to coronal heating and solar wind acceleration. Spicules themselves may be triggered by magnetic reconnection \citep{Pontieu2007PASJ} or waves \citep{Pontieu2004Natur}. Although, it is currently unclear what the decisive physical factors that trigger spicules, reconnection and waves are both promising candidates for their contribution to the energy exchange between the lower cool atmosphere and the corona. We also observe apparent transverse motion within spicules and intermittent Doppler-shifts in coronal loops could be evidence in support of the existence of \Alfven or kink waves in the solar atmosphere.  \\ \\
 Observations have demonstrated the ubiquity of vortex motions present in the solar atmosphere. These are usually found at photospheric Magentic Bright points (MBP) groups. Previous MHD simulations have shown such vortices could be responsible for the generation of various types of MHD waves, yet their relationship with other ubiquitous transients-jets (spicules) is unclear.
+
+\par A schematic diagram of basic structure of a jet is given by \fref{ssj}. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
+%\begin{equation}\label{v_j_speed}
+%v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
+%\end{equation}
+From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow 
+%----------------
+% I may not include this
+%\par !probably wont include in paper! When describing a jets these parameters are key for defining its morphology and structure: $v_j$, $\eta_j = \frac{\rho_j}{\rho_a}$, $K = \frac{p_{d}}{p_a}$, where $\rho_a(p_a)$ is the ambient density(pressure) and $p_{d}$ is the pressure at the driver. $\eta_j$ measures the density contrast of the jet itself and the ambient medium it propagates through. If $\eta_j>1(\eta_j<1)$ then a jet is labeled to as heavy(light). For $K$ with denotes our jet to ambient pressures ratio determine whether the jet is under-expanded ($K>1$) or over-expanded ($K<1$). In our case we are dealing with the expected dynamics of a heavy under expanded-jet. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
+%\begin{equation}\label{v_j_speed}
+%v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
+%\end{equation}
+%From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow in these jet. The bow shock can be seen early on in the simulation and we see that the temperature increase at the head of the jet (see left most panel in Fig. \eqref{paramter_scan_one}.
+% useful links for jets heads: 
+% https://books.google.co.uk/books?id=ZdjImbOLi9gC&pg=PA449&lpg=PA449&dq=how+to+calculate+speed+of+the+head+of+the+jet+astrophysics&source=bl&ots=SI82iL7XlT&sig=ACfU3U2q3yT93ZitzgWwFXm0YaPYX_l21w&hl=en&sa=X&ved=2ahUKEwiquezgm5rqAhV1RxUIHRFrDikQ6AEwD3oECAgQAQ#v=onepage&q=how%20to%20calculate%20speed%20of%20the%20head%20of%20the%20jet%20astrophysics&f=false
+% https://iopscience.iop.org/article/10.1088/1742-6596/1031/1/012022/pdf
+% https://science.sciencemag.org/content/sci/346/6207/325.full.pdf
+% http://articles.adsabs.harvard.edu//full/1994ApJ...435..261D/0000263.000.html
+% http://articles.adsabs.harvard.edu/pdf/1993ApJ...410..686D
+% https://iopscience.iop.org/article/10.1086/311159/pdf
+% http://articles.adsabs.harvard.edu/pdf/1996ApJ...467L..57V
 %------------------------------------------------------------------------------
 %\section{Spicules-like features in the Solar atmosphere}
 %\label{sec:spicule-jets}
