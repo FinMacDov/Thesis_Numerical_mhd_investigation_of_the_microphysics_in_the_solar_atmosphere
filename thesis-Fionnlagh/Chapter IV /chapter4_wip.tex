@@ -3,7 +3,7 @@
 \usepackage{amssymb}
 \usepackage{titlesec}
 \usepackage{amsmath}
-\DeclareMathOperator{\arcsec}{arcsec}
+\usepackage{siunitx} 
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -16,6 +16,8 @@
 \usepackage{bm}
 \usepackage{stmaryrd}
 \usepackage[utf8]{inputenc}
+\usepackage{afterpage}
+\usepackage{pdflscape}
 
 \usepackage{geometry}
  \geometry{
@@ -81,7 +83,7 @@
 \newcommand{\size}{0.75}
 \newcommand\measureISpecification{4ex}% not defined in mwe
 \newcommand{\ctab}[1]{\raisebox{\dimexpr \measureISpecification/2 -.748ex}{#1}}% vertically centers numbers
-\newcommand{\si}[1]{\;\rm{#1}}
+%\newcommand{\si}[1]{\;\rm{#1}}
 \newcommand{\mfig}[4]{
   \begin{figure}
   \begin{center}
@@ -93,6 +95,7 @@
 \newcommand{\kms}{~\rm{km ~s^{-1}}}
 \newcommand{\kgm}{~\rm{kg ~m^{-3}}}
 \newcommand{\np}{\\ \\}
+\newcommand{\degs}{^{\circ}}
 
 \usepackage{ulem}       % To use \sout
 \usepackage{enumitem}
@@ -111,31 +114,112 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-\setcounter{chapter}{2}
+\setcounter{chapter}{4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % START COPYING HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\chapter{Signatures of Flow-modulated Sausage Wave Modes in Solar Spicules}
+\chapter{Synthetic Jets Relation to Observations}
+\label{cap:obs}
+%-------------------------------------------
+\let\thefootnote\relax\footnotetext{
+%
+This chapter is based on the following refereed journal article:
+\begin{itemize}
+\item Dover, F., Sharma, R.,  Kors\'os, M., Erd\'elyi, R., (2020); Signatures of Cross-sectional Width Modulation in Solar Spicules due to Field-aligned Flows, \apj, Volume 905, Issue 1
+\end{itemize}
+}
+%-------------------------------------------
 \section{Introduction}
-Spicules are thin, grass-like features that are routinely observed in the lower solar atmosphere as dark (on-disk) or bright (at limb) structures, primarily in cool/chromospheric spectral lines (e.g., H$\alpha$, Ca \textsc{ii} H \& K, He \textsc{i} D3). These localised features effectively trace the chromospheric magnetic field concentrations in spite of the likely role of the neutrals at spicular temperatures and are a focus of many studies for their potential role in balancing the radiative losses and heating at the chromosphere-corona interface \citep{Tsiropoula2012}. Observations suggest that spicules generally emanate near the (inter)granulation lanes and remain subject to magnetohydrodynamic stresses (MHD) at their footpoint. The associated motions, irrespective of whether turbulent or coherent, become channelized through the spicule structure and are well reflected in their observed dynamic behavior. Broadly, spicule kinematics can be categorized in three major domains, viz., radially transverse, field-aligned and torsional, which have been extensively examined and interpreted in terms of discrete MHD wave modes \citep[see review:][]{Zaqarashvili2009}. 
-
-Ubiquitous transverse displacements in spicule features were interpreted as the $m$ = 1, kink MHD wave mode by previous studies, e.g.  \citep{Kukhianidze2006, DePontieu2007, Ebadi2014, Sharma2017}.  Similar dynamic behavior is also found prevalent in on-disk spicule-counterparts, commonly known as Rapid Blue/Red Shifted Excursions \citep[RBE,RREs:][]{RouppevanderVoort2009}. Field-aligned motions are primarily associated with mass flows, and common to many jet-like phenomenon, were reported in mottles \citep{Loughhead1974}, on-disk RBE/RREs \citep{Sekse2013} and off-limb spicules \citep{Pereira2012}. Axisymmetric torsional (rotationally transverse) motions in spicules were claimed to be observed in terms of $m$ = 0 torsional Alfv\'en wave mode by \citet{DePontieu2012}, however, it must be noted that the observations used to make this particular mode identification could also be due to perturbations in ambient chromospheric environment by spicule motions \citep{Goossens2014, Sharma2017}. 
-
-Though much attention was given to the identification and study of transverse (kink and torsional Alfv\'en) wave modes, the observations of cross-sectional width variations remained elusive, largely due to pertinent difficulties with observations of jet-like chromospheric features. The presence of cross-sectional width variations in thin magnetic flux tube structures, as a possible consequence of $m$ = 0 MHD sausage and/or $m$ = 2 fluting modes, were postulated in earlier theoretical studies \citep{Ziegler1997a, Ziegler1997, Ruderman2010}. A few observations of periodic cross-sectional width variations were limited to on-disk fibril structures. Concurrent transverse and cross-sectional width variations were reported as coupled kink and sausage wave modes by \citet{Jess2012} and \citet{Morton2012}. Similar observations for cross-sectional width and intensity oscillations in on-disk slender chromospheric fibrils were reported by \citet{Gafeira2017} and interpreted as MHD sausage wave modes. Moreover, an ensemble of coupled transverse, cross-sectional width and axisymmetric torsional motions were reported in off-limb spicules by \citet{Sharma2018}, which were interpreted as nonlinear kink wave mode.
-
-It must, however, be noted that spicules are essentially jet-like features where mass flows along their magnetic field are predominant with bulk velocities of the range of 25-100 km/s  \citep{Beckers1972ARAA1073B,Sterling2000SoPh19679S,Pereira2012}. Such bulk velocities may even have a dominant effect on the waves that are present in spicular structures. Plasma flows will interact with the oscillatory modes of spicules, e.g. periodic motions along or anti-parallel to the bulk motion will be affected differently. Wave motions in steady waveguides have been investigated in the past in a few theoretical studies \citep{Narayanan1991,nakariakov1995, terrahomem2003, soler2008} for different (slab/cylindrical) geometries. It was concluded that mass flows can generate shift in frequencies for confined MHD waves and can influence the wave propagation even causing resonant flow instabilities, depending upon the direction and strength of mass flows. Though, possible effects of mass flows on wave periodicities/propagation were known theoretically,  it still requires observational verification in highly localised dynamic waveguides such as solar spicules.
-
-Here, we report the first observational evidence of MHD sausage wave modes in off-limb spicule structures, identified as periodic variations in estimated cross-sectional widths. The observed dynamics were compared with MHD numerical simulations that mimic the jet evolution in a stratified atmosphere. Spectral analysis of cross-sectional width deformations in the rise and fall phases of both the observed and simulated spicule features are examined to better understand the possible role of field-aligned mass flows in modulating the observed periodicities of confined sausage wave modes.  
+%-------------------------------------------
+In this Chapter, the aim is to investigate the CSW behaviour of the straight jets and compare them against observations of H$\alpha$ spicules. Observations indicate that spicules generally emanate near the (inter)granulation lanes and remain subject to magnetohydrodynamic stresses (MHD) at their footpoint. The associated motions, irrespective of whether turbulent or coherent, become channelized through the spicule structure and are well reflected in their observed dynamic behaviour. Broadly, spicule kinematics can be categorized into three major domains: radially transverse, field-aligned, and torsional. These have been extensively examined and interpreted in terms of discrete MHD wave modes \citep[see review:][]{Zaqarashvili2009}. \np  
+%
+Since the discovery of standing kink oscillations, that cause transverse displacement in solar structures \citep{Aschwanden1999ApJ520880A, Nakariakov1999Sci285862N, Aschwanden2002SoPh20699A}, MHD waves in solar structures have gained much attention \citep[][\textit{e.g.}]{} {\color{green} !!get refs!!}. This due to their potential to provide estimates that we can't directly measure in solar structures (e.g. magnetic field strength) and they are thought to carry sufficient energy to heat the corona {\color{green} !!get refs!!}. The first report of Kink waves in spicules was by \cite{Kukhianidze2006}, and numerous studies have since followed with the goal of identification and study of transverse (kink and torsional \Alfven) wave modes \citep{DePontieu2007, Ebadi2014, Sharma2017} {\color{green} !!ref more!!}. However, reports of CSW variations remained elusive, due to current resolution limits for observations of jet-like chromospheric features. The presence of CSW variations in thin MFT structures, as a possible consequence of $m$ = 0 MHD sausage and/or $m$ = 2 fluting modes, were postulated in earlier theoretical studies \citep{Ziegler1997a, Ziegler1997, Ruderman2010}. Observations that report on CSW variations in spicular structures are limited to on-disk fibrils, where concurrent transverse and CSW were reported as coupled kink and sausage wave modes by \citet{Jess2012, Morton2012}. Similar observations for CSW and intensity oscillations in on-disk slender chromospheric fibrils were reported by \citet{Gafeira2017} and interpreted as MHD sausage wave modes. Moreover, an ensemble of coupled transverse, CSW and axisymmetric torsional motions were reported in off-limb spicules by \citet{Sharma2018}, which were interpreted as nonlinear kink wave mode. \np
+%
+An important aspect of spicules is they are essentially jet-like features where mass flows along their magnetic field with velocities of the range of $25-100\kms$  \citep{Beckers1972ARAA1073B, Sterling2000SoPh19679S, Pereira2012}. These velocities may even have a dominant effect on the waves that are present in spicular jets. Plasma flows will interact with the oscillatory modes of spicules, \textit{e.g.} periodic motions along or anti-parallel to the bulk motion will be affected differently. Wave motions in steady waveguides have been investigated in the past in a few theoretical studies \citep{Narayanan1991,nakariakov1995, terrahomem2003, soler2008} for different slab and cylindrical geometries. It was concluded that mass flows can generate a shift in frequencies for confined MHD waves and can influence the wave propagation even causing resonant flow instabilities, depending upon the direction, and strength of mass flows. Though possible effects of mass flow on wave periodicities/propagation were known theoretically, it still requires observational verification in highly localised dynamic waveguides such as solar spicules. \np
+%
+At multiple points through this thesis, there has been a comparison between the simulations and observations. There have been interesting features that have arisen in the synthetic jets, particularly the CSW variations and the knots. In this Chapter, we aim to focus on these aspects of the observations by comparing the CSW variations in off-limb spicules with the observed dynamical behaviour with synthetic jets and highlight observed solar features where knots may be present. \np
+%-------------------------------------------
+\section{Cross-sectional Width Variation in Synthetic jets}
+\label{sec:CSW_syn_jet}
+%-------------------------------------------
+The synthetic jets used in the thesis are set up to capture the fundamental dynamics of a chromospheric jet in a stratified atmosphere. Through the momentum-driven simulated jet lacks complex physical mechanisms, like e.g. radiative losses, ambipolar diffusion, ion-neutral effects, etc., it still mimics the crucial kinematic behaviour, such as longitudinal/field-aligned plasma motions with CSW variations (Fig.~\ref{jet_P300_B50_A60}) in both rise and fall phase of the jet evolution. \np
+%
+Using the jet tracking code as outline in Chapter~\ref{chap:sj} the CSW have been measured for a jet with parameters of $\theta =0\degs$, $P=300~\rm{s}$, $B=50~\rm{G}$, and $A=60\kms$ (see Fig.~\ref{jet_P300_B50_A60}). The parameter of these jets is similar to that of the standard jet, and hence display similar dynamics \textit{i.e.} morphology, lifetimes, knots and CSW variations. The jet's widths are temporally tracked at multiple heights, where the blue marks measure the widths and yellow triangle locked onto the apex of the jet. The results of the widths for each megameter the jet reaches are displayed in Fig.~\ref{CSW_m_heights}. From Fig.~\ref{CSW_m_heights} there are oscillatory patterns at each height, excluding at $6~\rm{Mm}$. \np
+%
+We decided to focus on slit height at $2~\rm{Mm}$ as it can be compared against observations, gives a good example of the oscillatory pattern seen at the multiple heights, and gives more temporal data to analyse than higher slits. The life of a jet can be separated into two phases, the rising phase, where the jet is being driven and propagating upward, and the fall phase where the jet is no longer being driven and apex height is decreasing with time. These regions are separated by using the parabolic trajectory and calculate the point at which the gradient switched from positive to negative, i.e. the apex of the trajectory, which is marked temporally by the solid black vertical line in Fig.~\ref{CSW_2m_height}. One striking feature is seen in Fig.~\ref{CSW_2m_height}, is the discovery ({\color{green}!!Are we the first to notice that the boundary deformation is different in the rising and falling phases of a spicule jet!!}) that there are distinct differences in the behaviour of the boundary deformation for the rising (green line) and falling (cyan line) phases of the jet. During the rising phase, the CSW is larger and with a few undulations. Whereas in the fall phase the CSW are shorter and faster undulations. The blue and orange lines show the quadratic fit used to detrend the rise and fall phases, respectively in Section~\ref{sec:CSW_comp}.
+%-----------------------
+\begin{figure*}
+\includegraphics[width=1.0\textwidth]{figures/jet_P300_B50_A60_with_markers.eps}
+\caption{Panels showing the temporal evolution of the simulated spicule density structure at four time-steps with apex marked by a yellow triangle. From $121.08-243.88 ~\rm{s}$ ($366.68-489.48~\rm{s}$)  the rising (falling)-phase Location of tracers edges are also shown as blue dots, which are used to estimate the variations in CSW during rising and falling phases of jet structure.}
+\label{jet_P300_B50_A60} 
+\end{figure*}
 
 \begin{figure*}
-\includegraphics[width=1.0\textwidth]{figures/fig_sp_a.png}
-\caption{Panels (a1) – (a4) show the temporal evolution of candidate spicule feature (SP:A) in H$\alpha$ passband at four instances, with positions of vertical (cyan) and horizontal (yellow) slits used for the estimation of field-aligned mass flows and cross-sectional width respectively. Panel (b) shows the time-distance plot from vertical slit on the spicule, highlighting the rise- and fall-phases of field-aligned mass flows. The maximum height attained by the visible plasma is marked with ‘+’ symbol, along with estimated velocities (+46.9 km/s, 40.25 km/s). Bottom panel (c) shows an example of Gaussian fit for intensity magnitudes for horizontal slit location (marked as yellow line on (a1) – (a4)), with error bars, estimated as the standard deviation for intensity values. Vertical black line marks the position of the amplitude of Gaussian fit, while shaded-regions mark average/unperturbed width (W$_{u}$) during spicule lifetime and perturbed/instantaneous width (W).}
-\label{fig:1} 
+\includegraphics[width=1.0\textwidth]{figures/P300B50A60.png}
+\caption{CSW variations over multiple heights for synthetic jet with $P=300~\rm{s}$, $B=50~\rm{G}$ and $A=60\kms$.} 
+\label{CSW_m_heights} 
 \end{figure*}
+
+\begin{figure*}
+\includegraphics[width=1.0\textwidth]{figures/raw_data_P300B50A60.png}
+\caption{CSW variation for slit at $2~\rm{Mm}$. The solid vertical black line separates the rise (green line) and fall (cyan line) phases. The blue and orange lines are a quadratic fit used to detrend the data.}  
+\label{CSW_2m_height} 
+\end{figure*}
+%-------------------------------------------
+\section{Observations of Cross-sectional Width Variation in Spicules}
+\label{sec:CSW_spicules}
+%-------------------------------------------
+As discussed in Section \ref{sec:c2discussion}, SST currently offers the best spatial resolution observation of the Sun, making it an ideal telescope to use for tracking the widths of such small features as spicules. SST is a ground-based telescope located in La Palma, which has one of the best seeing conditions in the world, placed $2,400~\rm{m}$ above sea level. It has a nearly $1~\rm{m}$ sized aperture and uses active optics, to minimise data degradation due to Earth's atmospheric conditions. The data captured in this section uses the CRisp Imaging SpectroPolarimeter (CRISP), which covers a wavelength range of $510$ to $860~\rm{nm}$, with a field of view of approximately $43.5\times43.5~\rm{Mm}$, and a pixel size of roughly $43~\rm{km}$. The spectral line selected for observation is H$\alpha$ $(656.3~\rm{nm})$ giving an angular resolution of approximately $95~\rm{km}$. H$\alpha$ can only form on the Sun where it is ``cool" enough for hydrogen to exist in its atomic form, which is the photosphere and chromosphere. It is part of the Balmer series and forms an absorption or emission spectra for hydrogen when the electron jumps from or falls to $n=2$. The H$\alpha$ line is commonly used for observing chromospheric structures as it reveal many complex structure in the ``messy" chromosphere \citep[\textit{etc.}]{Parmenter1966PASP78250P, von1985AA146192V, Nishikawa1988PASJ40613N, Judge2006ASPC354259J, Leenaarts2007AA473625L, Rutten2008ASPC39754R, Jess2012, Pereira2016ApJ82465P, Rutten2017AA598A89R}. \np
+%
+The spicules structures presented in Figs.~\ref{fig:spa},~\ref{fig:spb} and~\ref{fig:spc} where identified in observations carried out on AR NOAA AR11504 at 07:15-07:48 UT, June 21, 2012. The AR was scanned using 31 equally spaced line positions with 86 m\angstrom, steps from -1.376 to +1.29 \AA, relative to the line centre, along with the additional 4 positions in the far blue wing from -1.376 to 2.064 \AA. Following data acquisition, post-processing of data was carried out using the Multi-Object Multi-Frame Blind Deconvolution \citep [MOMFBD;][]{2005} image restoration algorithm. Also, standard procedures available in the image pipeline for CRISP data \citep{2015} including differential stretching and removal of dark- and flat-fielding were implemented. \np
+%
+The processed data spans around $30~\rm{mins}$ with a cadence of $7.7~\rm{s}$. Following the Nyquist criterion, the temporal-resolution of the dataset allowed the detection of MHD wave modes with periodicities over $15.4~\rm{s}$. The selected spicules were identified as high-intensity structures with the least possible superimposition by any other surrounding features during their visible lifetime in an observed passband. The identified spicules have an average lifetime of $118~\rm{s}$ measured from the H$\alpha$ line-centre. It is possible they could live longer as spicules tend to evolve in multiple passbands, which measurements have shown to have lifetimes in the range of $500-800~\rm{s}$ \citep{Pereira2014}. The observed features have an average length of about $3\pm0.36~\rm{Mm}$ with apex reaching up to an average height of $4.83~\rm{Mm}$. \np
+%
+The CSW of observed spicule features were estimated using the method adopted from \citet{Sharma2018}. A single Gaussian function with linear background is used to fit the intensity profile across the observed spicules, with estimated FWHM is taken as a measure of CSW of the feature. For the selected spicules the average FWHM of the spicules measured at $2~\rm{Mm}$ is $144.47~\rm{km}$ which is comparable with other reports for off-limb spicules \citep{Sharma2018}. The spicules are resolved as there is a $3.36$ ($1.52$) pixel (angular-resolution) cover, keeping note that the intensity values belonging to the spicule will occupy a space larger than the FWHM. This process is outlined in Fig.~\ref{fig:spa}, where panels (a1)-(a4) shows snapshots of the identified spicule where the cyan line is the vertical slit to track field-aligned plasma motions and horizontal yellow slit is placed at $2~\rm{Mm}$ to track the CSW. Panel (b) displays a time-distance from the vertical slits, which is used to estimate the speed of the spicules and allows for the separation of the rise and fall phases. Panel (c) shows the process of calculating the FWHM of the spicule where the dark (light) shaded region marks the unperturbed (perturbed) width $W_u$ ($W$) during the spicule lifetime measure by the yellow slit. The unperturbed width is fixed individually for each spicule as the average FWHM calculated over its lifetime and the perturbed width is the FWHM calculated at each time step of the observations. The temporal variations in CSW are calculated with $\delta W = W(t) - W_{u}$ and were used to estimate the periodicities in the spectral domain. \np
+%
+The observation of SP:A in Fig.~\ref{fig:spa} is an off-limb spicule that was observed at $-1.032~\angstrom$ from the H$\alpha$ line core with a total lifetime of around $161.7~\rm{s}$. The feature had a physical length of $3.8~\rm{Mm}$ at an inclination of $21.4\degs$ over the observed limb, with apex-height reaching up to $5.3~\rm{Mm}$. The longitudinal motions in the Lagrangian frame were analyzed to estimate the velocity and duration of rising and falling phases, using a vertical slit (Fig.~\ref{fig:spa}(a1) – (a4)) along the axis of spicule structure. The time-distance analysis of the vertical slit suggests a parabolic profile (Fig. \ref{fig:spa}(b)) of mass motions with an average ascending velocity of $\sim$46.9 km/s. The plasma attains the maximum height in about 81 sec and then falls back to the surface with an average velocity of 40.2 km/s. For the observed lifetime, the average/unperturbed CSW estimate (W$_{u}$) for the spicule structure was around $176~\rm{km}$.
+%----------------------------------
+\begin{figure*}
+\includegraphics[width=1.0\textwidth]{figures/fig_sp_a.png}
+\caption{Panels (a1) – (a4) show the temporal evolution of candidate spicule feature (SP:A) in H$\alpha$ passband at four instances, with positions of vertical (cyan) and horizontal (yellow) slits used for the estimation of field-aligned mass flows and CSW respectively. Panel (b) shows the time-distance plot from the vertical slit on the spicule, highlighting the rise- and fall-phases of field-aligned mass flow. The maximum height attained by the visible plasma is marked with the ‘+’ symbol, along with estimated velocities (+46.9 km/s, 40.25 km/s). Bottom panel (c) shows an example of Gaussian fit for intensity magnitudes for horizontal slit location (marked as a yellow line on (a1) – (a4)), with error bars, estimated as the standard deviation for intensity values. The vertical black line marks the position of the amplitude of Gaussian fit, while shaded-regions mark average/unperturbed width (W$_{u}$) during spicule lifetime and perturbed/instantaneous width (W). This figure and analysis its encapsulates was produced by Dr. Sharma.}
+\label{fig:spa} 
+\end{figure*}
+%-------------------------------
+\section{Comparison of Cross-sectional Width Variation in Synthetic Jets and Spicules}
+\label{sec:CSW_comp}
+%-------------------------------
+The CSW estimates from both observation and synthetic jets indicate an oscillatory pattern during the feature’s lifetime. These were further analyzed using wavelet transform to understand the nature of periodicities and associated wave physics. The results obtained from this analysis is viewed in the framework of ideal MHD waves as this is likely how this phenomenon would be interpreted in observations. To identify any significant periodicities, wavelet power spectra (WPS) and the associated global power spectrum (GPS) are constructed using open-source software developed by \cite{Torrence1998}. The default Morlet wavelet profile was employed with a two-$\sigma$ confidence level on CSW estimates from observations (top panels) and synthetic jet (bottom panels) as shown in Fig.~\ref{WL_1}. The wavelet analysis is applied to the full signal, rise and fall phases. For the synthetic jets the rise and fall phases are independently detrended with a quadratic polynomial (see Fig~\ref{CSW_2m_height}). In addition, the detrended data is smoothed to reduce noise with a moving average with a window size of 15 and 10 for the rising and falling phases, respectively. \np
+%
+The peak frequencies were identified in the wavelet analysis as spectral-magnitudes in WPS with significance levels over unity and higher, highlighted as black contours in Fig.~\ref{WL_1}. Furthermore, the peaks also had GPS over two-$\sigma$ (95\%) confidence levels (orange dashed-line in Fig.~\ref{WL_1}). The wavelet spectra for observed width variations during spicule lifetime suggest a strong spectral density concentration around $17~\rm{s}$ for $5$ cycles. Interestingly, for the simulated jet structure, the WPS indicates the presence of harmonics, concentrated around $65~\rm{s}$ and $32~\rm{s}$ for $8$ and $5$ cycles, respectively. The oscillatory behaviour between the rise and falling phase is displayed in the last two columns, respectively. It becomes clear with the wavelet spectrum for both observed and simulated width estimates during their rise and fall intervals that CSW oscillations show remarkable differences in their periodicities estimated when plasma is ascending along the magnetic field, against the gravity (rise phase), and later tracing the field lines under the influence of gravity (fall phase). Wavelet transforms for observational width variations indicate approximately $27~\rm{s}$ periodicity for 3 cycles while a powerful $70~\rm{s}$ periodicity is present in both GPS and WPS of the simulation data. However, there is a noticeable shift towards lower/higher periodicities/frequencies, for two out of three of our identified spicule cases (Table \ref{table:1}), during the fall-phase of the plasma flows in the jet structure. Wavelet spectrum for observed width variations shows dominant periodicity at $16~\rm{s}$ for $5$ cycles while for simulated data, there are two strong periods, concentrated around $30~\rm{s}$ and $68~\rm{s}$, each persistent for $5$ and $2.5$ cycles. These results are consistent with previous reports for CSW oscillations in on-disk fibrils \citep{Gafeira2017}. \np
+%
+An important aspect of our investigation is the confirmation of the first overtone in cross-sectional width periodicities associated with dynamic waveguides (spicules) in the solar chromosphere.  Earlier studies were able to only identify higher harmonics in static waveguides (e.g., in a coronal loop), with the presence of fundamental and first overtone \citep{verwichte2004, guo2015}. Recently, the presence of a second overtone was also reported for coronal loop observations by \citet{duckenfield2019}, associated with transverse kink oscillations. It must be noted that wave harmonics can provide vital clues regarding plasma and magnetic field characteristics of the waveguide via solar magneto-seismology applications \citep{andries2005,andries2009}. The presence of overtones in jets provides a key tool for chromospheric magneto-seismology. This phenomenon is not limited to this one observation as shown in Fig.~\ref{fig:spb} and Fig.~\ref{fig:spc}. For a summary of the results and physical properties of all the selected spicules see Table \ref{table:1}. \np 
+\begin{figure*}
+\includegraphics[width=1.0\textwidth]{figures/fig_3.png}
+\caption{Panels showing the results of spectral analysis of cross-sectional width estimates of observed (top) and simulated (bottom) jet structures. Each panel depicts for temporal evolution of overall widths (1.1) and subsequent rise- (2.1) and fall-phases (3.1), along with Wavelet Power Spectra (WPS: 1.2, 2.2, 3.2) and Global Power Spectra (GPS: 1.3, 2.3, 3.3) during each phase of the evolution of the jet. Vertical red-line in plots (Obs: 1.1 and Sim 1.1) marks the time when the field-aligned plasma attained the apex height. Further, plots (Obs: 1.1, Sim: 3.2) provide clear indication of a second harmonic of the cross-sectional width deformations in the dynamic spicular waveguide. This figure was created by Dr. Kors\'os and Dr. Sharma.}
+\label{WL_1} 
+\end{figure*}
+%
+\begin{figure*}[h]
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/fig_4.png}
+\caption{Spicule SP:B, with similar details as described in caption of Figures \ref{fig:spa} and \ref{WL_1}. This figure and analysis its encapsulates was produced by Dr. Sharma.}
+\label{fig:spb} 
+\end{centering}
+\end{figure*}
+%
+\begin{figure*}
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/fig_5.png}
+\caption{Spicule SP:C, with similar details as described in caption of Figures \ref{fig:spa} and \ref{WL_1}. This figure and analysis its encapsulates was produced by Dr. Sharma.}
+\label{fig:spc} 
+\end{centering}
+\end{figure*}
+
+\afterpage{%
+\begin{landscape}% Landscape page
 \begin{table*}
-\caption{Summary of observed physical characteristics of candidate spicule structures along with estimated periodicities during rise-, fall- and overall-phases. Physical and spectral parameters of simulated jet structure are also provided for a comparison between observed and simulated case(s). }             
+\caption{Summary of observed physical characteristics of candidate spicule structures along with estimated periodicities during rising, falling and overall-phases. Physical and spectral parameters of the synthetic jet structure are also provided for a comparison between observed and simulated case(s).}  
 \label{table:1}      
 %{\centering} 
 \begin{center}
@@ -146,83 +230,69 @@ Spicule       & Lifetime & Length & Apex-height & Unperturbed Width & \multicolu
 SP:A          & 161.7    & 3.8    & 5.3         & 176.0             & 27.0        & 16.0        & 17.0      \\
 SP:B          & 92.4     & 2.2    & 4.8         & 134.6             & 22.5        & 27.4        & 24.7      \\
 SP:C          & 100.1    & 2.8    & 4.4         & 122.8             & 41.2        & 31.3        & 48.8      \\ \hline
-Simulated jet & 471      & 8.0    & 8.0         & 350.0             & 70.0        & 30.0+68.0   & 32.0+65.0 \\ \hline
+Simulated jet & 471      & 8.0    & 8.0         & 187.5             & 70.0        & 30.0+68.0   & 32.0+65.0 \\ \hline
 \end{tabular}
 \end{center}
 \end{table*}
-%{\centering} 
-\section{Data and Analysis}
+\end{landscape}
+}
 
-\subsection{Observational Data}
-
-Data used in our investigation were taken by using the CRisp Imaging SpectroPolarimeter (CRISP) at the Swedish 1-m Solar Telescope \citep[SST:][]{Scharmer2008} on La Palma. The H$\alpha$ imaging-spectroscopic data of 07:15-07:48 UT, June 21, 2012, targeted an active region (AR) NOAA AR11504 with two sunspots at the limb position (heliocentric coordinates w.r.t the disk center, hereby denoted as: $\Theta$ = 893, $\Phi$ = -250). The AR was scanned using 31 equally spaced line positions with 86 m\AA, steps from -1.376 to +1.29 \AA, relative to the line center, along with the additional 4 positions in the far blue wing from -1.376 to 2.064 \AA. Following data acquisition, post-processing of data was carried out using the Multi-Object Multi Frame Blind Deconvolution \citep [MOMFBD;][]{2005} image restoration algorithm. Also, standard procedures available in the image pipeline for CRISP data \citep{2015} including differential stretching and removal of dark- and flat-fielding were implemented. 
-
-The final science-grade data of $\sim$30 min duration had a pixel size of 0.059$\arcsec$ ($\sim$43 km), angular-resolution of 0.13$\arcsec$ ($\sim$95 km), and the cadence of 7.7 sec. Following the the Nyquist criterion, the temporal-resolution of the dataset allowed the detection of MHD wave modes with periodicities over 15.4 sec. Candidate spicule(s) for our study (Table \ref{table:1}) were identified as high-intensity structures with least possible superimposition by any other surrounding features during their visible lifetime in an observed passband. The identified spicule structures have an average lifetime of 118 s in a particular line-scan position from the H$\alpha$ line-center. It must be noted that spicules tend to evolve in multiple passbands during their much longer (500-800 s) lifetimes \citep{Pereira2014}. Further, the observed features have an average length of $\sim3\pm$.36 Mm with apex reaching up to an average height of 4.83 Mm. An example of an identified spicule is given in Figure \ref{fig:1}(a1)-(a4)), which is presented in detail for field-aligned plasma motions (Fig.\ref{fig:1}(b)) and its associated role in modulating the cross-sectional widths (Fig.\ref{fig:1}(c)). \\
-
-\subsection{Wavelet Analysis} 
-The cross-sectional width of observed spicule features were estimated using the method adopted from \citet{Sharma2018}. A single Gaussian function with linear background is used to fit intensity profile across the observed spicules, with estimated FWHM is taken as a measure of cross-sectional width of the feature. For the selected cases in our study, the average estimated FWHM corresponds to 144.4 km, at a height of $\sim$2 Mm above the visible limb.
-
-
-The longitudinal and cross-sectional dynamics of numerical jet are examined by employing a tracer quantity that tracks the mass injection and associated motions \citep{Porth_2014}. A threshold on the tracer quantity filters out the simulated jet feature from the surrounding region and further helps with the identification of jet boundaries. A horizontal slice on filtered structure facilitate the estimation of width for the particular height and to track the variations over time (see the blue circular markers on  Figure~\ref{jet_P300_B50_A60}). The jet's apex is identified by selecting a single data point that belongs to the jet, with the highest vertical value (see yellow triangular markers on  Figure~\ref{jet_P300_B50_A60}). This latter allows for the temporal tracking of the numerical solar jet apex heights and the identification of its rising and falling phases. To perform wavelet analysis, the rise and falling phases are independently detrended with a quadratic polynomial. The detrended data is smoothed to reduce noise by using a moving average with a window size of 15 and 10 for the rising and falling phases, respectively.       
-
-Cross-sectional width estimates from both observed and simulated spicule structures were further analyzed using wavelet transform, to understand the nature of periodicities and associated wave physics. To identify any significant periodicities, we constructed wavelet power spectra (WPS) and the associated global power spectrum (GPS) using a software developed by \cite{Torrence1998}. The default Morlet wavelet profile was employed with a two-$\sigma$ confidence level on cross-sectional width estimates from observations and simulations. 
-
-\begin{figure*}
-\includegraphics[width=1.0\textwidth]{figures/jet_P300_B50_A60_with_markers.eps}
-\caption{Panels showing the temporal evolution of the simulated spicule density structure at four time-steps with apex marked by a yellow triangle. From $121.08-243.88 ~\rm{s}$ ($366.68-489.48~\rm{s}$)  the rising (falling)-phase Location of tracers edges are also shown as blue dots, which are used to estimate the variations in cross-sectional width during rise- and fall-phases of jet structure.}
-\label{jet_P300_B50_A60} 
+%-------------------------------------------
+\section{Blobs in Solar in jets Observations}
+\label{sec:EUV_jets}
+%-------------------------------------------
+As stated throughout the thesis observing knot-like structures is changeling due to the current resolution limits. However, larger-scale jets take place on the Sun as overviews in Section~\ref{!!?!!} and if the flow speed is sufficient then its possible patterns of the knots may be observed. In series of studies on coronal jets blob-like structures were observed \citep{Zhang2014AA567A11Z, Zhang2016SoPh291859Z, Chen2015ApJ81571C, Chen2017ApJ84054C}.  \np
+%
+In \cite{Zhang2016SoPh291859Z} show multiple observations of blob structures in solar jets. The observations were captured by Extreme-Ultraviolet Imager (EUVI) in the Sun-Earth Connection Coronal and Heliospheric Investigation (SECCHI) \citep{Howard2008SSRv13667H} package of the Solar TErrestrial RElations Observatory (STEREO) \citep{Kaiser2005AdSpR361483K} and Solar Dynamic Observatory (SDO) using the Atmospheric Imaging Assembly (AIA) instrument \citep{Lemen2012SoPh27517L}. The images in Fig.~\ref{fig_brigt_blobs_2} where observed with STEREO-B in $171~\AA$ filter with a spatial resolution approximately $2320~\rm{km}$ ($\ang{;;3.2}$) with a cadence of $75~\rm{s}$. In the example observation two jets (J1 and J2) appear to originate around a coronal bright point (BP1), which are thought to arise due to magnetic reconnection \citep{Priest1994ApJ427459P, Mandrini1996SoPh168115M, Longcope1998ApJ507433L, Santos2007ASTRA329S} and the jets flow along closed magnetic loops. J2 is particularly interesting as multiple blobs form along with the jet, which is highlighted by the white arrows in panels (f-g). If at the base of the jet there are mixed magnetic polarities, a current sheet forms between the interface of these regions and perturbation to this system can lead to magnetic reconnection. If an instability forms at this current sheet during reconnection then this can lead to plasmoids (regions of magnetic islands)\citep{Drake2006Natur443553D}. These plasmoids are proposed by \cite{Zhang2016SoPh291859Z} to explain the blobs in their jet observations. Interestingly the formation of the blobs by magnetic reconnection has been proposed for chromospheric anemone jets \citep{Singh2012ApJ75933S}, alluding this may occur over a range of scales \citep{Zhang2016SoPh291859Z}. \np 
+%If the current sheet is extremely thin a perturbation to this system can cause it to go unstable and cause magnetic reconnection. This creates magnetic flux which goes onto form plasmoids which creates magnetic island \citep{Drake2006Natur443553D}. These plasmoids are proposed by by \cite{Zhang2016SoPh291859Z} to formed by a tearing-mode instability. The formation of the blobs by magnetic reconnection has been proposed for chromospheric anemone jets also \citep{Singh2012ApJ75933S}.  \np 
+%
+%ffffffffffffffffffff
+\begin{figure*}[h]
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/Selection_065.png}
+\caption{Observations of a solar jets on  2014 September 10 taken from \cite{Zhang2016SoPh291859Z}. Panels (a-h) are running difference images in $171~\AA$ show the occurrence of two jets (J1, J2). The white arrows highlight where the bright blob-like structures sit along the jet beam.}
+\label{fig_brigt_blobs_2} 
+\end{centering}
 \end{figure*}
-
-\section{Comparing Simulations with Observations}
-To understand the role of field-aligned mass flows on MHD sausage wave modes, the periodicities in cross-sectional width estimates for an typical observed spicule (Figs.\ref{fig:1}) were compared with a simulated jet structure. The sample candidate off-limb spicule (SP:A) was observed at -1.032 $\angstrom$ from the H$\alpha$ line core with a total lifetime of $\sim$161.7 sec in the observed passband. The feature had a physical length of 3.8 Mm at an inclination of $\sim$21.4$^\circ$ over the observed limb, with apex-height reaching up to 5.3 Mm. Longitudinal motions in the Lagrangian frame were analyzed to estimate the velocity and duration of rise- and fall-phases, using a vertical slit (Fig. \ref{fig:1}(a1) – (a4)) along the axis of spicule structure. Time-distance analysis of the vertical slit suggests a parabolic profile (Fig. \ref{fig:1}(b)) of mass motions with an average ascending velocity of $\sim$46.9 km/s. The plasma attains the maximum height in about 81 sec and then falls back to the surface with an average velocity of 40.2 km/s. 
-
-Cross-sectional widths were estimated at a height of $\sim$2 Mm above the visible limb location. For the observed lifetime, the average/unperturbed cross-sectional width estimate (W$_{u}$) for the spicule structure was around $\sim$176 km, which is comparable with other reports for off-limb spicules \citep{Sharma2018}. The temporal variations in cross-sectional width ($\delta$W = W - W$_{u}$) were used to estimate the periodicities in spectral domain and further comparison with simulations. The numerical setup for our study is chosen to highlight the fundamental dynamics of a chromospheric jet in a stratified atmosphere. Though the momentum-driven simulated jet lacks complex physical mechanisms, like e.g. radiative losses, ambipolar diffusion, ion-neutral effects, etc., it still mimics the crucial kinematic behavior, such as, longitudinal/field-aligned plasma motions with cross-sectional width variations (Fig. \ref{jet_P300_B50_A60}) in both rise- and fall-phase of the jet evolution. 
-
-The density structure of the simulated jet also shows complex internal substructures within the jet-beam, prominent during the rise-phase. Formation of these \textit{knot}-like substructures appears to be concurrent with the structural deformations in the jet, and results due to high velocities at the jet footpoint. The \textit{knot}-like features are a common ingredient to many astrophysical jets \citep{Norman1982}, and can arise due to a myriad of internal shock waves creating \textit{crisscross/knot} pattern within the jet structure. The generation of these features has been routinely demonstrated in laboratory jets \citep{Menon2010ShWav20175M,Edgington_Mitchell2014,Ono2014}. However, due to the limited spatial resolution of the current dataset, this theoretically predicted fine structure inside the spicule jet cannot be verified observationally.
-
-Cross-sectional width estimates from both observations and numerical simulations indicate an oscillatory pattern during the feature’s lifetime (Fig. \ref{fig:3}, Sim:1.1, Obs:1.1). These periodic variations were further analyzed to estimate the dominant frequencies in the oscillations during the rise- and fall-phase of the jet evolution. Peak frequencies were identified in the wavelet analysis as spectral-magnitudes in WPS with significance levels over unity and higher, highlighted as black contours in Figures \ref{fig:3}. Furthermore, the peaks also had GPS over two-$\sigma$ (95\%) confidence levels (orange dashed-line in Fig. \ref{fig:3}). Wavelet spectra for observed width variations during spicule lifetime, suggest a strong spectral density concentration around $\sim$17 sec for 5 cycles. Interestingly, for the simulated jet structure, the WPS indicates the presence of harmonics, concentrated around $\sim$65 sec and $\sim$32 sec for 8 and 5 cycles, respectively. 
-
-\begin{figure*}
-\includegraphics[width=1.0\textwidth]{figures/fig_3.png}
-\caption{Panels showing the results of spectral analysis of cross-sectional width estimates of observed (top) and simulated (bottom) jet structures. Each panel depicts for temporal evolution of overall widths (1.1) and subsequent rise- (2.1) and fall-phases (3.1), along with Wavelet Power Spectra (WPS: 1.2, 2.2, 3.2) and Global Power Spectra (GPS: 1.3, 2.3, 3.3) during each phase of the evolution of the jet. Vertical red-line in plots (Obs: 1.1 and Sim 1.1) marks the time when the field-aligned plasma attained the apex height. Further, plots (Obs: 1.1, Sim: 3.2) provide clear indication of a second harmonic of the sausage waves confined in the dynamic spicular waveguide.}
-\label{fig:3} 
+%ffffffffffffffffffff
+%
+In \cite{Chen2015ApJ81571C, Chen2017ApJ84054C} around 20 jets were observed at the west edge of AR 11513 on the 2nd and 3rd of July 2012. In these jets bright regions are seen in the jet beam (see Fig.\ref{fig_brigt_blobs_alt}). The observations were captured by the space-based observations with SDO using the Atmospheric Imaging Assembly (AIA) instrument. AIA has a spatial resolution of $1088~\rm{km}$ ($\ang{;;1.5}$) and a temporal resolution of $12~\rm{s}$ for the EUV lines shown in Fig.~\ref{fig_brigt_blobs_alt}. The example jet clearly shows blobs structure as highlighted by slices 1 and 2 in panel (b). The conditions under which this form is similar to that outline \cite{Zhang2014AA567A11Z, Zhang2016SoPh291859Z}, as the brightening at the base of the jet has been shown to contain magnetic fields of opposite polarities \citep{Chen2017ApJ84054C}. \np
+%
+The suggested mechanism of blob formation is plausible in \cite{Zhang2016SoPh291859Z}, but so too mechanism put forward in Chapter~\ref{!!?!!} for blobs/knots to form in the jet beam when the flow is sufficient. These jets move at high velocities with the apparent speeds of J1 and J2 in Fig~\ref{fig_brigt_blobs_2} are $145\pm15\kms$ and $203\pm\kms$ \citep{Zhang2016SoPh291859Z} and jet in Fig.~\ref{fig_brigt_blobs_alt} is approximately $200\kms$ \citep{Chen2017ApJ84054C}. Based on the results of the carried out simulations in the thesis it's entirely feasible with these high speeds in a coronal environment for the blob formation to be created by shocks containing waves trapped in a jet beam. To rule out blobs forming due to shocks, one needs to establish the flow rate of the jet, as if continuous flow then shock base method is plausible or if it’s a short burst of flow then instabilities forming during magnetic reconnection is more likely.
+\begin{figure*}[h]
+\begin{centering}
+\includegraphics[width=1.0\textwidth]{figures/Selection_064.png}
+\caption{Snapshot of a EUV jet observed in the west of AR 11513 on 2012 July 2. Each panel represents different passband observations denoted in the top left-hand corner in angstrom. The bright blobs in the jet beam are most noticeable in $171~\AA$ where the slices are located. This figure and the analysis it encapsulates was produced by Dr. Chen.}
+\label{fig_brigt_blobs_alt} 
+\end{centering}
 \end{figure*}
-
-The effects of mass motions on the spicule becomes clear with the wavelet spectrum for both observed and simulated width estimates during their rise and fall intervals. The cross-sectional width oscillations show remarkable differences in their periodicities estimated when plasma is ascending along the magnetic field, against the gravity (rise-phase), and later tracing the field lines under the influence of gravity (fall-phase). Wavelet transforms for observational width variations indicate $\sim$27 sec periodicity for 3 cycles while a powerful 70 sec periodicity is present in both GPS and WPS of the simulation data. However, there is a noticeable shift towards lower/higher periodicities/frequencies, for two out of three of our identified spicule cases (Table \ref{table:1}), during the fall-phase of the plasma flows in the jet structure. Wavelet spectrum for observed width variations show dominant periodicity at 16 sec for 5 cycles while for simulated data, there are two strong periods, concentrated around $\sim$30 sec and $\sim$68 sec, each persistent for 5 and 2.5 cycles. These results are consistent with previous reports for cross-sectional width oscillations in on-disk fibrils \citep{Gafeira2017}. 
-
-An important aspect of our investigation is the confirmation of a first overtone in cross-sectional width periodicities associated with dynamic waveguides (spicules) in the solar chromosphere.  Earlier studies were able to only identify higher harmonics in static waveguides (e.g., in a coronal loop), with the presence of fundamental and first overtone \citep{verwichte2004, guo2015}. Recently, the presence of a second overtone was also reported for coronal loop observations by \citet{duckenfield2019}, associated with transverse kink oscillations. It must be noted that wave harmonics can provide vital clues regarding plasma and magnetic field characteristics of the waveguide via solar magneto-seismology applications \citep{andries2005,andries2009}. The presence of overtones in jets provides a key tool for chromospheric magneto-seismology with MHD sausage wave modes. 
+%STEREO originally constitute of two nearly identical satellites, reffered to as STEREO-A and STEREO-B, although STEREO-B is no longer in operation since 2014.    
+% ($131~\AA$, $171~\AA$, $193~\AA$, $211~\AA$, $304~\AA$ and $335~\AA$)
+%\begin{figure*}[h]
+%\begin{centering}
+%\includegraphics[width=1.0\textwidth]{figures/Selection_063.png}
+%\caption{EUV jet observed in AR west of AR 11513 on 2012 July 2. From left to right the columns show shows the $171\AA$ line observation of the jet, emission measure of the jet, DEM-weighted average temperature of the jet. The time stamps are in the top right hand corner of the first column. This figure and the analysis it encapsulates was produced by Dr. Chen.}
+%\label{fig_brigt_blobs} 
+%\end{centering}
+%\end{figure*}
 %============================================================
 \section{Summary and Discussion}
 \label{sec:sum}
 %============================================================
-In this Letter, the dynamic response of field-aligned mass flows on confined MHD wave modes within chromospheric jets is investigated. High-resolution CRISP/SST H$\alpha$ data were used to identify wave patterns in off-limb spicules, complemented with analysis of a 2D numerical simulation for jets in a stratified solar atmosphere. Cross-sectional width estimates for both observed and simulated jets indicate periodic oscillatory patterns suggesting MHD sausage wave mode. Further, wavelet transform of time series cross-sectional widths show affects of plasma flows on estimated periods. Major conclusions of our investigation are as follows.
-%%
-\begin{enumerate}[topsep=1ex]
-\item{Cross-sectional width oscillations in observed and simulated jets highlight the ubiquitous presence of MHD sausage wave modes in solar chromospheric localised features. Earlier reports identified these waves in on-disk thin flux tube structures, however, for the first time, are also observed in off-limb spicule structures. It must be noted that this intrinsic/dynamic wave characteristic is well established in astrophysical/laboratory jets, however, lacked attention as received by other MHD wave modes (kink, torisonal Alfv\'en) in chromospheric structures, primarily due to observational/instrumental constraints.}
+This Chapter compares the CSW properties of the synthetic jets with three observations of spicules captured with high-resolution CRISP/SST H$\alpha$ data. For both the simulation and observation wave behaviour is identified by CSW estimates. Using a wavelet transform of time series CSW show the effects of plasma flows on estimated periods. The Chapter discusses the possibilities that blob structures in larger solar jets observations could be knots produced by trapped shocks waves in the jet. The main conclusion drawn from the results:
+\begin{itemize}
+    \item{CSW variations in observed and synthetic jets highlight the observed behaviour as a fundamental property of spicule jets. Earlier reports interpreted these variations as a consequence of confined sausage waves in chromospheric jet structures, though similar characteristics are also shown by MHD fluting wave modes. Here, for the first time, an alternate explanation is provided in terms of internal shock waves for cross-sectional deformations of chromospheric waveguides. In Chapter~\ref{!!?!!} it has been highlighted that this phenomenon occurs over a whole range of jets with vastly different length scales, \textit{e.g.} from astrophysical to laboratory jets. It should be noted that boundary deformation behaviour is an intrinsic physical characteristic of jets with fast flow speeds, however, lacked attention for solar jets, primarily due to observational/instrumental constraints.}
 
-\item{Spectral analysis reveals modulation in periodicities of confined (sausage) wave modes during the rise- and fall-phase of field-aligned plasma. Observed/simulated periodicities indicate a shift towards lower magnitudes in the fall-phase when plasma motions are under the influence of gravity.}
+    \item{Spectral analysis using wavelet transform suggests noticeable modulation in estimated periodicities for the CSW in both observed and synthetic jet structure. In most cases, periodicities tend to shift towards lower magnitudes during the fall phase of the plasma in the jet, as compared to the momentum-pulse driven rise phase. Similar effects were reported in the past for changes in linear MHD wave characteristics due to mass flows in theoretical and prominence studies.}
 
-\item{For the first time, the first overtone in the estimated wave periodicity is identified in both observed and simulated dynamic chromospheric waveguide (spicule). This could have important implications for chromospheric magneto-seismology, further enabling the estimation of much needed longitudinal plasma and magnetic field information for chromospheric jets.}
-\end{enumerate}
-%%
-Our study indicates the possible coupling between the longitudinal mass motions and confined wave modes in spicule structures. Understanding of such behavior is crucial for the accurate estimation of overall energy budget and associated dissipation mechanisms. Furthermore, simulations suggests the formation of \textit{knot}-like substructures within the jet beam, prevalent during the rise-phase of plasma density. These substructures were closely linked with the estimated cross-sectional width variations in the jet and could possibly be generated due to superimposition of shock waves. Identification of signatures of mode coupling and jet-substructures is foreseen in future studies using forthcoming Daniel K. Inouye Solar Telescope (DKIST) and European Solar Telescope (EST).
-
-
-\begin{figure*}[h]
-\begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/fig_4.png}
-\caption{Spicule SP:B, with similar details as described in caption of Figures \ref{fig:1} and \ref{fig:3}}
-\label{fig:spb} 
-\end{centering}
-\end{figure*}
-
-\begin{figure*}
-\begin{centering}
-\includegraphics[width=1.0\textwidth]{figures/fig_5.png}
-\caption{Spicule SP:C, with similar details as described in caption of Figures \ref{fig:1} and \ref{fig:3}}
-\label{fig:spc} 
-\end{centering}
-\end{figure*}
+    \item{For the first time, the first overtone in the estimated periodicity is identified in both observed and simulated dynamic chromospheric waveguide (spicule). This could have important implications for chromospheric magneto-seismology, further enabling the estimation of much needed longitudinal plasma and magnetic field information for chromospheric jets.}
+    
+    \item{Knot formation could be an alternative explanation for blob structures reported in larger solar jets.}
+\end{itemize}
+%
+This Chapter indicates the possible coupling between the longitudinal mass motions and CSW variations in spicule structures. Understanding such behaviour is crucial for the accurate estimation of the overall energy budget and associated dissipation mechanisms. Furthermore, simulations suggest the formation of knot substructures within the jet beam, prevalent during the rise-phase of plasma density. These substructures were closely linked with the estimated CSW variations in the jet and could be generated due to the superimposition of shock waves. The simulation results should inform observers to be cautious attributing CSW variation in fast-flowing jets as being due to sausage waves as there other mechanisms (\textit{e.g.} shock waves occurring in supersonic flows) that can have a sausage-like appearance. \np
+%
+For the larger scale EUV jets, it should be noted regardless of formation mechanisms of blob/knot in the jet beam, they can occur over a whole range of scales in jets. Due to this factor, it is in my view likely that with the increase in spatial observation on the horizon for spicules, that only matter of time for knot structures to be observed in spicular jets.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % STOP COPYING HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
