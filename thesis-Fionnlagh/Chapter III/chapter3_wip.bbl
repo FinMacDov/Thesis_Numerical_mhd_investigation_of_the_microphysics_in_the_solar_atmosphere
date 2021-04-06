@@ -13,16 +13,47 @@
 \bibitem[{{Beckers}(1968)}]{Beckers1968}
 {Beckers}, J.~M. 1968, \solphys, 3, 367
 
+\bibitem[{{Berger} {et~al.}(2017){Berger}, {Hillier}, \&
+  {Liu}}]{Berger2017ApJ85060B}
+{Berger}, T., {Hillier}, A., \& {Liu}, W. 2017, \apj, 850, 60
+
+\bibitem[{{Berger} {et~al.}(2008){Berger}, {Shine}, {Slater}, {Tarbell},
+  {Title}, {Okamoto}, {Ichimoto}, {Katsukawa}, {Suematsu}, {Tsuneta}, {Lites},
+  \& {Shimizu}}]{Berger2008ApJ676L89B}
+{Berger}, T.~E., {Shine}, R.~A., {Slater}, G.~L., {et~al.} 2008, \apjl, 676,
+  L89
+
 \bibitem[{{Berger} {et~al.}(2010){Berger}, {Slater}, {Hurlburt}, {Shine},
   {Tarbell}, {Title}, {Lites}, {Okamoto}, {Ichimoto}, {Katsukawa}, {Magara},
   {Suematsu}, \& {Shimizu}}]{Berger2010ApJ7161288B}
 {Berger}, T.~E., {Slater}, G., {Hurlburt}, N., {et~al.} 2010, \apj, 716, 1288
 
+\bibitem[{{Canfield} {et~al.}(1996){Canfield}, {Reardon}, {Leka}, {Shibata},
+  {Yokoyama}, \& {Shimojo}}]{Canfield1996ApJ4641016C}
+{Canfield}, R.~C., {Reardon}, K.~P., {Leka}, K.~D., {et~al.} 1996, \apj, 464,
+  1016
+
 \bibitem[{{Chandrasekhar}(1961)}]{Chandrasekhar1961hhsbookC}
 {Chandrasekhar}, S. 1961, {Hydrodynamic and hydromagnetic stability}
 
+\bibitem[{{de la Cruz Rodr{\'\i}guez} \&
+  {Socas-Navarro}(2011)}]{delaCruzRodr2011AA527L8D}
+{de la Cruz Rodr{\'\i}guez}, J., \& {Socas-Navarro}, H. 2011, \aap, 527, L8
+
+\bibitem[{{De Pontieu} {et~al.}(2007){De Pontieu}, {McIntosh}, {Carlsson},
+  {Hansteen}, {Tarbell}, {Schrijver}, {Title}, {Shine}, {Tsuneta}, {Katsukawa},
+  {Ichimoto}, {Suematsu}, {Shimizu}, \& {Nagata}}]{dePontieu2007Sci3181574D}
+{De Pontieu}, B., {McIntosh}, S.~W., {Carlsson}, M., {et~al.} 2007, Science,
+  318, 1574
+
 \bibitem[{{Drazin}(2002)}]{Drazin2002ihsbookD}
 {Drazin}, P.~G. 2002, {Introduction to Hydrodynamic Stability}
+
+\bibitem[{{Ebadi} \& {Ghiassi}(2014{\natexlab{a}})}]{Ebadi2014Ap_SS353_31E}
+{Ebadi}, H., \& {Ghiassi}, M. 2014{\natexlab{a}}, \apss, 353, 31
+
+\bibitem[{{Ebadi} \& {Ghiassi}(2014{\natexlab{b}})}]{Ebadi2014ApSS35331E}
+---. 2014{\natexlab{b}}, \apss, 353, 31
 
 \bibitem[{{Filippov} {et~al.}(2015){Filippov}, {Srivastava}, {Dwivedi},
   {Masson}, {Aulanier}, {Joshi}, \& {Uddin}}]{Filippov2015MNRAS4511117F}
@@ -39,6 +70,33 @@
 {Foullon}, C., {Verwichte}, E., {Nykyri}, K., {Aschwanden}, M.~J., \& {Hannah},
   I.~G. 2013, \apj, 767, 170
 
+\bibitem[{{He} {et~al.}(2009){He}, {Marsch}, {Tu}, \&
+  {Tian}}]{He2009ApJ705L217H}
+{He}, J., {Marsch}, E., {Tu}, C., \& {Tian}, H. 2009, \apjl, 705, L217
+
+\bibitem[{{Heristchi} \& {Mouradian}(1992)}]{Heristchi1992SoPh14221H}
+{Heristchi}, D., \& {Mouradian}, Z. 1992, \solphys, 142, 21
+
+\bibitem[{{Hillier} {et~al.}(2012){Hillier}, {Berger}, {Isobe}, \&
+  {Shibata}}]{Hillier2012ApJ746120H}
+{Hillier}, A., {Berger}, T., {Isobe}, H., \& {Shibata}, K. 2012, \apj, 746, 120
+
+\bibitem[{{Jafarzadeh} {et~al.}(2017){Jafarzadeh}, {Solanki}, {Gafeira}, {van
+  Noort}, {Barthol}, {Blanco Rodr{\'\i}guez}, {del Toro Iniesta}, {Gandorfer},
+  {Gizon}, {Hirzberger}, {Kn{\"o}lker}, {Orozco Su{\'a}rez}, {Riethm{\"u}ller},
+  \& {Schmidt}}]{Jafarzadeh2017ApJS2299J}
+{Jafarzadeh}, S., {Solanki}, S.~K., {Gafeira}, R., {et~al.} 2017, \apjs, 229, 9
+
+\bibitem[{{Jess} {et~al.}(2012){Jess}, {Pascoe}, {Christian}, {Mathioudakis},
+  {Keys}, \& {Keenan}}]{Jess2012ApJ744L5J}
+{Jess}, D.~B., {Pascoe}, D.~J., {Christian}, D.~J., {et~al.} 2012, \apjl, 744,
+  L5
+
+\bibitem[{{Kukhianidze} {et~al.}(2006){Kukhianidze}, {Zaqarashvili}, \&
+  {Khutsishvili}}]{Kukhianidze2006A_A449L35K}
+{Kukhianidze}, V., {Zaqarashvili}, T.~V., \& {Khutsishvili}, E. 2006, \aap,
+  449, L35
+
 \bibitem[{{Kuridze} {et~al.}(2016){Kuridze}, {Zaqarashvili}, {Henriques},
   {Mathioudakis}, {Keenan}, \& {Hanslmeier}}]{Kuridze2016ApJ830133K}
 {Kuridze}, D., {Zaqarashvili}, T.~V., {Henriques}, V., {et~al.} 2016, \apj,
@@ -54,6 +112,44 @@
 {Liang}, H., {Hu}, X., {Huang}, X., \& {Xu}, J. 2019, Physics of Fluids, 31,
   112104
 
+\bibitem[{{Liu} {et~al.}(2009){Liu}, {Berger}, {Title}, \&
+  {Tarbell}}]{Liu2009ApJ707L37L}
+{Liu}, W., {Berger}, T.~E., {Title}, A.~M., \& {Tarbell}, T.~D. 2009, \apjl,
+  707, L37
+
+\bibitem[{{Mart{\'\i}nez-Sykora} {et~al.}(2016){Mart{\'\i}nez-Sykora}, {De
+  Pontieu}, {Carlsson}, \& {Hansteen}}]{Mart2016ApJ831L1M}
+{Mart{\'\i}nez-Sykora}, J., {De Pontieu}, B., {Carlsson}, M., \& {Hansteen}, V.
+  2016, \apjl, 831, L1
+
+\bibitem[{{Matsumoto} {et~al.}(2017){Matsumoto}, {Aloy}, \&
+  {Perucho}}]{Matsumoto2017MNRAS4721421M}
+{Matsumoto}, J., {Aloy}, M.~A., \& {Perucho}, M. 2017, \mnras, 472, 1421
+
+\bibitem[{{Morton} {et~al.}(2012){Morton}, {Verth}, {Jess}, {Kuridze},
+  {Ruderman}, {Mathioudakis}, \& {Erd{\'e}lyi}}]{Morton2012NatCo31315M}
+{Morton}, R.~J., {Verth}, G., {Jess}, D.~B., {et~al.} 2012, Nature
+  Communications, 3, 1315
+
+\bibitem[{{Mosher} \& {Pope}(1977)}]{Mosher1977SoPh53375M}
+{Mosher}, J.~M., \& {Pope}, T.~P. 1977, \solphys, 53, 375
+
+\bibitem[{{Pasachoff} {et~al.}(2009){Pasachoff}, {Jacobson}, \&
+  {Sterling}}]{Pasachoff2009SoPh26059P}
+{Pasachoff}, J.~M., {Jacobson}, W.~A., \& {Sterling}, A.~C. 2009, \solphys,
+  260, 59
+
+\bibitem[{{Pasachoff} {et~al.}(1968){Pasachoff}, {Noyes}, \&
+  {Beckers}}]{Pasachoff1968SoPh5131P}
+{Pasachoff}, J.~M., {Noyes}, R.~W., \& {Beckers}, J.~M. 1968, \solphys, 5, 131
+
+\bibitem[{{Petralia} {et~al.}(2018){Petralia}, {Reale}, \&
+  {Testa}}]{Petralia2018AA609A18P}
+{Petralia}, A., {Reale}, F., \& {Testa}, P. 2018, \aap, 609, A18
+
+\bibitem[{{Roberts}(1979)}]{Roberts1979SoPh6123R}
+{Roberts}, B. 1979, \solphys, 61, 23
+
 \bibitem[{{Ryutova} {et~al.}(2010){Ryutova}, {Berger}, {Frank}, {Tarbell}, \&
   {Title}}]{Ryutova2010SoPh26775R}
 {Ryutova}, M., {Berger}, T., {Frank}, Z., {Tarbell}, T., \& {Title}, A. 2010,
@@ -63,12 +159,41 @@
   {Erd{\'e}lyi}}]{Sharma2018ApJ85361S}
 {Sharma}, R., {Verth}, G., \& {Erd{\'e}lyi}, R. 2018, \apj, 853, 61
 
+\bibitem[{{Shibata} \& {Uchida}(1985)}]{Shibata1985PASJ3731S}
+{Shibata}, K., \& {Uchida}, Y. 1985, \pasj, 37, 31
+
+\bibitem[{{Shibata} \& {Uchida}(1986)}]{Shibata1986SoPh103299S}
+---. 1986, \solphys, 103, 299
+
+\bibitem[{{Sterling} \& {Hollweg}(1988)}]{Sterling1988ApJ327950S}
+{Sterling}, A.~C., \& {Hollweg}, J.~V. 1988, \apj, 327, 950
+
+\bibitem[{{Tavabi}(2012)}]{Tavabi2012JMPh31786T}
+{Tavabi}, E. 2012, Journal of Modern Physics, 3, 1786
+
+\bibitem[{{Tavabi} {et~al.}(2015){Tavabi}, {Koutchmy}, {Ajabshirizadeh},
+  {Ahangarzadeh Maralani}, \& {Zeighami}}]{Tavabi2015AA573A4T}
+{Tavabi}, E., {Koutchmy}, S., {Ajabshirizadeh}, A., {Ahangarzadeh Maralani},
+  A.~R., \& {Zeighami}, S. 2015, \aap, 573, A4
+
+\bibitem[{{Toma} {et~al.}(2017){Toma}, {Komissarov}, \&
+  {Porth}}]{Toma2017MNRAS4721253T}
+{Toma}, K., {Komissarov}, S.~S., \& {Porth}, O. 2017, \mnras, 472, 1253
+
 \bibitem[{{Tsiropoula} {et~al.}(2012){Tsiropoula}, {Tziotziou}, {Kontogiannis},
   {Madjarska}, {Doyle}, \& {Suematsu}}]{Tsiropoula2012}
 {Tsiropoula}, G., {Tziotziou}, K., {Kontogiannis}, I., {et~al.} 2012, \ssr,
   169, 181
 
+\bibitem[{{Vranjes} {et~al.}(2008){Vranjes}, {Poedts}, {Pandey}, \& {de
+  Pontieu}}]{Vranjes2008A_A478553V}
+{Vranjes}, J., {Poedts}, S., {Pandey}, B.~P., \& {de Pontieu}, B. 2008, \aap,
+  478, 553
+
 \bibitem[{{Zaqarashvili}(2020)}]{Zaqarashvili2020ApJ893L46Z}
 {Zaqarashvili}, T.~V. 2020, \apjl, 893, L46
+
+\bibitem[{{Zhai} \& {Bellan}(2016)}]{Zhai2016PhPl23c2121Z}
+{Zhai}, X., \& {Bellan}, P.~M. 2016, Physics of Plasmas, 23, 032121
 
 \end{thebibliography}
