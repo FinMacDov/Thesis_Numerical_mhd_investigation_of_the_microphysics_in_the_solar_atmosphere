@@ -23,6 +23,9 @@
 \usepackage{lscape}
 \usepackage{epstopdf}
 
+\usepackage{afterpage}
+\usepackage{pdflscape}
+
 
 \usepackage{geometry}
  \geometry{
@@ -143,6 +146,14 @@ $\eta$ $\rightarrow$ magnetic diffusivity of the plasma
 %\epigraphfontsize{\small\itshape}
 \epigraph{``We're going to explore the outside world someday, right? Far beyond these walls, there's flaming water, land made of ice, and fields of sand spread wide."}{--- \textit{Armin Arlert}, \textup{Hajime Isayama}, Vol. 2  Attack on Titian}
 %------------------------------------------------------------------------------
+\section{Abstract}
+\label{sec:Abstract}
+%------------------------------------------------------------------------------
+{\color{green} !!to do and this will get moved else where!!}
+
+The motivation for my work is to conduct numerical model to research into the effects of spicules on the transition region, particularly focusing on whether spicules are the drivers of TRQs \citep{Scullion2011}. We are interested in spicules (solar jets) as these jets are ubiquitous ($100,000$  at  any  time \citep{Beckers1968}) on the Sun, thus are a good candidate for coronal heating. These jets could perturb the transition region (a thin region of approximately $100$ km between the chromosphere and corona where the temperature raises from $10^4$ K to $1$-$2$ MK) causing it to oscillate (akin to when a drum is struck), thus possibly being the cause of Transition Region Quakes (TRQ). TRQ are energetic waves in the transition region that evolves in a similar manner to waves on 2D elastic waveguides. When a solar jet rises up from the photosphere to corona it will cause the Transition region to ripple and thus perturb the surrounding magnetic fields. The goal is to analyse the waves and the energy involved in these waves to investigate if they could significantly contribute to coronal heating. \\ \\ The discovery of a link between these TRQ and Rapid Blueshifted Excursions (RBE) identified in CRISP H-alpha data is potentially very far reaching. Work by \cite{Henriques2016} has already found convincing evidence of links between RBEs and coronal transient events, however they did not study whether their coronal features corresponded to coherent waves (i.e. TRQ manifesting as propagating wave fronts). This task is vital for expanding our knowledge of the coupling between the lower solar atmosphere and the transition region. \\ \\ The importance of small-scale jets is well known as they are suggested to contribute to coronal heating and solar wind acceleration. Spicules themselves may be triggered by magnetic reconnection \citep{Pontieu2007PASJ} or waves \citep{Pontieu2004Natur}. Although, it is currently unclear what the decisive physical factors that trigger spicules, reconnection and waves are both promising candidates for their contribution to the energy exchange between the lower cool atmosphere and the corona. We also observe apparent transverse motion within spicules and intermittent Doppler-shifts in coronal loops could be evidence in support of the existence of \Alfven or kink waves in the solar atmosphere.  \\ \\
+Observations have demonstrated the ubiquity of vortex motions present in the solar atmosphere. These are usually found at photospheric Magentic Bright points (MBP) groups. Previous MHD simulations have shown such vortices could be responsible for the generation of various types of MHD waves, yet their relationship with other ubiquitous transients-jets (spicules) is unclear.
+%------------------------------------------------------------------------------
 \section{Overview and Motivation}
 \label{sec:overview}
 %------------------------------------------------------------------------------
@@ -244,79 +255,40 @@ In recent years the correctness of the term "coronal heating problem" has been c
     \label{fig:chromo_Cart}
 \end{sidewaysfigure}
 %fffffffffffffffffffff
-%------------------------
-\section{Solar Jets}
-%------------------------
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|l|p{1.7cm}|}
-\hline
-\textbf{Feature} & \multicolumn{1}{c|}{\textbf{Obs.}} & \multicolumn{1}{c|}{\textbf{Life-time (s)}} & \multicolumn{1}{c|}{\textbf{Velocity ($\rm{km \ s^{-1}}$)}} & \multicolumn{1}{c|}{\textbf{Height (Mm)}} & \multicolumn{1}{c|}{\textbf{Driver}} \\ \hline
-
-Spicule TI  & limb &   \multicolumn{1}{c|}{$180-720$} & \multicolumn{1}{c|}{$20-40$} &  \multicolumn{1}{c|}{$4-12$}  & \multicolumn{1}{c|}{shock} \\ \hline
-
-Spicule TII & limb & \multicolumn{1}{c|}{$ 10-150$} & \multicolumn{1}{c|}{$ 50-150$} & \multicolumn{1}{c|}{$>5$}  & \multicolumn{1}{c|}{reconnection}  \\ \hline
-
-Dynfibs & \multicolumn{1}{c|}{disk} & \multicolumn{1}{c|}{$120-650$} & \multicolumn{1}{c|}{$10-30$} & \multicolumn{1}{c|}{$0.4-5.2$} & \multicolumn{1}{c|}{shock} \\ \hline
-
-Mottles & \multicolumn{1}{c|}{disk} & \multicolumn{1}{c|}{$120-900$} & \multicolumn{1}{c|}{$10-30$} & \multicolumn{1}{c|}{$2-10$} & \multicolumn{1}{c|}{shock} \\ \hline
-
-Macrospicule & limb  & \multicolumn{1}{c|}{$180-2700$} & \multicolumn{1}{c|}{$10-150$}  & \multicolumn{1}{c|}{$7-70$} & \multicolumn{1}{c|}{shock} \\ \hline
-
-RREs/RBEs & \multicolumn{1}{c|}{disk}  & \multicolumn{1}{c|}{$20-120$} & \multicolumn{1}{c|}{$10-50$}  & \multicolumn{1}{c|}{$1-4.5$} & \multicolumn{1}{c|}{reconnection} \\ \hline
-\end{tabular}
-\caption{Values based on following papers outline in this chapter}
-\label{solar_jet_table}
-\end{table}
-%------------------------
-\subsection{Basic Structure of Jets}
-\label{struc_of_jets}
-%------------------------
-The motivation for my work is to conduct numerical model to research into the effects of spicules on the transition region, particularly focusing on whether spicules are the drivers of TRQs \citep{Scullion2011}. We are interested in spicules (solar jets) as these jets are ubiquitous ($100,000$  at  any  time \citep{Beckers1968}) on the Sun, thus are a good candidate for coronal heating. These jets could perturb the transition region (a thin region of approximately $100$ km between the chromosphere and corona where the temperature raises from $10^4$ K to $1$-$2$ MK) causing it to oscillate (akin to when a drum is struck), thus possibly being the cause of Transition Region Quakes (TRQ). TRQ are energetic waves in the transition region that evolves in a similar manner to waves on 2D elastic waveguides. When a solar jet rises up from the photosphere to corona it will cause the Transition region to ripple and thus perturb the surrounding magnetic fields. The goal is to analyse the waves and the energy involved in these waves to investigate if they could significantly contribute to coronal heating. \\ \\ The discovery of a link between these TRQ and Rapid Blueshifted Excursions (RBE) identified in CRISP H-alpha data is potentially very far reaching. Work by \cite{Henriques2016} has already found convincing evidence of links between RBEs and coronal transient events, however they did not study whether their coronal features corresponded to coherent waves (i.e. TRQ manifesting as propagating wave fronts). This task is vital for expanding our knowledge of the coupling between the lower solar atmosphere and the transition region. \\ \\ The importance of small-scale jets is well known as they are suggested to contribute to coronal heating and solar wind acceleration. Spicules themselves may be triggered by magnetic reconnection \citep{Pontieu2007PASJ} or waves \citep{Pontieu2004Natur}. Although, it is currently unclear what the decisive physical factors that trigger spicules, reconnection and waves are both promising candidates for their contribution to the energy exchange between the lower cool atmosphere and the corona. We also observe apparent transverse motion within spicules and intermittent Doppler-shifts in coronal loops could be evidence in support of the existence of \Alfven or kink waves in the solar atmosphere.  \\ \\
-Observations have demonstrated the ubiquity of vortex motions present in the solar atmosphere. These are usually found at photospheric Magentic Bright points (MBP) groups. Previous MHD simulations have shown such vortices could be responsible for the generation of various types of MHD waves, yet their relationship with other ubiquitous transients-jets (spicules) is unclear.
-
-\par A schematic diagram of basic structure of a jet is given by \fref{ssj}. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
-%\begin{equation}\label{v_j_speed}
-%v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
-%\end{equation}
-From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow 
-%----------------
-% I may not include this
-%\par !probably wont include in paper! When describing a jets these parameters are key for defining its morphology and structure: $v_j$, $\eta_j = \frac{\rho_j}{\rho_a}$, $K = \frac{p_{d}}{p_a}$, where $\rho_a(p_a)$ is the ambient density(pressure) and $p_{d}$ is the pressure at the driver. $\eta_j$ measures the density contrast of the jet itself and the ambient medium it propagates through. If $\eta_j>1(\eta_j<1)$ then a jet is labeled to as heavy(light). For $K$ with denotes our jet to ambient pressures ratio determine whether the jet is under-expanded ($K>1$) or over-expanded ($K<1$). In our case we are dealing with the expected dynamics of a heavy under expanded-jet. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
-%\begin{equation}\label{v_j_speed}
-%v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
-%\end{equation}
-%From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow in these jet. The bow shock can be seen early on in the simulation and we see that the temperature increase at the head of the jet (see left most panel in Fig. \eqref{paramter_scan_one}.
-% useful links for jets heads: 
-% https://books.google.co.uk/books?id=ZdjImbOLi9gC&pg=PA449&lpg=PA449&dq=how+to+calculate+speed+of+the+head+of+the+jet+astrophysics&source=bl&ots=SI82iL7XlT&sig=ACfU3U2q3yT93ZitzgWwFXm0YaPYX_l21w&hl=en&sa=X&ved=2ahUKEwiquezgm5rqAhV1RxUIHRFrDikQ6AEwD3oECAgQAQ#v=onepage&q=how%20to%20calculate%20speed%20of%20the%20head%20of%20the%20jet%20astrophysics&f=false
-% https://iopscience.iop.org/article/10.1088/1742-6596/1031/1/012022/pdf
-% https://science.sciencemag.org/content/sci/346/6207/325.full.pdf
-% http://articles.adsabs.harvard.edu//full/1994ApJ...435..261D/0000263.000.html
-% http://articles.adsabs.harvard.edu/pdf/1993ApJ...410..686D
-% https://iopscience.iop.org/article/10.1086/311159/pdf
-% http://articles.adsabs.harvard.edu/pdf/1996ApJ...467L..57V
 %------------------------------------------------------------------------------
-%\section{Spicules-like features in the Solar atmosphere}
-%\label{sec:spicule-jets}
+\section{Jets in the Solar atmosphere}
+\label{sec:spicule-jets}
 %------------------------------------------------------------------------------
-The chromosphere is dominated by thin small-scaled, short lived  jet-like structures, rapidly evolving with time and height. These features occurring everywhere in quiet sun (QS) \citep{Pontieu2007astroph2081D,Rouppe2007ApJ660L169R,Pereira2012,Pereira2014ApJ}, around active regions (ARs) \citep{Pontieu2007astroph2081D,Pereira2012,Rouppe2013ApJ77656R,Gafeira2017ApJS2296G}, facule plages and coronal holes (CHs) \citep{Yamauchi2005ApJ629572Y,Moreno2008ApJ673L211M,Pereira2012,Young2015ApJ801124Y}. These jets change in appearance when observed in different spectral lines and in dependence from site they appear leading to whole range of names have to describe the jet-like phenomena, such as dynamic fibrils, mottles, spicules, surges. It possible some of these jets are the same phenomenon, but due to uncertainty have been given different labels. Comparisons of properties and behaviors of jet-like structures which make up the chromosphere show a similarity of characteristics and eludes that some of these structures, possibly all of these structures are related or even are the same phenomena \cite{Porfir2016A}. For example there has been a long standing question where spicules and mottles are the same. Dark mottles are seen on disk, where as the classic spicule is observed at the limb and they have similar properties \cite{Pontieu2007ASPC}. The formation of jets in the solar chromosphere is one of the most important, but also most poorly understood phenomena of the Sun's magnetized outer atmosphere \citep{Hansteen2006ApJ}. 
+The study of jets on the sun is over a $150$ years old with Father Angelo Secchi first observed jets in the chromosphere in the 1870's in Observatory of Roman Collegium and described them as ``burning fields" (see example in Fig.~\ref{de_flammes}). It took nearly 100 years after Secchi discovery of spicules for researcher to realise the sheer variety of jets that exist in the solar atmosphere \citep{Raouafi2016}. This started with modern observations in 1970s where the discovery of coronal transients in Fe XIV, macrospicules and explosive events \citep{Demastus1973, Bohlin1975ApJ197L133B, Withbroe1976ApJ, Brueckner1980HiA}. This active decade because because of launching of the space station Skylab and its capability of carrying EUV observations. More types jets where discovered in the 1990s, due to observations with space based Yohkoh soft x-ray telescope. \cite{Shibata1992PASJ} and {Strong1992PASJ} discovered of solar x-ray jets which are the largest and most energetic of the coronal jets, and even new jets are being discovered recently \citep{Cho2019ApJ884L38C}. \np
+%
+Due to many excellent observations its clear that solar jets are omnipresent at all times on the sun regardless of the phase of the solar cycle and there is a vast variety of types of jets, occurring across a whole range of scales. No more is this true than the chromosphere which is dominated by spicular jets which are thin small-scaled, short lived jet structures, rapidly evolving with time and height. These spicular jets occur everywhere from quiet sun (QS) \citep{Pontieu2007astroph2081D,Rouppe2007ApJ660L169R,Pereira2012,Pereira2014ApJ}, around active regions (ARs) \citep{Pontieu2007astroph2081D,Pereira2012,Rouppe2013ApJ77656R,Gafeira2017ApJS2296G} and coronal holes (CHs) \citep{Yamauchi2005ApJ629572Y,Moreno2008ApJ673L211M,Pereira2012,Young2015ApJ801124Y}.  These transients events could make significant contributions to the coronal heating and solar wind acceleration which to this day are unanswered questions \citep{Martinez-Sykora2017, Pontieu2017ApJ, Samanta2019Sci, Zuo2019AcASn, Bale2019Natur}. \np
+%------------------ add else where
+{\color{green} !!add else where!! }These jets change in appearance when observed in different spectral lines and in dependence from site they appear leading to whole range of names have to describe the jet-like phenomena, such as dynamic fibrils, mottles and spicules. It possible some of these jets are the same phenomenon, but due to uncertainty have been given different labels. Comparisons of properties and behaviors of jet-like structures which make up the chromosphere show a similarity of characteristics and eludes that some of these structures, possibly all of these structures are related or even are the same phenomena \cite{Porfir2016A}. For example there has been a long standing question where spicules and mottles are the same. Dark mottles are seen on disk, where as the classic spicule is observed at the limb and they have similar properties \cite{Pontieu2007ASPC}. The formation of jets in the solar chromosphere is one of the most important, but also most poorly understood phenomena of the Sun's magnetized outer atmosphere \citep{Hansteen2006ApJ}. \np
+%---- need to merge
 %  Since fibrils are the likely on-disk counterpart of spicules (e.g., Tsiropoula et al. 1994) https://ui.adsabs.harvard.edu/abs/1994A&A...290..285T 
 %\par !Notes!: Look into the paths the dynamic Fibs take. How do your decelerations times compare to \citep{Hansteen2006ApJ,De_Pontieu2007ApJ}?, mottles \cite{Beckers1968, Tsiropoula1994A&A,Suematsu1995ApJ} and rapid blueshifted excursions (RBE's) (e.g. ). Chromospheric phenomena that are related to spicules are dark mottles (on disk), (dynamic) fibrils, UV and EUV jets, macrospicules and surges.
-%------------------------------------------------------------------------------
-\subsection{Brief history of solar jets}
-\label{subsec:hist_of_jets}
-%------------------------------------------------------------------------------
-Solar jets are omnipresent at all times on the sun regardless of the phase of the solar cycle \citep{Raouafi2016} and there is a vast variety of solar jets (e.g. spicules, marco-spicules, x-ray jets, EUV jets, coronal jets, ect) that permeate through the solar atmosphere. The study of jets on the sun is over a century old with Father Angelo Sechchi first observing ``little" jets in the solar chromosphere in the late 1800s in Observatory of Roman Collegium, an historical overview of his scientific work is given by \citep{Bruck1979IrAJ}. These ``little'' jets where coined as spicules in 1945 by \cite{Roberts1945ApJ} who stated ``I was amazed at the extremely brief lifetimes and the great frequency of occurrence which visual observations of these spicules indicated". The life time they reported ranged from approximately 2-11 minutes which fits in the range of current estimates for spicules life times. The 1970's was active decade for a discovering a many different types of transient phenomena in the solar corona in both ground based and green line observations \citep{Demastus1973}, discovery of macro-spicules in Skylab EUV observations \citep{Bohlin1975ApJ197L133B, Withbroe1976ApJ} and the discovery of explosives events \citep{Brueckner1980HiA}. In early the 1990's Yohkoh-SXT observations lead to the discovery of the largest and most energetic category of coronal jets, solar x-ray jets \citep{Shibata1992PASJ,Strong1992PASJ}. These transients events could make significant contributions to the coronal heating and solar wind acceleration which to this day are unanswered questions \citep{Martinez-Sykora2017, Pontieu2017ApJ, Samanta2019Sci, Zuo2019AcASn, Bale2019Natur}. %
+%
+%\mfig{1}{figures/de_flames_combine.png}{Example of early observations of spicules evolution taken by Father Angelo Secchi which they described as flames. Images are takne from    }{de_flammes}
+%"Fig. 53 represents a show of flame seen to have tapered at their end; they had the shape shown in fig 54. After ten minutes, putting the eye to the glasses, we saw them transformed into sails (fig 55)"
+%
+\mfig{0.75}{figures/flammes_alt.png}{Example of early observations of spicules evolution taken by Father Angelo Secchi which they describe them as flames that are so small they resemble grass in gardens. Images are taken from \cite{Secchi1877}.}{de_flammes}
+% https://books.google.co.uk/books?hl=en&lr=&id=9K0PAwAAQBAJ&oi=fnd&pg=PA98&dq=Secchi,+P.+A.+1877,+Le+Soleil,+Vol.+2+(Paris:+Gauthier-Villars),+Chapter+II&ots=CXaa_h9BhO&sig=mYEulLxrd-uGAY0gS9dEIaTt3OA&redir_esc=y#v=onepage&q&f=false
+%These nets do develop, however, and form real flames, the whole of which offers an aspect similar to that of a field in which weeds are burned after the harvest. These flames are sometimes so small and so fine that they resemble the grass which adorns our gardens.
 %------------------------------------------------------------------------------
 \subsection{Spicules}
 \label{subsec:Spicules}
 %------------------------------------------------------------------------------
-\par Spicules are thin jet-like structures are omnipresent on the surface of the Sun with approximately $2 \times 10^{7}$ Ca II spicules on the the Sun at any time \citep{Judge_2010ApJ}. Spicules are best observed in strong chromospheric and transition region (TR) lines such as H$\alpha$, Ca II H \& K, Mg II H \& K, C II and Si IV lines. Observations of single spicules have historically been challenging because of the low observational resolution \citep{Sterling_2000SoPh}. Not only was resolution an issue, the dynamic nature of the spicule itself makes observations challenging as they have ascending and descending motions, swaying, twisting and torsion motions, and these make it difficult to pick out a individual spicules and track its evolution. Due to the sheer number of spicules present at one time when observing near the limb spicules strongly shield one another. Distortions due to the projection effect and spicule inclination give an unreal and misleading picture of spicule dimension and behavior \citep{Porfir2016A}. In the decades since, new telescopes both ground based and space based have been built such as SST \citep{Scharmer2003SPIE}, Hinode satellite \citep{Tsuneta2008SoPh,Suematsu2008SoPh,Ichimoto2008SoPh} and we are at the beginning of the next generation of solar telescopes with $4$ m European Solar Telescope with first light planned in $2026$ \citep{Matthews2016SPIE} and $4$ m Daniel K. Inouye Solar Telescope (DKIST) which released the highest resolution in image of Sun's surface and allowed us to see features as small as $30$ km and will allow the study of spicules in unprecedented detail. Despite historically challenges in observations, there is substantial amount of observational data on spicules available, giving us an understanding of their basic properties (mass density, temperature, velocity and magnetic field), possible initiation mechanisms and waves. Various review papers give an in depth overview of spicule features such as; \cite{Beckers1968, Beckers1972ARA&A} for basic properties, \cite{Sterling_2000SoPh} for initiation mechanisms, \cite{Zaqarashvili_2009SSRv} for waves and oscillations. From examining the properties of spicules \cite{Pontieu2007PASJ} classified spicules into two different categories type I and type II. Both types of spicules are a linked to the constant magento-convective driving in the photosphere. \\ 
-\par The potential of spicules being able to solve these outstanding problems in solar physics and their mysterious driving mechanism have meant that have attracted the strong attention and interest of researchers. Particularly with observations from Hinode, TRACE, IRIS and SST have allowed spicules to be observed with unprecedented spatial and temporal resolution which together with 3D radiative MHD simulations have led to a "renaissance" in spicule research \citep{Aschwanden2019ASSL}. The mass flux taken by the spicule to the corona exceeds that of the solar wind by two orders of magnitude \citep{Thomas1961} and spicules on average carry (!find amount!) of energy, if even (!find! \%) of spicule energy is dumped into the corona then it could easily power the upper atmosphere \citep{Woltjer1954BAN,Rush1954AuJPh,Li2009RAA} (!not correct papers to cite!). 
+% better here 
+Spicules are thin plasma flows that are omnipresent on the surface of the Sun with approximately $2 \times 10^{7}$ Ca II spicules on the the Sun at any time \citep{Judge_2010ApJ}. Spicules are best observed in strong chromospheric and transition region (TR) lines such as H$\alpha$, Ca II H \& K, Mg II H \& K, C II and Si IV lines. They first observed by \cite{Secchi1877} and where given their name by \cite{Roberts1945ApJ} who stated ``I was amazed at the extremely brief lifetimes and the great frequency of occurrence which visual observations of these spicules indicated". The life time they reported ranged from approximately 2-11 minutes which fits in the range of current estimates for spicules life times. These short life times along with temporal and spatial resolution limits made observing individual spicules historically difficult \citep{Sterling_2000SoPh}. In addition the dynamic nature of the spicules' poses a challenge as they are typically mobbed by other spicules shielding one another, they have bi-directional flows, kinking, twisting, and torsion motions. Other effects such as distortions due to the projection effect and spicule inclination add even more complexity as these effects can give an unreal and misleading picture of spicule dimension and behavior \citep{Porfir2016A}. \np
+%
+Despite these challenges in observations much effort has been as there is substantial amount of observational data on spicules available, giving us an understanding of their basic properties (mass density, temperature, velocity and magnetic field) \citep[see reviews:][]{Beckers1968, Beckers1972ARA&A}, possible driving mechanisms \citep[see review:][]{Sterling_2000SoPh}, and the waves and oscillations spicules can host \citep[see review:][]{Zaqarashvili_2009SSRv}. The main interest that lies in spicules is the potential to solve outstanding problems in solar physics, such as providing mass and energy into the solar atmosphere and wind, heating chromosphere/corona, and driving the solar wind {\color{green} !!cite ahoy!!}. The mass flux taken by the spicule to the corona exceeds that of the solar wind by two orders of magnitude \citep{Thomas1961} and spicules on average carry (!find amount!) of energy, if even (!find! \%) of spicule energy is dumped into the corona then it could easily power the upper atmosphere \citep{Woltjer1954BAN,Rush1954AuJPh,Li2009RAA} (!not correct papers to cite!). Another important factor, due to their ubiquity it is imperative that we can accurately model and describe spicules for us to understand the Sun's chromosphere. With the combination of improved spatial and temporal resolution achieved with telescopes, such as Hinode \citep{Tsuneta2008SoPh,Suematsu2008SoPh,Ichimoto2008SoPh}, TRACE, IRIS and SST \citep{Scharmer2003SPIE}, over the last two decades, and improved computational models have led to a "renaissance" in spicule research \citep{Aschwanden2019ASSL}. A major factor in this renewed interest was the discovery that the spicules contain two distinct types, labeled as Type I (TI) and Type II (TII) spicules by \cite{Pontieu2007PASJ}. \np
+% Might be better in coclusion
+{\color{green} might be better in conclusion} We are at the beginning of the next generation of solar telescopes with $4$ m European Solar Telescope with first light planned in $2026$ \citep{Matthews2016SPIE} and $4$ m Daniel K. Inouye Solar Telescope (DKIST) which released the highest resolution in image of Sun's surface and allowed us to see features as small as $30$ km and will allow the study of spicules in unprecedented detail.
 %------------------------------------------------------------------------------
 \subsubsection{Type I}
 \label{subsec:TI}
 %------------------------------------------------------------------------------
-\par Jets observed at the QS limb are traditionally called spicules, they are observed as bright ``straws", typically grouped together with other spicules and are located across the boundaries of supergranular cells. This group behavior was first described as “porcupine” and “wheat” field patterns by \cite{Lippincott1957SCoA215L}. They are typically observed in H$\alpha$ as thin, finger-like features, that rapidly elongate upwards with an average velocity of $\sim 25$ km s$^{-1}$ and reaches its apex within 1-2 minutes after it initial appearance and then fall back to the low chromosphere with a similar velocity its starting ascent \citep{Tsiropoula2012}. Spicules have always been an important feature to study since their discovery over 140 years ago. They are ubiquitous on the sun and dominate feature in some chromospheric filtergrams e.g. Ca II H \cite{Pereira2016ApJ82465P}. Because of their vast numbers they are a key observational window for the investigations related to the dynamics of the chromosphere and the mass and energy transfer mechanism across the solar the atmosphere. Early calculations showed it was theoretically possible for spicules to drive the solar wind as they their mass flux can be 100 times greater than the solar wind, thus if even if a majority of of the flux comes back down only a few percent is needed to continue upwards \cite{Pneuman1978SoPh5749P,Pneuman1977AA55305P}. They are also good candidates for supplying mass and energy to heat the corona (!find refs!). \\
+Jets observed at the QS limb are traditionally called spicules, they are observed as bright ``straws", typically grouped together with other spicules and are located across the boundaries of supergranular cells. This group behavior was first described as “porcupine” and “wheat” field patterns by \cite{Lippincott1957SCoA215L}. They are typically observed in H$\alpha$ as thin, finger-like features, that rapidly elongate upwards with an average velocity of $\sim 25$ km s$^{-1}$ and reaches its apex within 1-2 minutes after it initial appearance and then fall back to the low chromosphere with a similar velocity its starting ascent \citep{Tsiropoula2012}. Spicules have always been an important feature to study since their discovery over 140 years ago. They are ubiquitous on the sun and dominate feature in some chromospheric filtergrams e.g. Ca II H \cite{Pereira2016ApJ82465P}. Because of their vast numbers they are a key observational window for the investigations related to the dynamics of the chromosphere and the mass and energy transfer mechanism across the solar the atmosphere. Early calculations showed it was theoretically possible for spicules to drive the solar wind as they their mass flux can be 100 times greater than the solar wind, thus if even if a majority of of the flux comes back down only a few percent is needed to continue upwards \cite{Pneuman1978SoPh5749P,Pneuman1977AA55305P}. They are also good candidates for supplying mass and energy to heat the corona (!find refs!). \\
 \par The type I spicules where first defined by \cite{Pontieu2007PASJ} using data from Ca II from Hinode/SOT. They are similar to the traditional limb spicule and are defined as long lived structures with life times of $\sim 180-420$ s, which have bidirectional up flows of mass (rise up from the limb and then fall) following a parabolic path and have upward velocity of the order of $20$ km s$^{-1}$. These spicules are proposed to be initiated by by \textit{p}-mode leakage between granular cells \citep{Pontieu2004Natur}. Most studies report that a spicules lifetime is between $120-720$ s with an average $\sim 300$ s \cite{Georgakilas1999AA341610G,Cook1984AdSpR459C,Alissandrakis1971SoPh2047A,Lippincott1957SCoA215L,Rush1954AuJPh7230R,Roberts1945ApJ}.  
 More recently, \cite{Pasachoff2009SoPh26059P} found lifetimes between $180$ and $720$ s who studied the spicules in H$\alpha$, with a mean value of $426\pm138$ s. These lifetimes reasonably agree with \cite{Pontieu2007PASJ} measurements. \cite{Pereira2012} measured lifetime between $150-400$ s. The heights of spicules are typically measured from its foot in the photospheric limb up to where spicule becomes no longer visible. However, measuring the heights of spicules can be tricky as its roots based in photosphere can be difficult to identify due to their grouping behavior, its not obvious whether the footpoint is in front or behind the limb is  and the top of spicule doesn't have clear defined boundary. Other observational factors add to this difficulty such as, exposure time and seeing conditions. Spicules have historically been mostly observed in the H$\alpha$ line which is difficult to trace down due the opacity of chromosphere. Despite these difficulties there is general agreement on reported spicules heights \cite{Tsiropoula2012}. Using data from H$\alpha$ observations \cite{Beckers1972ARA&A,Beckers1968} estimated the average heights between $6.5$-$9.5$ Mm. \cite{Pasachoff2009SoPh26059P} used both H$\alpha$ observations and combined with TRACE data in the 16000 \AA channel to obtain heights in the range $4.2-12.2$ Mm with a mean $7.2\pm2$ Mm. \cite{Pasachoff2009SoPh26059P} observed heights in TRACE UV found them be $\sim 2.8$ Mm taller than in H$\alpha$. \cite{Pontieu2007PASJ} measure heights in Ca II H using Hinode/SOT which vary from few hundred km to $10$ Mm with most below $5$ Mm. \cite{Pereira2012} report maximum heights of $4-8$ $Mm$ using Ca II H data from Hinode/SOT. In the past spicules widths ($200-1,000$ km) and dynamics have, been very close to the resolution limits of observations \citep{Pontieu2007ASPC}. As a result of this limitation, the superposition inherent in limb observations, and the difficulty of interpreting H${\alpha}$, the properties of spicules have not been well constrained, which have led to many theoretical models. There is an agreement on widths measured in spicule. \cite{Beckers1972ARA&A,Beckers1968} used H$\alpha$ and Ca II H and K line observation reporting widths between $400-2,500$ km, with most spicules having diameter between  400 and 1,500 km \cite{Lynch1973SoPh3063L,Dunn1960Obs8031D}. \cite{Pasachoff2009SoPh26059P} reported observing in H$\alpha$ with SST gave widths of $300-1,100$ km with mean diameter of $660$ km and found just as with heights, widths are also greater by a factor of 1.5 with ranges of $700-2,500$ km when using measuring with 1600 \AA TRACE data. The discrepancy in widths could TRACE resolution is approximately four times lower than SST and highlight the impact resolutions can have on these measurements. \cite{Tavabi2011NewA16296T} measured widths in Ca II H using SOT/Hinode and reported a range of widths from $200$ km to more than $1,000$ km. \cite{Pereira2012} measured width of $\sim 220-420$ km. For limb spicule velocities \cite{Pasachoff2009SoPh26059P} measured ascending velocities with a mean of $27\pm18.1$ km s$^{-1}$, a median of $25$ km s$^{-1}$ and a range of $3-75$ km s$^{-1}$. \cite{Pereira2012} measured ascending velocities of $15-40$ km s$^{-1}$. Spicules appear at different angles of inclination that range from approximately $20^{\circ}$ \cite{Beckers1968} to $37^{\circ}$ \cite{Trujillo2005ApJ619L191T} with an average of $23^{\circ}$. \cite{Pereira2012} measured inclinations of $\sim 5^{\circ}-25^{\circ}$.   
 To summarise above the typical properties of limb spicules are they have heights of $7-13$ Mm, widths of $300-1500$ km, during their lifetimes of $1-10$ minutes, an upward velocity of $25$ km s$^{-1}$, temperatures ranging from $5,000-15,000$ K and densities of approximately $3\times10^{-13}$ g cm$^{-3}$ \citep{Sterling_2000SoPh}.
@@ -394,220 +366,67 @@ Fibrils are the chromospheric equivalence of coronal loops as they appears as cu
 %------------------------------------------------------------------------------
 to do
 %------------------------------------------------------------------------------
-\subsection{Surges}
-\label{subsec:surge}
+\subsection{Summery of Spicular Jets}
+\label{subsec:jet_table}
 %------------------------------------------------------------------------------
-to do
-%------------------------------------------------------------------------------
-\section{History and Current State of Numerical Models}
-\label{sec:models}
-%------------------------------------------------------------------------------
-How these spicules originate and they are driven is one of the main issues facing solar physicists currently, see e.g. \citep{kuz2017ApJ,Tsiropoula2012,Martinez-Sykora2017}. The two main avenues of investigation for this phenomenon are with observations and numerical simulations. In terms of studying the launching mechanisms with observations it is challenging to directly observe the foot-point of spicules (!explain further!). This is where simulations are needed to gain further insight into the plausible launching mechanisms. There are numerous potential mechanisms for launching spicules. All simulations start with some form of energy deposition in the photosphere or chromosphere driving the material up from these regions into the corona. Three broad categories of drivers are pulses in velocity or gas pressure, \Alfven wave and \textit{p}-modes. Other mechanisms (!add refs!) include magnetic reconnection, the compression of the plasma sheet by the magnetic field, Joule heating in current sheet, thermal conduction from the corona and buffering of anchored magnetic flux by granulation can lead to spicules formation. All these are discussed in more detail in \cite{Sterling_2000SoPh}. \\
-\par Another interesting aspect of spicules is their potential to mediate the mass transfer of energy and mass from the photosphere to the corona \citep{Pereira2012, Pontieu2004Natur}. This potential was recognised early \citep{Beckers1968}, but lack of high-quality observations prevented their link to the corona \citep{Withbroe1983ApJ}. With launching of Hinode Solar Optical Telescope provided a significant step forward in quality of observations of spicules was made allowing us to study their properties in more detail. With Hinode seeing-free high spatial and temporal resolution observations of the chromosphere, it showed that spicules where much more dynamic than previously thought, thus re-igniting the debate on their potential to heat the corona \citep{Pontieu2007PASJ} (!add sect on soho and trace!). \\
-\par It has been shown by \cite{Tsiropoula2004} if magnetic reconnection is considered as the driving mechanisms of mottles, the material they supply to the solar corona is in excess of that required to compensate for the coronal mass loss in the solar wind, while the amount of energy released to heat the corona depends on the several parameters, among which are the number of events, their axial velocity and magnetic field, ect., and can be negligible or substantial. \cite{De_Pontieu2007ApJ}, on the other hand, showed that the energy flux supplied by \Alfven waves identified in spicules is large enough to supply the energy released needed to heat the quiet solar corona and drive solar wind. Thus the question arises of how these small scale features participate and contribute into the large scale observable phenomena, and how more accurate determination of the physical parameters, which are related to the physical processes can be extracted from observations.
-\par As the driving mechanisms of of spicules are debatable, we assume that we have a jet which is driven buy a momentum pulse from the photosphere with the aim of investigating whether simple drivers can recreate the dynamical behaviors of spicules.
-\par There have been many theoretical approaches to describe spicules, which can be summarised as follows (i) Strong pulse in the lower atmosphere; (ii) weak pulse in the lower atmosphere; pressure pulse in the higher atmosphere; (iv) \Alfven wave (both low and high frequency) models \cite{Zaqarashvili_2009SSRv}; (v) magnetic reconnection for type II spicules \cite{Pontieu2007PASJ, Sterling2010ApJ}; (vi) Joule heating due to ion-neutral collisional dampening \cite{James2003AA}; (vii) Leakage of global p-mode oscillations from photosphere and the formation of shocks int he chromosphere \cite{Pontieu2004Natur,Zaqarashvili2007A&A}; (viii) MHD kink waves \citep{Kukhianidze2006A&A}, and (ix) vorticle flows which lead to torsional \Alfven waves that drives spicules \citep{Iijima2017ApJ}.
-\begin{itemize}
-\item 1D propagating shock models \cite{Heggland2007ApJ6661277H,Shibata1982SoPh78333S,Shibata1982}
-\item  propagating shocks models, passing though the upper chromosphere and TR towards the corona. \cite{Hansteen2006ApJ} preformed a 2D numerical radiative MHD simulations in an atmosphere that goes from upper convective zone to lower corona (including everything between) \cite{Hansteen2007ASPC368107H} (this citation is purely for atmospheric set up) and this extended in \cite{De_Pontieu2007ApJ}. These simulations shed light on the origins of spicules, mottles and dynamic fibrils can driven be driven by p-modes oscillations and convective flows.
-\item \cite{Mart2009ApJ7011569M} (extended both \citep{De_Pontieu2007ApJ,Hansteen2006ApJ}), by carrying out 3D version. They identify driver they label as ``other mechanisms" (beside p-mode). They find that collapsing granules, convective buffeting by breaking granules (is this a collapsing granule?), flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that possible there is more driving mechanism are possible, but in general (even in simulations) it often difficult to to identify the driver. Interesting regardless of the driving mechanism the dynamics of the spicules remain consistent (TI). In these simulations the ranges for lifetime ($2-3$ mins) and max height are smaller than those in observations ($<2,000$ km)    
-\item \cite{Matsumoto2010ApJ7101857M}  Spicules driven by resonant \Alfven waves generated in the photosphere and confined in a cavity between the photosphere and TR. \Alfven waves are driven by the magento-convection at the photosphere. 
-\item solve 2D ideal MHD equations and perturb vel to simulate TI spicules \cite{Murawski2010AA519A8M} 
-\item \cite{Murawski2010AA519A8M} spicule formation can be divided into 3 main groups, pulses, \Alfven waves, and p-mode leakage. 
-\item The main idea of spicule formation by impulsively launched perturbations is as follows. Velocity or gas pressures pulses deposited int eh lower atmosphere are steeped into shocks as a result of the rapid decrease in mass density with height. These shock lift the TR, producing spicules.
-\item \cite{Hollweg1982ApJ257345H} developed shock model and carried out 1D simulations. In this simulation gas pressure lits the TR to  the observed heights of spicules. \cite{Suematsu1982SoPh7599S} did the same for velocity pulses. Later on \cite{Heggland2007ApJ6661277H} studied the shock model with additional physics of radiation and heat conduction.
-\item \cite{Scullion2011ApJ74314S} does 3D simulations to model type I spicule. They use a wave based driver to show the transmission of acoustic waves from lower chromosphere and into the corona, which leads to the formation of a jet, which excites TR quakes.       
-%-------------
-%-----------------------
-%reviews to ref
-\item \cite{Carlsson2019ARAA57189C} newer review of numerical model. Should be mentioned in some ways, focus on BiFrost simulations.
-\item \cite{Zaqarashvili_2009SSRv} summarise on the oscillation and waves of spicules.
-\end{itemize}
-Summary of \cite{Sterling_2000SoPh}
-\begin{itemize}
-\item numerical models can be categorised as following: 
-\begin{enumerate}
-\item Strong pulse in lower atmosphere (photosphere to low chromosphere) ($\sim 60$ km s-1 for initial velocities)
-\item weak pulse in the lower atmosphere i.e. rebound shock model (range of $\sim 1$ km s-1 based on the magnitude seen in granular motions). 
-\item pressure-pulse in the higher chromosphere (middle or upper chromosphere)
-\item \Alfven wave models 
-\end{enumerate}
-\item \cite{Sterling1990ApJ349647S} and \cite{Cheng1992AA266537C} extended model (2) by adding radiation losses and hear conduction. 
-\item driver (3) was explored by \cite{Shibata1982} (no radiation and heat conduction). They excite two types of chromospheric jets that form dependent on height of pressure pulse in chromosphere. The shock tube jet (TR is expanded directly by the pressure pulse expanding and is placed above middle of chromosphere) and the other is a crest shock jet is TR is raised by the slow shock wave that can be generated by the expanding pressure enhancement (below middle chromosphere). 
-\item driver (3) was extended by \cite{Sterling1990ApJ349647S,Sterling1993ApJ407778S,Cheng1992AA266537C,Heggland2007ApJ6661277H,kuzma2017AA597A133K}, by adding effect of radiation and heat conduction. another example of pressure pulse \cite{Smirnova2016SoPh2913207S}. 
-\item more recent simulation have studied pressure pulse with a 2D two-fluid model \cite{kuzma2017ApJ84978K}.   
-\item can add some more recent papers here e.g. Kuzma, 2-fluid models ect.
-\item driver (4), two classes low freq and high freq. the basic idea is that torsional \Alfven waves on vertical flux tubes could drive jets. \Alfven waves are a nature byproduct of buffeting of flux tubes by photospheric granulation. \cite{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H} first did 1.5 D numerical simulations and showed that \Alfven waves can non-linearly couple into MHD fast-mode shock and also create slow shocks, these shock can then move chromospheric material upwards and excite the TR creating a jet. 
-\item \cite{Kudoh1999ApJ514493K} carried out 2D simulations, but instead of a single \Alfvenic pulse they used multiple random \Alfvenic pulses (all these dont included rad loss and te conduction).  
-\item Some of the most convincing simulations that produce spicules-like jet are \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M}. These start of art simulations use the Bifrost code \citep{Gudiksen2011AA531A154G} which has one of the most realistic atmosphere that connects the upper convection zone to the lower corona. Which can include multiple complex physics (e.g. ) See blah for more detail... include a possible combination of radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects. They find that spicular features naturally and frequently occur because of their numerical set up (i.e. connecting the atmosphere to convective motions and inclusion of realistic physics) \cite{Mart2017Sci3561269M}. 
-\item They solve the MHD equations with non-gray and non-LTE radiative transfer, with thermal conduction along the magnetic field lines. 
-\end{itemize}
-magnetic recognition.
-\begin{itemize}
-\item magnetic reconnection driven jets \cite{Gonz2018arXiv180704224G,Gonz2018ApJ856176G,Gonz2017ApJ,Isobe2008ApJ679L57I,Archontis2005ApJ6351299A} 
-\item larger scale jets \cite{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y,Nishizuka2008ApJ683L83N}
-\item wave induced \cite{Heggland2009ApJ7021H}.
-\end{itemize}
+\afterpage{%
+\begin{landscape}% Landscape page
+\begin{table*}
+\caption{Values based on cite papers throughout Section~\ref{sec:spicule-jets}}
+\label{solar_jet_table}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|p{1.7cm}|}
+\hline
+\textbf{Feature} & \multicolumn{1}{c|}{\textbf{Obs.}} & \multicolumn{1}{c|}{\textbf{Life-time (s)}} & \multicolumn{1}{c|}{\textbf{Velocity ($\rm{km \ s^{-1}}$)}} & \multicolumn{1}{c|}{\textbf{Height (Mm)}} & \multicolumn{1}{c|}{\textbf{Driver}} \\ \hline
+
+Spicule TI  & limb &   \multicolumn{1}{c|}{$180-720$} & \multicolumn{1}{c|}{$20-40$} &  \multicolumn{1}{c|}{$4-12$}  & \multicolumn{1}{c|}{shock} \\ \hline
+
+Spicule TII & limb & \multicolumn{1}{c|}{$ 10-150$} & \multicolumn{1}{c|}{$ 50-150$} & \multicolumn{1}{c|}{$>5$}  & \multicolumn{1}{c|}{reconnection}  \\ \hline
+
+Dynfibs & \multicolumn{1}{c|}{disk} & \multicolumn{1}{c|}{$120-650$} & \multicolumn{1}{c|}{$10-30$} & \multicolumn{1}{c|}{$0.4-5.2$} & \multicolumn{1}{c|}{shock} \\ \hline
+
+Mottles & \multicolumn{1}{c|}{disk} & \multicolumn{1}{c|}{$120-900$} & \multicolumn{1}{c|}{$10-30$} & \multicolumn{1}{c|}{$2-10$} & \multicolumn{1}{c|}{shock} \\ \hline
+
+Macrospicule & limb  & \multicolumn{1}{c|}{$180-2700$} & \multicolumn{1}{c|}{$10-150$}  & \multicolumn{1}{c|}{$7-70$} & \multicolumn{1}{c|}{shock} \\ \hline
+
+RREs/RBEs & \multicolumn{1}{c|}{disk}  & \multicolumn{1}{c|}{$20-120$} & \multicolumn{1}{c|}{$10-50$}  & \multicolumn{1}{c|}{$1-4.5$} & \multicolumn{1}{c|}{reconnection} \\ \hline
+\end{tabular}
+\end{center}
+\end{table*}
+\end{landscape}
+}
+%------------------------
+\subsection{Basic Structure of Super Sonic jets}
+\label{struc_of_jets}
+%------------------------
+{\color{green} need to move elsewhere}
+A schematic diagram of basic structure of a jet is given by \fref{ssj}. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
+%\begin{equation}\label{v_j_speed}
+%v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
+%\end{equation}
+From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow 
+%----------------
+% I may not include this
+%\par !probably wont include in paper! 
+When describing a jets these parameters are key for defining its morphology and structure: $v_j$, $\eta_j = \frac{\rho_j}{\rho_a}$, $K = \frac{p_{d}}{p_a}$, where $\rho_a(p_a)$ is the ambient density(pressure) and $p_{d}$ is the pressure at the driver. $\eta_j$ measures the density contrast of the jet itself and the ambient medium it propagates through. If $\eta_j>1(\eta_j<1)$ then a jet is labeled to as heavy(light). For $K$ with denotes our jet to ambient pressures ratio determine whether the jet is under-expanded ($K>1$) or over-expanded ($K<1$). In our case we are dealing with the expected dynamics of a heavy under expanded-jet. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
+\begin{equation}\label{v_j_speed}
+v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
+\end{equation}
+From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow in these jet. The bow shock can be seen early on in the simulation and we see that the temperature increase at the head of the jet (see left most panel in Fig. \eqref{paramter_scan_one}.
+% useful links for jets heads: 
+% https://books.google.co.uk/books?id=ZdjImbOLi9gC&pg=PA449&lpg=PA449&dq=how+to+calculate+speed+of+the+head+of+the+jet+astrophysics&source=bl&ots=SI82iL7XlT&sig=ACfU3U2q3yT93ZitzgWwFXm0YaPYX_l21w&hl=en&sa=X&ved=2ahUKEwiquezgm5rqAhV1RxUIHRFrDikQ6AEwD3oECAgQAQ#v=onepage&q=how%20to%20calculate%20speed%20of%20the%20head%20of%20the%20jet%20astrophysics&f=false
+% https://iopscience.iop.org/article/10.1088/1742-6596/1031/1/012022/pdf
+% https://science.sciencemag.org/content/sci/346/6207/325.full.pdf
+% http://articles.adsabs.harvard.edu//full/1994ApJ...435..261D/0000263.000.html
+% http://articles.adsabs.harvard.edu/pdf/1993ApJ...410..686D
+% https://iopscience.iop.org/article/10.1086/311159/pdf
+% http://articles.adsabs.harvard.edu/pdf/1996ApJ...467L..57V
 %---------------------------------------------
 \section{MHD Equations}
 \label{section:MHD_eqs}
 %--------------------------------------------
 These magnetic fields support waves oscillations which can be studies to in the coronal environment such as coronal loops which allows us to determine properties such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}.
-%---------------------------------------------
-\section{Numerical Recipe}
-\label{section:numerical_recipe}
-%--------------------------------------------
-\subsection{MPI-AMRVAC}
-MPI-AMRVAC in a numerical code, developed in Fortran 90 parallezied with Message Passing Interface(MPI) \citep{Keppens_2012}. The code aims to solve any systems of hyperbolic partial differential in conservative form as show: 
-\begin{equation}\label{AMRVAC_stlye}
-\frac{\partial \boldsymbol{U}}{\partial t} + \nabla \cdot \boldsymbol{F}(\boldsymbol{U}) = \boldsymbol{S}_{phys} (\boldsymbol{U}, \partial_{i} \boldsymbol{U}, \partial_i \partial_j \boldsymbol{U},\boldsymbol{x},t) ,
-\end{equation}
-where $U$ is the set of conserved variables, $F(U)$ the corresponding fluxes and $S_{phys}$ are the source terms. The source terms are used to add extra physics e.g. gravity, diffusion, viscosity, etc. If we are working with the ideal MHD equation with no gravity then $S_{phys} = $0 and we would have $U=(\rho, \boldsymbol{m}, e, \boldsymbol{B})$. \\ \\ MPI-AMRVAc is constructed to solve the conservation equations. However, it is possible to define your input of initial conditions in primitive form $U = (\rho, \boldsymbol{v}, p, \boldsymbol{B})$. If defined this manner the conservative quantities are calculated from the primitive input and then the systems of equations are solved spatially and temporally. The creators of this code took much care to make sure the conversion from primate to conservative (or vise versa) does not cause a lack of precision. \\ \\      
-%solves the MHD equations in the following form:
-%\begin{equation}
-%\frac{\partial \rho}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho) = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \rho \boldsymbol{v}}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho \boldsymbol{v} - \boldsymbol{BB})+ \nabla p_{tot} = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial e}{\partial t} + \nabla \cdot (\boldsymbol{v}e - \boldsymbol{BB} \cdot + \boldsymbol{v} p_tot) = \nabla \cdot (\boldsymbol{B} \times \eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \boldsymbol{B}}{\partial t}+ \nabla \cdot (\boldsymbol{Bv}-\boldsymbol{Bv}) = -\nabla \times (\eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%p=(\gamma-1)(e- \frac{\rho \boldsymbol{v}^2-\boldsymbol{B}^2}{2}) .
-%\end{equation}
-The main focus of this software is on conservation laws in particular with shock dominated problems. MPI-AMRVAC has been constructed so it is a single versatile software with options and switches for various problems rather than developing a different method or version for each problem separately. You have a selection of physics modules that come with he codes such as HD, MHD, SRHD, SRMHD and you can create your own physics model as long as the equation are of the form given by Eq. \eqref{AMRVAC_stlye}. There is a selection a numerical solver available for both temporal and spatial discretization. Once the solver and physics modules have been selected the user can write a user file. The contents of this file gives the initial inputs or acts on the evolving quantities during the simulation e.g. define a boundary condition that has continuous inflow. The advantage of this approach is that it allows for a reduction of overall time for software development. The advantage of using AMR is it allows us to increase resolution on areas of interest (i.e where smaller scale dynamics are occurring) without having to increase the resolution of the whole domain which would be computationally expensive. The reason why we are using MPI-AMRVAC for this project is to deal with the different length scales occurring in the simulation.
-%---------------------------------
-%NeeD TO MERGE
-%--------------
-MPI-AMRVAC is an MPI-parallelized Adaptive Mesh Refinement code. AMRVAC solves a systems of hyperbolic partial differential equations by a number of different numerical schemes. In principle the ARMVAC handles anything of the generic form: 
-\begin{equation}
-\frac{\partial \boldsymbol{U}}{\partial t} + \nabla \cdot \boldsymbol{F}(\boldsymbol{U}) = \boldsymbol{S}_{phys} (\boldsymbol{U}, \partial_{i} \boldsymbol{U}, \partial_i \partial_j \boldsymbol{U},\boldsymbol{x},t) .
-\end{equation}
-%solves the MHD equations in the following form:
-%\begin{equation}
-%\frac{\partial \rho}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho) = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \rho \boldsymbol{v}}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho \boldsymbol{v} - \boldsymbol{BB})+ \nabla p_{tot} = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial e}{\partial t} + \nabla \cdot (\boldsymbol{v}e - \boldsymbol{BB} \cdot + \boldsymbol{v} p_tot) = \nabla \cdot (\boldsymbol{B} \times \eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \boldsymbol{B}}{\partial t}+ \nabla \cdot (\boldsymbol{Bv}-\boldsymbol{Bv}) = -\nabla \times (\eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%p=(\gamma-1)(e- \frac{\rho \boldsymbol{v}^2-\boldsymbol{B}^2}{2}) .
-%\end{equation}
-The main focus of this software is on conservation laws in particular with shock dominated problems. AMRVAC has been constructed so it is a single versatile software with options and switches for various problems (e.g. HD, MHD, adiabatic, relativistic, choices in numerical solvers, ect) rather than developing a different method or version for each problem separately. The advantage of this approach is that it allows for a reduction of overall time for software development. One of the main reasons for using AMRVAC for carrying out numerical simulations of these jets is to deal with differences in the order of magnitude in length scales involved in this research. This has been my main task over the last 9 months becoming acquainted with AMRVAC software. As part of this I have become comfortable with using ICEBERG and ParaView (open-source software that is used visualise the output).
-\subsection{MHD Equations} 
-We will model Solar jets by taking a fluid approach using the magnetohydrodynamic (MHD) equations. The MHD equations are a combination of the Navier$–$Stokes equations of fluid dynamics and  Maxwell's equations of electromagnetism. It describes the motion of magnetic fluids in the presence of the electromagnetic fields, which is well suited to describe the dynamics of a plasma. A plasma is a completely ionised gas, consisting of freely moving positively charged ions, which behaves collectively in the presence of a magnetic field and is the forth state of matter. From a human's perspective the typical states of matter encountered in our day to day life on Earth mainly appears in three phases of solid, liquid and gas. We may observe plasmas on Earth for example lightning, TVs and neon lamps. However, if we consider matter on a universal scale, then we see that $90 \%$ of baryonic matter in the universe is plasma. Hence, we conclude that plasma is the normal state of baryonic matter in the universe \citep{goedbloed2004principles}. An interesting property of the MHD equations is they are scale independent. This means the MHD equations provides a basis for the description of the macroscopic dynamics of $90 \%$ of baryonic matter in the Universe and also are applicable to laboratory plasma such as in tokamaks ($20$ m) to astrophysical plasmas such as accretion disc of a active galactic nucleus ($10^{21}$  m) \citep{goedbloed2004principles}. The MHD theory is a fluid approach which is valid if the length scales of the system are larger than the Debye shielding length. The Debye shielding length defines the typical length scale in which the ions and electrons neutralise one another and thus the particles feel no force from the electric field. The fluid motion describes the collective motion of particles. This collective interaction involving motion, currents and magnetic fields describes the general behaviour of the MHD fields. The MHD equations are given by the following:      
-\begin{equation}\label{eq86}
-\frac{\partial \rho}{\partial t} = - \nabla \cdot (\rho \boldsymbol{v}),
-\end{equation}
-\begin{equation}\label{eq87}
-\rho \frac{d \boldsymbol{v}}{dt} = - \nabla p + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}) \times \boldsymbol{B} + \rho \boldsymbol{g},
-\end{equation}
-\begin{equation}\label{eq88}
-\frac{dp}{dt} = - \gamma p \nabla \cdot \boldsymbol{v},
-\end{equation}
-\begin{equation}\label{eq89}
-\frac{\partial \boldsymbol{B}}{\partial t} = \nabla \times (\boldsymbol{v} \times \boldsymbol{B}) - \frac{1}{\mu_0} \nabla \times (\eta \nabla \times \boldsymbol{B}),
-\end{equation}
-\begin{equation}\label{eq90}
-\nabla \cdot \boldsymbol{B} = 0.
-\end{equation}
-Where Eq. (\ref{eq86}) is the mass continuity equation which states matter cannot be created or destroyed it simply changes to a different form of matter. Eq. (\ref{eq87}) is the momentum equation, it represents balance between acceleration, also the balance between the pressure gradient and the Lorentz force (force which is exerted by a magnetic field on a moving charge, $\frac{1}{\mu_0} (\nabla \times \boldsymbol{B}) \times \boldsymbol{B}$). As the Lorentz force is directed perpendicular to the magnetic field, this means that the acceleration along the magnetic field lines are caused by pressure gradient or gravity. Eq. \eqref{eq88} represents the internal energy and Eq. \eqref{eq89} is the induction equation and links the dynamics of the magnetic field through the velocity term. Eq. \eqref{eq90} is the solenoidal constraint and implies that there are no magnetic monopoles or pure sinks of the magnetic field.\\ \\ To gain intuitive understanding of oscillations in a plasma we derive analytically MHD equations. We take small perturbation with respect to the background quantities, therefore we define the following:
-\begin{equation} \label{eq91}
-\boldsymbol{B} = \boldsymbol{B}_0 + \boldsymbol{B}_1 (\boldsymbol{r},t) , \ \ \boldsymbol{v} = \boldsymbol{v}_1 (\boldsymbol{r}, t) , \ \ \rho = \rho_0 + \rho_1 ( \boldsymbol{r},t) , \ \ p = p_0 + p_1 ( \boldsymbol{r}, t) ,
-\end{equation}
-where $\boldsymbol{r} = (x,y,z)$ is the potion vector. The subscript $0$ ($1$) represents the equilibrium quantity (Eulerian perturbation). Where $v_0=0$ as we assume no background flow. Applying the perturbations shown by Eq. \eqref{eq91} to Eq. \eqref{eq86} to Eq. \eqref{eq90} obtains the linearised MHD equations: 
-\begin{equation}
-\frac{\partial \rho_1}{\partial t} = \nabla \cdot (\rho_0 \boldsymbol{v}_1) ,
-\end{equation}
-\begin{equation}
-\rho_0 \frac{\partial \boldsymbol{v}_1}{\partial t}  = - \nabla p_1 + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}_0) \times \boldsymbol{B}_1 + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}_1) \times \boldsymbol{B}_0 ,
-\end{equation}
-\begin{equation}
-\frac{\partial p_1}{\partial t} = - \boldsymbol{v}_1 \cdot \nabla p_0 - \gamma p_0 \nabla \cdot \boldsymbol{v}_1 , 
-\end{equation}
-\begin{equation}
-\frac{\partial \boldsymbol{B}_1}{\partial t} = \nabla \times (\boldsymbol{v}_1 \times \boldsymbol{B}_0) - \nabla \times (\eta \nabla \times \boldsymbol{B}_1) ,
-\end{equation}
-\begin{equation}
-\nabla \cdot \boldsymbol{B}_0 = \nabla \cdot \boldsymbol{B}_1 = 0 .
-\end{equation}
-These equations are the used to construct our models for the oscillations. 
-\subsubsection{Adaptive Mesh Refinement}
-Need to give full description of AMR. 
-\begin{figure}
-\centering
-\includegraphics[width = \textwidth]{figures/amrpng.png}
-\caption{A generic AMR block skeleton fom: https:$//$homes.esat.kuleuven.be$/$ $\sim$keppens/amrstructure.html}.
-\label{amr_scheme}
-\end{figure}   
-%------------------------------------------------------------------------------
-\subsection{Atmospheric Equilibrium}
-\label{sec:atmos_equil}
-%------------------------------------------------------------------------------
-The transition region is located at $2$ Mm where the temperature smoothly connects an $8000$ K photosphere to $1.5$ MK corona as shown in \fref{atoms_profile}. The temperature of the atmosphere as a function of height is mathematically represented as,   
-\begin{equation}\label{te_pro}
-T_0(y>0) = T_{ch}+\frac{T_{c} - T_{ch}}{2} \left[ \tanh \left( \frac{y-y_{tr}}{w_{tr}} \right)+1 \right],
-\end{equation}
-where $y$ is the vertical position, $T_0(0)=T_{ch}=8\times10^3 \ \rm{K}$ ($T_{c}=1.8\times10^6 \ \rm{K}$) is the chromospheric (coronal) temperature and $y_{tr}=2$ Mm ($w_{tr}=0.02$ Mm) is the TR height (width). As there is a uniform vertical magnetic, hence $\bs{J} \times \bs{B}=0$ and magnetohydrostatic equilibrium is achieved with,
-\begin{equation}
-\frac{dp}{dy} = - \rho g.
-\end{equation}
-Temperature and pressure are related through the ideal gas law,
-\begin{equation}
-p = \frac{ \rho \rgas T}{M},
-\end{equation} 
-where $M$ is the mean atomic weight, $T$ is the temperature and $\rgas$ is the universal gas constant. Therefore, one can obtain the $\rho$ and $p$ in the following form,  
-\begin{equation}\label{p_pro}
-p(y) = p_0 \exp \left( - \int_0^y  \frac{1}{H(y')} dy' \right), 
-\end{equation} 
-\begin{equation}\label{rho_pro}
-\rho(y) = \rho_0 \frac{T_0}{T(y)} \exp \left( \int_0^y \frac{1}{H(y') }dy' \right),
-\end{equation}
-where $\rho_0$ and $p_0$ are the initial mass density and pressure equilibrium, respectively, at the lower boundary of the computational domain, and the pressure scale heights are given by,
-\begin{equation}
-H(y) = \frac{\rgas T(y)}{Mg}.
-\end{equation}
-Using the temperature profile given by \eref{te_pro} and taking $\rho_0 = 2.34e-4\times10^{-4}\;\rm{kg}\;\rm{m^{-3}}$ we construct pressure and mass density as function of height by means of \eref{p_pro} and \eref{rho_pro}.
-%------------------------------------------------------------------------------
-\subsection{Grid Setup}
-\label{sec:Grid_Setup}
-%------------------------------------------------------------------------------
-We use the open source MPI-AMRVAC software version 2.0 \cite{Xia_2017} to simulation solar jets in a simple solar atmosphere. We set the domain size to $50$ Mm $\times$ $30$ Mm with a level one resolution of $32$ $\times$ $24$ (giving a physical resolution of $\sim$ $1.56$ Mm $\times$ $1.25$ Mm). This coarse level one resolution was chosen to allow the dissipation of shocks as they travel towards the boundaries. To accurately capture the sharpness of the TR we applied 7 levels of AMR giving a spatial resolution of $\sim$ $12$ km$\times$ $10$ km. We use unidirectional grid stretching in the horizontal direction, where from the origin the grid cells change by a constant factor of $1.1$ from cell to cell. Due to the choice of discretisation scheme for the boundary conditions, we employ ghost cells of 2 grid layers encasing the physical domain in each direction, which have a physical size of $3 \ \rm{Mm}$. The numerical scheme applied for spatial discretisation is HLL (Harten-Lax-van Leer) \cite{hll_1983} and a third order \u{C}ada limiter \citep{CADA20094118} for the time discretisation. We use CFL number of $0.8$ and GLM-MHD method to maintain $\bs{\nabla} \cdot \bs{B}=0$ \citep{DEDNER2002645}. The initial magneto-hydrostatics stratification places the TR at $2$ Mm where the temperature smoothly links $8000$ K chromosphere to a $1.8$ Mm corona (see Fig. 1). For the left and right boundary we utilise a periodic boundary condition. In the  ghost cells of the lower boundary we fix $\rho$, $e$ and $\bs{B}$ to their initial values. In the ghost cells for the upper boundary the values for $\rho$, $e$ are determined by the gravitational stratification and $\bs{B}$ was extrapolated assuming zero normal gradient. For both upper and lower boundary we take an antisymmetric boundary for the velocity components.
-%fffffffffffffffffffffff
-\mfig{1}{figures/numerical_Setup.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
-%fffffffffffffffffffffffff
-%------------------------------------------------------------------------------      
-\subsection{Driver}
-\label{subsec:driver}
-%------------------------------------------------------------------------------
-To drive the jet we us a momentum pulse at the base of computational domain for a specified period of time (ranging from $50-300s$). The jet is launched symmetrically by a driver in the center of the computational domain which varies both spatially and temporally. In the x-direction the jet vertical velocity is Gaussian with the FHWM of $350 \ \rm{km}$ ($j_w$) and as the jet evolves in time it will reach a switch off phase in which it will shut off with a hyperbolic tangent,
-\begin{equation}
-v_{j}(x) = -\frac{A}{2} \left( \tanh \left( \frac{\pi (t-t_{d})}{t_d}+ \pi \right) +1 \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
-\end{equation}    
-where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ is time, $t_{d}$ is the time for $v_j=0$ , $P$ is the period of the driver and $x_0$ is central location of the jet injection. The driver the width of the Gaussian is determined by $\Delta x$ which is the FWHM based of the jet width (see \fref{atoms_profile}),
-\begin{equation}
-\Delta x = \dfrac{j_w}{4 \sqrt{2 \log{2}}},
-\end{equation}  
-%fffffffffffffffffffff
-%\begin{figure}
-%\hspace{-1.5cm}
-%\captionsetup[subfigure]{labelformat=empty}
-%\subfloat[]{\includegraphics[width=0.6\linewidth]{figures/driver_dt_off.png}} 
-%\subfloat[]{\includegraphics[width=0.6\linewidth]{figures/driver_dx.png}} 
-%\caption{Example of driver velocity with $A=60$ km s$^{-1}$, $P$ and switch off time of $300$ s (LHS) and Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points (RHS).}
-%\label{fig4}
-%\end{figure}
-%ffffffffffffffffffffff
+
 
 \section{Outline of Thesis}
 
