@@ -25,6 +25,7 @@
 
 \usepackage{afterpage}
 \usepackage{pdflscape}
+\usepackage{xfrac}
 
 
 \usepackage{geometry}
@@ -87,8 +88,8 @@
 \newcommand\encircle[1]{%
   \tikz[baseline=(X.base)] 
     \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
-\newcommand{\Alfven}{Alfv\'{e}n } 
-\newcommand{\Alfvenic}{Alfv\'{e}nic }
+\newcommand{\Alfven}{Alfv\'{e}n} 
+\newcommand{\Alfvenic}{Alfv\'{e}nic}
 \newcommand{\size}{0.75}
 \newcommand\measureISpecification{4ex}% not defined in mwe
 \newcommand{\ctab}[1]{\raisebox{\dimexpr \measureISpecification/2 -.748ex}{#1}}% vertically centers numbers
@@ -357,10 +358,10 @@ Their widths and heights put them among the smallest categories of jets observed
 %\item  spicule properties have proven to be notoriously difficult to measure at the solar limb due to the super-position of many spicules along the line of sight combined with their narrow spatial extent and significant displacement during their short lifetime. The problem of superposition can be over-come by observing their disk counterpart.
 %\end{itemize}
 %------------------------------------------------------------------------------
-\subsection{X-ray and EUV jets}
-\label{subsec:euv}
+%\subsection{X-ray and EUV jets}
+%\label{subsec:euv}
 %------------------------------------------------------------------------------
-to do
+%to do
 %------------------------------------------------------------------------------
 \subsection{Summery of Spicular Jets}
 \label{subsec:jet_table}
@@ -392,9 +393,120 @@ RREs/RBEs & \multicolumn{1}{c|}{disk}  & \multicolumn{1}{c|}{$20-120$} & \multic
 \end{landscape}
 }
 %---------------------------------------------
-\section{MHD Equations}
+\section{Magnetohydrodynamic Equations}
 \label{section:MHD_eqs}
 %--------------------------------------------
+An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fluid) is given by combination of the Navier–Stokes equations of fluid dynamics with Maxell's equation of electromagnetism, that are the foundation of the magnetohydrodynamic (MHD) equations. An interesting property of the MHD equations is they are scale independent, hence they are suitable for describing laboratory plasma such as in tokamaks ($20~\rm{m}$) to astrophysical plasmas such as accretion disc of a active galactic nucleus ($10^{21}~\rm{m}$) \citep{goedbloed2004principles}. MHD theory holds if the typical length (time) scale are greater than the ion gyroperiod (gyroradius) and mean free path time (length) and the plasma velocities are not relativistic \citep{priest2014magnetohydrodynamics}. The MHD equations shown will be the ideal form, this is when plasma is perfectly conducting as well using the ideal gas law ($p = \rho \rgas T/\Tilde{\mu}$) when constructing them.    
+% ideal gas assumptions
+% 1. no intermolecular force
+% 2. No Volume
+% 3. Collisions perfectly elastic 
+%---------------------------------------------
+\subsection{Continuity Equation}
+\label{section:cont_eq}
+%--------------------------------------------
+The mass continuity equation which physical represents the matter cannot be created or destroyed, it simply changes to a different form of matter and is given by,
+\begin{equation}\label{eq86}
+\frac{\partial \rho}{\partial t} = - \bn \cdot (\rho \boldsymbol{v}).
+\end{equation}
+%---------------------------------------------
+\subsection{Momentum Equation}
+\label{section:cont_eq}
+%--------------------------------------------
+The momentum equation describes the balance between acceleration and pressure/tension forces, as shown by,
+\begin{equation}\label{eq87}
+\rho \frac{d \boldsymbol{v}}{dt} = - \nabla p + \frac{1}{\mu_0} (\bn \times \boldsymbol{B}) \times \boldsymbol{B} + \rho \boldsymbol{g}.
+\end{equation}
+The Lorentz force is a perpendicular force to the magnetic filed lines that is a combination of two forces that are created by the magnetic field,
+\begin{equation}\label{lor_for} 
+    \frac{1}{\mu_0}(\bs{\nabla}\times \bs{B})\times \bs{B} = \frac{1}{\mu_0}( \bs{B} \cdot \bs{\nabla}) \bs{B} - \nabla\left(\frac{ \bs{B}^2}{2\mu_0}\right).
+\end{equation}
+The two forces on the right hand side of \eref{lor_for} are the magnetic tension and magnetic pressure, respectively. The magnetic tension exerts to straighten out any bent magnetic fields lines and the magnetic pressure acts to push magnetic fields apart if they are bunch too close together.    %---------------------------------------------
+\subsection{Energy Equation}
+\label{section:cont_eq}
+%--------------------------------------------
+The energy equation given by, 
+\begin{equation}\label{eq88}
+\frac{D p}{D t} \left( \frac{p}{\rho^{\gamma}} \right) = 0.
+\end{equation}
+where $D/Dt = \partial/\partial t+\cdot \bn$ is the material derivative, which describes the derivative when frame the of reference is moving with the fluid flow.
+%---------------------------------------------
+\subsection{Induction Equation}
+\label{section:cont_eq}
+%--------------------------------------------
+The full induction equation describes the temporal evolution of the magnetic field, with respect to the advection and dissipation of the magnetic field,
+\begin{equation}\label{eq89}
+\frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}) - \frac{1}{\mu_0} \nabla \times (\eta \bn \times \boldsymbol{B}).
+\end{equation}
+The behavior of the magnetic is determined by the balance two terms on the right hand side which is defined by the magnetic Renolds number, 
+\begin{equation}
+    R_m = \frac{\bn \times (\boldsymbol{v} \times \boldsymbol{B})}{\eta \nabla \bs{B}}=\frac{l_0 V_0}{\eta},
+\end{equation}
+where $l_0$ ($v_0$) are typical length (velocity) scales. For structures on the Sun the typical length scales tend to be large in comparison to the magnetic diffusivity, which results in a large Reynolds number. This magnetic Renolds number has important implication with regards to coronal heating as it means that it difficult to dissipate waves in the corona. In general for a solar plasma the ideal limit is applicable and we can assumed that we have a perfectly conduction plasma ($R_m>>1$) which modifies the induction equation to,
+\begin{equation}\label{perf_induct}
+\frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}).
+\end{equation}
+This large $R_m$ has important implications for magnetic flux conservation as Alfv\'{e}n's theorem shows that the magnetic filed behaves as if it moves with the plasma \citep{priest2014magnetohydrodynamics}. This shown by starting with taking a magnetic flux through a surface $S$ enclosed a curve $C$. The evolution of the magnetic field would be given by,
+\begin{equation}
+    \psi = \iint_s \bs{B} \cdot d\bs{S}.
+\end{equation}
+When considering the temporal evolution of the magnetic flux over the defined surface then,
+\begin{equation}
+    \frac{d \psi}{ dt} = \iint \frac{\partial \bs{B}}{ \partial t} \cdot d\bs{S} + \oint_c  \bs{B} \cdot \bs{v} \times d\bs{l},
+\end{equation}
+where $d\bs{l}$ is an element parallel to curve $C$. By using Stokes theorem on ($\bs{B} \cdot \bs{v} \times d\bs{l} = - \bs{v} \times \bs{B} \cdot d \bs{l}$), one obtains,
+\begin{equation}
+    \frac{d}{dt} \iint_S \bs{B} \cdot d \bs{S} = \iint_S \left( \frac{\partial \boldsymbol{B}}{\partial t} - \bn \times (\boldsymbol{v} \times \boldsymbol{B})  \right) \cdot d\bs{S} = 0, 
+\end{equation}
+which is zero due to \eqref{perf_induct}. This implies no matter what the plasma does it is moving around with the same number of field lines going through the surface which it encompasses the same number of plasma particles. The magnetic field lines are frozen into the plasma, therefore if the plasma move the magnetic field lines have to move with it e.g. if the plasma expands so too will the filed lines.
+%---------------------------------------------
+\subsection{Solenoidal Constraint}
+\label{section:cont_eq}
+%--------------------------------------------
+The solenoidal constraint implies that there are no magnetic monopoles or pure sinks of the magnetic field,
+\begin{equation}\label{eq90}
+\nabla \cdot \boldsymbol{B} = 0.
+\end{equation}
+%---------------------------------------------
+\subsection{Overview of MHD waves}
+\label{section:kink_saus}
+%--------------------------------------------
+Whether studying the ideal MHD equations in a slab or cylindrical geometry one can obtain multiple different wave types. For simplicity we take a slab geometry with no gravity, uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, equilibrium pressure is constant, and no initial flow. To study the wave behavour of this system we first linerise the ideal MHD equations to study small perturbation (subscript $1$) from the plasma equilibrium (subscript $0$), 
+\begin{equation} \label{eq91}
+\boldsymbol{B} = \boldsymbol{B}_0 + \boldsymbol{B}_1 (\boldsymbol{r},t) , \ \ \boldsymbol{v} = \boldsymbol{v}_1 (\boldsymbol{r}, t) , \ \ \rho = \rho_0 + \rho_1 ( \boldsymbol{r},t) , \ \ p = p_0 + p_1 ( \boldsymbol{r}, t) ,
+\end{equation}
+where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to ideal MHD equations and neglecting higher order terms for the perturbations yields,
+\begin{equation}
+\frac{\partial \rho_1}{\partial t} = \rho_0 ( \bn \cdot \boldsymbol{v}_1),
+\end{equation}
+\begin{equation}
+\rho_0 \frac{\partial \boldsymbol{v}_1}{\partial t}  = - \nabla p_1 + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}_1) \times \boldsymbol{B}_0,
+\end{equation}
+\begin{equation}
+\frac{\partial p_1}{\partial t} = c^2_{s0}  \frac{\partial \rho_1}{ \partial t},
+\end{equation}
+\begin{equation}
+\frac{\partial \boldsymbol{B}_1}{\partial t} = \nabla \times (\boldsymbol{v}_1 \times \boldsymbol{B}_0),
+\end{equation}
+\begin{equation}
+\nabla \cdot \boldsymbol{B}_0 = \nabla \cdot \boldsymbol{B}_1 = 0 ,
+\end{equation}
+where $c_{s0} = \sqrt{\gamma p_0/ \rho_0}$ is the sound speed. A general wave equation can be obtained by combing the linearise ideal MHD equations,
+\begin{equation}\label{wave_eq}
+    \frac{\partial^2 \bs{v}_1}{\partial t^2} = c_{s0}^2 \bn (\bn \cdot \bs{v}) + \frac{1}{\mu \rho_0} (\bn \times (\bn \times (\bs{v}\times\bs{B_0}))) \times \bs{B_0}.
+\end{equation}
+As we are looking for wave-like solution, we assume solution will have to form,
+\begin{equation}\label{wave_plane_sol}
+    \bs{v_1} = \bs{C_v} e^{i( \bs{k}\cdot \bs{r} - \omega t)},
+\end{equation}
+where $\bs{k}=(k_x,0,k_z)$ is the wave vector ($k_y=0$ for simplicity), $\omega$ is the frequency. Applying \eqref{wave_plane_sol} to the wave equation \eref{wave_eq}, one can obtain a dispersion relation,
+\begin{equation}\label{disp_rel}
+ (\omega^2-k^2_z V_{A0}^2)(\omega^4-\omega^2k^2(c_{s0}+V_{A0})+k^2 k^2_z c_{s0}^2 V_{A0}^2) = 0,
+\end{equation}
+where $V_{A0}=B_0/\sqrt{\mu \rho_0}$ is the \Alfven speed. This dispersion relation contain multiple solutions. The first solution is obtained if we assume $\beta \gg 1$ and hence can omit any magnetic terms, i.e. $V_{A0}=0$, then one obtain the solution for the forward and back propagating sound waves from \eref{disp_rel}, $\omega = \pm k c_{s0}$. The sound waves are only possible if the fluid is compressible and they are longtuidainal waves that. If the environment is uniform in temperature then they will propagate isotropically. The second solution comes from the first term, $\omega=\pm k_z V_{A0}$, which is the forward and backward propagating \Alfven waves. \Alfven waves are a purely magnetic waves that propagate in along the magnetic field lines. The third set of solutions are,
+\begin{equation}
+    \omega^2 = \frac{1}{2} k^2{c_{s0}+V_{A0}^2} \left( 1 \pm \sqrt{1-4c^2_T \frac{ k^2_z}{k^2}}  \right)
+\end{equation}
 These magnetic fields support waves oscillations which can be studies to in the coronal environment such as coronal loops which allows us to determine properties such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}.
 %------------------------------------------------------------------------------
 \subsection{may include else where}
