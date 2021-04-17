@@ -446,7 +446,7 @@ where $l_0$ ($v_0$) are typical length (velocity) scales. For structures on the 
 \begin{equation}\label{perf_induct}
 \frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}).
 \end{equation}
-This large $R_m$ has important implications for magnetic flux conservation as Alfv\'{e}n's theorem shows that the magnetic filed behaves as if it moves with the plasma \citep{priest2014magnetohydrodynamics}. This shown by starting with taking a magnetic flux through a surface $S$ enclosed a curve $C$. The evolution of the magnetic field would be given by,
+This large $R_m$ has important implications for magnetic flux conservation as  Alfv\'{e}n's theorem shows that the magnetic filed behaves as if it moves with the plasma \citep{priest2014magnetohydrodynamics}. This shown by starting with taking a magnetic flux through a surface $S$ enclosed a curve $C$. The evolution of the magnetic field would be given by,
 \begin{equation}
     \psi = \iint_s \bs{B} \cdot d\bs{S}.
 \end{equation}
@@ -468,15 +468,15 @@ The solenoidal constraint implies that there are no magnetic monopoles or pure s
 \nabla \cdot \boldsymbol{B} = 0.
 \end{equation}
 %---------------------------------------------
-\subsection{Overview of MHD waves}
-\label{section:kink_saus}
+\subsection{Overview of MHD Waves}
+\label{section:mhd_Waves}
 %--------------------------------------------
-Whether studying the ideal MHD equations in a slab or cylindrical geometry one can obtain multiple different wave types. For simplicity we take a slab geometry with no gravity, uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, equilibrium pressure is constant, and no initial flow. To study the wave behavour of this system we first linerise the ideal MHD equations to study small perturbation (subscript $1$) from the plasma equilibrium (subscript $0$), 
+MFT are observe in multiple regions of the Sun, stemming out from granular lanes and provide a photosphere to corona connection (see Fig.~\ref{fig:chromo_Cart}). These tubes have been have been shown theoretically act as waves guides \citep{Roberts1981SoPh6939R, Edwin1982SoPh76239E, Roberts1990IAUS142159R, Goossens1992SoPh138233G, Goossens2009AA503213G, Murawski2015AA577A126M, Allcock2017SoPh29235A}. Also, they act as a guide for spicular material ejected into the solar atmosphere.The waves behavior in magnetic slabs has been studied by \cite{Roberts1981SoPh6939R} and \cite{Edwin1982SoPh76239E}. We will outline parts of the derivations to gain a fundamental insight into the wave behaviour of these MFT. For simplicity we will study the ideal MHD equations further in a slab geometry, taking a plasma medium with no gravity, with a uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, is in pressure equilibrium, and has no initial flow. To study the wave behaviour of this system we first linerise the ideal MHD equations to study small perturbation (subscript $1$) from the plasma equilibrium (subscript $0$), 
 \begin{equation} \label{eq91}
 \boldsymbol{B} = \boldsymbol{B}_0 + \boldsymbol{B}_1 (\boldsymbol{r},t) , \ \ \boldsymbol{v} = \boldsymbol{v}_1 (\boldsymbol{r}, t) , \ \ \rho = \rho_0 + \rho_1 ( \boldsymbol{r},t) , \ \ p = p_0 + p_1 ( \boldsymbol{r}, t) ,
 \end{equation}
 where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to ideal MHD equations and neglecting higher order terms for the perturbations yields,
-\begin{equation}
+\begin{equation}\label{mhd_lin1}
 \frac{\partial \rho_1}{\partial t} = \rho_0 ( \bn \cdot \boldsymbol{v}_1),
 \end{equation}
 \begin{equation}
@@ -488,7 +488,7 @@ where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to
 \begin{equation}
 \frac{\partial \boldsymbol{B}_1}{\partial t} = \nabla \times (\boldsymbol{v}_1 \times \boldsymbol{B}_0),
 \end{equation}
-\begin{equation}
+\begin{equation}\label{mhd_lin2}
 \nabla \cdot \boldsymbol{B}_0 = \nabla \cdot \boldsymbol{B}_1 = 0 ,
 \end{equation}
 where $c_{s0} = \sqrt{\gamma p_0/ \rho_0}$ is the sound speed. A general wave equation can be obtained by combing the linearise ideal MHD equations,
@@ -504,9 +504,80 @@ where $\bs{k}=(k_x,0,k_z)$ is the wave vector ($k_y=0$ for simplicity), $\omega$
  (\omega^2-k^2_z V_{A0}^2)(\omega^4-\omega^2k^2(c_{s0}+V_{A0})+k^2 k^2_z c_{s0}^2 V_{A0}^2) = 0,
 \end{equation}
 where $V_{A0}=B_0/\sqrt{\mu \rho_0}$ is the \Alfven speed. This dispersion relation contain multiple solutions. The first solution is obtained if we assume $\beta \gg 1$ and hence can omit any magnetic terms, i.e. $V_{A0}=0$, then one obtain the solution for the forward and back propagating sound waves from \eref{disp_rel}, $\omega = \pm k c_{s0}$. The sound waves are only possible if the fluid is compressible and they are longtuidainal waves that. If the environment is uniform in temperature then they will propagate isotropically. The second solution comes from the first term, $\omega=\pm k_z V_{A0}$, which is the forward and backward propagating \Alfven waves. \Alfven waves are a purely magnetic waves that propagate in along the magnetic field lines. The third set of solutions are,
-\begin{equation}
-    \omega^2 = \frac{1}{2} k^2{c_{s0}+V_{A0}^2} \left( 1 \pm \sqrt{1-4c^2_T \frac{ k^2_z}{k^2}}  \right)
+\begin{equation}\label{MA_waves}
+    \omega^2 = \frac{1}{2} k^2{c_{s0}^2+V_{A0}^2} \left( 1 \pm \sqrt{1-4c^2_T \frac{ k^2_z}{k^2}}  \right),
 \end{equation}
+where, 
+\begin{equation}
+  c_T = \frac{c_{s0}^2V_{A0}^2}{\sqrt{c_{s0}^2+V_{A0}^2}}, 
+\end{equation}
+is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward and backwards fast (taking the $+$ of the last term) and slow (taking the $-$ of the last term) magnetoacoustic (MA) waves. These waves modes are a combination magnetic and sound wave, hence the restoring forces are a combination both pressure and Lorentz force. How all these waves behave in a medium is heavily affected by $\beta$.
+%---------------------------------------------
+%\subsection{MHD waves in a Magnetic Flux Tube}
+%\label{section:Tan_I}
+%--------------------------------------------
+%To understand the basic motion of a flux tube we summarise the steps as shown in \cite{Edwin1982SoPh76239E}. First we consider an interface that sits two different homogeneous plasma's. This tangential discontinuity is in the $yz$-plane at $x= 0$ and marks location where $\rho$, $p$, $\bs{B}$. The same assumption made for the plasma applied in Section~\ref{section:mhd_Waves} hold unless otherwise sated. By combining the MHD equations and Fourier analysing with $f(\bs{r},t)=\hat{f}(x) \exp(i (k_z z - \omega t))$, one obtains the wave equations for both sides of the interface as,
+%\begin{equation}
+%    \frac{d^2 \hat{v}_x}{dx^2}-m^2_{i,e} \hat{x}_x = 0,
+%\end{equation}
+%where $i$ ($e$) denote the parameters internal (external) to the MFT and
+%\begin{equation}\label{eva_trapp}
+%    m_{i,e}^2 = \frac{(k_z^2 c_{si,se}^2-\omega^2)(k_z^2 V_{Ai,Ae}^2-\omega^2)}{(c_{si,se}^2+V_{Ai,Ae}^2)(k_z^2 %c_{Ti,Te}^2-\omega^2)}.
+%\end{equation}
+%The Fourier analyse is this form due to parameters varying across the $x$-direction and that we are only interested in waves traveling along the interface. From \eref{eva_trapp}, one obtains two solutions, which are called the leaky modes ($m^2_{i,e}<0$) which travel towards infinity and the trapped modes ($m^2_{i,e}>0$), which decay as $x$ tends to infinity. Consider only solution for $m^2_{i,e}>0$), there are distinct MHD surface modes solutions for,
+%\begin{equation}
+%    \hat(v_x) = 
+%    \begin{cases}
+%      C_i e^{m_i} & \text{if } x \le 0, \\
+%      C_e e^{-m_e} & \text{if } x > 0.
+%    \end{cases}
+%\end{equation}
+%---------------------------------------------
+\subsection{MHD waves in a Magnetic Flux Tube}
+\label{section:Tan_I}
+%--------------------------------------------
+To understand the basic motion of a flux tube we summarise the steps as shown in \cite{Roberts1981SoPh6939R}. They introduce a MFT setting an in same state as outlined earlier in this Section~\ref{section:mhd_Waves}, bar a change in the magnetic field $\bs{B(x)}=(0,0,B_0(x))$ configuration,
+\begin{equation}
+    B_0(x) = 
+    \begin{cases}
+      B_i, & \text{if } |x| \leq x_0, \\
+      0, & \text{if } |x| > x_0.
+    \end{cases}
+\end{equation}
+where $\pm x_0$ is the location of the boundaries of the MFT and $i$ ($e$) denote the parameters internal (external) to the MFT. In this set up one can arrive at the dispersion relation by combining Eqs.~\eqref{mhd_lin1} - \eqref{mhd_lin2} and assuming plane wave solution ($f(x)=C_f e^{i(kz-\omega t)}$), one can obtain a wave equation of the form,
+\begin{equation}
+    \frac{d^2 \hat{v}_x}{dx^2}-m^2_{i,e} \hat{x}_x = 0,
+\end{equation}
+where $i$ ($e$) denote the parameters internal (external) to the MFT and
+\begin{equation}\label{eva_trapp}
+    m_{i,e}^2 = \frac{(k_z^2 c_{si,se}^2-\omega^2)(k_z^2 V_{Ai,Ae}^2-\omega^2)}{(c_{si,se}^2+V_{Ai,Ae}^2)(k_z^2 c_{Ti,Te}^2-\omega^2)}.
+\end{equation}
+The Fourier analyse is this form due to parameters varying across the $x$-direction and that we are only interested in waves traveling along the interface. From \eref{eva_trapp}, one can already obtains two solutions, which are called the leaky modes ($m^2_{i,e}<0$) which travel towards infinity and the trapped modes ($m^2_{i,e}>0$), which decay as $x$ tends to infinity. As we are not interest in searching for solutions for the leaky waves, we focuse on the trapped waves, which have a solution of the form,
+\begin{equation}
+        B_0(x) = 
+    \begin{cases}
+      C_{10} e^{m_e (x+x_0)}, &  \text{if } x < -x_0, \\
+      C_{00} \cosh{(m_i x)} + C_{01} \sinh{(m_i x)}, & \text{if } |x| < x_0, \\
+      C_{11} e^{-m_e(x-x_0)}, & \text{if } x > x_0,
+    \end{cases}
+\end{equation}
+where $C_{jl}$ for $j=0,1$ and $l=0,1$ are constants. By applying the boundary conditions at the interface to the system of MHD equations once an arrive at the dispersion relation,
+\begin{equation}\label{disp_saus_kink}
+    D_s(\omega) D_k(\omega) = 0,
+\end{equation}
+where,
+\begin{equation}
+    D_s(\omega) = \rho_em_i(\omega_\textrm{Ae}^2 - \omega^2)\tanh{(m_ix_0)} + \rho_im_e(\omega_\textrm{Ai}^2 - \omega^2),
+\end{equation}
+\begin{equation}
+    D_k(\omega) = \rho_em_i(\omega_\textrm{Ae}^2 - \omega^2)\coth{(m_ix_0)} + \rho_im_e(\omega_\textrm{Ai}^2 - \omega^2).
+\end{equation}
+The solutions for \eref{disp_saus_kink} lead to two separates waves modes know as the kink wave (from $D_k =0$) and sausage wave 
+
+
+
+
+
 These magnetic fields support waves oscillations which can be studies to in the coronal environment such as coronal loops which allows us to determine properties such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}.
 %------------------------------------------------------------------------------
 \subsection{may include else where}
