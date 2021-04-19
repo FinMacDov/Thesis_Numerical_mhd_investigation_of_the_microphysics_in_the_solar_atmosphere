@@ -88,8 +88,8 @@
 \newcommand\encircle[1]{%
   \tikz[baseline=(X.base)] 
     \node (X) [draw, shape=circle, inner sep=0] {\strut #1};}
-\newcommand{\Alfven}{Alfv\'{e}n} 
-\newcommand{\Alfvenic}{Alfv\'{e}nic}
+\newcommand{\Alfven}{Alfv\'{e}n } 
+\newcommand{\Alfvenic}{Alfv\'{e}nic }
 \newcommand{\size}{0.75}
 \newcommand\measureISpecification{4ex}% not defined in mwe
 \newcommand{\ctab}[1]{\raisebox{\dimexpr \measureISpecification/2 -.748ex}{#1}}% vertically centers numbers
@@ -127,20 +127,20 @@ $\boldsymbol{g} = (0,0,-g_z)$ $\rightarrow$ Gravitational acceleration. \\
 $\gamma = 5/3$ $\rightarrow$ Ratio of specific heat. \\
 $\eta$ $\rightarrow$ Magnetic diffusivity of the plasma. \\
 $\widetilde{\mu}$ $\rightarrow$ Mean atomic weight (the average mass per particle in the units of the proton mass).  \\
-$R$ $\rightarrow$ Gas constant.\\
+$\rgas$ $\rightarrow$ Gas constant.\\
 $\boldsymbol{j} = (1 / \mu_0) (\nabla \times \boldsymbol{B})$ $\rightarrow$ Current density.  \\
 $H(z) = \dfrac{R T(z)}{\widetilde{\mu} g}$ $\rightarrow$ Scale height.  \\
 $G$ $\rightarrow$ Gravitational constant. \\
 $M_{\odot}$ $\rightarrow$ Solar mass. \\
 $R_{\odot}$ $\rightarrow$ Solar radius. \\
 $p_{mag} = \dfrac{B^2}{2 \mu_0} $ $\rightarrow$ Magnetic pressure. \\
-$P=p_{tot} = p + p_{mag} $ $\rightarrow$ Total pressure. \\
+$p_{tot} = p + p_{mag} $ $\rightarrow$ Total pressure. \\
 $m = \rho \boldsymbol{v}$ $\rightarrow$ Momentum density. \\
 $e$ $\rightarrow$ Total energy density. \\ 
-$\boldsymbol{\xi}$ $\rightarrow$ Plasma displacement. \\
 $C^2_s = \gamma \dfrac{p}{\rho}$ $\rightarrow$ Sound speed squared. \\ 
 $V_A^2=\dfrac{B^2}{\mu_0 \rho}$ $\rightarrow$ \Alfven speed squared. 
 $\eta$ $\rightarrow$ magnetic diffusivity of the plasma
+$\beta=\dfrac{p}{p_{mag}}$ $\rightarrow$ Plasma beta
 \clearpage
 \setcounter{page}{1}
 %------------------------------------------------------------------------------
@@ -148,32 +148,20 @@ $\eta$ $\rightarrow$ magnetic diffusivity of the plasma
 \label{chap:intro}
 %------------------------------------------------------------------------------
 %\epigraphfontsize{\small\itshape}
-\epigraph{``We're going to explore the outside world someday, right? Far beyond these walls, there's flaming water, land made of ice, and fields of sand spread wide."}{--- \textit{Armin Arlert}, \textup{Hajime Isayama}, Vol. 2  Attack on Titian}
+\epigraph{``We're going to explore the outside world someday, right? Far beyond these walls, there's flaming water, land made of ice, and fields of sand spread wide."}{--- \textit{Armin Arlert}, \textup{Hajime Isayama}, Vol. 2  Attack on Titan}
 %------------------------------------------------------------------------------
 \section{Abstract}
 \label{sec:Abstract}
-%------------------------------------------------------------------------------
-{\color{green} !!to do and this will get moved else where!!}
-The motivation for my work is to conduct numerical model to research into the effects of spicules on the transition region, particularly focusing on whether spicules are the drivers of TRQs \citep{Scullion2011}. We are interested in spicules (solar jets) as these jets are ubiquitous ($100,000$  at  any  time \citep{Beckers1968}) on the Sun, thus are a good candidate for coronal heating. These jets could perturb the transition region (a thin region of approximately $100$ km between the chromosphere and corona where the temperature raises from $10^4$ K to $1$-$2$ MK) causing it to oscillate (akin to when a drum is struck), thus possibly being the cause of Transition Region Quakes (TRQ). TRQ are energetic waves in the transition region that evolves in a similar manner to waves on 2D elastic waveguides. When a solar jet rises up from the photosphere to corona it will cause the Transition region to ripple and thus perturb the surrounding magnetic fields. The goal is to analyse the waves and the energy involved in these waves to investigate if they could significantly contribute to coronal heating. \\ \\ The discovery of a link between these TRQ and Rapid Blueshifted Excursions (RBE) identified in CRISP H-alpha data is potentially very far reaching. Work by \cite{Henriques2016} has already found convincing evidence of links between RBEs and coronal transient events, however they did not study whether their coronal features corresponded to coherent waves (i.e. TRQ manifesting as propagating wave fronts). This task is vital for expanding our knowledge of the coupling between the lower solar atmosphere and the transition region. \\ \\ The importance of small-scale jets is well known as they are suggested to contribute to coronal heating and solar wind acceleration. Spicules themselves may be triggered by magnetic reconnection \citep{Pontieu2007PASJ} or waves \citep{Pontieu2004Natur}. Although, it is currently unclear what the decisive physical factors that trigger spicules, reconnection and waves are both promising candidates for their contribution to the energy exchange between the lower cool atmosphere and the corona. We also observe apparent transverse motion within spicules and intermittent Doppler-shifts in coronal loops could be evidence in support of the existence of \Alfven or kink waves in the solar atmosphere.  \\ \\
-Observations have demonstrated the ubiquity of vortex motions present in the solar atmosphere. These are usually found at photospheric Magentic Bright points (MBP) groups. Previous MHD simulations have shown such vortices could be responsible for the generation of various types of MHD waves, yet their relationship with other ubiquitous transients-jets (spicules) is unclear.
-%------------------------------------------------------------------------------
-\section{Overview and Motivation}
-\label{sec:overview}
-%------------------------------------------------------------------------------
-There are many mysterious about the Sun that remain to be unlocked, two relevant to this thesis are: how does the Sun maintain one million degree corona?; what drives and supplies mass to the solar wind? This thesis unfortunately does not provide the answer to these questions, but does increase our understanding of solar spicular jets that are main candidate in accounting for these phenomenon. \np 
+%------------------------------------------------------------------------
+There are many mysteries about the Sun that remain to be unlocked, two relevant to this thesis are: how does the Sun maintain one million degree corona? What drives and supplies mass to the solar wind? This thesis unfortunately does not provide the answer to these questions, but it does increase our understanding of solar spicular jets that are one of the main candidates in accounting for these phenomena. \np
 %
-Our main interest lies in small scale jets such as classical/type I spicules, dynamic fibrils and mottles. We seek to understand what are the dynamics of small jets by deploying simple numerical models. By using simple models we can identify the fundamental nature of these features. Parameter spaces are investigated for key parameters to study how sensitive the dynamics and morphology of spicular jets are to different environments. There have been numerous numerical studies on these jets. However, typically they focus on initiation mechanism and the vertical dynamics (e.g. heights reaches, speeds, trajectory, \textit{etc}). However, these jets are not just vertically dynamic, but are host of complex motion both in the vertical and horizontal directions. In the literature there few studies on the horizontal dynamics of spicules and this may be due to need for very high resolution to study this phenomenon, but with next generation of solar telescopes around the corner (\textit{e.g. DKIST and EST}), more research should come to pass on the cross-sectional evolution of small scale solar jets. This thesis embarks on highlighting the dynamics that they may be observed in these future studies.
-%-------------------
-%The motivation for my work is to construct a model that accurately simulates waves in the Transition region. We are interested in spicules (solar jets) as these jets are ubiquitous ($100,000$  at  any  time \citep{Beckers1968}) on the Sun, thus are a good candidate for coronal heating. These jets could perturb the transition region (a thin region of approximately $100$ km between the chromosphere and corona where the temperature raises from $10^4$ K to $1$-$2$ MK) causing it to oscillate (akin to when a drum is struck). When a solar jet rises up from the photosphere to corona it will cause the Transition region to ripple and thus perturb the surrounding magnetic fields. The goal is to analyses the waves and the energy involved in these waves to investigate if they could significantly contribute to coronal heating. \np
+Our main interest lies in small scale jets such as classical/type I spicules, dynamic fibrils, and mottles. We seek to understand what are the dynamics of small jets by deploying simple numerical models. By using simple models we can identify the fundamental nature of these features. Parameter spaces are investigated for key parameters to study how sensitive the dynamics and morphology of spicular jets are to different environmental conditions. \np
 %
-%My research for my PhD is to construct models using numerical magnetohydronamics (MHD) to investigate these dynamics that occur in the solar atmosphere. MHD is combination of the Navier$–$Stokes equation of fluid dynamics and Maxwell equations of electromagnetism. It describes the motion of magnetic field in the presence of electromagnetic fields, which is well suited for describing the dynamics of plasma in the solar atmosphere. One of main problems that have puzzled scientist for over 70 years is the coronal heating problem. This problem refers to observations that the temperature from the core of the Sun to the photosphere decreases as one would expect and the corona which is the outer layer of the Sun's atmosphere (i.e. furthest away from the nuclear reaction in the core) then logically this would be the coldest, however, the corona is 200 times hotter than the photosphere. This contradiction is referred to as the coronal heating problem. One candidate to explain coronal heating is based on magnetically driven waves. We know that these waves carry significant amount of energy, enough to heat and maintain the corona. However, these waves are not easily dissipated into heat energy. The challenge is to find mechanisms in which the energy in these waves are converted into heat energy.  \np
-%------------------------------------------------------------------------------
-%\section{Structure and Physical Properties of the Sun}
-%\label{sec:structure}
-%------------------------------------------------------------------------------
+There have been numerous numerical studies on these jets. However, typically they focus on initiation mechanism and the vertical dynamics (e.g. heights reaches, speeds, trajectory, \textit{etc}). However, these jets are not just vertically dynamic but are hosts of complex motion both in the vertical and horizontal directions. In the literature, there few studies on the horizontal dynamics of spicules and this may be due to needing for very high resolution to study this phenomenon, but with the next generation of solar telescopes around the corner (e.g. DKIST and EST), more research should come to pass on the cross-sectional evolution of small scale solar jets. This thesis embarks on highlighting the dynamics that may be observed in these future studies.
+%----------------------------------------------------------
 \section{The Sun}
 \label{sec:Sun}
-%------------------------------------------------------------------------------
+%----------------------------------------------------------
 The Sun is often referred to as a mundane star by the larger astrophysical community as it is a common main sequence star (G-type), particularly when its compared against the zoo of exotic astrophysical objects \textit{e.g.} stars in Binary systems, Neutron stars, Red Giants, White Dwarfs, Cepheids, Wolf-Rayet stars, \textit{etc.}. However, one of the most fascinating aspects of the Sun is its magnetic field. To quote Robert Leighton, ``If the sun had no magnetic field, it would be as uninteresting as most astronomers think it is". The magnetic field makes the Sun a truly a dynamics star as it moulds and shapes its atmospheric environment \textit{e.g.} coronal loops, prominence's, Rosettes, fibrils, Helmet streamers \textit{etc.}, as well store energy which can be released in dramatic fashion \textit{e.g.} coronal mass ejections, spicules, EUV jets \textit{etc.} Due high resolutions observations observers can fantastic images of these dynamics with both ground and space based instruments such as Solar Dynamic Observatory (SDO) \citep{Lemen2012SoPh27517L}, Solar and Heliospheric Observatory (SOHO), Transition Region and Coronal Explorer (TRACE), Hinode \citep{Tsuneta2008SoPh,Suematsu2008SoPh,Ichimoto2008SoPh}, Swedish Solar telescope (SST) \citep{Scharmer2003SPIE}. The combination of the Sun's magnetic field and it being the only star we can fully resolve gives us a marvellous space laboratory at our astronomical doorstep from which the physics of other stars can be understood. An overview of the basic properties of the Sun taken from \cite{priest2014magnetohydrodynamics}:
 Age: $4.6 \times 10^9$ years. \\
 Mass: $M_{\odot}= 1.99 \times 10^{30}$ kg. \\
@@ -396,7 +384,7 @@ RREs/RBEs & \multicolumn{1}{c|}{disk}  & \multicolumn{1}{c|}{$20-120$} & \multic
 \section{Magnetohydrodynamic Equations}
 \label{section:MHD_eqs}
 %--------------------------------------------
-An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fluid) is given by combination of the Navier–Stokes equations of fluid dynamics with Maxell's equation of electromagnetism, that are the foundation of the magnetohydrodynamic (MHD) equations. An interesting property of the MHD equations is they are scale independent, hence they are suitable for describing laboratory plasma such as in tokamaks ($20~\rm{m}$) to astrophysical plasmas such as accretion disc of a active galactic nucleus ($10^{21}~\rm{m}$) \citep{goedbloed2004principles}. MHD theory holds if the typical length (time) scale are greater than the ion gyroperiod (gyroradius) and mean free path time (length) and the plasma velocities are not relativistic \citep{priest2014magnetohydrodynamics}. The MHD equations shown will be the ideal form, this is when plasma is perfectly conducting as well using the ideal gas law ($p = \rho \rgas T/\Tilde{\mu}$) when constructing them.    
+An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fluid) is given by the combination of the Navier–Stokes equations of fluid dynamics with Maxwell's equation of electromagnetism, which are the foundation of the magnetohydrodynamic (MHD) equations. An interesting property of the MHD equations is they are scale independent, hence they are suitable for describing laboratory plasma such as in tokamaks ($20~\rm{m}$) to astrophysical plasmas such as accretion disc of an active galactic nucleus ($10^{21}~\rm{m}$) \citep{goedbloed2004principles}. MHD theory holds if the typical length (time) scale is greater than the ion gyroperiod (gyroradius) and mean free path time (length) and the plasma velocities are not relativistic \citep{priest2014magnetohydrodynamics}. The MHD equations shown will be the ideal form, this is when plasma is perfectly conducting as well using the ideal gas law ($p = \rho \rgas T/\Tilde{\mu}$) when constructing them. Where $p$ is the gas pressure, $\rho$ is the density, $\rgas=8.3\times 10^{3}~\rm{J~K^{-1}~kg{-1}}$ is the gas constant, and $\Tilde{\mu}=1$ is the mean atomic weight for a neutral plasma.    
 % ideal gas assumptions
 % 1. no intermolecular force
 % 2. No Volume
@@ -405,19 +393,20 @@ An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fl
 \subsection{Continuity Equation}
 \label{section:cont_eq}
 %--------------------------------------------
-The mass continuity equation which physical represents the matter cannot be created or destroyed, it simply changes to a different form of matter and is given by,
+The mass continuity equation which physically represents the matter cannot be created or destroyed, it simply changes to a different form of matter and is given by,
 \begin{equation}\label{eq86}
 \frac{\partial \rho}{\partial t} = - \bn \cdot (\rho \boldsymbol{v}).
 \end{equation}
+Where $\bs{v}=(v_x,v_y,v_z)$ is the plasma velocity and $t$ is time. 
 %---------------------------------------------
 \subsection{Momentum Equation}
 \label{section:cont_eq}
 %--------------------------------------------
-The momentum equation describes the balance between acceleration and pressure/tension forces, as shown by,
+The momentum equation describes the balance between acceleration and pressure/tension forces, as well as any other forces acting in the system, such as gravity, as shown by,
 \begin{equation}\label{eq87}
 \rho \frac{d \boldsymbol{v}}{dt} = - \nabla p + \frac{1}{\mu_0} (\bn \times \boldsymbol{B}) \times \boldsymbol{B} + \rho \boldsymbol{g}.
 \end{equation}
-The Lorentz force is a perpendicular force to the magnetic filed lines that is a combination of two forces that are created by the magnetic field,
+Where $\bs{B}=(B_x,B_y,B_z)$ is the magnetic field strength, $\mu_0=4 \pi \times 10^{-7}~\rm{Hm^{-1}}$ is the magnetic permeability of a vacuum, and $\bs{g} = (0,0,g_z)$ is the gravitational acceleration. The Lorentz force is a perpendicular force to the magnetic field lines that is a combination of two forces that are created by the magnetic field,
 \begin{equation}\label{lor_for} 
     \frac{1}{\mu_0}(\bs{\nabla}\times \bs{B})\times \bs{B} = \frac{1}{\mu_0}( \bs{B} \cdot \bs{\nabla}) \bs{B} - \nabla\left(\frac{ \bs{B}^2}{2\mu_0}\right).
 \end{equation}
@@ -427,9 +416,9 @@ The two forces on the right hand side of \eref{lor_for} are the magnetic tension
 %--------------------------------------------
 The energy equation given by, 
 \begin{equation}\label{eq88}
-\frac{D p}{D t} \left( \frac{p}{\rho^{\gamma}} \right) = 0.
+\frac{D}{D t} \left( \frac{p}{\rho^{\gamma}} \right) = 0.
 \end{equation}
-where $D/Dt = \partial/\partial t+\cdot \bn$ is the material derivative, which describes the derivative when frame the of reference is moving with the fluid flow.
+where $\gamma=5/3$ is the ratio of specific heats and $D/Dt = \partial/\partial t+\bn \cdot$ is the material derivative, which describes the derivative when the frame of reference is moving with the fluid flow.
 %---------------------------------------------
 \subsection{Induction Equation}
 \label{section:cont_eq}
@@ -438,15 +427,15 @@ The full induction equation describes the temporal evolution of the magnetic fie
 \begin{equation}\label{eq89}
 \frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}) - \frac{1}{\mu_0} \nabla \times (\eta \bn \times \boldsymbol{B}).
 \end{equation}
-The behavior of the magnetic is determined by the balance two terms on the right hand side which is defined by the magnetic Renolds number, 
+where $\eta= \mu_0 \sigma_c$ is the magnetic diffusivity and $\sigma_c$ is the electrical conductivity. The behaviour of the coupled behaviour of the magnetic field and plasma is determined by the balance of two terms on the right hand side which is defined by the magnetic Renolds number,
 \begin{equation}
     R_m = \frac{\bn \times (\boldsymbol{v} \times \boldsymbol{B})}{\eta \nabla \bs{B}}=\frac{l_0 V_0}{\eta},
 \end{equation}
-where $l_0$ ($v_0$) are typical length (velocity) scales. For structures on the Sun the typical length scales tend to be large in comparison to the magnetic diffusivity, which results in a large Reynolds number. This magnetic Renolds number has important implication with regards to coronal heating as it means that it difficult to dissipate waves in the corona. In general for a solar plasma the ideal limit is applicable and we can assumed that we have a perfectly conduction plasma ($R_m>>1$) which modifies the induction equation to,
+where $l_0$ ($v_0$) are typical length (velocity) scales. For structures on the Sun, the typical length scales tend to be large in comparison to the magnetic diffusivity, which results in a large Reynolds number. This magnetic Renolds number has important implications with regards to coronal heating as it means that it is difficult to dissipate waves in the corona. In general, for a solar plasma, the ideal limit is applicable and we can assume that we have a perfectly conduction plasma ($R_m>>1$) which modifies the induction equation to,
 \begin{equation}\label{perf_induct}
 \frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}).
 \end{equation}
-This large $R_m$ has important implications for magnetic flux conservation as  Alfv\'{e}n's theorem shows that the magnetic filed behaves as if it moves with the plasma \citep{priest2014magnetohydrodynamics}. This shown by starting with taking a magnetic flux through a surface $S$ enclosed a curve $C$. The evolution of the magnetic field would be given by,
+This large $R_m$ has important implications for the motion of the plasma and the magnetic field lines. This is because Alfv\'{e}n's theorem shows that the magnetic field behaves as if it moves with the plasma \citep{priest2014magnetohydrodynamics}. By taking a magnetic flux through a surface $S$ enclosed a curve $C$. The evolution of the magnetic field would be given by,
 \begin{equation}
     \psi = \iint_s \bs{B} \cdot d\bs{S}.
 \end{equation}
@@ -458,7 +447,7 @@ where $d\bs{l}$ is an element parallel to curve $C$. By using Stokes theorem on 
 \begin{equation}
     \frac{d}{dt} \iint_S \bs{B} \cdot d \bs{S} = \iint_S \left( \frac{\partial \boldsymbol{B}}{\partial t} - \bn \times (\boldsymbol{v} \times \boldsymbol{B})  \right) \cdot d\bs{S} = 0, 
 \end{equation}
-which is zero due to \eqref{perf_induct}. This implies no matter what the plasma does it is moving around with the same number of field lines going through the surface which it encompasses the same number of plasma particles. The magnetic field lines are frozen into the plasma, therefore if the plasma move the magnetic field lines have to move with it e.g. if the plasma expands so too will the filed lines.
+which is zero due to \eqref{perf_induct}. This implies no matter what the plasma does it is moving around with the same number of field lines going through the surface which encompasses the same number of plasma particles. The magnetic field lines are frozen into the plasma, therefore if the plasma moves the magnetic field lines have to move with it e.g. if the plasma expands so too will the field lines.
 %---------------------------------------------
 \subsection{Solenoidal Constraint}
 \label{section:cont_eq}
@@ -471,7 +460,7 @@ The solenoidal constraint implies that there are no magnetic monopoles or pure s
 \subsection{Overview of MHD Waves}
 \label{section:mhd_Waves}
 %--------------------------------------------
-MFT are observe in multiple regions of the Sun, stemming out from granular lanes and provide a photosphere to corona connection (see Fig.~\ref{fig:chromo_Cart}). These tubes have been have been shown theoretically act as waves guides \citep{Roberts1981SoPh6939R, Edwin1982SoPh76239E, Roberts1990IAUS142159R, Goossens1992SoPh138233G, Goossens2009AA503213G, Murawski2015AA577A126M, Allcock2017SoPh29235A}. Also, they act as a guide for spicular material ejected into the solar atmosphere.The waves behavior in magnetic slabs has been studied by \cite{Roberts1981SoPh6939R} and \cite{Edwin1982SoPh76239E}. We will outline parts of the derivations to gain a fundamental insight into the wave behaviour of these MFT. For simplicity we will study the ideal MHD equations further in a slab geometry, taking a plasma medium with no gravity, with a uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, is in pressure equilibrium, and has no initial flow. To study the wave behaviour of this system we first linerise the ideal MHD equations to study small perturbation (subscript $1$) from the plasma equilibrium (subscript $0$), 
+MFT is observed in multiple regions of the Sun, stemming out from granular lanes and provide a photosphere to corona connection (see Fig.~\ref{fig:chromo_Cart}). These tubes have been have been shown theoretically act as waves guides \citep{Roberts1981SoPh6939R, Edwin1982SoPh76239E, Roberts1990IAUS142159R, Goossens1992SoPh138233G, Goossens2009AA503213G, Murawski2015AA577A126M, Allcock2017SoPh29235A}. The wave behaviour in magnetic slabs has been studied by \cite{Roberts1981SoPh6939R} and \cite{Edwin1982SoPh76239E}. We will outline parts of the derivations to gain a fundamental insight into the wave behaviour of these MFT. For simplicity we will study the ideal MHD equations further in a slab geometry, taking a plasma medium with no gravity, with a uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, is in pressure equilibrium, and has no initial flow. To study the wave behaviour of this system we first linearise the ideal MHD equations to study small perturbation (subscript $1$) from the plasma equilibrium (subscript $0$), 
 \begin{equation} \label{eq91}
 \boldsymbol{B} = \boldsymbol{B}_0 + \boldsymbol{B}_1 (\boldsymbol{r},t) , \ \ \boldsymbol{v} = \boldsymbol{v}_1 (\boldsymbol{r}, t) , \ \ \rho = \rho_0 + \rho_1 ( \boldsymbol{r},t) , \ \ p = p_0 + p_1 ( \boldsymbol{r}, t) ,
 \end{equation}
@@ -491,19 +480,19 @@ where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to
 \begin{equation}\label{mhd_lin2}
 \nabla \cdot \boldsymbol{B}_0 = \nabla \cdot \boldsymbol{B}_1 = 0 ,
 \end{equation}
-where $c_{s0} = \sqrt{\gamma p_0/ \rho_0}$ is the sound speed. A general wave equation can be obtained by combing the linearise ideal MHD equations,
+where $c_{s0} = \sqrt{\gamma p_0/ \rho_0}$ is the equilibrium sound speed. A general wave equation can be obtained by combining the linearise ideal MHD equations,
 \begin{equation}\label{wave_eq}
     \frac{\partial^2 \bs{v}_1}{\partial t^2} = c_{s0}^2 \bn (\bn \cdot \bs{v}) + \frac{1}{\mu \rho_0} (\bn \times (\bn \times (\bs{v}\times\bs{B_0}))) \times \bs{B_0}.
 \end{equation}
-As we are looking for wave-like solution, we assume solution will have to form,
+As we are looking for a wave-like solution, we assume a solution will have to form,
 \begin{equation}\label{wave_plane_sol}
-    \bs{v_1} = \bs{C_v} e^{i( \bs{k}\cdot \bs{r} - \omega t)},
+    \bs{f}(\bs{r},t) = \hat{f} e^{i( \bs{k}\cdot \bs{r} - \omega t)},
 \end{equation}
-where $\bs{k}=(k_x,0,k_z)$ is the wave vector ($k_y=0$ for simplicity), $\omega$ is the frequency. Applying \eqref{wave_plane_sol} to the wave equation \eref{wave_eq}, one can obtain a dispersion relation,
+where $f$ is a placeholder of any perturbed quantity (in this case $\bs{v}$), $\hat{f}$ is the amplitude of each perturbation, $\bs{k}=(k_x,0,k_z)$ is the wave vector ($k_y=0$ for simplicity), and $\omega$ is the frequency. Applying \eqref{wave_plane_sol} to the wave equation \eref{wave_eq}, one can obtain a dispersion relation,
 \begin{equation}\label{disp_rel}
  (\omega^2-k^2_z V_{A0}^2)(\omega^4-\omega^2k^2(c_{s0}+V_{A0})+k^2 k^2_z c_{s0}^2 V_{A0}^2) = 0,
 \end{equation}
-where $V_{A0}=B_0/\sqrt{\mu \rho_0}$ is the \Alfven speed. This dispersion relation contain multiple solutions. The first solution is obtained if we assume $\beta \gg 1$ and hence can omit any magnetic terms, i.e. $V_{A0}=0$, then one obtain the solution for the forward and back propagating sound waves from \eref{disp_rel}, $\omega = \pm k c_{s0}$. The sound waves are only possible if the fluid is compressible and they are longtuidainal waves that. If the environment is uniform in temperature then they will propagate isotropically. The second solution comes from the first term, $\omega=\pm k_z V_{A0}$, which is the forward and backward propagating \Alfven waves. \Alfven waves are a purely magnetic waves that propagate in along the magnetic field lines. The third set of solutions are,
+where $V_{A0}=B_0/\sqrt{\mu \rho_0}$ is the equilibrium \Alfven speed. This dispersion relation contains multiple solutions. The first solution is obtained if we assume $\beta \gg 1$ and hence can omit any magnetic terms, i.e. $V_{A0}=0$, then one obtains the solution for the forward and backward propagating sound waves from \eref{disp_rel}, $\omega = \pm k c_{s0}$. The sound waves are only possible if the fluid is compressible and they are longitudinal waves. If the environment is uniform in temperature then they will propagate isotropically. The second solution comes from the first term, $\omega=\pm k_z V_{A0}$, which is the forward and backward propagating \Alfven waves. \Alfven waves are purely transverse magnetic waves that propagate along the magnetic field lines. The third set of solutions are,
 \begin{equation}\label{MA_waves}
     \omega^2 = \frac{1}{2} k^2{c_{s0}^2+V_{A0}^2} \left( 1 \pm \sqrt{1-4c^2_T \frac{ k^2_z}{k^2}}  \right),
 \end{equation}
@@ -511,7 +500,7 @@ where,
 \begin{equation}
   c_T = \frac{c_{s0}^2V_{A0}^2}{\sqrt{c_{s0}^2+V_{A0}^2}}, 
 \end{equation}
-is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward and backwards fast (taking the $+$ of the last term) and slow (taking the $-$ of the last term) magnetoacoustic (MA) waves. These waves modes are a combination magnetic and sound wave, hence the restoring forces are a combination both pressure and Lorentz force. How all these waves behave in a medium is heavily affected by $\beta$.
+is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward and backwards fast (taking the $+$ of the last term) and slow (taking the $-$ of the last term) magnetoacoustic (MA) waves. These waves modes are a combination of magnetic and sound waves, hence the restoring forces are a combination of both pressure and Lorentz force. How all these waves behave in a medium is heavily affected by $\beta$.
 %---------------------------------------------
 %\subsection{MHD waves in a Magnetic Flux Tube}
 %\label{section:Tan_I}
@@ -536,7 +525,7 @@ is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward an
 \subsection{MHD waves in a Magnetic Flux Tube}
 \label{section:Tan_I}
 %--------------------------------------------
-To understand the basic motion of a flux tube we summarise the steps as shown in \cite{Roberts1981SoPh6939R}. They introduce a MFT setting an in same state as outlined earlier in this Section~\ref{section:mhd_Waves}, bar a change in the magnetic field $\bs{B(x)}=(0,0,B_0(x))$ configuration,
+To understand the basic motion of a flux tube we summarise the steps as shown in \cite{Roberts1981SoPh6939R}. They introduce a MFT setting an in same state as outlined earlier in this Section~\ref{section:mhd_Waves}, bar a change in the magnetic field $(\bs{B}(x)=(0,0,B_0(x))$ configuration,
 \begin{equation}
     B_0(x) = 
     \begin{cases}
@@ -544,15 +533,15 @@ To understand the basic motion of a flux tube we summarise the steps as shown in
       0, & \text{if } |x| > x_0.
     \end{cases}
 \end{equation}
-where $\pm x_0$ is the location of the boundaries of the MFT and $i$ ($e$) denote the parameters internal (external) to the MFT. In this set up one can arrive at the dispersion relation by combining Eqs.~\eqref{mhd_lin1} - \eqref{mhd_lin2} and assuming plane wave solution ($f(x)=C_f e^{i(kz-\omega t)}$), one can obtain a wave equation of the form,
+where $\pm x_0$ is the location of the boundaries of the MFT and $i$ ($e$) denote the parameters internal (external) to the MFT. In this set up one can arrive at the dispersion relation by combining Eqs.~\eqref{mhd_lin1} - \eqref{mhd_lin2} and assuming plane wave solution ($f(x)=\hat{f} e^{i(kz-\omega t)}$), one can obtain a wave equation of the form,
 \begin{equation}
-    \frac{d^2 \hat{v}_x}{dx^2}-m^2_{i,e} \hat{x}_x = 0,
+    \frac{d^2 \hat{v}_x}{dx^2}-m^2_{i,e} \hat{v}_x = 0,
 \end{equation}
-where $i$ ($e$) denote the parameters internal (external) to the MFT and
+and,
 \begin{equation}\label{eva_trapp}
     m_{i,e}^2 = \frac{(k_z^2 c_{si,se}^2-\omega^2)(k_z^2 V_{Ai,Ae}^2-\omega^2)}{(c_{si,se}^2+V_{Ai,Ae}^2)(k_z^2 c_{Ti,Te}^2-\omega^2)}.
 \end{equation}
-The Fourier analyse is this form due to parameters varying across the $x$-direction and that we are only interested in waves traveling along the interface. From \eref{eva_trapp}, one can already obtains two solutions, which are called the leaky modes ($m^2_{i,e}<0$) which travel towards infinity and the trapped modes ($m^2_{i,e}>0$), which decay as $x$ tends to infinity. As we are not interest in searching for solutions for the leaky waves, we focuse on the trapped waves, which have a solution of the form,
+The Fourier analysis is this form due to parameters varying across the $x$-direction and that we are only interested in waves traveling along the interface. From \eref{eva_trapp}, one can already obtains two solutions, which are called the leaky modes ($m^2_{i,e}<0$) which travel towards infinity and the trapped modes ($m^2_{i,e}>0$), which decay as $x$ tends to infinity. As we are not interest in searching for solutions for the leaky waves, we focuse on the trapped waves, which have a solution of the form,
 \begin{equation}
         B_0(x) = 
     \begin{cases}
@@ -563,42 +552,44 @@ The Fourier analyse is this form due to parameters varying across the $x$-direct
 \end{equation}
 where $C_{jl}$ for $j=0,1$ and $l=0,1$ are constants. By applying the boundary conditions at the interface to the system of MHD equations once an arrive at the dispersion relation,
 \begin{equation}\label{disp_saus_kink}
-    D_s(\omega) D_k(\omega) = 0,
+    D_k(\omega)D_s(\omega)  = 0,
 \end{equation}
 where,
-\begin{equation}
-    D_s(\omega) = \rho_em_i(\omega_\textrm{Ae}^2 - \omega^2)\tanh{(m_ix_0)} + \rho_im_e(\omega_\textrm{Ai}^2 - \omega^2),
-\end{equation}
-\begin{equation}
+\begin{equation}\label{kw_eq}
     D_k(\omega) = \rho_em_i(\omega_\textrm{Ae}^2 - \omega^2)\coth{(m_ix_0)} + \rho_im_e(\omega_\textrm{Ai}^2 - \omega^2).
 \end{equation}
-The solutions for \eref{disp_saus_kink} lead to two separates waves modes know as the kink wave (from $D_k =0$) and sausage wave 
-
-
-
-
-
-These magnetic fields support waves oscillations which can be studies to in the coronal environment such as coronal loops which allows us to determine properties such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}.
+\begin{equation}\label{sw_eq}
+    D_s(\omega) = \rho_em_i(\omega_\textrm{Ae}^2 - \omega^2)\tanh{(m_ix_0)} + \rho_im_e(\omega_\textrm{Ai}^2 - \omega^2),
+\end{equation}
+The solutions for \eref{disp_saus_kink} lead to two separates waves modes know as the kink wave (from $D_k =0$) and sausage wave (from $D_s =0$). The trigonometric functions in Eqs.~\eqref{kw_eq} and \eqref{sw_eq} are a key component that determining whether the boundaries of the MFT move in (kink wave) or out (sausage wave) of phase, as shown in Fig.~\ref{KW_SW}. \np
+%
+There are numerous reports of all these MHD waves in the solar atmosphere \citep{Tomczyk2007Sci3171192T, Tomczyk2009ApJ6971384T, jess_alfven_2009, Morton2012NatCo31315M}. By studying these waves (referred to as solar seismology) one can provide diagnostics of the plasma properties that we otherwise can be challenging to measure directly such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}. In particular interest of this thesis, these waves modes have been reported to occur in spicules \citep{Kukhianidze2006AA, Okamoto2011ApJ736L24O, Jess2012ApJ744L5J, Verth2016GMS216431V, Sharma2018ApJ85361S}.
+%fffffffffffffffffffffff
+\mfig{0.75}{figures/KW_SW.png}{Example of the effect of the sausage (left) and kink (right) waves on MFT. This image is extracted from \cite{Morton2012NatCo31315M}.}{KW_SW}
+%fffffffffffffffffffffff
+%---------------------------------------------
+\section{outline of Thesis}
+\label{section:outline}
+The thesis aims to investigate the fundamental dynamics of spicular jets by applying simple models. Each chapter will contain as follows:
+\begin{itemize}
+    \item {\bf{Chapter 2}}: An overview is given on the current states of numerical models. We outline the software we use and detail our numerical setup that is applied throughout the thesis.
+    \item {\bf{Chapter 3}}: We study synthetic jets in a simplified solar atmosphere. We launch purely vertical jets with a momentum pulse. By changing multiple parameters linked to the driver (length and initial velocity amplitude) and the magnetic field strength, we investigate how the jet height, cross-sectional width variations, and morphology is impacted by the parameter space.
+    \item {\bf{Chapter 4}}: In this chapter, we add increasing degrees of tilt from the vertical for the synthetic jet to see how this impacts the jet dynamics and morphology. A focus parameter space is used to investigate and an improved jet tracking software is deployed to measure the heights and cross-sectional width variations.     
+    \item {\bf{Chapter 5}}: The cross-section width variations identified in Chapter 3 and 4 are studied further by comparison with observations. We treat the cross-sectional width variations in synthetic jets and observations as standing waves and apply a wavelet analysis. We also make a comparison of the knots observed in the jet beams of the synthetic jets with blobs reported in larger scale solar jets.   
+    \item {\bf{Chapter 6}}: A summary of the main results and outline the future steps one could take to build upon the research outline in the thesis.  
+\end{itemize}
+%--------------------------------------------
 %------------------------------------------------------------------------------
-\subsection{may include else where}
+%\subsection{may include else where}
 %------------------------------------------------------------------------------
 %------------------ add else where
-{\color{green} !!add else where!! }These jets change in appearance when observed in different spectral lines and in dependence from site they appear leading to whole range of names have to describe the jet-like phenomena, such as dynamic fibrils, mottles and spicules. It possible some of these jets are the same phenomenon, but due to uncertainty have been given different labels. Comparisons of properties and behaviors of jet-like structures which make up the chromosphere show a similarity of characteristics and eludes that some of these structures, possibly all of these structures are related or even are the same phenomena \cite{Porfir2016A}. For example there has been a long standing question where spicules and mottles are the same. Dark mottles are seen on disk, where as the classic spicule is observed at the limb and they have similar properties \cite{Pontieu2007ASPC}. The formation of jets in the solar chromosphere is one of the most important, but also most poorly understood phenomena of the Sun's magnetized outer atmosphere \citep{Hansteen2006ApJ}.
-
-Observations reveal presence of ubiquitous small-scale jet-like structures on the Sun in a variety of magnetic environments e.g. in quiet-Sun (QS) \citep{Pontieu2007astroph2081D,Rouppe2007ApJ660L169R,Pereira2012,Pereira2014ApJ}, around active regions (ARs) \citep{Pontieu2007astroph2081D,Pereira2012,Rouppe2013ApJ77656R,Gafeira2017ApJS2296G} and coronal holes (CHs) \citep{Yamauchi2005ApJ629572Y,Moreno2008ApJ673L211M,Pereira2012,Young2015ApJ801124Y}. Depending upon the observed wavelengths, energetics, physical characteristics (length, lifetime, velocity), regions (QS, AR or CH) or locations (at-limb or on-disk), these structures are further categorized as different features (e.g. spicules, mottles, dynamic fibrils, marcospicules, x-ray jets, EUV jets, coronal jets, \textit{etc.}) that permeate the solar atmosphere. Advancement in instrumentation and observational techniques has further led to the detection of similar features \citep[\textit{e.g.}][]{Gafeira2017, Cho2019ApJ884L38C}. Despite much investigation inton their physical and dynamical characteristics, still many questions remained unanswered regarding their role in mass, energy and momentum across the transition region, to the corona. \np
-
+%{\color{green} !!add else where!! }These jets change in appearance when observed in different spectral lines and in dependence from site they appear leading to whole range of names have to describe the jet-like phenomena, such as dynamic fibrils, mottles and spicules. It possible some of these jets are the same phenomenon, but due to uncertainty have been given different labels. Comparisons of properties and behaviors of jet-like structures which make up the chromosphere show a similarity of characteristics and eludes that some of these structures, possibly all of these structures are related or even are the same phenomena \cite{Porfir2016A}. For example there has been a long standing question where spicules and mottles are the same. Dark mottles are seen on disk, where as the classic spicule is observed at the limb and they have similar properties \cite{Pontieu2007ASPC}. The formation of jets in the solar chromosphere is one of the most important, but also most poorly understood phenomena of the Sun's magnetized outer atmosphere \citep{Hansteen2006ApJ}.
+%Observations reveal presence of ubiquitous small-scale jet-like structures on the Sun in a variety of magnetic environments e.g. in quiet-Sun (QS) \citep{Pontieu2007astroph2081D,Rouppe2007ApJ660L169R,Pereira2012,Pereira2014ApJ}, around active regions (ARs) \citep{Pontieu2007astroph2081D,Pereira2012,Rouppe2013ApJ77656R,Gafeira2017ApJS2296G} and coronal holes (CHs) \citep{Yamauchi2005ApJ629572Y,Moreno2008ApJ673L211M,Pereira2012,Young2015ApJ801124Y}. Depending upon the observed wavelengths, energetics, physical characteristics (length, lifetime, velocity), regions (QS, AR or CH) or locations (at-limb or on-disk), these structures are further categorized as different features (e.g. spicules, mottles, dynamic fibrils, marcospicules, x-ray jets, EUV jets, coronal jets, \textit{etc.}) that permeate the solar atmosphere. Advancement in instrumentation and observational techniques has further led to the detection of similar features \citep[\textit{e.g.}][]{Gafeira2017, Cho2019ApJ884L38C}. Despite much investigation inton their physical and dynamical characteristics, still many questions remained unanswered regarding their role in mass, energy and momentum across the transition region, to the corona. \np
 % it might be worthwhile defining the classical spicule here then branching off to TI TII spicules
-They are similar to the traditional limb spicule {\color{green} !!need to define in spciule section!!}
-
-They reach their apex within 1-2 minutes after it initial appearance and then fall back to the low chromosphere with a similar velocity its starting ascent \citep{Tsiropoula2012}. Spicules have always been an important feature to study since their discovery over 150 years ago. They are ubiquitous on the sun and dominate feature in some chromospheric filtergrams e.g. Ca II H \cite{Pereira2016ApJ82465P}. Because of their vast numbers they are a key observational window for the investigations related to the dynamics of the chromosphere and the mass and energy transfer mechanism across the solar the atmosphere. %\np
-
-These features dominate the chromosphere, thus in order to understand the solar atmosphere it is imperative we understand the dynamics of small scale jets.
-
-These jet-like phenomena change in appearance when observed in different spectral lines and in dependence from site they appear leading to whole range of names to describe them, such as spicules, mottles and dynamic fibrils. All these jets share similar properties and behaviors eluding to the possibility they all are related or even are the same phenomena \citep{Porfir2016A}. For example there has been a long standing question whether spicules (observed on limb) and mottles (observed on disk) are the same \citep{Pontieu2007ASPC}.
-
-% Might be better in coclusion
-{\color{green} might be better in conclusion} We are at the beginning of the next generation of solar telescopes with $4$ m European Solar Telescope with first light planned in $2026$ \citep{Matthews2016SPIE} and $4$ m Daniel K. Inouye Solar Telescope (DKIST) which released the highest resolution in image of Sun's surface and allowed us to see features as small as $30$ km and will allow the study of spicules in unprecedented detail.
-
+%They are similar to the traditional limb spicule {\color{green} !!need to define in spciule section!!}
+%They reach their apex within 1-2 minutes after it initial appearance and then fall back to the low chromosphere with a similar velocity its starting ascent \citep{Tsiropoula2012}. Spicules have always been an important feature to study since their discovery over 150 years ago. They are ubiquitous on the sun and dominate feature in some chromospheric filtergrams e.g. Ca II H \cite{Pereira2016ApJ82465P}. Because of their vast numbers they are a key observational window for the investigations related to the dynamics of the chromosphere and the mass and energy transfer mechanism across the solar the atmosphere. %\np
+%These features dominate the chromosphere, thus in order to understand the solar atmosphere it is imperative we understand the dynamics of small scale jets.
+%These jet-like phenomena change in appearance when observed in different spectral lines and in dependence from site they appear leading to whole range of names to describe them, such as spicules, mottles and dynamic fibrils. All these jets share similar properties and behaviors eluding to the possibility they all are related or even are the same phenomena \citep{Porfir2016A}. For example there has been a long standing question whether spicules (observed on limb) and mottles (observed on disk) are the same \citep{Pontieu2007ASPC}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 %not needed
 %\subsubsection{Numerical Techniques}
