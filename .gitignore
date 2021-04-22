@@ -16,6 +16,10 @@
 *.png
 *.rar
 *.tks
+*.avi
+*.jpeg
+*.svg
+*.gif
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 #*.bbl
