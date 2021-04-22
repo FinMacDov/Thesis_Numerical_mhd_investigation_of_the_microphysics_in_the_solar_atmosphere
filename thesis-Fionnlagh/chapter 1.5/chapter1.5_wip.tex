@@ -91,14 +91,19 @@
   \label{#4}
   \end{center}
   \end{figure}}
+\newcommand{\kms}{~\rm{km ~s^{-1}}}
+\newcommand{\kgm}{~\rm{kg ~m^{-3}}}
 \newcommand{\np}{\\ \\}
+\newcommand{\degs}{^{\circ}}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
 
 \begin{document}
 
 \baselineskip=18pt
 
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % START COPYING HERE
@@ -107,101 +112,129 @@
 \chapter{Numerical Recipe}
 \label{chap:Numerical_Recipe}
 %-------------------------------
+%------------------------------------------------------------------------------
+\section{Overview of Numerical Models}
+\label{sec:models}
+%------------------------------------------------------------------------------
+How these spicules originate and they are driven is one of the main issues facing solar physicists currently \citep{Tsiropoula2012,kuzma2017ApJ84978K,Martinez-Sykora2017}. The two main avenues of investigation for this phenomenon are with observations and numerical simulations. Historically it has been challenging to spatio-temporal resolve spicular structures, and has given unclear properties from which to base a models on. This has led to a plethora theoretical models. These models have been reviewed by \cite{Sterling_2000SoPh} and \cite{Aschwanden2019ASSL} that can broadly be split into the following categories: pressure/velocity pulse in lower/upper chromosphere leading to formation of shocks \citep{Shibata1982,Suematsu1982SoPh7599S,Hollweg1982ApJ257345H,Sterling1990ApJ349647S,Heggland2007ApJ6661277H,kuzma2017ApJ84978K}, p-mode leakage \citep{Pontieu2004Natur},  \Alfven waves which can non-linearly couple and form shocks \citep{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H, Kudoh1999ApJ514493K, Matsumoto2010ApJ7101857M}, magnetic reconnection \citep{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y, Archontis2005ApJ6351299A, Pontieu2007PASJ,Isobe2008ApJ679L57I,Nishizuka2008ApJ683L83N,Sterling2010ApJ,Gonz2017ApJ,Gonz2018arXiv180704224G,Gonz2018ApJ856176G}, Joule heating due to ion-neutral collisional dampening \citep{Haerendel1992Natur360241H,James2003AA}, MHD kink waves \citep{Kukhianidze2006A&A}, and vorticle flows which lead to torsional \Alfven waves that drives spicules \citep{Iijima2017ApJ,Samanta2019Sci}. \np
+%
+It important to note as the goal of this thesis is not to determine the origins of spicules. We are interests in the dynamics and morphology of the jet once it is indicated. For this reason we decided established method of applying a pulse based driver and we will give a brief overview of the history of these types of models.   
+%------------------------------------------------------------------------------
+\subsection{Pulse model}
+\label{ssec:pulse_model}
+%------------------------------------------------------------------------------
+For pulse model simulations they start with some form of energy deposition in the photosphere or chromosphere that drives material upwards from these regions into the corona. These types numerical simulations originated in the 1980s where \cite{Hollweg1982ApJ257345H} developed the rebound shock model which is triggered with a velocity pulse, \cite{Suematsu1982SoPh7599S} placed pressure pulse in lower atmosphere, \cite{Shibata1982} carried out simulations with pressure pulses in the upper chromosphere. \np
+%
+\cite{Hollweg1982ApJ257345H} takes a weak pulse of $1\kms$ which is similar to velocities of granular motions at the base of his simulations. Due to the increasing temperature profile of the solar atmosphere any waves created by disturbing the atmosphere are steepened as they travel upwards. When a wave steepen enough it can form a shock, which lifts the local material. When this lifted falls back due to gravity is compresses the lower atmosphere triggering a new wave, which can propagate upwards and steepen, triggering more rebound shocks. \cite{Hollweg1982ApJ257345H} tried to use this model to explain the formation of spicules as the opposing forces exerted by rebound shocks and gravity cause undulations in the TR which he interpret as spicules. \cite{Hollweg1982ApJ257345H} shows this model meets some of the charasteric of spicules as the the motion of TR could appear as non-ballistic, comparable mean upward velocities, heights, temperature, and density. There have been numerous models which has built upon rebound shock model, including radiation and heat conduction \citep{Sterling1988ApJ327950S, Sterling1990ApJ349647S, Cheng1992AA266549C, Cheng1992AA262581C, Cheng1992AA266537C}. When including more sophisticated physics it becomes challenging to reproduce spicule characteristics. For example when \cite{Sterling1990ApJ349647S} added realistic radiation losses, they where not able to produce spicules heights greater than $6~\rm{Mm}$. \cite{Cheng1992AA266549C, Cheng1992AA266537C} used both radiation losses and ionizaton. He found the only way of generating jets similar to spciular properties was by having a longer driving time. Recent simulations carried out by \cite{Heggland2007ApJ6661277H} used longer driving times. They showed how to produce chromospheric jets with including radiation losses and ionizaton, by placing a monochromatic piston driver at the base of the simulation with velocities (driving times) in the range of $0.2-1.1\kms$ (180-360~\rm{s}).
+%
+Strong velocity pulse in the upper atmosphere. 
+
+\cite{Suematsu1982SoPh7599S} started the model which placed pressure pulse in the low chromospheric atmosphere. 
+
+Pressure pulse int eh upper atmsophere. recent models kuzma, sigh ect. 
+
+Then more
+
+
+because the TR receives repeated accelerations at short intervals, it motion is not ballistic. rather the TR heights increase in an unsteady fashion due to the intermittent interactions with the shocks; if observed with poor resolution, this motion may appear constant in agreement with observations. the chromosphere material lofted behind the uplifted material TR can resemble spicules in a number of ways, such as mean upwards velocity, values of density, and the relatively flat Te profile and density profiles.  
+
+
+and once they come contact with jump conditions of the TR they produce strong upward and downward shock waves. These rbeound shocks are generated when parts of the chromospheric plasma are uplifted by a shock, but due to gravity it falls backs causing it to compress lower chromospheric plasma, which makes it rebound upwards triggering a new wave. This wave can then steepen as it travels through the atmosphere triggering more rebound shocks.
+
+The rebound shock model assumes that there is disturbance in the low atmosphere. 
+
+An upward propagating wave front 
+
+      
+
+
+Three broad categories of drivers are pulses in velocity or gas pressure, \Alfven wave and \textit{p}-modes.
+%------------------------------------------------------------------------------
+\subsubsection{Strong Pulse In low Atmosphere}
+\label{sssec:pulse_model}
+%------------------------------------------------------------------------------
+ Early studies of pressure pulses in an HD stratified atmosphere are carried out by \cite{Suematsu1982SoPh7599S}, \cite{Shibata1982, Shibata1982SoPh78333S}, and \citep{Hollweg1982ApJ257345H}. The basic dynamics of these studies is that an artificial enhancement of pressure is placed at various heights, which drivers waves upwards into the atmosphere and when it reaches the TR region (essentially acts as a contact discontinuity), it produces a strong shock. The lower the pulse is place in the atmosphere the strong the shock produced at the TR \citep{Shibata1982, Shibata1982SoPh78333S}. This is because the more atmosphere these waves travel the more they are amplified due to the temperature gradient. This lifts the TR and they interpret the matter behind this interface as a spicule. This means that placement of the pulse affects the measure spicules heights. These models are able to capture spicule temperatures, heights, and smooth trajectory for the apex of the spicule during its accent. \np \np     
+\cite{Sterling_2000SoPh} breaks the velocity pulse into two categories (i) Strong pulse in lower atmosphere (photosphere to low chromosphere) ($\sim 60\kms$ for initial velocities); (ii) weak pulse in the lower atmosphere i.e. rebound shock model (range of $\sim 1 \kms$ based on the magnitude seen in granular motions). 
+
+\begin{itemize}
+         \item \cite{Hollweg1982ApJ257345H} developed shock model and carried out 1D simulations. In this simulation gas pressure lits the TR to the observed heights of spicules. \cite{Suematsu1982SoPh7599S} did the same for velocity pulses. Later on \cite{Heggland2007ApJ6661277H} studied the shock model with additional physics of radiation and heat conduction.
+    \item  propagating shocks models, passing though the upper chromosphere and TR towards the corona. \cite{Hansteen2006ApJ} preformed a 2D numerical radiative MHD simulations in an atmosphere that goes from upper convective zone to lower corona (including everything between) \cite{Hansteen2007ASPC368107H} (this citation is purely for atmospheric set up) and this extended in \cite{De_Pontieu2007ApJ}. These simulations shed light on the origins of spicules, mottles and dynamic fibrils can driven be driven by p-modes oscillations and convective flows.
+    \item \cite{Mart2009ApJ7011569M} (extended both \citep{De_Pontieu2007ApJ,Hansteen2006ApJ}), by carrying out 3D version. They identify driver they label as ``other mechanisms" (beside p-mode). They find that collapsing granules, convective buffeting by breaking granules (is this a collapsing granule?), flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that possible there is more driving mechanism are possible, but in general (even in simulations) it often difficult to to identify the driver. Interesting regardless of the driving mechanism the dynamics of the spicules remain consistent (TI). In these simulations the ranges for lifetime ($2-3$ mins) and max height are smaller than those in observations ($<2,000$ km)  
+    \item \cite{Matsumoto2010ApJ7101857M}  Spicules driven by resonant \Alfven waves generated in the photosphere and confined in a cavity between the photosphere and TR. \Alfven waves are driven by the magento-convection at the photosphere. 
+    \item solve 2D ideal MHD equations and perturb vel to simulate TI spicules \cite{Murawski2010AA519A8M} 
+    \item \cite{Murawski2010AA519A8M} spicule formation can be divided into 3 main groups, pulses, \Alfven waves, and p-mode leakage. 
+    \item The main idea of spicule formation by impulsively launched perturbations is as follows. Velocity or gas pressures pulses deposited int eh lower atmosphere are steeped into shocks as a result of the rapid decrease in mass density with height. These shock lift the TR, producing spicules.
+
+    \item \cite{Scullion2011ApJ74314S} does 3D simulations to model type I spicule. They use a wave based driver to show the transmission of acoustic waves from lower chromosphere and into the corona, which leads to the formation of a jet, which excites TR quakes.
+\end{itemize}
+
+
+(vii) Leakage of global p-mode oscillations from photosphere and the formation of shocks in the chromosphere \cite{Pontieu2004Natur,Zaqarashvili2007A&A}; 
+
+ \cite{Mart2009ApJ7011569M} identify multiple possible drivers for spicules in their 3D numerical simulations. In their simulation they use atmosphere that connect the upper convection zone to lower corona and found that spicular features naturally occur. They find other mechanisms that could explain spicule formation by collapsing granules, convective buffeting by breaking granules \citep{Roberts1979SoPh6123R}, flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that more driving mechanisms are possible, but in general (even in simulations) it often difficult to identify the driver. Interestingly regardless of the driving mechanism the dynamics of the spicules remain consistent with TI spicules with ranges for lifetime ($2-3$ minutes) and maximum height ($<2,000$ km). These are lower than reported in observations, but these simulation have been built upon \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M} using the Bifrost code \citep{Gudiksen2011AA531A154G}. They have one of the most realistic solar atmospheres which can include multiple complex physics (e.g. radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects). Again, they find that spicular features naturally and frequently occur \citep{Mart2017Sci3561269M}.
+%-----------------------------------
+\begin{itemize}
+%reviews to ref
+\item \cite{Carlsson2019ARAA57189C} newer review of numerical model. Should be mentioned in some ways, focus on BiFrost simulations.
+\item \cite{Zaqarashvili_2009SSRv} summarise on the oscillation and waves of spicules.
+\end{itemize}
+Summary of \cite{Sterling_2000SoPh}
+\begin{itemize}
+\item numerical models can be categorised as following: 
+\begin{enumerate}
+\item Strong pulse in lower atmosphere (photosphere to low chromosphere) ($\sim 60$ km s-1 for initial velocities)
+\item weak pulse in the lower atmosphere i.e. rebound shock model (range of $\sim 1$ km s-1 based on the magnitude seen in granular motions). 
+\item pressure-pulse in the higher chromosphere (middle or upper chromosphere)
+\item \Alfven wave models 
+\end{enumerate}
+\item \cite{Sterling1990ApJ349647S} and \cite{Cheng1992AA266537C} extended model (2) by adding radiation losses and hear conduction. 
+\item driver (3) was explored by \cite{Shibata1982} (no radiation and heat conduction). They excite two types of chromospheric jets that form dependent on height of pressure pulse in chromosphere. The shock tube jet (TR is expanded directly by the pressure pulse expanding and is placed above middle of chromosphere) and the other is a crest shock jet is TR is raised by the slow shock wave that can be generated by the expanding pressure enhancement (below middle chromosphere). 
+\item driver (3) was extended by \cite{Sterling1990ApJ349647S,Sterling1993ApJ407778S,Cheng1992AA266537C,Heggland2007ApJ6661277H,kuzma2017AA597A133K}, by adding effect of radiation and heat conduction. another example of pressure pulse \cite{Smirnova2016SoPh2913207S}. 
+\item more recent simulation have studied pressure pulse with a 2D two-fluid model \cite{kuzma2017ApJ84978K}.   
+\item can add some more recent papers here e.g. Kuzma, 2-fluid models ect.
+\item driver (4), two classes low freq and high freq. the basic idea is that torsional \Alfven waves on vertical flux tubes could drive jets. \Alfven waves are a nature byproduct of buffeting of flux tubes by photospheric granulation. \cite{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H} first did 1.5 D numerical simulations and showed that \Alfven waves can non-linearly couple into MHD fast-mode shock and also create slow shocks, these shock can then move chromospheric material upwards and excite the TR creating a jet. 
+\item \cite{Kudoh1999ApJ514493K} carried out 2D simulations, but instead of a single \Alfvenic pulse they used multiple random \Alfvenic pulses (all these dont included rad loss and te conduction).  
+\item Some of the most convincing simulations that produce spicules-like jet are \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M}. These start of art simulations use the Bifrost code \citep{Gudiksen2011AA531A154G} which has one of the most realistic atmosphere that connects the upper convection zone to the lower corona. Which can include multiple complex physics (e.g. ) See blah for more detail... include a possible combination of radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects. They find that spicular features naturally and frequently occur because of their numerical set up (i.e. connecting the atmosphere to convective motions and inclusion of realistic physics) \cite{Mart2017Sci3561269M}. 
+\item They solve the MHD equations with non-gray and non-LTE radiative transfer, with thermal conduction along the magnetic field lines. 
+\end{itemize}
+magnetic recognition.
+\begin{itemize}
+\item magnetic reconnection driven jets \cite{Gonz2018arXiv180704224G,Gonz2018ApJ856176G,Gonz2017ApJ,Isobe2008ApJ679L57I,Archontis2005ApJ6351299A} 
+\item larger scale jets \cite{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y,Nishizuka2008ApJ683L83N}
+\item wave induced \cite{Heggland2009ApJ7021H}.
+\end{itemize}
+%----------------------------
+% stuff
+Historically it has been challenging to spatio-temporal resolve spicular structures and has given unclear properties from which to base a models on. Modern instruments and observing techniques are able to resolve individual spicular structures, but the formation mechanisms remains an important open question. This has lead to theoretical models as reviewed by \cite{Sterling_2000SoPh} that can broadly be split into the following categories: pressure/velocity pulse in lower/upper chromosphere leading to formation of shocks e.g. \citep{Shibata1982,Suematsu1982SoPh7599S,Hollweg1982ApJ257345H,Sterling1990ApJ349647S,Heggland2007ApJ6661277H,kuzma2017ApJ84978K}, \Alfven waves which can non-linearly couple and form shocks \citep{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H,Kudoh1999ApJ514493K,Matsumoto2010ApJ7101857M}, magnetic reconnection \citep{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y,Archontis2005ApJ6351299A,Pontieu2007PASJ,Isobe2008ApJ679L57I,Nishizuka2008ApJ683L83N,Sterling2010ApJ,Gonz2017ApJ,Gonz2018arXiv180704224G,Gonz2018ApJ856176G}, Joule heating due to ion-neutral collisional dampening \citep{Haerendel1992Natur360241H,James2003AA}, MHD kink waves \citep{Kukhianidze2006A&A}, and vorticle flows which lead to torsional \Alfven waves that drives spicules \citep{Iijima2017ApJ,Samanta2019Sci} and \textit{p}-mode leakage \citep{Pontieu2004Natur}. \cite{Mart2009ApJ7011569M} identify multiple possible drivers for spicules in their 3D numerical simulations. In their simulation they use atmosphere that connect the upper convection zone to lower corona and found that spicular features naturally occur. They find other mechanisms that could explain spicule formation by collapsing granules, convective buffeting by breaking granules \citep{Roberts1979SoPh6123R}, flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that more driving mechanisms are possible, but in general (even in simulations) it often difficult to identify the driver. Interestingly regardless of the driving mechanism the dynamics of the spicules remain consistent with TI spicules with ranges for lifetime ($2-3$ minutes) and maximum height ($<2,000$ km). These are lower than reported in observations, but these simulation have been built upon \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M} using the Bifrost code \citep{Gudiksen2011AA531A154G}. They have one of the most realistic solar atmospheres which can include multiple complex physics (e.g. radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects). Again, they find that spicular features naturally and frequently occur \citep{Mart2017Sci3561269M}. \np
+%--------------------------------------------------------
 \section{MPI-AMRVAC}
-All the simulatioon carried out in this thesis uses the open source software Message Passing Interface Adaptive Mesh Refinement Versatile Advection Code (MPI-AMRVAC). This sofware is developed in Fortran 90 parallezied with Message Passing Interface(MPI) \citep{Keppens_2012} and focused on using shock capturing schemes to retain near-conservation of the systeme of euqaitons. Essiantly, the code solves any systems of hyperbolic partial differential in conservative form as show: 
+%--------------------------------------------------------
+All the simulations carried out in this thesis use the open source software Message Passing Interface Adaptive Mesh Refinement Versatile Advection Code (MPI-AMRVAC). This software is developed in Fortran 90 parallezied with Message Passing Interface(MPI) \citep{toth1996ApLC34245T,Keppens_2012,Porth_2014,Xia_2017}. The main focus of this software is maintaining conservation laws in shock dominated problems. This achieved using shock capturing schemes to retain near-conservation for a set of hyperbolic partial differential equations, typical in conservative form: 
 \begin{equation}\label{AMRVAC_stlye}
 \frac{\partial \boldsymbol{U}}{\partial t} + \nabla \cdot \boldsymbol{F}(\boldsymbol{U}) = \boldsymbol{S}_{phys} (\boldsymbol{U}, \partial_{i} \boldsymbol{U}, \partial_i \partial_j \boldsymbol{U},\boldsymbol{x},t) ,
 \end{equation}
-where $U$ is the set of conserved variables, $F(U)$ the corresponding fluxes and $S_{phys}$ are the source terms. The source terms are used to add extra physics e.g. gravity, diffusion, viscosity, etc. If we are working with the ideal MHD equation with no gravity then $S_{phys} = $0 and we would have $U=(\rho, \boldsymbol{m}, e, \boldsymbol{B})$. \np
+where $U$ is the set of conserved variables, $F(U)$ the corresponding fluxes and $S_{phys}$ are the source terms. The source terms are used to add extra physics, such as gravity, diffusion, and viscosity. \np
 %
-MPI-AMRVAc is constructed to solve the conservation equations. However, it is possible to define your input of initial conditions in primitive form $U = (\rho, \boldsymbol{v}, p, \boldsymbol{B})$. If defined this manner the conservative quantities are calculated from the primitive input and then the systems of equations are solved spatially and temporally. The creators of this code took much care to make sure the conversion from primate to conservative (or vise versa) does not cause a lack of precision. \np      
-%solves the MHD equations in the following form:
-%\begin{equation}
-%\frac{\partial \rho}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho) = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \rho \boldsymbol{v}}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho \boldsymbol{v} - \boldsymbol{BB})+ \nabla p_{tot} = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial e}{\partial t} + \nabla \cdot (\boldsymbol{v}e - \boldsymbol{BB} \cdot + \boldsymbol{v} p_tot) = \nabla \cdot (\boldsymbol{B} \times \eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \boldsymbol{B}}{\partial t}+ \nabla \cdot (\boldsymbol{Bv}-\boldsymbol{Bv}) = -\nabla \times (\eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%p=(\gamma-1)(e- \frac{\rho \boldsymbol{v}^2-\boldsymbol{B}^2}{2}) .
-%\end{equation}
-The main focus of this software is on conservation laws in particular with shock dominated problems. MPI-AMRVAC has been constructed so it is a single versatile software with options and switches for various problems rather than developing a different method or version for each problem separately. You have a selection of physics modules that come with he codes such as HD, MHD, SRHD, SRMHD and you can create your own physics model as long as the equation are of the form given by Eq. \eqref{AMRVAC_stlye}. There is a selection a numerical solver available for both temporal and spatial discretization. Once the solver and physics modules have been selected the user can write a user file. The contents of this file gives the initial inputs or acts on the evolving quantities during the simulation e.g. define a boundary condition that has continuous inflow. The advantage of this approach is that it allows for a reduction of overall time for software development. \np
-%
-The advantage of using AMR is it allows us to increase resolution on areas of interest (i.e where smaller scale dynamics are occurring) without having to increase the resolution of the whole domain which would be computationally expensive. The reason why we are using MPI-AMRVAC for this project is to deal with the different length scales occurring in the simulation.
-%---------------------------------
-%NeeD TO MERGE
-%--------------
-MPI-AMRVAC is an MPI-parallelized Adaptive Mesh Refinement code. AMRVAC solves a systems of hyperbolic partial differential equations by a number of different numerical schemes. In principle the ARMVAC handles anything of the generic form: 
-\begin{equation}
-\frac{\partial \boldsymbol{U}}{\partial t} + \nabla \cdot \boldsymbol{F}(\boldsymbol{U}) = \boldsymbol{S}_{phys} (\boldsymbol{U}, \partial_{i} \boldsymbol{U}, \partial_i \partial_j \boldsymbol{U},\boldsymbol{x},t) .
-\end{equation}
-%solves the MHD equations in the following form:
-%\begin{equation}
-%\frac{\partial \rho}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho) = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \rho \boldsymbol{v}}{\partial t} + \nabla \cdot (\boldsymbol{v} \rho \boldsymbol{v} - \boldsymbol{BB})+ \nabla p_{tot} = 0 ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial e}{\partial t} + \nabla \cdot (\boldsymbol{v}e - \boldsymbol{BB} \cdot + \boldsymbol{v} p_tot) = \nabla \cdot (\boldsymbol{B} \times \eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%\frac{\partial \boldsymbol{B}}{\partial t}+ \nabla \cdot (\boldsymbol{Bv}-\boldsymbol{Bv}) = -\nabla \times (\eta \boldsymbol{j}) ,
-%\end{equation}
-%\begin{equation}
-%p=(\gamma-1)(e- \frac{\rho \boldsymbol{v}^2-\boldsymbol{B}^2}{2}) .
-%\end{equation}
-The main focus of this software is on conservation laws in particular with shock dominated problems. AMRVAC has been constructed so it is a single versatile software with options and switches for various problems (e.g. HD, MHD, adiabatic, relativistic, choices in numerical solvers, ect) rather than developing a different method or version for each problem separately. The advantage of this approach is that it allows for a reduction of overall time for software development. One of the main reasons for using AMRVAC for carrying out numerical simulations of these jets is to deal with differences in the order of magnitude in length scales involved in this research. This has been my main task over the last 9 months becoming acquainted with AMRVAC software. As part of this I have become comfortable with using ICEBERG and ParaView (open-source software that is used visualise the output).
-\subsection{MHD Equations} 
-We will model Solar jets by taking a fluid approach using the magnetohydrodynamic (MHD) equations. The MHD equations are a combination of the Navier$–$Stokes equations of fluid dynamics and  Maxwell's equations of electromagnetism. It describes the motion of magnetic fluids in the presence of the electromagnetic fields, which is well suited to describe the dynamics of a plasma. A plasma is a completely ionised gas, consisting of freely moving positively charged ions, which behaves collectively in the presence of a magnetic field and is the forth state of matter. From a human's perspective the typical states of matter encountered in our day to day life on Earth mainly appears in three phases of solid, liquid and gas. We may observe plasmas on Earth for example lightning, TVs and neon lamps. However, if we consider matter on a universal scale, then we see that $90 \%$ of baryonic matter in the universe is plasma. Hence, we conclude that plasma is the normal state of baryonic matter in the universe \citep{goedbloed2004principles}. An interesting property of the MHD equations is they are scale independent. This means the MHD equations provides a basis for the description of the macroscopic dynamics of $90 \%$ of baryonic matter in the Universe and also are applicable to laboratory plasma such as in tokamaks ($20$ m) to astrophysical plasmas such as accretion disc of a active galactic nucleus ($10^{21}$  m) \citep{goedbloed2004principles}. The MHD theory is a fluid approach which is valid if the length scales of the system are larger than the Debye shielding length. The Debye shielding length defines the typical length scale in which the ions and electrons neutralise one another and thus the particles feel no force from the electric field. The fluid motion describes the collective motion of particles. This collective interaction involving motion, currents and magnetic fields describes the general behaviour of the MHD fields. The MHD equations are given by the following:      
-\begin{equation}\label{eq86}
-\frac{\partial \rho}{\partial t} = - \nabla \cdot (\rho \boldsymbol{v}),
-\end{equation}
-\begin{equation}\label{eq87}
-\rho \frac{d \boldsymbol{v}}{dt} = - \nabla p + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}) \times \boldsymbol{B} + \rho \boldsymbol{g},
-\end{equation}
-\begin{equation}\label{eq88}
-\frac{dp}{dt} = - \gamma p \nabla \cdot \boldsymbol{v},
-\end{equation}
-\begin{equation}\label{eq89}
-\frac{\partial \boldsymbol{B}}{\partial t} = \nabla \times (\boldsymbol{v} \times \boldsymbol{B}) - \frac{1}{\mu_0} \nabla \times (\eta \nabla \times \boldsymbol{B}),
-\end{equation}
-\begin{equation}\label{eq90}
-\nabla \cdot \boldsymbol{B} = 0.
-\end{equation}
-Where Eq. (\ref{eq86}) is the mass continuity equation which states matter cannot be created or destroyed it simply changes to a different form of matter. Eq. (\ref{eq87}) is the momentum equation, it represents balance between acceleration, also the balance between the pressure gradient and the Lorentz force (force which is exerted by a magnetic field on a moving charge, $\frac{1}{\mu_0} (\nabla \times \boldsymbol{B}) \times \boldsymbol{B}$). As the Lorentz force is directed perpendicular to the magnetic field, this means that the acceleration along the magnetic field lines are caused by pressure gradient or gravity. Eq. \eqref{eq88} represents the internal energy and Eq. \eqref{eq89} is the induction equation and links the dynamics of the magnetic field through the velocity term. Eq. \eqref{eq90} is the solenoidal constraint and implies that there are no magnetic monopoles or pure sinks of the magnetic field.\\ \\ To gain intuitive understanding of oscillations in a plasma we derive analytically MHD equations. We take small perturbation with respect to the background quantities, therefore we define the following:
-\begin{equation} \label{eq91}
-\boldsymbol{B} = \boldsymbol{B}_0 + \boldsymbol{B}_1 (\boldsymbol{r},t) , \ \ \boldsymbol{v} = \boldsymbol{v}_1 (\boldsymbol{r}, t) , \ \ \rho = \rho_0 + \rho_1 ( \boldsymbol{r},t) , \ \ p = p_0 + p_1 ( \boldsymbol{r}, t) ,
-\end{equation}
-where $\boldsymbol{r} = (x,y,z)$ is the potion vector. The subscript $0$ ($1$) represents the equilibrium quantity (Eulerian perturbation). Where $v_0=0$ as we assume no background flow. Applying the perturbations shown by Eq. \eqref{eq91} to Eq. \eqref{eq86} to Eq. \eqref{eq90} obtains the linearised MHD equations: 
-\begin{equation}
-\frac{\partial \rho_1}{\partial t} = \nabla \cdot (\rho_0 \boldsymbol{v}_1) ,
-\end{equation}
-\begin{equation}
-\rho_0 \frac{\partial \boldsymbol{v}_1}{\partial t}  = - \nabla p_1 + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}_0) \times \boldsymbol{B}_1 + \frac{1}{\mu_0} (\nabla \times \boldsymbol{B}_1) \times \boldsymbol{B}_0 ,
-\end{equation}
-\begin{equation}
-\frac{\partial p_1}{\partial t} = - \boldsymbol{v}_1 \cdot \nabla p_0 - \gamma p_0 \nabla \cdot \boldsymbol{v}_1 , 
-\end{equation}
-\begin{equation}
-\frac{\partial \boldsymbol{B}_1}{\partial t} = \nabla \times (\boldsymbol{v}_1 \times \boldsymbol{B}_0) - \nabla \times (\eta \nabla \times \boldsymbol{B}_1) ,
-\end{equation}
-\begin{equation}
-\nabla \cdot \boldsymbol{B}_0 = \nabla \cdot \boldsymbol{B}_1 = 0 .
-\end{equation}
-These equations are the used to construct our models for the oscillations. 
+MPI-AMRVAC has been constructed to be a versatile piece of software, arming the user with multitude of options. This reduces development time as rather than writing bespoke software for each simulation, modules of the code can efficiently be swapped or modified to produce desired effect, e.g. changing physic modules, spatial\textbackslash temporal solvers, grid setup and geometric, change boundary conditions, and writing own custom routines. \np
+% 
 \subsubsection{Adaptive Mesh Refinement}
-Need to give full description of AMR. 
+One of the main features of MPI-AMRVAC is the adaptive mesh refinement (AMR). Using AMR means that rather having a static fixed resolution for the entirety of the simulation, we have a dynamical grid, that add/removes grid cells as needed. For example see the differing mesh in Fig.~\ref{amr_example} the test case of a hydrodynamic Rayleigh-Taylor Instability (RTI) (see Section~\ref{!!?!!} for more description of RTI). In this simulation there is a a denser fluid flowing downwards and area of highest resolution are located where rapid changes are occurring in the computational domain. The rules that AMR are allocated and deallocated are:     
+
+
+which allows for computationally efficient placement of grid cells. 
+%fffffffffffffffffffffffff
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{figures/RTI_example.png}
+\caption{Example of AMR mesh for RTI. Notice there is increase number of grid cells around dynamic regions.: \url{http://amrvac.org/md_doc_examples.html}}.
+\label{amr_example}
+\end{figure}   
+%fffffffffffffffffffffffff
+This means that one can increase the grid cells in regions of interest (i.e where smaller scale dynamics are occurring) based on the numerical error without having to increase the resolution of the whole domain which would be computationally expensive. \np
 \begin{figure}
 \centering
 \includegraphics[width = \textwidth]{figures/amrpng.png}
-\caption{A generic AMR block skeleton fom: https:$//$homes.esat.kuleuven.be$/$ $\sim$keppens/amrstructure.html}.
+\caption{A generic AMR block skeleton from: \url{http://amrvac.org/md_doc_amrstructure.html}}.
 \label{amr_scheme}
 \end{figure}   
 %------------------------------------------------------------------------------
@@ -238,19 +271,33 @@ Using the temperature profile given by \eref{te_pro} and taking $\rho_0 = 2.34e-
 %------------------------------------------------------------------------------
 We use the open source MPI-AMRVAC software version 2.0 \cite{Xia_2017} to simulation solar jets in a simple solar atmosphere. We set the domain size to $50$ Mm $\times$ $30$ Mm with a level one resolution of $32$ $\times$ $24$ (giving a physical resolution of $\sim$ $1.56$ Mm $\times$ $1.25$ Mm). This coarse level one resolution was chosen to allow the dissipation of shocks as they travel towards the boundaries. To accurately capture the sharpness of the TR we applied 7 levels of AMR giving a spatial resolution of $\sim$ $12$ km$\times$ $10$ km. We use unidirectional grid stretching in the horizontal direction, where from the origin the grid cells change by a constant factor of $1.1$ from cell to cell. Due to the choice of discretisation scheme for the boundary conditions, we employ ghost cells of 2 grid layers encasing the physical domain in each direction, which have a physical size of $3 \ \rm{Mm}$. The numerical scheme applied for spatial discretisation is HLL (Harten-Lax-van Leer) \cite{hll_1983} and a third order \u{C}ada limiter \citep{CADA20094118} for the time discretisation. We use CFL number of $0.8$ and GLM-MHD method to maintain $\bs{\nabla} \cdot \bs{B}=0$ \citep{DEDNER2002645}. The initial magneto-hydrostatics stratification places the TR at $2$ Mm where the temperature smoothly links $8000$ K chromosphere to a $1.8$ Mm corona (see Fig. 1). For the left and right boundary we utilise a periodic boundary condition. In the  ghost cells of the lower boundary we fix $\rho$, $e$ and $\bs{B}$ to their initial values. In the ghost cells for the upper boundary the values for $\rho$, $e$ are determined by the gravitational stratification and $\bs{B}$ was extrapolated assuming zero normal gradient. For both upper and lower boundary we take an antisymmetric boundary for the velocity components.
 %fffffffffffffffffffffff
-\mfig{1}{figures/numerical_Setup.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
+\mfig{1}{figures/numerical_Setup_lowres.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
 %fffffffffffffffffffffffff
 %------------------------------------------------------------------------------      
 \subsection{Driver}
 \label{subsec:driver}
 %------------------------------------------------------------------------------
+As the driving mechanisms of of spicules are debatable, we assume that we have a jet which is driven buy a momentum pulse from the photosphere with the aim of investigating whether simple drivers can recreate the dynamical behaviors of spicules.
+%------------
 To drive the jet we us a momentum pulse at the base of computational domain for a specified period of time (ranging from $50-300s$). The jet is launched symmetrically by a driver in the center of the computational domain which varies both spatially and temporally. In the x-direction the jet vertical velocity is Gaussian with the FHWM of $350 \ \rm{km}$ ($j_w$) and as the jet evolves in time it will reach a switch off phase in which it will shut off with a hyperbolic tangent,
+To initiate the jets we use a momentum pulse that we drive in the ghost cells. These ghost have a fixed density value from which we apply the following velocity profile to,
+\begin{equation}
+    v_x(x) = \frac{-A\sin{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
+\end{equation}
+\begin{equation}
+    v_y(x) = \frac{-A\cos{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right).
+\end{equation}
+Where $A$ is the amplitude of the driver,$P$ is the driver time, $t$ is time, $x$ is horizontal position, $x_0$ location of the central jet axis, $\theta$ is the launching angles , and the $\Delta x$ is based on FWHM of the jet width and is given by, 
+\begin{equation}
+\Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}}.
+\end{equation}
+Where $j_w$ is the jet width.
 \begin{equation}
 v_{j}(x) = -\frac{A}{2} \left( \tanh \left( \frac{\pi (t-t_{d})}{t_d}+ \pi \right) +1 \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
 \end{equation}    
 where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ is time, $t_{d}$ is the time for $v_j=0$ , $P$ is the period of the driver and $x_0$ is central location of the jet injection. The driver the width of the Gaussian is determined by $\Delta x$ which is the FWHM based of the jet width (see \fref{atoms_profile}),
 \begin{equation}
-\Delta x = \dfrac{j_w}{4 \sqrt{2 \log{2}}},
+\Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}},
 \end{equation}  
 %fffffffffffffffffffff
 %\begin{figure}
@@ -262,61 +309,6 @@ where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ 
 %\label{fig4}
 %\end{figure}
 %ffffffffffffffffffffff
-
-\section{Outline of Thesis}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-%not need
-%\subsubsection{Numerical Techniques}
-%Solving differential equations are key part of understanding the physics occurring in nature. Often coupled systems of differential equations can not be solved analytically without making major assumption to simply the equation and thus removing important physics from the original problem. A classic example of a system of equations which isn't solvable analytically is the three body problem where using Newtonian mechanics you consider three masses interacting with one another through gravitational force. The numerical soultions to this problem allowed the revolution in modern space flights, and the launch of the two Voyager probes. By using numerical techniques on the MHD equations we gain an insight into systems which are too complex to obtain analytically.  \\ \\A differential is the gradient of a function over an infinitesimally small range. The numerical approximation takes this range and makes it finite, calculation the differential from an approximation dependent on the selected method. In the sub-sections I will summarise a selection of solvers used in the MPI-AMRVAC code that are applied in this thesis.
-%\subsubsection{Finite Difference Method}
-%The general expression for a derivative is the following:
-%\begin{equation}
-%f'(x)=\lim\limits _{h\to0}\frac{f(x+h)-f(x)}{h} , 
-%\end{equation}
-%the finite difference method (FDM) approximates this equation by taking the step size $h$ as finite. The general form of a finite difference equation is $f(x+b)-f(x+a)$. The two simplest forms are:
-%\begin{align}
-%\Delta_+ f =  f(x+h)-f(x), \\
-%\Delta_- f = f(x-h)-f(x) .
-%\end{align}
-%These equations can be used to calculate the derivatives by using the following:
-%\begin{align}
-%\text{Forward Difference: }&f'(x) = \frac{f(x+h)-f(h)}{h} , \\
-%\text{Backwards Difference: }&f'(x) = \frac{f(x)-f(x-h)}{h}
-%\end{align}
-%These equations can be derived from a Taylor expansion of $f(x\pm h)$,
-%\begin{align}
-%f(x-h) & = f(x)-h f'(x)+\frac{h^{2}f''(x)}{2!}-\frac{h^{3}f'''(x)}{3!}+\frac{h^{4}f^{iv}(x)}{4!}+...\label{eq:TaylorForward}\\
-%f(x+h) & = f(x)+h f'(x)+\frac{h^{2}f''(x)}{2!}+\frac{h^{3}f'''(x)}{3!}+\frac{h^{4}f^{iv}(x)}{4!}+...\label{eq:TaylorBackward}
-%\end{align}
-%The forward (backwards) difference equations is the first-order truncation of the $f(x+h)$ ($f(x+h)$) Taylor series. From this it can be seen that the truncation error of a forward and backward difference approximation is $O(h)$, and that the accuracy is easily improved by increasing the number of terms included. \\ \\
-%Another variation of FDM that reduces the error, while maintaining the first-order nature of these solutions is achieved by combining the forward and backward difference into a central difference approximation of the following form: 
-%\begin{equation}
-%f(x)=\frac{1}{2} \left(f(x + h) + f(x - h)\right).
-%\end{equation}
-%Preforming a Taylor expansion and taking first order as previous done results in the following: 
-%\begin{equation}
-%f'(x)=\frac{f(x+h)-f(x-h)}{2h}.\label{eq:First Order CD}
-%\end{equation}
-%The  error for central difference approximation $O(h^{2})$ as we have combined both the two Taylor series expansions. The accuracy of the solution is important, for it determines how well the computed solution represents the true solution. The most obvious way to increase the accuracy of the solution is to increase the number of terms included from the Taylor expansion of the forward and backward differences. For example the derivation of a fourth-order central difference scheme which can be calculated by starting from Eqs. \eqref{eq:TaylorForward}-\eqref{eq:TaylorBackward} and subtracting the second from the first, to the fourth order gives, in one dimension the following:
-%\begin{equation}
-%f(x+h)-f(x-h)=2 h f'(x)+\frac{2 h^{3} f'''(x)}{3!}+O(h^{4}).\label{eq:centraldifferencedx}
-%\end{equation}
-%The next step is to calculate the same subtraction for $2 h$ which can be written as:
-%\begin{equation}
-%f(x+2 h)-f(x-2 h)=4 h f'(x)+\frac{16 h^{3}f'''(x)}{3!}+O(h^{4}).\label{eq:CentralDifference2dx}
-%\end{equation}
-%Then subtracting \eqref{eq:CentralDifference2dx} from $8\times$(\eqref{eq:centraldifferencedx}) and rearranging for $f'(x)$ results in:
-%\begin{equation}
-%f'(x)=\frac{8f(x+h)-8f(x-h)-f(x+2h)+f(x-2h)}{12h}+O(h^{4}),\label{eq:4thOrderCentralDifferenceUniform}
-%\end{equation}
-%which is the fourth order central difference scheme in one dimension for a uniform spacing of $\pm h$.
-%This scheme can be expanded into $n$ dimensions by using the basic property of differentiation $\frac{\partial^{2}u}{\partial x\partial y}=\frac{\partial}{\partial x}\left(\frac{\partial u}{\partial y}\right)=\frac{\partial}{\partial y}\left(\frac{\partial u}{\partial x}\right)$. This scheme provides good accuracy while being computationally efficient.
-%\subsubsection{TVLD}
-%Need to add other solvers used in AMRVAC.
-%\subsection{Atmospheric Model}
-%%Need to add images background for models. 
-%SP2RC has a method for constructing 3D MHD equilibrium for multiple magnetic flux tubes in a stratified solar atmosphere \citep{Gent_2013p1,Gent_2014p2}. This solar atmospheric model incorporates a wide and realistic range of scales using the combined results of \cite{Vernazza_1981ApJS}  VALIIIC model for the chromosphere and \cite{McWhirter1975} for the lower corona. This model can then used in Sheffield Advance Code \citep{Griffiths2013} which splits the equation in terms of its steady state for the background, then governing equations can be reduced, solving only the evolution for the perturbations. Capturing the true dynamics of these phenomena requires realistic flux tube models and this is the aim of this project. We will study the jet origin, excitation and multiple jet excitation employing a novel 3D MHD code. We will validate results with high-resolution data (e.g. CRISP) to gain insight into the relationship between various solar transients (e.g. jets, MBPs, RBE). By using this combination of numerical simulations and observations of the penetration of jets from the chromosphere, through the transition region into the corona, we will reveal how momentum and energy are transported to the upper atmosphere.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % STOP COPYING HERE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
