@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{54}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,6 +19,12 @@ Markus~J. {Aschwanden}, Amy {Winebarger}, David {Tsiklauri}, and Hardi {Peter}.
 \newblock {The Coronal Heating Paradox}.
 \newblock \emph{\apj}, 659\penalty0 (2):\penalty0 1673--1681, April 2007.
 \newblock \doi{10.1086/513070}.
+
+\bibitem[{Athay} and {Holzer}(1982)]{Athay1982ApJ255743A}
+R.~G. {Athay} and T.~E. {Holzer}.
+\newblock {The role of spicules in heating the solar atmosphere}.
+\newblock \emph{\apj}, 255:\penalty0 743--752, April 1982.
+\newblock \doi{10.1086/159873}.
 
 \bibitem[{Bale} et~al.(2019){Bale}, {Badman}, {Bonnell}, {Bowen}, {Burgess},
   {Case}, {Cattell}, {Chandran}, {Chaston}, {Chen}, {Drake}, {de Wit},
@@ -46,8 +52,9 @@ S.~D. {Bale}, S.~T. {Badman}, J.~W. {Bonnell}, T.~A. {Bowen}, D.~{Burgess},
 
 \bibitem[{Beckers}(1968)]{Beckers1968}
 J.~M. {Beckers}.
-\newblock {Solar Spicules (Invited Review Paper)}.
-\newblock \emph{\solphys}, 3\penalty0 (3):\penalty0 367--433, March 1968.
+\newblock {Solar spicules}.
+\newblock \emph{Solar Physic}, 3\penalty0 (3):\penalty0 367--433, 1968.
+\newblock ISSN 1573-093X.
 \newblock \doi{10.1007/BF00171614}.
 
 \bibitem[{Beckers}(1972)]{Beckers1972ARA&A}
@@ -105,6 +112,16 @@ B.~{De Pontieu}, S.~{McIntosh}, V.~H. {Hansteen}, M.~{Carlsson}, C.~J.
   Chromosphere}.
 \newblock \emph{\pasj}, 59:\penalty0 S655--S662, November 2007.
 \newblock \doi{10.1093/pasj/59.sp3.S655}.
+
+\bibitem[{De Pontieu} et~al.(2011){De Pontieu}, {McIntosh}, {Carlsson},
+  {Hansteen}, {Tarbell}, {Boerner}, {Martinez-Sykora}, {Schrijver}, and
+  {Title}]{dePontieu2011Sci33155D}
+B.~{De Pontieu}, S.~W. {McIntosh}, M.~{Carlsson}, V.~H. {Hansteen}, T.~D.
+  {Tarbell}, P.~{Boerner}, J.~{Martinez-Sykora}, C.~J. {Schrijver}, and A.~M.
+  {Title}.
+\newblock {The Origins of Hot Plasma in the Solar Corona}.
+\newblock \emph{Science}, 331\penalty0 (6013):\penalty0 55, January 2011.
+\newblock \doi{10.1126/science.1197738}.
 
 \bibitem[{De Pontieu} et~al.(2017{\natexlab{a}}){De Pontieu}, {De Moortel},
   {Martinez-Sykora}, and {McIntosh}]{Pontieu2017ApJ}
@@ -204,6 +221,12 @@ D.~B. {Jess}, R.~J. {Morton}, G.~{Verth}, V.~{Fedun}, S.~D.~T. {Grant}, and
   Overview of Recent Results}.
 \newblock \emph{\ssr}, 190\penalty0 (1-4):\penalty0 103--161, July 2015.
 \newblock \doi{10.1007/s11214-015-0141-3}.
+
+\bibitem[{Judge} and {Carlsson}(2010)]{Judge_2010ApJ}
+P.~G. {Judge} and M.~{Carlsson}.
+\newblock {On the Solar Chromosphere Observed at the LIMB with Hinode}.
+\newblock \emph{\apj}, 719:\penalty0 469--473, August 2010.
+\newblock \doi{10.1088/0004-637X/719/1/469}.
 
 \bibitem[{Kudoh} and {Shibata}(1999)]{Kudoh1999ApJ514493K}
 Takahiro {Kudoh} and Kazunari {Shibata}.
@@ -462,6 +485,12 @@ Maurice H.~P.~M. {van Putten}.
 \newblock {Knots in Simulations of Magnetized Relativistic Jets}.
 \newblock \emph{\apjl}, 467:\penalty0 L57, August 1996.
 \newblock \doi{10.1086/310196}.
+
+\bibitem[{Withbroe} and {Noyes}(1977)]{Withbroe1977ARAA15363W}
+G.~L. {Withbroe} and R.~W. {Noyes}.
+\newblock {Mass and energy flow in the solar chromosphere and corona.}
+\newblock \emph{\araa}, 15:\penalty0 363--387, January 1977.
+\newblock \doi{10.1146/annurev.aa.15.090177.002051}.
 
 \bibitem[{Zaqarashvili} and {Erd{\'e}lyi}(2009)]{Zaqarashvili_2009SSRv}
 T.~V. {Zaqarashvili} and R.~{Erd{\'e}lyi}.
