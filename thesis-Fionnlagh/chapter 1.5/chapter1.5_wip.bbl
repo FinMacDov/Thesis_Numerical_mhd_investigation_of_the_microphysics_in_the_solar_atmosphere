@@ -1,9 +1,16 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Beckers}(1968)]{Beckers1968}
+J.~M. {Beckers}.
+\newblock {Solar spicules}.
+\newblock \emph{Solar Physic}, 3\penalty0 (3):\penalty0 367--433, 1968.
+\newblock ISSN 1573-093X.
+\newblock \doi{10.1007/BF00171614}.
 
 \bibitem[{\v{C}}ada and Torrilhon(2009)]{CADA20094118}
 Miroslav {\v{C}}ada and Manuel Torrilhon.
@@ -14,6 +21,34 @@ Miroslav {\v{C}}ada and Manuel Torrilhon.
 \newblock \doi{https://doi.org/10.1016/j.jcp.2009.02.020}.
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S0021999109000953}.
+
+\bibitem[{De Pontieu} et~al.(2004){De Pontieu}, {Erd{\'e}lyi}, and
+  {James}]{Pontieu2004Natur}
+B.~{De Pontieu}, R.~{Erd{\'e}lyi}, and S.~P. {James}.
+\newblock {Solar chromospheric spicules from the leakage of photospheric
+  oscillations and flows}.
+\newblock \emph{\nat}, 430:\penalty0 536--539, July 2004.
+\newblock \doi{10.1038/nature02749}.
+
+\bibitem[{De Pontieu} et~al.(2007{\natexlab{a}}){De Pontieu}, {Hansteen},
+  {Rouppe van der Voort}, {van Noort}, and {Carlsson}]{De_Pontieu2007ApJ}
+B.~{De Pontieu}, V.~H. {Hansteen}, L.~{Rouppe van der Voort}, M.~{van Noort},
+  and M.~{Carlsson}.
+\newblock {High-Resolution Observations and Modeling of Dynamic Fibrils}.
+\newblock \emph{\apj}, 655\penalty0 (1):\penalty0 624--641, January
+  2007{\natexlab{a}}.
+\newblock \doi{10.1086/509070}.
+
+\bibitem[{De Pontieu} et~al.(2007{\natexlab{b}}){De Pontieu}, {McIntosh},
+  {Hansteen}, {Carlsson}, {Schrijver}, {Tarbell}, {Title}, {Shine}, {Suematsu},
+  {Tsuneta}, {Katsukawa}, {Ichimoto}, {Shimizu}, and {Nagata}]{Pontieu2007PASJ}
+B.~{De Pontieu}, S.~{McIntosh}, V.~H. {Hansteen}, M.~{Carlsson}, C.~J.
+  {Schrijver}, T.~D. {Tarbell}, A.~M. {Title}, R.~A. {Shine}, Y.~{Suematsu},
+  S.~{Tsuneta}, Y.~{Katsukawa}, K.~{Ichimoto}, T.~{Shimizu}, and S.~{Nagata}.
+\newblock {A Tale of Two Spicules: The Impact of Spicules on the Magnetic
+  Chromosphere}.
+\newblock \emph{\pasj}, 59:\penalty0 S655--S662, November 2007{\natexlab{b}}.
+\newblock \doi{10.1093/pasj/59.sp3.S655}.
 
 \bibitem[Dedner et~al.(2002)Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer, and
   Wesenberg]{DEDNER2002645}
@@ -26,11 +61,20 @@ A~Dedner, F~Kemm, D~Kr{\"{o}}ner, C.-D. Munz, T~Schnitzer, and M~Wesenberg.
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S002199910196961X}.
 
-\bibitem[Goedbloed and Poedts(2004)]{goedbloed2004principles}
-Johan~Peter Goedbloed and Stefaan Poedts.
-\newblock \emph{Principles of magnetohydrodynamics: with applications to
-  laboratory and astrophysical plasmas}.
-\newblock Cambridge university press, 2004.
+\bibitem[{Gonz{\'a}lez-Avil{\'e}s} et~al.(2017){Gonz{\'a}lez-Avil{\'e}s},
+  {Guzm{\'a}n}, and {Fedun}]{Gonz2017ApJ}
+J.~J. {Gonz{\'a}lez-Avil{\'e}s}, F.~S. {Guzm{\'a}n}, and V.~{Fedun}.
+\newblock {Jet Formation in Solar Atmosphere due to Magnetic Reconnection}.
+\newblock \emph{\apj}, 836:\penalty0 24, February 2017.
+\newblock \doi{10.3847/1538-4357/836/1/24}.
+
+\bibitem[{Hansteen} et~al.(2006){Hansteen}, {De Pontieu}, {Rouppe van der
+  Voort}, {van Noort}, and {Carlsson}]{Hansteen2006ApJ}
+V.~H. {Hansteen}, B.~{De Pontieu}, L.~{Rouppe van der Voort}, M.~{van Noort},
+  and M.~{Carlsson}.
+\newblock {Dynamic Fibrils Are Driven by Magnetoacoustic Shocks}.
+\newblock \emph{\apjl}, 647\penalty0 (1):\penalty0 L73--L76, August 2006.
+\newblock \doi{10.1086/507452}.
 
 \bibitem[Harten et~al.(1983)Harten, Lax, and van. Leer]{hll_1983}
 Amiram. Harten, Peter~D Lax, and Bram van. Leer.
@@ -39,6 +83,27 @@ Amiram. Harten, Peter~D Lax, and Bram van. Leer.
 \newblock \emph{SIAM Review}, 25\penalty0 (1):\penalty0 35--61, 1983.
 \newblock \doi{10.1137/1025002}.
 \newblock URL \url{https://doi.org/10.1137/1025002}.
+
+\bibitem[{Heggland} et~al.(2007){Heggland}, {De Pontieu}, and
+  {Hansteen}]{Heggland2007ApJ6661277H}
+L.~{Heggland}, B.~{De Pontieu}, and V.~H. {Hansteen}.
+\newblock {Numerical Simulations of Shock Wave-driven Chromospheric Jets}.
+\newblock \emph{\apj}, 666\penalty0 (2):\penalty0 1277--1283, September 2007.
+\newblock \doi{10.1086/518828}.
+
+\bibitem[{Iijima} and {Yokoyama}(2017)]{Iijima2017ApJ}
+H.~{Iijima} and T.~{Yokoyama}.
+\newblock {A Three-dimensional Magnetohydrodynamic Simulation of the Formation
+  of Solar Chromospheric Jets with Twisted Magnetic Field Lines}.
+\newblock \emph{\apj}, 848\penalty0 (1):\penalty0 38, October 2017.
+\newblock \doi{10.3847/1538-4357/aa8ad1}.
+
+\bibitem[{James} et~al.(2003){James}, {Erd{\'e}lyi}, and {De
+  Pontieu}]{James2003AA}
+S.~P. {James}, R.~{Erd{\'e}lyi}, and B.~{De Pontieu}.
+\newblock {Can ion-neutral damping help to form spicules?}
+\newblock \emph{\aap}, 406:\penalty0 715--724, August 2003.
+\newblock \doi{10.1051/0004-6361:20030685}.
 
 \bibitem[{Keppens} et~al.(2012){Keppens}, {Meliani}, {van Marle}, {Delmont},
   {Vlasis}, and {van der Holst}]{Keppens_2012}
@@ -50,10 +115,129 @@ R.~{Keppens}, Z.~{Meliani}, A.~J. {van Marle}, P.~{Delmont}, A.~{Vlasis}, and
   February 2012.
 \newblock \doi{10.1016/j.jcp.2011.01.020}.
 
+\bibitem[{Kukhianidze} et~al.(2006){Kukhianidze}, {Zaqarashvili}, and
+  {Khutsishvili}]{Kukhianidze2006A&A}
+V.~{Kukhianidze}, T.~V. {Zaqarashvili}, and E.~{Khutsishvili}.
+\newblock {Observation of kink waves in solar spicules}.
+\newblock \emph{\aap}, 449\penalty0 (2):\penalty0 L35--L38, April 2006.
+\newblock \doi{10.1051/0004-6361:200600018}.
+
+\bibitem[{Ku{\'z}ma} et~al.(2017){Ku{\'z}ma}, {Murawski}, {Kayshap},
+  {W{\'o}jcik}, {Srivastava}, and {Dwivedi}]{kuz2017ApJ}
+B.~{Ku{\'z}ma}, K.~{Murawski}, P.~{Kayshap}, D.~{W{\'o}jcik}, A.~K.
+  {Srivastava}, and B.~N. {Dwivedi}.
+\newblock {Two-fluid Numerical Simulations of Solar Spicules}.
+\newblock \emph{\apj}, 849:\penalty0 78, November 2017.
+\newblock \doi{10.3847/1538-4357/aa8ea1}.
+
+\bibitem[Mart{\'{i}}nez-Sykora et~al.(2017)Mart{\'{i}}nez-Sykora, {De Pontieu},
+  Hansteen, {Rouppe van der Voort}, Carlsson, and Pereira]{Martinez-Sykora2017}
+J~Mart{\'{i}}nez-Sykora, B~{De Pontieu}, V~H Hansteen, L~{Rouppe van der
+  Voort}, M~Carlsson, and T~M~D Pereira.
+\newblock {On the generation of solar spicules and Alfv{\'{e}}nic waves.}
+\newblock \emph{Science (New York, N.Y.)}, 356\penalty0 (6344):\penalty0
+  1269--1272, jun 2017.
+\newblock ISSN 1095-9203.
+\newblock \doi{10.1126/science.aah5412}.
+\newblock URL \url{http://www.ncbi.nlm.nih.gov/pubmed/28642434}.
+
+\bibitem[{Pereira} et~al.(2012){Pereira}, {De Pontieu}, and
+  {Carlsson}]{Pereira2012}
+Tiago M.~D. {Pereira}, Bart {De Pontieu}, and Mats {Carlsson}.
+\newblock {Quantifying Spicules}.
+\newblock \emph{\apj}, 759\penalty0 (1):\penalty0 18, November 2012.
+\newblock \doi{10.1088/0004-637X/759/1/18}.
+
+\bibitem[{Porth} et~al.(2014){Porth}, {Xia}, {Hendrix}, {Moschou}, and
+  {Keppens}]{Porth_2014}
+O.~{Porth}, C.~{Xia}, T.~{Hendrix}, S.~P. {Moschou}, and R.~{Keppens}.
+\newblock {MPI-AMRVAC for Solar and Astrophysics}.
+\newblock \emph{\apjs}, 214:\penalty0 4, September 2014.
+\newblock \doi{10.1088/0067-0049/214/1/4}.
+
+\bibitem[{Samanta} et~al.(2019){Samanta}, {Tian}, {Yurchyshyn}, {Peter}, {Cao},
+  {Sterling}, {Erd{\'e}lyi}, {Ahn}, {Feng}, {Utz}, {Banerjee}, and
+  {Chen}]{Samanta2019Sci}
+Tanmoy {Samanta}, Hui {Tian}, Vasyl {Yurchyshyn}, Hardi {Peter}, Wenda {Cao},
+  Alphonse {Sterling}, Robertus {Erd{\'e}lyi}, Kwangsu {Ahn}, Song {Feng},
+  Dominik {Utz}, Dipankar {Banerjee}, and Yajie {Chen}.
+\newblock {Generation of solar spicules and subsequent atmospheric heating}.
+\newblock \emph{Science}, 366\penalty0 (6467):\penalty0 890--894, November
+  2019.
+\newblock \doi{10.1126/science.aaw2796}.
+
+\bibitem[Shibata et~al.(1982)Shibata, Nishikawa, Kitai, and
+  Suematsu]{Shibata1982}
+Kazunari Shibata, Takara Nishikawa, Reizaburo Kitai, and Yoshinori Suematsu.
+\newblock {Numerical hydrodynamics of the jet phenomena in the solar atmosphere
+  - II. Surges}.
+\newblock \emph{Solar Physics}, 77\penalty0 (1-2):\penalty0 121--151, apr 1982.
+\newblock ISSN 00380938.
+\newblock \doi{10.1007/BF00156100}.
+
+\bibitem[{Sterling}(2000)]{Sterling_2000SoPh}
+A.~C. {Sterling}.
+\newblock {Solar Spicules: A Review of Recent Models and Targets for Future
+  Observations - (Invited Review)}.
+\newblock \emph{\solphys}, 196:\penalty0 79--111, September 2000.
+\newblock \doi{10.1023/A:1005213923962}.
+
+\bibitem[{Sterling} et~al.(2010){Sterling}, {Moore}, and
+  {DeForest}]{Sterling2010ApJ}
+Alphonse~C. {Sterling}, Ronald~L. {Moore}, and Craig~E. {DeForest}.
+\newblock {Hinode Solar Optical Telescope Observations of the Source Regions
+  and Evolution of ``Type II'' Spicules at the Solar Polar Limb}.
+\newblock \emph{\apjl}, 714\penalty0 (1):\penalty0 L1--L6, May 2010.
+\newblock \doi{10.1088/2041-8205/714/1/L1}.
+
+\bibitem[{T{\'o}th}(1996)]{toth1996ApLC34245T}
+G.~{T{\'o}th}.
+\newblock {A General Code for Modeling MHD Flows on Parallel Computers:
+  Versatile Advection Code}.
+\newblock \emph{Astrophysical Letters and Communications}, 34:\penalty0 245,
+  January 1996.
+
+\bibitem[{Tsiropoula} and {Tziotziou}(2004)]{Tsiropoula2004}
+G.~{Tsiropoula} and K.~{Tziotziou}.
+\newblock {The role of chromospheric mottles in the mass balance and heating of
+  the solar atmosphere}.
+\newblock \emph{\aap}, 424:\penalty0 279--288, September 2004.
+\newblock \doi{10.1051/0004-6361:20035794}.
+
+\bibitem[{Tsiropoula} et~al.(2012){Tsiropoula}, {Tziotziou}, {Kontogiannis},
+  {Madjarska}, {Doyle}, and {Suematsu}]{Tsiropoula2012}
+G.~{Tsiropoula}, K.~{Tziotziou}, I.~{Kontogiannis}, M.~S. {Madjarska}, J.~G.
+  {Doyle}, and Y.~{Suematsu}.
+\newblock {Solar Fine-Scale Structures. I. Spicules and Other Small-Scale,
+  Jet-Like Events at the Chromospheric Level: Observations and Physical
+  Parameters}.
+\newblock \emph{\ssr}, 169:\penalty0 181--244, September 2012.
+\newblock \doi{10.1007/s11214-012-9920-2}.
+
+\bibitem[{Withbroe}(1983)]{Withbroe1983ApJ}
+G.~L. {Withbroe}.
+\newblock {The role of spicules in heating the solar atmosphere Implications of
+  EUV observations}.
+\newblock \emph{\apj}, 267:\penalty0 825--836, April 1983.
+\newblock \doi{10.1086/160917}.
+
 \bibitem[{Xia} et~al.(2017){Xia}, {Teunissen}, {El Mellah}, {Chane}, and
   {Keppens}]{Xia_2017}
 C.~{Xia}, J.~{Teunissen}, I.~{El Mellah}, E.~{Chane}, and R.~{Keppens}.
 \newblock {MPI-AMRVAC 2.0 for Solar and Astrophysical Applications}.
 \newblock \emph{ArXiv e-prints}, October 2017.
+
+\bibitem[{Zaqarashvili} and {Erd{\'e}lyi}(2009)]{Zaqarashvili_2009SSRv}
+T.~V. {Zaqarashvili} and R.~{Erd{\'e}lyi}.
+\newblock {Oscillations and Waves in Solar Spicules}.
+\newblock \emph{\ssr}, 149:\penalty0 355--388, December 2009.
+\newblock \doi{10.1007/s11214-009-9549-y}.
+
+\bibitem[{Zaqarashvili} et~al.(2007){Zaqarashvili}, {Khutsishvili},
+  {Kukhianidze}, and {Ramishvili}]{Zaqarashvili2007A&A}
+T.~V. {Zaqarashvili}, E.~{Khutsishvili}, V.~{Kukhianidze}, and G.~{Ramishvili}.
+\newblock {Doppler-shift oscillations in solar spicules}.
+\newblock \emph{\aap}, 474\penalty0 (2):\penalty0 627--632, November 2007.
+\newblock \doi{10.1051/0004-6361:20077661}.
 
 \end{thebibliography}
