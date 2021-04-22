@@ -23,6 +23,17 @@
 \usepackage{xfrac}
 \usepackage{ulem}       % To use \sout
 \usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{pdflscape}
+
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{epstopdf}
+
+\usepackage{rotfloat}
+%\floatstyle{boxed} 
+\restylefloat{figure}
+
 
 \usepackage{geometry}
  \geometry{
@@ -99,10 +110,15 @@
 \newcommand{\np}{\\ \\}
 %y amstext
 \newcommand{\angstrom}{\textup{\AA}}
+\newcommand{\degs}{^{\circ}}
+
+\usepackage{enumitem}
+\newlist{mylist}{itemize}{1}
+\setlist[mylist]{label=\textbf{P1:}}
+\newcommand\itemp{\item[\textbf{P2:}]}
 
 \def\UrlFont{\sf}
-
-\title{Numerical Magnetohydrodynamic Investigation of the Microphysics in the Solar Atmosphere}   %note \\[1ex] is a line break in the title
+\title{Numerical Magnetohydrodynamic Investigation of Jets in the Solar Atmosphere}   %note \\[1ex] is a line break in the title
 
 \author{Fionnlagh Iain Mackenzie Dover}
 
@@ -146,7 +162,8 @@
 \include{2.0_Chapter_II/chapter2}
 \include{3.0_Chapter_III/chapter3}
 \include{4.0_Chapter_IV/chapter4}
-\include{5.0_Conclusions/conclusions}
+\include{5.0_Chapter_IV/chapter5}
+\include{6.0_Conclusions/conclusions}
 
 %now enable appendix numbering format and include any appendices
 \appendix

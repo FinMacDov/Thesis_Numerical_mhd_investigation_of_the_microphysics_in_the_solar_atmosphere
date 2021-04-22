@@ -1,100 +1,191 @@
-\chapter{The Dynamics of Filed-aligned Jets in a Solar Atmosphere}
-%-------------------------------------------------------------------------------
-\let\thefootnote\relax\footnotetext{
+%------------------------------------------------------------------------------
+\chapter{Numerical Recipe}
+\label{chap:Numerical_Recipe}
+%-------------------------------
+%------------------------------------------------------------------------------
+\section{Overview of Numerical Models}
+\label{sec:models}
+%------------------------------------------------------------------------------
+How these spicules originate and they are driven is one of the main issues facing solar physicists currently \citep{Tsiropoula2012,kuzma2017ApJ84978K,Martinez-Sykora2017}. The two main avenues of investigation for this phenomenon are with observations and numerical simulations. Historically it has been challenging to spatio-temporal resolve spicular structures, and has given unclear properties from which to base a models on. This has led to a plethora theoretical models. These models have been reviewed by \cite{Sterling_2000SoPh} and \cite{Aschwanden2019ASSL} that can broadly be split into the following categories: pressure/velocity pulse in lower/upper chromosphere leading to formation of shocks \citep{Shibata1982,Suematsu1982SoPh7599S,Hollweg1982ApJ257345H,Sterling1990ApJ349647S,Heggland2007ApJ6661277H,kuzma2017ApJ84978K}, p-mode leakage \citep{Pontieu2004Natur},  \Alfven waves which can non-linearly couple and form shocks \citep{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H, Kudoh1999ApJ514493K, Matsumoto2010ApJ7101857M}, magnetic reconnection \citep{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y, Archontis2005ApJ6351299A, Pontieu2007PASJ,Isobe2008ApJ679L57I,Nishizuka2008ApJ683L83N,Sterling2010ApJ,Gonz2017ApJ,Gonz2018arXiv180704224G,Gonz2018ApJ856176G}, Joule heating due to ion-neutral collisional dampening \citep{Haerendel1992Natur360241H,James2003AA}, MHD kink waves \citep{Kukhianidze2006A&A}, and vorticle flows which lead to torsional \Alfven waves that drives spicules \citep{Iijima2017ApJ,Samanta2019Sci}. \np
+%
+It important to note as the goal of this thesis is not to determine the origins of spicules. We are interests in the dynamics and morphology of the jet once it is indicated. For this reason we decided established method of applying a pulse based driver and we will give a brief overview of the history of these types of models.   
+%------------------------------------------------------------------------------
+\subsection{Pulse model}
+\label{ssec:pulse_model}
+%------------------------------------------------------------------------------
+For pulse model simulations they start with some form of energy deposition in the photosphere or chromosphere that drives material upwards from these regions into the corona. These types numerical simulations originated in the 1980s where \cite{Hollweg1982ApJ257345H} developed the rebound shock model which is triggered with a velocity pulse, \cite{Suematsu1982SoPh7599S} placed pressure pulse in lower atmosphere, \cite{Shibata1982} carried out simulations with pressure pulses in the upper chromosphere. \np
+%
+\cite{Hollweg1982ApJ257345H} takes a weak pulse of $1\kms$ which is similar to velocities of granular motions at the base of his simulations. Due to the increasing temperature profile of the solar atmosphere any waves created by disturbing the atmosphere are steepened as they travel upwards. When a wave steepen enough it can form a shock, which lifts the local material. When this lifted falls back due to gravity is compresses the lower atmosphere triggering a new wave, which can propagate upwards and steepen, triggering more rebound shocks. \cite{Hollweg1982ApJ257345H} tried to use this model to explain the formation of spicules as the opposing forces exerted by rebound shocks and gravity cause undulations in the TR which he interpret as spicules. \cite{Hollweg1982ApJ257345H} shows this model meets some of the charasteric of spicules as the the motion of TR could appear as non-ballistic, comparable mean upward velocities, heights, temperature, and density. There have been numerous models which has built upon rebound shock model, including radiation and heat conduction \citep{Sterling1988ApJ327950S, Sterling1990ApJ349647S, Cheng1992AA266549C, Cheng1992AA262581C, Cheng1992AA266537C}. When including more sophisticated physics it becomes challenging to reproduce spicule characteristics. For example when \cite{Sterling1990ApJ349647S} added realistic radiation losses, they where not able to produce spicules heights greater than $6~\rm{Mm}$. \cite{Cheng1992AA266549C, Cheng1992AA266537C} used both radiation losses and ionizaton. He found the only way of generating jets similar to spciular properties was by having a longer driving time. Recent simulations carried out by \cite{Heggland2007ApJ6661277H} used longer driving times. They showed how to produce chromospheric jets with including radiation losses and ionizaton, by placing a monochromatic piston driver at the base of the simulation with velocities (driving times) in the range of $0.2-1.1\kms$ (180-360~\rm{s}).
+%
+Strong velocity pulse in the upper atmosphere. 
 
-This chapter is based on the following refereed journal article:
+\cite{Suematsu1982SoPh7599S} started the model which placed pressure pulse in the low chromospheric atmosphere. 
+
+Pressure pulse int eh upper atmsophere. recent models kuzma, sigh ect. 
+
+Then more
+
+
+because the TR receives repeated accelerations at short intervals, it motion is not ballistic. rather the TR heights increase in an unsteady fashion due to the intermittent interactions with the shocks; if observed with poor resolution, this motion may appear constant in agreement with observations. the chromosphere material lofted behind the uplifted material TR can resemble spicules in a number of ways, such as mean upwards velocity, values of density, and the relatively flat Te profile and density profiles.  
+
+
+and once they come contact with jump conditions of the TR they produce strong upward and downward shock waves. These rbeound shocks are generated when parts of the chromospheric plasma are uplifted by a shock, but due to gravity it falls backs causing it to compress lower chromospheric plasma, which makes it rebound upwards triggering a new wave. This wave can then steepen as it travels through the atmosphere triggering more rebound shocks.
+
+The rebound shock model assumes that there is disturbance in the low atmosphere. 
+
+An upward propagating wave front 
+
+      
+
+
+Three broad categories of drivers are pulses in velocity or gas pressure, \Alfven wave and \textit{p}-modes.
+%------------------------------------------------------------------------------
+\subsubsection{Strong Pulse In low Atmosphere}
+\label{sssec:pulse_model}
+%------------------------------------------------------------------------------
+ Early studies of pressure pulses in an HD stratified atmosphere are carried out by \cite{Suematsu1982SoPh7599S}, \cite{Shibata1982, Shibata1982SoPh78333S}, and \citep{Hollweg1982ApJ257345H}. The basic dynamics of these studies is that an artificial enhancement of pressure is placed at various heights, which drivers waves upwards into the atmosphere and when it reaches the TR region (essentially acts as a contact discontinuity), it produces a strong shock. The lower the pulse is place in the atmosphere the strong the shock produced at the TR \citep{Shibata1982, Shibata1982SoPh78333S}. This is because the more atmosphere these waves travel the more they are amplified due to the temperature gradient. This lifts the TR and they interpret the matter behind this interface as a spicule. This means that placement of the pulse affects the measure spicules heights. These models are able to capture spicule temperatures, heights, and smooth trajectory for the apex of the spicule during its accent. \np \np     
+\cite{Sterling_2000SoPh} breaks the velocity pulse into two categories (i) Strong pulse in lower atmosphere (photosphere to low chromosphere) ($\sim 60\kms$ for initial velocities); (ii) weak pulse in the lower atmosphere i.e. rebound shock model (range of $\sim 1 \kms$ based on the magnitude seen in granular motions). 
+
 \begin{itemize}
-\item Barbulescu, M., Erd\'elyi, R. (2018); Magnetoacoustic Waves and the Kelvin-Helmholtz Instability in a Steady Asymmetric Slab. I: The Effects of Varying Density Ratios, \solphys, Volume 293, Issue 6
-\end{itemize}
-}
-%------------------------------------------------------------------------------
-\section{Introduction}
-\label{sec:c2intro}
-%------------------------------------------------------------------------------
-Despite the numerous numerical simulation, very few papers simulating solar jets include an investigation of a parameter space.
-%------------------------------------------------------------------------------      
-\section{Parameter Space}
-\label{subsec:paramater_space}
-%------------------------------------------------------------------------------
-The parameter space chosen for investigation is $P=50,~200$ and $300~\rm{s}$ (driver times), $B_y=20,~40,~60,~80,~100~\rm{G}$ (magnetic filed strength) and $A=20,~40,~60$ and $80 \kms$ (initial amplitudes). These values are based around typical values for classical spicules. The driver times based on the $5$ minute oscillation of the p-mode \citep{Leighton1962ApJ135474L}, as they are potential driver for multiple solar features (spicules, mottles  and dynamic fibrils) \citep{Pontieu2004Natur}. The magnetic field strength are in the ranges observed values for spicules which is consistent with spectropolarimetric estimates for limb spicules \citep{centeno2010, suarez2015}. The range of velocities are chosen based on the energy need to lift near photospheric mass ($?\kgm$) and observed speeds seen in spicules which have a range of $?-?\kms$ !Need to get a group of citations!. \np
-% may include a summarry table in the intro that is used in presenations, then we could refere to it in text.
-%
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/jet_P300_B60A_60T_0103.png}{Example of jet tracking software. Solid blue dots mark the jet edges and the yellow triangle marks the jets apex.}{j_track_example}
-%fffffffffffffffffffffffffff
-To understand the jet dynamics we need to quantify important aspects of the jet, e.g. speed, life time, trajectory and jet boundary deformation. This is achieved by temporally tracking the jets width (solid blue dots) and apex (yellow triangle), using jet tracking software (see \fref{j_track_example}). The jet tracking software we developed uses the tracer quantity developed by \cite{Porth_2014}, to locate each data point. The tracer follows the mass flow of jet as it enters the computational domain and is assigned a non-physical value of $100$ (jet value). To separate jet pixels from non-jet pixels we use a threshold of tracer value being greater than $15\%$ of the jet value to convert into binary array where $1$ belongs jet cell and $0$ is assumed to be ambient medium. At specified height intervals (our case every $1 \rm{Mm}$) horizontal slices are taken to identify jet side boundaries and the the apex is located by finding the highest vertical index belonging to the jet.
-\subsection{Jet Tracking}
-\subsection{Jet Trajectories}
-\subsection{Effects on Jet Apex and Widths}
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/jet_traj.png}{The effect of the parameter space on the jet trajectory. Each panel is grouped together by initial amplitude and from top left to bottom right they are group by $A= 20, ~40, ~60$ and $80 \kms$. Units are omitted from legend for readability, the units for $P,~B$ and $A$ are $\rm{s}~, \rm{G}$ and $\kms$, respectively.}{pscan_traj}
-%fffffffffffffffffffffffffff
-% !possibley add figs for these!!!!!!!!!!
-By temporally tracking (see \fref{pscan_traj}) the apex data we seen that the jets have parabolic trajectories. These trajectories have been compared to expected ballistic trajectories and found to be non-ballistic. Solar jet-like features such as spicules, mottles and dynamic fibrils have been shown to have non-ballistic parabolic trajectories e.g. mottles, dynamic fibrils and TI spicules \citep{ Hansteen2006ApJ,Rouppe2007ApJ660L169R,Pontieu2007PASJ}, which is in agreement with our simulations. In \fref{pscan_traj} exhibits that for driver $<40 \kms$ then we are reaching the limits of spicules heights. In each panel there is a subgroup reaching lower heights due reduced driving time. \np  
-%
-These jet-like events are predicted to have linear correlation between deceleration and maximum velocity and if the jet is initiated with shock waves the relationship is defined by the following \citep{Heggland2007ApJ6661277H},
-\begin{equation}
-d = \frac{v_{max}}{P_{w}/2},
-\end{equation}
-where $d$ is declaration, $v_{max}$ is the maximum velocity during the lifetime of the jet and $P_{wave}$ is the period of the wave. In !fig (todo)! !!1! we show that our jets have a linear relationship, by that found in \citep{Heggland2007ApJ6661277H}, but this is due to the nature in which these jets are driven as it is not a short pulse like event, the parameter $P_{w}=P$, which in our cases is linked to the life time of the jet rather than the period of a wave. While we find that we match observation with a linear correlation, its not with the same gradient of line as theoretically predicted for these jet-like events. \np
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/test_combine_image.png}{The effects of the parameter space on both the max apex (panels on the left) and mean jet widths (panels on right). Units are omitted from legend for readability, $P,~B$ and $A$ are in $\rm{s},~\rm{G}$ and $\kms$, respectively}{pscan_full}
-%fffffffffffffffffffffffffff
-To understand the global impact of the key parameters investigated, we compared how each parameter effects the max apex height and average width of the jet over its entire lift cycle. In \fref{pscan_full}, the panels to the left, top to bottom show the influence of changing $B$, $P$ and $A$ on the maximum apex reached during the jets lifetime. Varying the magnetic field strength has little impact on the heights reached by a jet as all lines have shallow gradients. This parameter could potentially have a larger effect of jet heights if the flow of the jet is not aligned with he magnetic field. This particular aspect is investigated in chapter !!(?)!.  The driver time has small effect on the jet heights, there is a slight decrease in height for $p=50$, but then peaks for $P=200~\rm{s}$ and $P=300~\rm{s}$. This suggested to transport mass from lower in the atmosphere through the solar atmosphere then a instantaneous pulse will not be sufficient, there needs to be longer driver time. In both previously mentioned parameters, they are grouped by colors and line styles for $B$ and $P$ scans, which corresponds to matching initial amplitudes. This alludes to initial amplitude being the most important parameter for determining jet heights, as indicated by the last leftmost panel in \fref{pscan_full}. The maximum height reached by a solar jet is mainly determined by the initial Amplitude of the driver and has a parabolic trend. As the magnetic field plays small role in jet heioghts and as the driver time flattens at $200~\rm{s}$, our best chance of observing a jet is with longer driving times, therefore we can model that jet heights with a simple power law of the form, 
-\begin{equation}
-h_{max} = C v_j^{n},
-\end{equation} 
-by collapsing the data by taking a average at each velocity data point and then fit an optimal curve using least squares obtaining values of $C= 10^{-2.21}$ and $n= 1.72$ as shown in leftmost lowest panel in \fref{pscan_full} as a solid red line with solid data markers. The light blue shading gives and error range of . Visually and from the power law, both clearly show that for our choice of driver it doesn't have a linear trend between apex jet height and pulse strength, which contradicts results in \cite{Singh2019}. We should take note that in \cite{Singh2019} an instant pressure pulse close to the TR was used as a driver, which may not be directly comparable to our study. \np     
-%
-On the panels to the right of \fref{pscan_full} shows the effect of the parameter space on the mean widths. The means widths are calculated measure the width of the jet for every $1~\rm{Mm}$ over the entire life time of the jet. This metric is not perfect, but gives useful overview of the impact of these parameters that make physical sense.     
-% need to edit ---------------------
-The effect of the parameter space on the jet widths are show on the panels on the right hand side \fref{parameter_scan_lines}. To obtain the width data, it is measured at every megameter the jet reaches and the mean value is calculated over the whole life of the jet. This is by no means a perfect method, but does give useful insight into the global deformation of the jet boundary and returns result that make physical sense. For example by varying the magnetic field strength we observe that the weaker the field strength the less collimated the jet is. This is because as the jet rises it has a higher pressure than the ambient medium cause it to expand and bend surrounding field lines. The stronger the magnetic field lines, the greater tension they have and thus greater collimation of the jet. This parameter scan suggests that for regions with strong magnetic field the jet widths should be reduced and this trend should be noticeable in observations {\color{green} Can you think of any study that has reported this or looked into this?}. By increasing the driving time, it increases the jet widths and we observe a linear trend in the data. This is because with a longer driver more material is supplied to the jet, thus increasing the jet widths. The lines are grouped together based on their magnetic field strength represent by matching colors due to collimation from the magnetic field. This parameter scan indicates the amplitude of the driver has minimal effect on jet widths for magnetic field aligned flow. With non-field aligned flow we suspect this parameter would have a greater effect on jet widths, but this needs to be confirmed. \np
-%
-Based on the results of the parameter scan we define a ``standard'' jet, the one we believe most reflective of classical spicules. This is depicted in \fref{standard_jet}, with $P=300$ s, $B=60$ G and $A=60$ km s$^{-1}$ where the top, middle and bottom panels show changes in the density, temperature and numerical Schlieren shown in terms of normalized density gradient magnitude. The numerical Schlieren is defined as follows,
-\begin{equation}
-    S_{ch} = \exp{\left( -c_0 \left[ \frac{|\boldsymbol{\nabla} \rho|-c_1 |\boldsymbol{\nabla} \rho|_{max}}{c_2 |\boldsymbol{\nabla} \rho|_{max}-c_1|\boldsymbol{\nabla} \rho|_{max}} \right] \right)}, 
-\end{equation}
+         \item \cite{Hollweg1982ApJ257345H} developed shock model and carried out 1D simulations. In this simulation gas pressure lits the TR to the observed heights of spicules. \cite{Suematsu1982SoPh7599S} did the same for velocity pulses. Later on \cite{Heggland2007ApJ6661277H} studied the shock model with additional physics of radiation and heat conduction.
+    \item  propagating shocks models, passing though the upper chromosphere and TR towards the corona. \cite{Hansteen2006ApJ} preformed a 2D numerical radiative MHD simulations in an atmosphere that goes from upper convective zone to lower corona (including everything between) \cite{Hansteen2007ASPC368107H} (this citation is purely for atmospheric set up) and this extended in \cite{De_Pontieu2007ApJ}. These simulations shed light on the origins of spicules, mottles and dynamic fibrils can driven be driven by p-modes oscillations and convective flows.
+    \item \cite{Mart2009ApJ7011569M} (extended both \citep{De_Pontieu2007ApJ,Hansteen2006ApJ}), by carrying out 3D version. They identify driver they label as ``other mechanisms" (beside p-mode). They find that collapsing granules, convective buffeting by breaking granules (is this a collapsing granule?), flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that possible there is more driving mechanism are possible, but in general (even in simulations) it often difficult to to identify the driver. Interesting regardless of the driving mechanism the dynamics of the spicules remain consistent (TI). In these simulations the ranges for lifetime ($2-3$ mins) and max height are smaller than those in observations ($<2,000$ km)  
+    \item \cite{Matsumoto2010ApJ7101857M}  Spicules driven by resonant \Alfven waves generated in the photosphere and confined in a cavity between the photosphere and TR. \Alfven waves are driven by the magento-convection at the photosphere. 
+    \item solve 2D ideal MHD equations and perturb vel to simulate TI spicules \cite{Murawski2010AA519A8M} 
+    \item \cite{Murawski2010AA519A8M} spicule formation can be divided into 3 main groups, pulses, \Alfven waves, and p-mode leakage. 
+    \item The main idea of spicule formation by impulsively launched perturbations is as follows. Velocity or gas pressures pulses deposited int eh lower atmosphere are steeped into shocks as a result of the rapid decrease in mass density with height. These shock lift the TR, producing spicules.
 
-%------------------------------------------------------------------------------      
-\subsection{Jet Head}
-\label{subsec:j_head}
-%------------------------------------------------------------------------------      
-%------------------------------------------------------------------------------      
-\subsection{Jet Beam Structure}
-\label{subsec:j_beam_struc}
-%------------------------------------------------------------------------------      
-%------------------------------------------------------------------------------      
-\subsection{Jet boundary deformation}
-\label{subsec:j_boundary_Def}
-%------------------------------------------------------------------------------ 
-%------------------------------------------------------------------------------
-\section{Summary and Discussion}
-\label{sec:c2discussion}
-%------------------------------------------------------------------------------
-     
-%------------------------------------------------------------------------------      
-\section{Stuff to go somewhere}
-%------------------------------------------------------------------------------      
-The way the jet is excited is analogous to jets created in a laboratory, in the sense we artificially created 'nozzle' in which drive our material into the atmosphere. Akin to laboratory jets our jet has high density ratio ($\eta_j >1$) and has Mach numbers ($\sim 1-3$). When describing a jets these parameters are key for defining its morphology and structure: $v_j$, $\eta_j = \frac{\rho_j}{\rho_a}$, $K = \frac{p_{d}}{p_a}$, where $\rho_a(p_a)$ is the ambient density(pressure) and $p_{d}$ is the pressure at the driver. $\eta_j$ measures the density contrast of the jet itself and the ambient medium it propagates through. If $\eta_j>1(\eta_j<1)$ then a jet is labeled to as heavy(light). For $K$ with denotes our jet to ambient pressures ratio determine whether the jet is under-expanded ($K>1$) or over-expanded ($K<1$). In our case we are dealing with the expected dynamics of a heavy under expanded-jet. In a paper by \cite{Norman1982} they describe the structures that occur in HD super sonic jets. The jets described in the paper are generated from a high pressure reservoir contain in the nozzle and internal structure of these jets is depicted in \fref{cartoon_jet_waves}. In the simulations shown in \fref{jet_simulation} we can see areas of enhanced brightness along the central axis of the jet, which we will refer to as knots. This phenomena occurs in laboratory jets \textit{e.g.} \citep{Ono2014,Edgington-Mitchell2014,Menon2010} and in astrophysical jets \textit{e.g.} \cite{Blandford2019,Belan2011,DeGouveiaDalPino2005,Birkinshaw1996}. In our case two possible mechanisms for explaining the knotted structures in the jet simulations: \\
-\par (1) The knots could be created by the interaction of the pressure forces occurring inside and outside the jet. If we tracked a small portion of the jet as it evolves upwards it would undergo a series of expansion and contractions. Initially the jet pressure is greater than the surrounding atmosphere, thus as it rises it expands. However, this expansion lowers the jet pressure and as jet diameter increases it bends surrounding magnetic field lines. This increases the magnetic tension until it's greater than the jet pressure, causing the jet boundary to reconverges towards the jet center. As the jet diameter shrinks the jet pressure responds by increasing and becomes the dominant force pushing the jet boundary outwards. Thus, the cycle repeats as the jet tries to reach an equilibrium with its environment. Essentially, there is a ``tug of war" is occurring between the total pressure forces inside and outside the jet.  \\
-\par (2) When a jet is going supersonic it will have a myriad of internal structures cause by shock waves \citep{Norman1982}. A schematic overview of these structures are given in Fig. \eqref{cartoon_jet_waves}. In the simulation the jet speeds reach roughly Mach $\sim 1-3$ of the local sound speed and the body of the jet itself has plasma beta $\sim 2-10$, therefore the MHD waves do not play the main role in internal structure of the jet and will be similar to dynamics of an HD supersonic jet. The notable features of interest in a supersonic jet is the osculating jet boundary and cross pattern occurring inside the jet. The jet boundary undulates as the gas periodically over expands and collapses in as it tries to reach and equilibrium with the ambient atmospheric pressure. The jet repeatedly overshoots the equilibrium position because the effects of the boundary are communicated to the interior of the jet by sound waves, which are traveling slower than supersonic flow of the jet. This leads the to lowest\textbackslash highest points of pressure in the jet being out of phase with the highest\textbackslash lowest jet diameter (see Fig. \eqref{cartoon_jet_waves}). As the jets pressure is greater than ambient atmospheric pressure the dynamics of the jet are akin to an under-expanded jet as shown in \cite{Norman1982,Edgington-Mitchell2014}. The crisscross shock pattern is created by a series of shock and expansion structures that can create these ``knots". An expansion fan (blue dashed lines in Fig. \eqref{cartoon_jet_waves}) forms at the base of the due to the difference in pressure between the jet and the ambient atmosphere. This expansion fan causes an outward flow making the jet enlarge. The Mach lines of the expansion waves reflects of the jet boundary inwards towards the jet center in the form of compression waves and a compression fan due pressure continuity (red lines in Fig. \eqref{cartoon_jet_waves}). The compression waves reflected at a near constant angle from the jet boundary and as this boundary is curved the Mach lines of the compressions waves have a tendency to converge into a conical shock wave before reaching the center of the jet. This incident shock either goes under a regular reflection or becomes a Mach disk depending on the angle between the incident shock and the central jet axis, for small and large angles respectively (see black lines Fig. \eqref{cartoon_jet_waves}). As the flow passes through this shock it will increase the pressure in the jet. When the reflected shock reaches the jet boundary it knocks the boundary outwards, creating an expansion fan and thus allows the process to be repeated.
-%------ put this elsewhere
-\par A schematic diagram of basic structure of a jet is given by \fref{ssj}. When a HD super sonic jet moves through the ambient medium, a bow shock is formed is formed in front of the advancing head of the jet and at the top of jet itself there is a Mach disk which is usually much stronger than the bow shock \citep{Chakrabarti1988}. The region close to advancing head of the jet is referred as working surface of the jet. Between the bow shock and the jet there are two other distinct regions the cocoon and screen which are separated by a contact discontinuity. The cocoon is the shocked jet medium and screen is the shocked ambient medium. The velocity of the jet head $v_h$ by comparing the momentum fluxes the jet and the external matter at the head of the jet and is estimated by the following,
-\begin{equation}\label{v_j_speed}
-v_h \approx \dfrac{v_j}{1+ \left( \dfrac{\rho_e}{\rho_j} \right)^{\sfrac{1}{2}}} 
+    \item \cite{Scullion2011ApJ74314S} does 3D simulations to model type I spicule. They use a wave based driver to show the transmission of acoustic waves from lower chromosphere and into the corona, which leads to the formation of a jet, which excites TR quakes.
+\end{itemize}
+
+
+(vii) Leakage of global p-mode oscillations from photosphere and the formation of shocks in the chromosphere \cite{Pontieu2004Natur,Zaqarashvili2007A&A}; 
+
+ \cite{Mart2009ApJ7011569M} identify multiple possible drivers for spicules in their 3D numerical simulations. In their simulation they use atmosphere that connect the upper convection zone to lower corona and found that spicular features naturally occur. They find other mechanisms that could explain spicule formation by collapsing granules, convective buffeting by breaking granules \citep{Roberts1979SoPh6123R}, flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that more driving mechanisms are possible, but in general (even in simulations) it often difficult to identify the driver. Interestingly regardless of the driving mechanism the dynamics of the spicules remain consistent with TI spicules with ranges for lifetime ($2-3$ minutes) and maximum height ($<2,000$ km). These are lower than reported in observations, but these simulation have been built upon \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M} using the Bifrost code \citep{Gudiksen2011AA531A154G}. They have one of the most realistic solar atmospheres which can include multiple complex physics (e.g. radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects). Again, they find that spicular features naturally and frequently occur \citep{Mart2017Sci3561269M}.
+%-----------------------------------
+\begin{itemize}
+%reviews to ref
+\item \cite{Carlsson2019ARAA57189C} newer review of numerical model. Should be mentioned in some ways, focus on BiFrost simulations.
+\item \cite{Zaqarashvili_2009SSRv} summarise on the oscillation and waves of spicules.
+\end{itemize}
+Summary of \cite{Sterling_2000SoPh}
+\begin{itemize}
+\item numerical models can be categorised as following: 
+\begin{enumerate}
+\item Strong pulse in lower atmosphere (photosphere to low chromosphere) ($\sim 60$ km s-1 for initial velocities)
+\item weak pulse in the lower atmosphere i.e. rebound shock model (range of $\sim 1$ km s-1 based on the magnitude seen in granular motions). 
+\item pressure-pulse in the higher chromosphere (middle or upper chromosphere)
+\item \Alfven wave models 
+\end{enumerate}
+\item \cite{Sterling1990ApJ349647S} and \cite{Cheng1992AA266537C} extended model (2) by adding radiation losses and hear conduction. 
+\item driver (3) was explored by \cite{Shibata1982} (no radiation and heat conduction). They excite two types of chromospheric jets that form dependent on height of pressure pulse in chromosphere. The shock tube jet (TR is expanded directly by the pressure pulse expanding and is placed above middle of chromosphere) and the other is a crest shock jet is TR is raised by the slow shock wave that can be generated by the expanding pressure enhancement (below middle chromosphere). 
+\item driver (3) was extended by \cite{Sterling1990ApJ349647S,Sterling1993ApJ407778S,Cheng1992AA266537C,Heggland2007ApJ6661277H,kuzma2017AA597A133K}, by adding effect of radiation and heat conduction. another example of pressure pulse \cite{Smirnova2016SoPh2913207S}. 
+\item more recent simulation have studied pressure pulse with a 2D two-fluid model \cite{kuzma2017ApJ84978K}.   
+\item can add some more recent papers here e.g. Kuzma, 2-fluid models ect.
+\item driver (4), two classes low freq and high freq. the basic idea is that torsional \Alfven waves on vertical flux tubes could drive jets. \Alfven waves are a nature byproduct of buffeting of flux tubes by photospheric granulation. \cite{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H} first did 1.5 D numerical simulations and showed that \Alfven waves can non-linearly couple into MHD fast-mode shock and also create slow shocks, these shock can then move chromospheric material upwards and excite the TR creating a jet. 
+\item \cite{Kudoh1999ApJ514493K} carried out 2D simulations, but instead of a single \Alfvenic pulse they used multiple random \Alfvenic pulses (all these dont included rad loss and te conduction).  
+\item Some of the most convincing simulations that produce spicules-like jet are \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M}. These start of art simulations use the Bifrost code \citep{Gudiksen2011AA531A154G} which has one of the most realistic atmosphere that connects the upper convection zone to the lower corona. Which can include multiple complex physics (e.g. ) See blah for more detail... include a possible combination of radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects. They find that spicular features naturally and frequently occur because of their numerical set up (i.e. connecting the atmosphere to convective motions and inclusion of realistic physics) \cite{Mart2017Sci3561269M}. 
+\item They solve the MHD equations with non-gray and non-LTE radiative transfer, with thermal conduction along the magnetic field lines. 
+\end{itemize}
+magnetic recognition.
+\begin{itemize}
+\item magnetic reconnection driven jets \cite{Gonz2018arXiv180704224G,Gonz2018ApJ856176G,Gonz2017ApJ,Isobe2008ApJ679L57I,Archontis2005ApJ6351299A} 
+\item larger scale jets \cite{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y,Nishizuka2008ApJ683L83N}
+\item wave induced \cite{Heggland2009ApJ7021H}.
+\end{itemize}
+%----------------------------
+% stuff
+Historically it has been challenging to spatio-temporal resolve spicular structures and has given unclear properties from which to base a models on. Modern instruments and observing techniques are able to resolve individual spicular structures, but the formation mechanisms remains an important open question. This has lead to theoretical models as reviewed by \cite{Sterling_2000SoPh} that can broadly be split into the following categories: pressure/velocity pulse in lower/upper chromosphere leading to formation of shocks e.g. \citep{Shibata1982,Suematsu1982SoPh7599S,Hollweg1982ApJ257345H,Sterling1990ApJ349647S,Heggland2007ApJ6661277H,kuzma2017ApJ84978K}, \Alfven waves which can non-linearly couple and form shocks \citep{Hollweg1982SoPh7535H,Hollweg1992ApJ389731H,Kudoh1999ApJ514493K,Matsumoto2010ApJ7101857M}, magnetic reconnection \citep{Yokoyama1995Natur37542Y,Yokoyama1996PASJ48353Y,Archontis2005ApJ6351299A,Pontieu2007PASJ,Isobe2008ApJ679L57I,Nishizuka2008ApJ683L83N,Sterling2010ApJ,Gonz2017ApJ,Gonz2018arXiv180704224G,Gonz2018ApJ856176G}, Joule heating due to ion-neutral collisional dampening \citep{Haerendel1992Natur360241H,James2003AA}, MHD kink waves \citep{Kukhianidze2006A&A}, and vorticle flows which lead to torsional \Alfven waves that drives spicules \citep{Iijima2017ApJ,Samanta2019Sci} and \textit{p}-mode leakage \citep{Pontieu2004Natur}. \cite{Mart2009ApJ7011569M} identify multiple possible drivers for spicules in their 3D numerical simulations. In their simulation they use atmosphere that connect the upper convection zone to lower corona and found that spicular features naturally occur. They find other mechanisms that could explain spicule formation by collapsing granules, convective buffeting by breaking granules \citep{Roberts1979SoPh6123R}, flux emergence through the photosphere and magnetic energy released in the photosphere or in the lower chromosphere. They mention that more driving mechanisms are possible, but in general (even in simulations) it often difficult to identify the driver. Interestingly regardless of the driving mechanism the dynamics of the spicules remain consistent with TI spicules with ranges for lifetime ($2-3$ minutes) and maximum height ($<2,000$ km). These are lower than reported in observations, but these simulation have been built upon \citep{Mart2017Sci3561269M,Mart2018ApJ860116M,Mart2020ApJ88995M} using the Bifrost code \citep{Gudiksen2011AA531A154G}. They have one of the most realistic solar atmospheres which can include multiple complex physics (e.g. radiative transfer with scattering in photosphere and lower chromosphere, upper chromospheric and TR radiative losses and gains, optically thin radiative losses in the corona, thermal conduction along the magnetic field lines, ion-neutral effects, non-LTE effects). Again, they find that spicular features naturally and frequently occur \citep{Mart2017Sci3561269M}. \np
+%--------------------------------------------------------
+\section{MPI-AMRVAC}
+%--------------------------------------------------------
+All the simulations carried out in this thesis use the open source software Message Passing Interface Adaptive Mesh Refinement Versatile Advection Code (MPI-AMRVAC). This software is developed in Fortran 90 parallezied with Message Passing Interface(MPI) \citep{toth1996ApLC34245T,Keppens_2012,Porth_2014,Xia_2017}. The main focus of this software is maintaining conservation laws in shock dominated problems. This achieved using shock capturing schemes to retain near-conservation for a set of hyperbolic partial differential equations, typical in conservative form: 
+\begin{equation}\label{AMRVAC_stlye}
+\frac{\partial \boldsymbol{U}}{\partial t} + \nabla \cdot \boldsymbol{F}(\boldsymbol{U}) = \boldsymbol{S}_{phys} (\boldsymbol{U}, \partial_{i} \boldsymbol{U}, \partial_i \partial_j \boldsymbol{U},\boldsymbol{x},t) ,
 \end{equation}
-From \eref{v_j_speed} we can see for light jets ($\eta_j<1$) this means that speed of the head of the jet will be slower than the jet speed itself, this leads to a pile up of material which forms the cocoon. For heavy jets ($\eta_j>1$), the head of the jet will advance with speeds comparable to the jet itself and thus leads to much less back flow. This is why there is very little back flow in these jet The bow shock can be seen early on in the simulation and we see that the temperature increase at the head of the jet.
-\par We have developed software to track the max jet heights (!get image example!) as it evolves and to measure the widths of the jet every megameter. The software tracts the jet using the tracer quantity that was set in simulation. A tracer tracks the density evoultion of th simaultion as described in \cite{Porth_2014}, we assign the jet with a vlaue 100 and everthing else as 0. We then set a threshold of $15\%$ of the jet value and convert into binary image (1 belong to jet and 0 not belonging to jet). To find the edges we take a horizontal slice every mega meter and look for changes and peak of the jet by taking the highest index value in the vertical. From this we create a data set which is used to produce Figs. (\ref{max_h_vs_b}-\ref{hight_dt}). We study how the different driver times, magnetic and drive amplitude effect the max height and average widths of the jet to see what effect this has on the jet morphology. From \fref{max_h_vs_b} it shows that strength of the magnetic has minimal impact on the max height reach by the jet. It important to note that the magnetic field may play a significant role in max jet heights if jets direction was not in-line with the magnetic field. As we can see from the color bands which corresponds to max amplitude reached by driver, this suggest that this is a key parameter for the max jet height. In \fref{max_h_vs_a} we conclude that max height is the jet mainly determined by the max amplitude reached by the driver with a parabolic trend. We observe that for our driver which is a momentum pulse we don't not get a linear trend between max jet height and pulse strength as reported in \cite{Singh2019}. \cite{Singh2019} used a a single instantaneous pressure pulse placed $1.8$ Mm. This suggests that height at which the driver is placed, its amplitude and its duration of driving is driven important to jet evolution. For example the longer distance that a pulse has to travel through the chromosphere to the TR the stronger the shocks the grow and the higher the jets will reach \citep{Shibata1982}. In \fref{max_h_vs_a} wee see that the driver time has some impact on max height. It shows that for short driver time of $50$ s there is a reduction in heights reached by the jets and there is no significant different between jet heights for a 200 and 300 s driver. We can see that the lines are banded together with matching line styles which again corresponds to matching velocities of the driver and reinforces that initial velocity is the main factor in determining max jet height if jet direction is inline with the magnetic field direction.
-%------------------------
-\par In \fref{mean_w_vs_A} we observe that the initial amplitude has little effect on jet widths. We a see pairing between drivers with $200$ and $300$ s, indicated by matching line styles, which is expected based on \fref{mean_w_vs_A}. The only parameter this doesn't apply is for $B=20 G$, this is due to the jet being weakly confined by the magentic feild. In \fref{mean_w_vs_dt} shows a linear trend between driving time, this is because with a longer driver more material will be supplied to the jet. There can also be a pile up in the jet beam as falling material interacts with raising material causing the jet to slighly ballon. We can see that the lines are grouped together based on their magnetic field strength represent by matching colors. This is an expected result as for weaker magnetic fields we get much larger jets widths, this is due to the magnetic field not being strong enough to compress the jet as it raises. Where as where the magnetic feild is stronger we observe that the jet widths are significantly reduced. This interpretation is evidenced by \fref{mean_w_vs_b} where we see larger jet widths for weaker magnetic field. We observe that they are group by there driver times as they have matching line styles. In \fref{hight_dt} we take use a the following paramters $P=300$ s, $B=50$ G and $A=60$ km s$^{-1}$ and run it with a much higher cadence in output. Each line in this \fref{hight_dt} represents a different height in the jet. We clearly the boundary of the jet are osculating over time. We don't see this phenomenon in simulations with a jet driven with a single instant pulse (!double check this claim! such as \citep{kuz2017ApJ,Singh2019}) we don't observe oscillations in there jet simulations, even though clearly in observations solar jets they oscillate (get refs). In Figs. (\ref{A20}-\ref{A80}) we have plotted the trajector of the max height of the jet over time, each Fig. is a displays all jets with the same driving amplitude. We find that our jets have a asymmetric parabolic path as reported in \cite{Singh2019}. We believe this is due to a piling of jet material as the jet begins to falls as falling matter will interact with raising matter. This will slow the jets decent. It is possible the magnetic field could impede the jets decent if the direction of falling material was at an angle with respect the magnetic field. We can see that heights reached are within the limits of what is expected for spicules. 
-%fffffffffffffffffffffffffff
-\mfig{0.8}{figures/jet_P300_B60A_60_t_1_10_13_19.png}{Simulation of jet in Stratified atmosphere with uniform magnetic field in vertical direction. This is the ``standard" jet with parameter $P=300$ s, $B=60$ G, $A=60$ km s$^{-1}$. Top, middle and bottom panels show density, temperature and numerical Schlieren respectively.}{jet_simulation}
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/parameter_scan_1.png}{Simulation of jet in stratified atmosphere with uniform magnetic field in vertical direction. Examples of parameter scan with variations of one parameter of standard jet and all panels show the density evolution. Top, middle and bottom panels are $B=80,20$ G and $A=80$ km s$^{-1}$, respectively.}{pscan_den_plot1}
-\mfig{1}{figures/paramter_scan_2.png}{Continuation of \fref{pscan_den_plot1} with top, middle and bottom panels are $A=20$ km s$^{-1}$, $P=50$ and $200$ s, respectively.}{pscan_den_plot2}
-%fffffffffffffffffffffffffff
-\mfig{0.8}{figures/jet_diagram.eps}{schematic overview of the structure of a under-expanded supersonic HD jet.}{cartoon_jet_waves}
-%fffffffffffffffffffffffffff
-\mfig{0.5}{figures/diagram_of_ssj.png}{A schematic diagram giving an overview of the expected structures found in an HD super sonic jet dran in frame of the bow shock. Diagram taken from \cite{Chakrabarti1988}.}{ssj}
-%fffffffffffffffffffffffffff
-\mfig{1}{figures/combine_zoom.png}{todo.}{jet_head}
+where $U$ is the set of conserved variables, $F(U)$ the corresponding fluxes and $S_{phys}$ are the source terms. The source terms are used to add extra physics, such as gravity, diffusion, and viscosity. \np
+%
+MPI-AMRVAC has been constructed to be a versatile piece of software, arming the user with multitude of options. This reduces development time as rather than writing bespoke software for each simulation, modules of the code can efficiently be swapped or modified to produce desired effect, e.g. changing physic modules, spatial\textbackslash temporal solvers, grid setup and geometric, change boundary conditions, and writing own custom routines. \np
+% 
+\subsubsection{Adaptive Mesh Refinement}
+One of the main features of MPI-AMRVAC is the adaptive mesh refinement (AMR). Using AMR means that rather having a static fixed resolution for the entirety of the simulation, we have a dynamical grid, that add/removes grid cells as needed. For example see the differing mesh in Fig.~\ref{amr_example} the test case of a hydrodynamic Rayleigh-Taylor Instability (RTI) (see Section~\ref{!!?!!} for more description of RTI). In this simulation there is a a denser fluid flowing downwards and area of highest resolution are located where rapid changes are occurring in the computational domain. The rules that AMR are allocated and deallocated are:     
+
+
+which allows for computationally efficient placement of grid cells. 
+%fffffffffffffffffffffffff
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{figures/RTI_example.png}
+\caption{Example of AMR mesh for RTI. Notice there is increase number of grid cells around dynamic regions.: \url{http://amrvac.org/md_doc_examples.html}}.
+\label{amr_example}
+\end{figure}   
+%fffffffffffffffffffffffff
+This means that one can increase the grid cells in regions of interest (i.e where smaller scale dynamics are occurring) based on the numerical error without having to increase the resolution of the whole domain which would be computationally expensive. \np
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{figures/amrpng.png}
+\caption{A generic AMR block skeleton from: \url{http://amrvac.org/md_doc_amrstructure.html}}.
+\label{amr_scheme}
+\end{figure}   
+%------------------------------------------------------------------------------
+\subsection{Atmospheric Equilibrium}
+\label{sec:atmos_equil}
+%------------------------------------------------------------------------------
+The transition region is located at $2$ Mm where the temperature smoothly connects an $8000$ K photosphere to $1.5$ MK corona as shown in \fref{atoms_profile}. The temperature of the atmosphere as a function of height is mathematically represented as,   
+\begin{equation}\label{te_pro}
+T_0(y>0) = T_{ch}+\frac{T_{c} - T_{ch}}{2} \left[ \tanh \left( \frac{y-y_{tr}}{w_{tr}} \right)+1 \right],
+\end{equation}
+where $y$ is the vertical position, $T_0(0)=T_{ch}=8\times10^3 \ \rm{K}$ ($T_{c}=1.8\times10^6 \ \rm{K}$) is the chromospheric (coronal) temperature and $y_{tr}=2$ Mm ($w_{tr}=0.02$ Mm) is the TR height (width). As there is a uniform vertical magnetic, hence $\bs{J} \times \bs{B}=0$ and magnetohydrostatic equilibrium is achieved with,
+\begin{equation}
+\frac{dp}{dy} = - \rho g.
+\end{equation}
+Temperature and pressure are related through the ideal gas law,
+\begin{equation}
+p = \frac{ \rho \rgas T}{M},
+\end{equation} 
+where $M$ is the mean atomic weight, $T$ is the temperature and $\rgas$ is the universal gas constant. Therefore, one can obtain the $\rho$ and $p$ in the following form,  
+\begin{equation}\label{p_pro}
+p(y) = p_0 \exp \left( - \int_0^y  \frac{1}{H(y')} dy' \right), 
+\end{equation} 
+\begin{equation}\label{rho_pro}
+\rho(y) = \rho_0 \frac{T_0}{T(y)} \exp \left( \int_0^y \frac{1}{H(y') }dy' \right),
+\end{equation}
+where $\rho_0$ and $p_0$ are the initial mass density and pressure equilibrium, respectively, at the lower boundary of the computational domain, and the pressure scale heights are given by,
+\begin{equation}
+H(y) = \frac{\rgas T(y)}{Mg}.
+\end{equation}
+Using the temperature profile given by \eref{te_pro} and taking $\rho_0 = 2.34e-4\times10^{-4}\;\rm{kg}\;\rm{m^{-3}}$ we construct pressure and mass density as function of height by means of \eref{p_pro} and \eref{rho_pro}.
+%------------------------------------------------------------------------------
+\subsection{Grid Setup}
+\label{sec:Grid_Setup}
+%------------------------------------------------------------------------------
+We use the open source MPI-AMRVAC software version 2.0 \cite{Xia_2017} to simulation solar jets in a simple solar atmosphere. We set the domain size to $50$ Mm $\times$ $30$ Mm with a level one resolution of $32$ $\times$ $24$ (giving a physical resolution of $\sim$ $1.56$ Mm $\times$ $1.25$ Mm). This coarse level one resolution was chosen to allow the dissipation of shocks as they travel towards the boundaries. To accurately capture the sharpness of the TR we applied 7 levels of AMR giving a spatial resolution of $\sim$ $12$ km$\times$ $10$ km. We use unidirectional grid stretching in the horizontal direction, where from the origin the grid cells change by a constant factor of $1.1$ from cell to cell. Due to the choice of discretisation scheme for the boundary conditions, we employ ghost cells of 2 grid layers encasing the physical domain in each direction, which have a physical size of $3 \ \rm{Mm}$. The numerical scheme applied for spatial discretisation is HLL (Harten-Lax-van Leer) \cite{hll_1983} and a third order \u{C}ada limiter \citep{CADA20094118} for the time discretisation. We use CFL number of $0.8$ and GLM-MHD method to maintain $\bs{\nabla} \cdot \bs{B}=0$ \citep{DEDNER2002645}. The initial magneto-hydrostatics stratification places the TR at $2$ Mm where the temperature smoothly links $8000$ K chromosphere to a $1.8$ Mm corona (see Fig. 1). For the left and right boundary we utilise a periodic boundary condition. In the  ghost cells of the lower boundary we fix $\rho$, $e$ and $\bs{B}$ to their initial values. In the ghost cells for the upper boundary the values for $\rho$, $e$ are determined by the gravitational stratification and $\bs{B}$ was extrapolated assuming zero normal gradient. For both upper and lower boundary we take an antisymmetric boundary for the velocity components.
+%fffffffffffffffffffffff
+\mfig{1}{figures/numerical_Setup_lowres.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
+%fffffffffffffffffffffffff
+%------------------------------------------------------------------------------      
+\subsection{Driver}
+\label{subsec:driver}
+%------------------------------------------------------------------------------
+As the driving mechanisms of of spicules are debatable, we assume that we have a jet which is driven buy a momentum pulse from the photosphere with the aim of investigating whether simple drivers can recreate the dynamical behaviors of spicules.
+%------------
+To drive the jet we us a momentum pulse at the base of computational domain for a specified period of time (ranging from $50-300s$). The jet is launched symmetrically by a driver in the center of the computational domain which varies both spatially and temporally. In the x-direction the jet vertical velocity is Gaussian with the FHWM of $350 \ \rm{km}$ ($j_w$) and as the jet evolves in time it will reach a switch off phase in which it will shut off with a hyperbolic tangent,
+To initiate the jets we use a momentum pulse that we drive in the ghost cells. These ghost have a fixed density value from which we apply the following velocity profile to,
+\begin{equation}
+    v_x(x) = \frac{-A\sin{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
+\end{equation}
+\begin{equation}
+    v_y(x) = \frac{-A\cos{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right).
+\end{equation}
+Where $A$ is the amplitude of the driver,$P$ is the driver time, $t$ is time, $x$ is horizontal position, $x_0$ location of the central jet axis, $\theta$ is the launching angles , and the $\Delta x$ is based on FWHM of the jet width and is given by, 
+\begin{equation}
+\Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}}.
+\end{equation}
+Where $j_w$ is the jet width.
+\begin{equation}
+v_{j}(x) = -\frac{A}{2} \left( \tanh \left( \frac{\pi (t-t_{d})}{t_d}+ \pi \right) +1 \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
+\end{equation}    
+where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ is time, $t_{d}$ is the time for $v_j=0$ , $P$ is the period of the driver and $x_0$ is central location of the jet injection. The driver the width of the Gaussian is determined by $\Delta x$ which is the FWHM based of the jet width (see \fref{atoms_profile}),
+\begin{equation}
+\Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}},
+\end{equation}  
