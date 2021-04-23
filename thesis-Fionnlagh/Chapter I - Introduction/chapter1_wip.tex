@@ -388,7 +388,7 @@ RREs/RBEs & \multicolumn{1}{c|}{disk}  & \multicolumn{1}{c|}{$20-120$} & \multic
 \section{Magnetohydrodynamic Equations}
 \label{section:MHD_eqs}
 %--------------------------------------------
-An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fluid) is given by the combination of the Navier–Stokes equations of fluid dynamics with Maxwell's equation of electromagnetism, which are the foundation of the magnetohydrodynamic (MHD) equations. An interesting property of the MHD equations is they are scale independent, hence they are suitable for describing laboratory plasma such as in tokamaks ($20~\rm{m}$) to astrophysical plasmas such as accretion disk of an active galactic nucleus ($10^{21}~\rm{m}$) \citep{goedbloed2004principles}. MHD theory holds if the typical length (time) scale is greater than the ion gyroperiod (gyroradius) and mean free path time (length) and the plasma velocities are not relativistic \citep{priest2014magnetohydrodynamics}. The MHD equations shown will be the ideal form, this is when plasma is perfectly conducting as well using the ideal gas law ($p = \rho \rgas T/\Tilde{\mu}$) when constructing them. Where $p$ is the gas pressure, $\rho$ is the density, $\rgas=8.3\times 10^{3}~\rm{J~K^{-1}~kg{-1}}$ is the gas constant, and $\Tilde{\mu}=1$ is the mean atomic weight for a neutral plasma.    
+An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fluid) is given by the combination of the Navier–Stokes equations of fluid dynamics with Maxwell's Equations of electromagnetism, which are the foundation of the magnetohydrodynamic (MHD) equations. An interesting property of the MHD equations is they are scale-independent, hence they are suitable for describing laboratory plasma such as in tokamaks ($\sim 20~\rm{m}$) to astrophysical plasmas such as accretion disk of an active galactic nucleus ($\sim 10^{21}~\rm{m}$) \citep{goedbloed2004principles}. MHD theory holds if the typical length (time) scale is greater than the ion gyroperiod (gyroradius) and mean free path time (length) and the plasma velocities are not relativistic \citep{priest2014magnetohydrodynamics}. The MHD equations shown will be the ideal form which is when plasma is perfectly conducting as well using the ideal gas law ($p = \rho \rgas T/\Tilde{\mu}$) when constructing them. Where $p$ is the gas pressure, $\rho$ is the density, $\rgas=8.3\times 10^{3}~\rm{J~K^{-1}~kg^{-1}}$ is the gas constant, and $\Tilde{\mu}=1$ is the mean atomic weight for a neutral plasma.    
 % ideal gas assumptions
 % 1. no intermolecular force
 % 2. No Volume
@@ -397,49 +397,49 @@ An appropriate description of the bulk motion of plasma flow (i.e. a magnetic fl
 \subsection{Continuity Equation}
 \label{section:cont_eq}
 %--------------------------------------------
-The mass continuity equation which physically represents the matter cannot be created or destroyed, it simply changes to a different form of matter and is given by,
+The mass continuity equation which physically represents that matter cannot be created or destroyed is given by,
 \begin{equation}\label{eq86}
-\frac{\partial \rho}{\partial t} = - \bn \cdot (\rho \boldsymbol{v}).
+\frac{\partial \rho}{\partial t} = - \bn \cdot (\rho \boldsymbol{v}),
 \end{equation}
-Where $\bs{v}=(v_x,v_y,v_z)$ is the plasma velocity and $t$ is time. 
+where $\bs{v}=(v_x,v_y,v_z)$ is the plasma velocity and $t$ is time. 
 %---------------------------------------------
 \subsection{Momentum Equation}
 \label{section:cont_eq}
 %--------------------------------------------
 The momentum equation describes the balance between acceleration and pressure/tension forces, as well as any other forces acting in the system, such as gravity, as shown by,
 \begin{equation}\label{eq87}
-\rho \frac{d \boldsymbol{v}}{dt} = - \nabla p + \frac{1}{\mu_0} (\bn \times \boldsymbol{B}) \times \boldsymbol{B} + \rho \boldsymbol{g}.
+\rho \frac{d \boldsymbol{v}}{dt} = - \nabla p + \frac{1}{\mu_0} (\bn \times \boldsymbol{B}) \times \boldsymbol{B} + \rho \boldsymbol{g},
 \end{equation}
-Where $\bs{B}=(B_x,B_y,B_z)$ is the magnetic field strength, $\mu_0=4 \pi \times 10^{-7}~\rm{Hm^{-1}}$ is the magnetic permeability of a vacuum, and $\bs{g} = (0,0,g_z)$ is the gravitational acceleration. The Lorentz force is a perpendicular force to the magnetic field lines that is a combination of two forces that are created by the magnetic field,
+where $\bs{B}=(B_x,B_y,B_z)$ is the magnetic field strength, $\mu_0=4 \pi \times 10^{-7}~\rm{Hm^{-1}}$ is the magnetic permeability of a vacuum, and $\bs{g} = (0,0,g_z)$ is the gravitational acceleration. The Lorentz force is a perpendicular force to the magnetic field lines that is a combination of two forces that are created by the magnetic field,
 \begin{equation}\label{lor_for} 
     \frac{1}{\mu_0}(\bs{\nabla}\times \bs{B})\times \bs{B} = \frac{1}{\mu_0}( \bs{B} \cdot \bs{\nabla}) \bs{B} - \nabla\left(\frac{ \bs{B}^2}{2\mu_0}\right).
 \end{equation}
-The two forces on the right hand side of \eref{lor_for} are the magnetic tension and magnetic pressure, respectively. The magnetic tension exerts to straighten out any bent magnetic fields lines and the magnetic pressure acts to push magnetic fields apart if they are bunch too close together.    %---------------------------------------------
+The two forces on the right hand side of \eref{lor_for} are the magnetic tension and magnetic pressure. The magnetic tension acts to straighten out curved magnetic fields lines and the magnetic pressure acts to push magnetic fields apart.    %---------------------------------------------
 \subsection{Energy Equation}
 \label{section:cont_eq}
 %--------------------------------------------
-The energy equation given by, 
+The energy equation is given by, 
 \begin{equation}\label{eq88}
-\frac{D}{D t} \left( \frac{p}{\rho^{\gamma}} \right) = 0.
+\frac{D}{D t} \left( \frac{p}{\rho^{\gamma}} \right) = 0,
 \end{equation}
-where $\gamma=5/3$ is the ratio of specific heats and $D/Dt = \partial/\partial t+\bn \cdot$ is the material derivative, which describes the derivative when the frame of reference is moving with the fluid flow.
+where $\gamma=5/3$ is the ratio of specific heats and $D/Dt = \partial/\partial t+\bn \cdot$ is the material derivative, which gives the rate of change when the frame of reference is moving with the fluid flow.
 %---------------------------------------------
 \subsection{Induction Equation}
 \label{section:cont_eq}
 %--------------------------------------------
-The full induction equation describes the temporal evolution of the magnetic field, with respect to the advection and dissipation of the magnetic field,
+The induction equation describes the temporal evolution of the magnetic field, with respect to the advection and dissipation of the magnetic field,
 \begin{equation}\label{eq89}
 \frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}) - \frac{1}{\mu_0} \nabla \times (\eta \bn \times \boldsymbol{B}).
 \end{equation}
-where $\eta= \mu_0 \sigma_c$ is the magnetic diffusivity and $\sigma_c$ is the electrical conductivity. The behaviour of the coupled behaviour of the magnetic field and plasma is determined by the balance of two terms on the right hand side which is defined by the magnetic Renolds number,
+where $\eta= \mu_0 \sigma_c$ is the magnetic diffusivity and $\sigma_c$ is the electrical conductivity. The coupled behaviour of the magnetic field and plasma is determined by the ratio of the two terms on the right hand side, defined as the magnetic Renolds number,
 \begin{equation}
     R_m = \frac{\bn \times (\boldsymbol{v} \times \boldsymbol{B})}{\eta \nabla \bs{B}}=\frac{l_0 V_0}{\eta},
 \end{equation}
-where $l_0$ ($v_0$) are typical length (velocity) scales. For structures on the Sun, the typical length scales tend to be large in comparison to the magnetic diffusivity, which results in a large Reynolds number. This magnetic Renolds number has important implications with regards to coronal heating as it means that it is difficult to dissipate waves in the corona. In general, for a solar plasma, the ideal limit is applicable and we can assume that we have a perfectly conduction plasma ($R_m>>1$) which modifies the induction equation to,
+where $l_0$ ($v_0$) are typical length (velocity) scales. For structures on the Sun, the typical length scales tend to be large in comparison to the magnetic diffusivity, which results in a large magnetic Reynolds number. This has important implications on coronal heating as it impedes the dissipation of waves in the corona. In general, for a solar plasma, the ideal limit is applicable and we can assume that we have a perfectly conduction plasma ($R_m\ll1$) which modifies the induction equation to
 \begin{equation}\label{perf_induct}
 \frac{\partial \boldsymbol{B}}{\partial t} = \bn \times (\boldsymbol{v} \times \boldsymbol{B}).
 \end{equation}
-This large $R_m$ has important implications for the motion of the plasma and the magnetic field lines. This is because Alfv\'{e}n's theorem shows that the magnetic field behaves as if it moves with the plasma \citep{priest2014magnetohydrodynamics}. By taking a magnetic flux through a surface $S$ enclosed a curve $C$. The evolution of the magnetic field would be given by,
+This large $R_m$ has important implications for the motion of the plasma and the magnetic field lines. This is because Alfv\'{e}n's Frozen Flux Theorem shows that the magnetic field moves with the plasma \citep{priest2014magnetohydrodynamics}. By taking a magnetic flux through a surface $S$ enclosed by a simple connected curve $C$. The evolution of the magnetic field is given by,
 \begin{equation}
     \psi = \iint_s \bs{B} \cdot d\bs{S}.
 \end{equation}
@@ -447,7 +447,7 @@ When considering the temporal evolution of the magnetic flux over the defined su
 \begin{equation}
     \frac{d \psi}{ dt} = \iint \frac{\partial \bs{B}}{ \partial t} \cdot d\bs{S} + \oint_c  \bs{B} \cdot \bs{v} \times d\bs{l},
 \end{equation}
-where $d\bs{l}$ is an element parallel to curve $C$. By using Stokes theorem on ($\bs{B} \cdot \bs{v} \times d\bs{l} = - \bs{v} \times \bs{B} \cdot d \bs{l}$), one obtains,
+where $d\bs{l}$ is a line element parallel to curve $C$. By using Stokes theorem, one obtains
 \begin{equation}
     \frac{d}{dt} \iint_S \bs{B} \cdot d \bs{S} = \iint_S \left( \frac{\partial \boldsymbol{B}}{\partial t} - \bn \times (\boldsymbol{v} \times \boldsymbol{B})  \right) \cdot d\bs{S} = 0, 
 \end{equation}
@@ -456,7 +456,7 @@ which is zero due to \eqref{perf_induct}. This implies no matter what the plasma
 \subsection{Solenoidal Constraint}
 \label{section:cont_eq}
 %--------------------------------------------
-The solenoidal constraint implies that there are no magnetic monopoles or pure sinks of the magnetic field,
+The solenoidal constraint implies that there are no magnetic monopoles or sinks of the magnetic field,
 \begin{equation}\label{eq90}
 \nabla \cdot \boldsymbol{B} = 0.
 \end{equation}
@@ -464,11 +464,13 @@ The solenoidal constraint implies that there are no magnetic monopoles or pure s
 \subsection{Overview of MHD Waves}
 \label{section:mhd_Waves}
 %--------------------------------------------
-MFT is observed in multiple regions of the Sun, stemming out from granular lanes and provide a photosphere to corona connection (see Fig.~\ref{fig:chromo_Cart}). These tubes have been have been shown theoretically act as waves guides \citep{Roberts1981SoPh6939R, Edwin1982SoPh76239E, Roberts1990IAUS142159R, Goossens1992SoPh138233G, Goossens2009AA503213G, Murawski2015AA577A126M, Allcock2017SoPh29235A}. The wave behaviour in magnetic slabs has been studied by \cite{Roberts1981SoPh6939R} and \cite{Edwin1982SoPh76239E}. We will outline parts of the derivations to gain a fundamental insight into the wave behaviour of these MFT. For simplicity we will study the ideal MHD equations further in a slab geometry, taking a plasma medium with no gravity, with a uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, is in pressure equilibrium, and has no initial flow. To study the wave behaviour of this system we first linearise the ideal MHD equations to study small perturbation (subscript $1$) from the plasma equilibrium (subscript $0$), 
+MFT are observed in multiple regions of the Sun, stemming out from granular lanes and provide a photosphere to corona connection (see Fig.~\ref{fig:chromo_Cart}). They have been shown theoretically to act as wavesguides \citep{Roberts1981SoPh6939R, Edwin1982SoPh76239E, Roberts1990IAUS142159R, Goossens1992SoPh138233G, Goossens2009AA503213G, Murawski2015AA577A126M, Allcock2017SoPh29235A}. \np
+%
+The wave behaviour in magnetic slabs has been studied by \cite{Roberts1981SoPh6939R} and \cite{Edwin1982SoPh76239E}. We will outline parts of the derivations to gain a fundamental insight into the wave behaviour of these MFT. For simplicity, we will study the ideal MHD equations further in a slab geometry, taking a plasma medium with no gravity, with a uniform vertical magnetic field $\bs{B}=(0,0,B_0)$, in pressure equilibrium, and has no initial flow. To study the wave behaviour of this system we first linearise the ideal MHD equations to study small perturbations (subscript $1$) from the plasma equilibrium (subscript $0$), 
 \begin{equation} \label{eq91}
 \boldsymbol{B} = \boldsymbol{B}_0 + \boldsymbol{B}_1 (\boldsymbol{r},t) , \ \ \boldsymbol{v} = \boldsymbol{v}_1 (\boldsymbol{r}, t) , \ \ \rho = \rho_0 + \rho_1 ( \boldsymbol{r},t) , \ \ p = p_0 + p_1 ( \boldsymbol{r}, t) ,
 \end{equation}
-where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to ideal MHD equations and neglecting higher order terms for the perturbations yields,
+where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to the ideal MHD equations and neglecting terms for quadratic order and higher, the perturbations yields,
 \begin{equation}\label{mhd_lin1}
 \frac{\partial \rho_1}{\partial t} = \rho_0 ( \bn \cdot \boldsymbol{v}_1),
 \end{equation}
@@ -484,15 +486,15 @@ where $\bs{r} = (x,y,z)$ is the position vector. Applying these perturbations to
 \begin{equation}\label{mhd_lin2}
 \nabla \cdot \boldsymbol{B}_0 = \nabla \cdot \boldsymbol{B}_1 = 0 ,
 \end{equation}
-where $c_{s0} = \sqrt{\gamma p_0/ \rho_0}$ is the equilibrium sound speed. A general wave equation can be obtained by combining the linearise ideal MHD equations,
+where $c_{s0} = \sqrt{\gamma p_0/ \rho_0}$ is the equilibrium sound speed. A general wave equation can be obtained by combining the linearised ideal MHD equations namely,
 \begin{equation}\label{wave_eq}
     \frac{\partial^2 \bs{v}_1}{\partial t^2} = c_{s0}^2 \bn (\bn \cdot \bs{v}) + \frac{1}{\mu \rho_0} (\bn \times (\bn \times (\bs{v}\times\bs{B_0}))) \times \bs{B_0}.
 \end{equation}
-As we are looking for a wave-like solution, we assume a solution will have to form,
+As we are looking for a wave-like solution, we assume a solution will have the form,
 \begin{equation}\label{wave_plane_sol}
     \bs{f}(\bs{r},t) = \hat{f} e^{i( \bs{k}\cdot \bs{r} - \omega t)},
 \end{equation}
-where $f$ is a placeholder of any perturbed quantity (in this case $\bs{v}$), $\hat{f}$ is the amplitude of each perturbation, $\bs{k}=(k_x,0,k_z)$ is the wave vector ($k_y=0$ for simplicity), and $\omega$ is the frequency. Applying \eqref{wave_plane_sol} to the wave equation \eref{wave_eq}, one can obtain a dispersion relation,
+where $f$ is a placeholder of any perturbed quantity (in this case $\bs{v}$), $\hat{f}$ is the amplitude of each perturbation, $\bs{k}=(k_x,0,k_z)$ is the wave vector ($k_y=0$ for simplicity), and $\omega$ is the angular frequency. Applying \eref{wave_plane_sol} to the wave equation \eref{wave_eq}, one can obtain a dispersion relation,
 \begin{equation}\label{disp_rel}
  (\omega^2-k^2_z V_{A0}^2)(\omega^4-\omega^2k^2(c_{s0}+V_{A0})+k^2 k^2_z c_{s0}^2 V_{A0}^2) = 0,
 \end{equation}
@@ -502,9 +504,9 @@ where $V_{A0}=B_0/\sqrt{\mu \rho_0}$ is the equilibrium \Alfven speed. This disp
 \end{equation}
 where, 
 \begin{equation}
-  c_T = \frac{c_{s0}^2V_{A0}^2}{\sqrt{c_{s0}^2+V_{A0}^2}}, 
+  c_T = \frac{c_{s0}V_{A0}}{\sqrt{c_{s0}^2+V_{A0}^2}}, 
 \end{equation}
-is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward and backwards fast (taking the $+$ of the last term) and slow (taking the $-$ of the last term) magnetoacoustic (MA) waves. These waves modes are a combination of magnetic and sound waves, hence the restoring forces are a combination of both pressure and Lorentz force. How all these waves behave in a medium is heavily affected by $\beta$.
+is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward and backwards fast (taking the $+$ of the last term) and slow (taking the $-$ of the last term) magnetoacoustic (MA) waves. These wave modes are a combination of magnetic and sound waves, hence the restoring forces are a combination of both pressure and Lorentz force. How all these waves behave is heavily affected by $\beta$.
 %---------------------------------------------
 %\subsection{MHD waves in a Magnetic Flux Tube}
 %\label{section:Tan_I}
@@ -529,15 +531,15 @@ is the tube speed. Each solution gives for \eqref{MA_waves} gives the forward an
 \subsection{MHD waves in a Magnetic Flux Tube}
 \label{section:Tan_I}
 %--------------------------------------------
-To understand the basic motion of a flux tube we summarise the steps as shown in \cite{Roberts1981SoPh6939R}. They introduce a MFT setting an in same state as outlined earlier in this Section~\ref{section:mhd_Waves}, bar a change in the magnetic field $(\bs{B}(x)=(0,0,B_0(x))$ configuration,
+To understand the basic motion of a flux tube we summarise the steps as shown in \cite{Roberts1981SoPh6939R}. They introduce a MFT setting an in same state as outlined earlier in this Section~\ref{section:mhd_Waves}, bar a change in the magnetic field configuration,
 \begin{equation}
     B_0(x) = 
     \begin{cases}
       B_i, & \text{if } |x| \leq x_0, \\
-      0, & \text{if } |x| > x_0.
+      0, & \text{if } |x| > x_0,
     \end{cases}
 \end{equation}
-where $\pm x_0$ is the location of the boundaries of the MFT and $i$ ($e$) denote the parameters internal (external) to the MFT. In this set up one can arrive at the dispersion relation by combining Eqs.~\eqref{mhd_lin1} - \eqref{mhd_lin2} and assuming plane wave solution ($f(x)=\hat{f} e^{i(kz-\omega t)}$), one can obtain a wave equation of the form,
+where $\pm x_0$ is the location of the boundaries of the MFT and $i$ ($e$) denote the parameters internal (external) to the MFT. In this set up, by combining Eqs.~\eqref{mhd_lin1} - \eqref{mhd_lin2} and assuming a plane wave solution ($f(x)=\hat{f} e^{i(kz-\omega t)}$), one can obtain a wave equation of the form,
 \begin{equation}
     \frac{d^2 \hat{v}_x}{dx^2}-m^2_{i,e} \hat{v}_x = 0,
 \end{equation}
@@ -545,7 +547,7 @@ and,
 \begin{equation}\label{eva_trapp}
     m_{i,e}^2 = \frac{(k_z^2 c_{si,se}^2-\omega^2)(k_z^2 V_{Ai,Ae}^2-\omega^2)}{(c_{si,se}^2+V_{Ai,Ae}^2)(k_z^2 c_{Ti,Te}^2-\omega^2)}.
 \end{equation}
-The Fourier analysis is this form due to parameters varying across the $x$-direction and that we are only interested in waves traveling along the interface. From \eref{eva_trapp}, one can already obtains two solutions, which are called the leaky modes ($m^2_{i,e}<0$) which travel towards infinity and the trapped modes ($m^2_{i,e}>0$), which decay as $x$ tends to infinity. As we are not interest in searching for solutions for the leaky waves, we focuse on the trapped waves, which have a solution of the form,
+The Fourier analysis is this form due to parameters varying across the $x$-direction and that we are only interested in waves traveling along the interface. From \eref{eva_trapp}, one can already obtains two solutions, which are called the leaky modes ($m^2_{i,e}<0$) which travel towards infinity and the trapped modes ($m^2_{i,e}>0$), which decay as $x$ tends to infinity. As we are not interested in searching for solutions for the leaky waves, we focus on the trapped waves, which have a solution of the form,
 \begin{equation}
         B_0(x) = 
     \begin{cases}
@@ -554,7 +556,7 @@ The Fourier analysis is this form due to parameters varying across the $x$-direc
       C_{11} e^{-m_e(x-x_0)}, & \text{if } x > x_0,
     \end{cases}
 \end{equation}
-where $C_{jl}$ for $j=0,1$ and $l=0,1$ are constants. By applying the boundary conditions at the interface to the system of MHD equations once an arrive at the dispersion relation,
+where $C_{jl}$ for $j=0,1$ and $l=0,1$ are constants. By applying the boundary conditions at the interface to the system of MHD equations one can arrive at the dispersion relation,
 \begin{equation}\label{disp_saus_kink}
     D_k(\omega)D_s(\omega)  = 0,
 \end{equation}
@@ -567,19 +569,19 @@ where,
 \end{equation}
 The solutions for \eref{disp_saus_kink} lead to two separates waves modes know as the kink wave (from $D_k =0$) and sausage wave (from $D_s =0$). The trigonometric functions in Eqs.~\eqref{kw_eq} and \eqref{sw_eq} are a key component that determining whether the boundaries of the MFT move in (kink wave) or out (sausage wave) of phase, as shown in Fig.~\ref{KW_SW}. \np
 %
-There are numerous reports of all these MHD waves in the solar atmosphere \citep{Tomczyk2007Sci3171192T, Tomczyk2009ApJ6971384T, jess_alfven_2009, Morton2012NatCo31315M}. By studying these waves (referred to as solar seismology) one can provide diagnostics of the plasma properties that we otherwise can be challenging to measure directly such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}. In particular interest of this thesis, these waves modes have been reported to occur in spicules \citep{Kukhianidze2006AA, Okamoto2011ApJ736L24O, Jess2012ApJ744L5J, Verth2016GMS216431V, Sharma2018ApJ85361S}.
+There are numerous reports of all these MHD waves in the solar atmosphere \citep{Tomczyk2007Sci3171192T, Tomczyk2009ApJ6971384T, jess_alfven_2009, Morton2012NatCo31315M}. By studying these waves one can provide diagnostics of the plasma properties that we otherwise can be challenging to measure directly such as density \citep{Verwichte_2013A_A}, magnetic field strength \citep{Nakariakov_2001} and temperature \citep{De_Moortel_2003SoPh}. This is known as solar magneto-seismology. In particular interest of this thesis, these wave modes have been reported to occur in spicules \citep{Kukhianidze2006AA, Okamoto2011ApJ736L24O, Jess2012ApJ744L5J, Verth2016GMS216431V, Sharma2018ApJ85361S}.
 %fffffffffffffffffffffff
 \mfig{0.75}{figures/KW_SW.png}{Example of the effect of the sausage (left) and kink (right) waves on MFT. This image is extracted from \cite{Morton2012NatCo31315M}.}{KW_SW}
 %fffffffffffffffffffffff
 %---------------------------------------------
-\section{outline of Thesis}
+\section{Outline of Thesis}
 \label{section:outline}
-The thesis aims to investigate the fundamental dynamics of spicular jets by applying simple models. Each chapter will contain as follows:
+The thesis aims to investigate the fundamental dynamics of spicular jets by applying simple models. Each chapter will contain the following:
 \begin{itemize}
-    \item {\bf{Chapter 2}}: An overview is given on the current states of numerical models. We outline the software we use and detail our numerical setup that is applied throughout the thesis.
-    \item {\bf{Chapter 3}}: We study synthetic jets in a simplified solar atmosphere. We launch purely vertical jets with a momentum pulse. By changing multiple parameters linked to the driver (length and initial velocity amplitude) and the magnetic field strength, we investigate how the jet height, cross-sectional width variations, and morphology is impacted by the parameter space.
-    \item {\bf{Chapter 4}}: In this chapter, we add increasing degrees of tilt from the vertical for the synthetic jet to see how this impacts the jet dynamics and morphology. A focus parameter space is used to investigate and an improved jet tracking software is deployed to measure the heights and cross-sectional width variations.     
-    \item {\bf{Chapter 5}}: The cross-section width variations identified in Chapter 3 and 4 are studied further by comparison with observations. We treat the cross-sectional width variations in synthetic jets and observations as standing waves and apply a wavelet analysis. We also make a comparison of the knots observed in the jet beams of the synthetic jets with blobs reported in larger scale solar jets.   
+    \item {\bf{Chapter 2}}: An overview is given on the current state of numerical models of spicules. We outline the software we use and detail our numerical setup that is applied throughout the thesis.
+    \item {\bf{Chapter 3}}: We study synthetic jets in a simplified solar atmosphere. We launch vertical jets with a momentum pulse. By changing multiple parameters linked to the driver (length and initial velocity amplitude) and the magnetic field strength, we investigate how the jet height, cross-sectional width variations, and morphology are impacted by the parameter space.
+    \item {\bf{Chapter 4}}: In this chapter, we add increasing degrees of tilt from the vertical to see how this impacts the jet dynamics and morphology. A focus parameter space is used to investigate and an improved jet tracking software is deployed to measure the heights and cross-sectional width variations.     
+    \item {\bf{Chapter 5}}: The cross-sectional width variations identified in Chapter 3 and 4 are studied further by comparison with observations. We postulate the cross-sectional width variations in synthetic jets and observations as standing waves and apply a wavelet analysis. We also make a comparison of the knots observed in the jet beams of the synthetic jets with blobs reported observations of larger scale solar jets.   
     \item {\bf{Chapter 6}}: A summary of the main results and outline the future steps one could take to build upon the research outline in the thesis.  
 \end{itemize}
 %--------------------------------------------
