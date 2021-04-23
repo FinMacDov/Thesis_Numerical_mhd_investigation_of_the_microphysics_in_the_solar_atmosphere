@@ -151,13 +151,17 @@ All the simulations carried out in this thesis use the open source software Mess
 \end{equation}
 where $U$ is the set of conserved variables, $F(U)$ the corresponding fluxes and $S_{phys}$ are the source terms. The source terms are used to add extra physics, such as gravity, diffusion, and viscosity. \np
 %
-MPI-AMRVAC has been constructed to be a versatile piece of software, arming the user with multitude of options. This reduces development time as rather than writing bespoke software for each simulation, modules of the code can efficiently be swapped or modified to produce desired effect, e.g. changing physic modules, spatial\textbackslash temporal solvers, grid setup and geometric, change boundary conditions, and writing own custom routines. \np
-% 
-\subsubsection{Adaptive Mesh Refinement}
-One of the main features of MPI-AMRVAC is the adaptive mesh refinement (AMR). Using AMR means that rather having a static fixed resolution for the entirety of the simulation, we have a dynamical grid, that add/removes grid cells as needed. For example see the differing mesh in Fig.~\ref{amr_example} the test case of a hydrodynamic Rayleigh-Taylor Instability (RTI) (see Section~\ref{!!?!!} for more description of RTI). In this simulation there is a a denser fluid flowing downwards and area of highest resolution are located where rapid changes are occurring in the computational domain. The rules that AMR are allocated and deallocated are:     
-
-
-which allows for computationally efficient placement of grid cells. 
+MPI-AMRVAC has been constructed to be a versatile piece of software, arming the user with multitude of options. This reduces development time as rather than writing bespoke software for each simulation, modules of the code can efficiently be swapped or modified to produce desired effect, e.g. changing physic modules, spatial\textbackslash temporal solvers, grid setup and geometric, change boundary conditions, and writing own custom routines.
+%-------------------------------------
+\subsection{Adaptive Mesh Refinement}
+\label{ssec:amr}
+%-------------------------------------
+One of the main features of MPI-AMRVAC is the adaptive mesh refinement (AMR). Using AMR means that rather having a static fixed resolution for the entirety of the simulation, we have a dynamical grid, that add/removes grid cells as needed. For example see the differing mesh in Fig.~\ref{amr_example} the test case of a hydrodynamic Rayleigh-Taylor Instability (RTI) (see Section~\ref{!!?!!} for more description of RTI). In this simulation there is a a denser fluid flowing downwards and area of highest resolution are located where rapid changes are occurring in the computational domain. In Fig.~\ref{amr_scheme} we can see different levels of AMR being used. For example, cell (3,1) is the level one grid, which is the coarsest resolution initially defined by the user, cell (6,3) and (12,7) are level two and three respectively, with each half the size of the previous level. The rules that AMR are allocated and deallocated are:
+\begin{itemize}
+    \item The AMR can only be one level high than its neighbouring cells.
+    \item If the measured local numerical error is greater (lesser) than the user set threshold, the the level of the grid cell is increased (decreased).
+\end{itemize}
+It is advantageous to use ARM in our simulations as it allows for computationally efficient placement of grid cells to resolve steep gradients, such as the TR and boundaries of the jet, as well cheaply capturing the small scale dynamics.   
 %fffffffffffffffffffffffff
 \begin{figure}
 \centering
@@ -177,11 +181,11 @@ This means that one can increase the grid cells in regions of interest (i.e wher
 \subsection{Atmospheric Equilibrium}
 \label{sec:atmos_equil}
 %------------------------------------------------------------------------------
-The transition region is located at $2$ Mm where the temperature smoothly connects an $8000$ K photosphere to $1.5$ MK corona as shown in \fref{atoms_profile}. The temperature of the atmosphere as a function of height is mathematically represented as,   
+To create synthetic jets, we need to construct a stratified atmosphere similar to solar conditions. We place the TR at $2$ Mm where the temperature smoothly connects an $8000$ K photosphere to $1.5$ MK corona as shown in \fref{atoms_profile}. The temperature of the atmosphere as a function of height is mathematically represented as,   
 \begin{equation}\label{te_pro}
 T_0(y>0) = T_{ch}+\frac{T_{c} - T_{ch}}{2} \left[ \tanh \left( \frac{y-y_{tr}}{w_{tr}} \right)+1 \right],
 \end{equation}
-where $y$ is the vertical position, $T_0(0)=T_{ch}=8\times10^3 \ \rm{K}$ ($T_{c}=1.8\times10^6 \ \rm{K}$) is the chromospheric (coronal) temperature and $y_{tr}=2$ Mm ($w_{tr}=0.02$ Mm) is the TR height (width). As there is a uniform vertical magnetic, hence $\bs{J} \times \bs{B}=0$ and magnetohydrostatic equilibrium is achieved with,
+where $y$ is the vertical position, $T_0(0)=T_{ch}=8\times10^3 \ \rm{K}$ ($T_{c}=1.8\times10^6 \ \rm{K}$) is the chromospheric (coronal) temperature and $y_{tr}=2$ Mm ($w_{tr}=0.02$ Mm) is the TR height (width). As there is a uniform vertical magnetic, hence $\bs{j} \times \bs{B}=0$ and magnetohydrostatic equilibrium is achieved with,
 \begin{equation}
 \frac{dp}{dy} = - \rho g.
 \end{equation}
@@ -205,36 +209,26 @@ Using the temperature profile given by \eref{te_pro} and taking $\rho_0 = 2.34e-
 \subsection{Grid Setup}
 \label{sec:Grid_Setup}
 %------------------------------------------------------------------------------
-We use the open source MPI-AMRVAC software version 2.0 \cite{Xia_2017} to simulation solar jets in a simple solar atmosphere. We set the domain size to $50$ Mm $\times$ $30$ Mm with a level one resolution of $32$ $\times$ $24$ (giving a physical resolution of $\sim$ $1.56$ Mm $\times$ $1.25$ Mm). This coarse level one resolution was chosen to allow the dissipation of shocks as they travel towards the boundaries. To accurately capture the sharpness of the TR we applied 7 levels of AMR giving a spatial resolution of $\sim$ $12$ km$\times$ $10$ km. We use unidirectional grid stretching in the horizontal direction, where from the origin the grid cells change by a constant factor of $1.1$ from cell to cell. Due to the choice of discretisation scheme for the boundary conditions, we employ ghost cells of 2 grid layers encasing the physical domain in each direction, which have a physical size of $3 \ \rm{Mm}$. The numerical scheme applied for spatial discretisation is HLL (Harten-Lax-van Leer) \cite{hll_1983} and a third order \u{C}ada limiter \citep{CADA20094118} for the time discretisation. We use CFL number of $0.8$ and GLM-MHD method to maintain $\bs{\nabla} \cdot \bs{B}=0$ \citep{DEDNER2002645}. The initial magneto-hydrostatics stratification places the TR at $2$ Mm where the temperature smoothly links $8000$ K chromosphere to a $1.8$ Mm corona (see Fig. 1). For the left and right boundary we utilise a periodic boundary condition. In the  ghost cells of the lower boundary we fix $\rho$, $e$ and $\bs{B}$ to their initial values. In the ghost cells for the upper boundary the values for $\rho$, $e$ are determined by the gravitational stratification and $\bs{B}$ was extrapolated assuming zero normal gradient. For both upper and lower boundary we take an antisymmetric boundary for the velocity components.
+We set the domain size to $50$ Mm $\times$ $30$ Mm with a level one resolution of $32$ $\times$ $24$ (giving a physical resolution of $\sim$ $1.56$ Mm $\times$ $1.25$ Mm). This coarse level one resolution was chosen to allow the dissipation of shocks as they travel towards the boundaries. To accurately capture the sharpness of the TR we applied 7 levels of AMR giving a spatial resolution of $\sim$ $12$ km$\times$ $10$ km. We use unidirectional grid stretching in the horizontal direction, where from the origin the grid cells change by a constant factor of $1.1$ from cell to cell. Due to the choice of discretisation scheme for the boundary conditions, we employ ghost cells of 2 grid layers encasing the physical domain in each direction, which have a physical size of $3~\rm{Mm}$. The numerical scheme applied for spatial discretisation is HLL (Harten-Lax-van Leer) \cite{hll_1983} and a third order \u{C}ada limiter \citep{CADA20094118} for the time discretisation. We use CFL number of $0.8$ and GLM-MHD method to maintain $\bs{\nabla} \cdot \bs{B}=0$ \citep{DEDNER2002645}. For the left and right boundary we utilise a periodic boundary condition. In the ghost cells of the lower boundary we fix $\rho$, $e$ and $\bs{B}$ to their initial values. In the ghost cells for the upper boundary the values for $\rho$, $e$ are determined by the gravitational stratification and $\bs{B}$ was extrapolated assuming zero normal gradient. For both upper and lower boundary we take an antisymmetric boundary for the velocity components.
 %fffffffffffffffffffffff
-\mfig{1}{figures/numerical_Setup_lowres.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=375$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
+\mfig{1}{figures/numerical_Setup_lowres.png}{Top left plot displays the an example of the grid at $t=0$. Top right plot shows initial temperature (red line) and density (blue dashed) stratification in the first $10$ Mm. the lower panels from left to right to an example of Gaussian distribution for $A=60$ km s$^{-1}$ and $j_w=187.5$ km marked by red points at $t=0$ and the driver velocity with $A=60$ km s$^{-1}$, $P=300$ s..}{atoms_profile}
 %fffffffffffffffffffffffff
 %------------------------------------------------------------------------------      
 \subsection{Driver}
 \label{subsec:driver}
 %------------------------------------------------------------------------------
-As the driving mechanisms of of spicules are debatable, we assume that we have a jet which is driven buy a momentum pulse from the photosphere with the aim of investigating whether simple drivers can recreate the dynamical behaviors of spicules.
-%------------
-To drive the jet we us a momentum pulse at the base of computational domain for a specified period of time (ranging from $50-300s$). The jet is launched symmetrically by a driver in the center of the computational domain which varies both spatially and temporally. In the x-direction the jet vertical velocity is Gaussian with the FHWM of $350 \ \rm{km}$ ($j_w$) and as the jet evolves in time it will reach a switch off phase in which it will shut off with a hyperbolic tangent,
-To initiate the jets we use a momentum pulse that we drive in the ghost cells. These ghost have a fixed density value from which we apply the following velocity profile to,
+As the driving mechanisms of of spicules is an open question we assume that the synthetic jet is driven buy a momentum pulse from the photosphere with the aim of investigating whether simple drivers can recreate the dynamical behaviors of spicules. Rather than going for a pressure pulse, we decide to momentum pulse to simulate spicules as a mass transfer from low heights, as to our knowledge this yet to be investigated. The jet is launched symmetrically by a driver in the center of the computational domain which varies both spatially and temporally (see bottom panels Fig.~\ref{atoms_profile}). In the $x$-direction the jet velocity is Gaussian with the FHWM of $187.5 \ \rm{km}$ ($j_w$) and as the jet evolves in time it will reach a switch off phase in which it will shut off with a hyperbolic tangent as defined by,
 \begin{equation}
     v_x(x) = \frac{-A\sin{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
 \end{equation}
 \begin{equation}
-    v_y(x) = \frac{-A\cos{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right).
+    v_y(x) = \frac{-A\cos{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
 \end{equation}
-Where $A$ is the amplitude of the driver,$P$ is the driver time, $t$ is time, $x$ is horizontal position, $x_0$ location of the central jet axis, $\theta$ is the launching angles , and the $\Delta x$ is based on FWHM of the jet width and is given by, 
-\begin{equation}
-\Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}}.
-\end{equation}
-Where $j_w$ is the jet width.
-\begin{equation}
-v_{j}(x) = -\frac{A}{2} \left( \tanh \left( \frac{\pi (t-t_{d})}{t_d}+ \pi \right) +1 \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
-\end{equation}    
-where $v_j$ is the velocity of the jet, $A$ is the amplitude of the driver, $t$ is time, $t_{d}$ is the time for $v_j=0$ , $P$ is the period of the driver and $x_0$ is central location of the jet injection. The driver the width of the Gaussian is determined by $\Delta x$ which is the FWHM based of the jet width (see \fref{atoms_profile}),
+where $A$ is the amplitude of the driver, $\theta$ is the tilt angle from the vertical, $P$ is the driver time, $t$ is time, $x$ is horizontal position, $x_0$ location of the central jet axis, $\theta$ is the launching angles, and the $\Delta x$ is based on FWHM of the jet width and is given by, 
 \begin{equation}
 \Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}},
-\end{equation}  
+\end{equation}
+where $j_w$ is the jet width.
 %fffffffffffffffffffff
 %\begin{figure}
 %\hspace{-1.5cm}
