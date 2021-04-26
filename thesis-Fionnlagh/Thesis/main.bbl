@@ -1,36 +1,1479 @@
 \begin{thebibliography}{xx}
 
-\harvarditem{{Abramowitz} \harvardand\ {Stegun}}{1965}{Abramowitz1965}
-{Abramowitz}, M. \harvardand\ {Stegun}, I.~A.  \harvardyearleft
-  1965\harvardyearright , {\em {Handbook of mathematical functions with
-  formulas, graphs, and mathematical tables}}.
+\harvarditem{{Alfv{\'e}n}}{1947}{Alfv1947MNRAS107211A}
+{Alfv{\'e}n}, H.  \harvardyearleft 1947\harvardyearright , `{Magneto
+  hydrodynamic waves, and the heating of the solar corona}', {\em \mnras} {\bf
+  107},~211.
 
-\harvarditem[Andries et~al.]{Andries, Van~Doorsselaere, Roberts, Verth,
-  Verwichte \harvardand\ Erdélyi}{2009}{andries2009}
-Andries, J., Van~Doorsselaere, T., Roberts, B., Verth, G., Verwichte, E.
-  \harvardand\ Erdélyi, R.  \harvardyearleft 2009\harvardyearright , `Coronal
-  seismology by means of kink oscillation overtones', {\em Space Science
-  Reviews} {\bf 149},~3--29.
+\harvarditem{{Alissandrakis} \harvardand\
+  {Macris}}{1971}{Alissandrakis1971SoPh2047A}
+{Alissandrakis}, C.~E. \harvardand\ {Macris}, C.~J.  \harvardyearleft
+  1971\harvardyearright , `{A Study of the Fine Structure of the Solar
+  Chromosphere at the Limb}', {\em \solphys} {\bf 20}(1),~47--56.
 
-\harvarditem[{de Pontieu} et~al.]{{de Pontieu}, {McIntosh}, {Hansteen},
-  {Carlsson}, {Schrijver}, {Tarbell}, {Title}, {Shine}, {Suematsu}, {Tsuneta},
-  {Katsukawa}, {Ichimoto}, {Shimizu} \harvardand\
-  {Nagata}}{2007}{DePontieu2007}
-{de Pontieu}, B., {McIntosh}, S., {Hansteen}, V.~H., {Carlsson}, M.,
+\harvarditem{{Allcock} \harvardand\ {Erd{\'e}lyi}}{2017}{Allcock2017SoPh29235A}
+{Allcock}, M. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2017\harvardyearright , `{Magnetohydrodynamic Waves in an Asymmetric Magnetic
+  Slab}', {\em \solphys} {\bf 292}(2),~35.
+
+\harvarditem[{Allcock} et~al.]{{Allcock}, {Shukhobodskaia}, {Zs{\'a}mberger}
+  \harvardand\ {Erd{\'e}lyi}}{2019}{Allcock2019FrASS648A}
+{Allcock}, M., {Shukhobodskaia}, D., {Zs{\'a}mberger}, N.~K. \harvardand\
+  {Erd{\'e}lyi}, R.  \harvardyearleft 2019\harvardyearright ,
+  `{Magnetohydrodynamic waves in multi-layered asymmetric waveguides: solar
+  magneto-seismology theory and application}', {\em Frontiers in Astronomy and
+  Space Sciences} {\bf 6},~48.
+
+\harvarditem[{Antolin} et~al.]{{Antolin}, {Pagano}, {Testa}, {Petralia}
+  \harvardand\ {Reale}}{2021}{Antolin2021NatAs554A}
+{Antolin}, P., {Pagano}, P., {Testa}, P., {Petralia}, A. \harvardand\ {Reale},
+  F.  \harvardyearleft 2021\harvardyearright , `{Reconnection nanojets in the
+  solar corona}', {\em Nature Astronomy} {\bf 5},~54--62.
+
+\harvarditem[{Antolin} et~al.]{{Antolin}, {Shibata}, {Kudoh}, {Shiota}
+  \harvardand\ {Brooks}}{2008}{Antolin2008IAUS247279A}
+{Antolin}, P., {Shibata}, K., {Kudoh}, T., {Shiota}, D. \harvardand\ {Brooks},
+  D.  \harvardyearleft 2008\harvardyearright , {Predicting observational
+  signatures of coronal heating by Alfv{\'e}n waves and nanoflares}, {\em in}
+  R.~{Erd{\'e}lyi} \harvardand\ C.~A. {Mendoza-Briceno}, eds, `Waves \&
+  Oscillations in the Solar Atmosphere: Heating and Magneto-Seismology', Vol.
+  247, pp.~279--287.
+
+\harvarditem[{Appourchaux} et~al.]{{Appourchaux}, {Belkacem}, {Broomhall},
+  {Chaplin}, {Gough}, {Houdek}, {Provost}, {Baudin}, {Boumier}, {Elsworth},
+  {Garc{\'\i}a}, {Andersen}, {Finsterle}, {Fr{\"o}hlich}, {Gabriel}, {Grec},
+  {Jim{\'e}nez}, {Kosovichev}, {Sekii}, {Toutain} \harvardand\
+  {Turck-Chi{\`e}ze}}{2010}{Appourchaux2010AARv18197A}
+{Appourchaux}, T., {Belkacem}, K., {Broomhall}, A.~M., {Chaplin}, W.~J.,
+  {Gough}, D.~O., {Houdek}, G., {Provost}, J., {Baudin}, F., {Boumier}, P.,
+  {Elsworth}, Y., {Garc{\'\i}a}, R.~A., {Andersen}, B.~N., {Finsterle}, W.,
+  {Fr{\"o}hlich}, C., {Gabriel}, A., {Grec}, G., {Jim{\'e}nez}, A.,
+  {Kosovichev}, A., {Sekii}, T., {Toutain}, T. \harvardand\ {Turck-Chi{\`e}ze},
+  S.  \harvardyearleft 2010\harvardyearright , `{The quest for the solar g
+  modes}', {\em \aapr} {\bf 18}(1-2),~197--277.
+
+\harvarditem{{Appourchaux} \harvardand\
+  {Corbard}}{2019}{Appourchaux2019AA624A106A}
+{Appourchaux}, T. \harvardand\ {Corbard}, T.  \harvardyearleft
+  2019\harvardyearright , `{Searching for g modes. II. Unconfirmed g-mode
+  detection in the power spectrum of the time series of round-trip travel
+  time}', {\em \aap} {\bf 624},~A106.
+
+\harvarditem[{Archontis} et~al.]{{Archontis}, {Moreno-Insertis}, {Galsgaard}
+  \harvardand\ {Hood}}{2005}{Archontis2005ApJ6351299A}
+{Archontis}, V., {Moreno-Insertis}, F., {Galsgaard}, K. \harvardand\ {Hood},
+  A.~W.  \harvardyearleft 2005\harvardyearright , `{The Three-dimensional
+  Interaction between Emerging Magnetic Flux and a Large-Scale Coronal Field:
+  Reconnection, Current Sheets, and Jets}', {\em \apj} {\bf
+  635}(2),~1299--1318.
+
+\harvarditem{{Arregui}}{2015}{Arregui2015RSPTA37340261A}
+{Arregui}, I.  \harvardyearleft 2015\harvardyearright , `{Wave heating of the
+  solar atmosphere}', {\em Philosophical Transactions of the Royal Society of
+  London Series A} {\bf 373}(2042),~20140261--20140261.
+
+\harvarditem{{Aschwanden}}{2010}{Aschwanden2010SoPh262235A}
+{Aschwanden}, M.~J.  \harvardyearleft 2010\harvardyearright , `{Image
+  Processing Techniques and Feature Recognition in Solar Physics}', {\em
+  \solphys} {\bf 262}(2),~235--275.
+
+\harvarditem{{Aschwanden}}{2019}{Aschwanden2019ASSL}
+{Aschwanden}, M.~J.  \harvardyearleft 2019\harvardyearright , {\em {New
+  Millennium Solar Physics}}, Vol. 458.
+
+\harvarditem[{Aschwanden} et~al.]{{Aschwanden}, {Winebarger}, {Tsiklauri}
+  \harvardand\ {Peter}}{2007}{Aschwanden2007ApJ}
+{Aschwanden}, M.~J., {Winebarger}, A., {Tsiklauri}, D. \harvardand\ {Peter}, H.
+   \harvardyearleft 2007\harvardyearright , `{The Coronal Heating Paradox}',
+  {\em \apj} {\bf 659}(2),~1673--1681.
+
+\harvarditem{{Athay}}{1981}{Athay1981NASSP45085A}
+{Athay}, R.~G.  \harvardyearleft 1981\harvardyearright , {\em {The chromosphere
+  and transition region.}}, Vol. 450, pp.~85--133.
+
+\harvarditem{{Ayres}}{2019}{Ayres2019sgspbook27A}
+{Ayres}, T.~R.  \harvardyearleft 2019\harvardyearright , {\em {Chapter 2 -
+  Stellar and Solar Chromospheres and Attendant Phenomena}}, pp.~27--57.
+
+\harvarditem[{Ayres} et~al.]{{Ayres}, {Uitenbroek}, {Cauzzi}, {Reardon},
+  {Berger}, {Schrijver}, {de Pontieu}, {Judge}, {McIntosh}, {White}
+  \harvardand\ {Solanki}}{2009}{Ayres2009astro2010S9A}
+{Ayres}, T., {Uitenbroek}, H., {Cauzzi}, G., {Reardon}, K., {Berger}, T.,
+  {Schrijver}, C., {de Pontieu}, B., {Judge}, P., {McIntosh}, S., {White}, S.
+  \harvardand\ {Solanki}, S.  \harvardyearleft 2009\harvardyearright , {The
+  Solar Chromosphere: Old Challenges, New Frontiers}, {\em in} `astro2010: The
+  Astronomy and Astrophysics Decadal Survey', Vol. 2010, p.~9.
+
+\harvarditem[{Bale} et~al.]{{Bale}, {Badman}, {Bonnell}, {Bowen}, {Burgess},
+  {Case}, {Cattell}, {Chandran}, {Chaston}, {Chen}, {Drake}, {de Wit},
+  {Eastwood}, {Ergun}, {Farrell}, {Fong}, {Goetz}, {Goldstein}, {Goodrich},
+  {Harvey}, {Horbury}, {Howes}, {Kasper}, {Kellogg}, {Klimchuk}, {Korreck},
+  {Krasnoselskikh}, {Krucker}, {Laker}, {Larson}, {MacDowall}, {Maksimovic},
+  {Malaspina}, {Martinez-Oliveros}, {McComas}, {Meyer-Vernet}, {Moncuquet},
+  {Mozer}, {Phan}, {Pulupa}, {Raouafi}, {Salem}, {Stansby}, {Stevens}, {Szabo},
+  {Velli}, {Woolley} \harvardand\ {Wygant}}{2019}{Bale2019Natur}
+{Bale}, S.~D., {Badman}, S.~T., {Bonnell}, J.~W., {Bowen}, T.~A., {Burgess},
+  D., {Case}, A.~W., {Cattell}, C.~A., {Chandran}, B.~D.~G., {Chaston}, C.~C.,
+  {Chen}, C.~H.~K., {Drake}, J.~F., {de Wit}, T.~D., {Eastwood}, J.~P.,
+  {Ergun}, R.~E., {Farrell}, W.~M., {Fong}, C., {Goetz}, K., {Goldstein}, M.,
+  {Goodrich}, K.~A., {Harvey}, P.~R., {Horbury}, T.~S., {Howes}, G.~G.,
+  {Kasper}, J.~C., {Kellogg}, P.~J., {Klimchuk}, J.~A., {Korreck}, K.~E.,
+  {Krasnoselskikh}, V.~V., {Krucker}, S., {Laker}, R., {Larson}, D.~E.,
+  {MacDowall}, R.~J., {Maksimovic}, M., {Malaspina}, D.~M.,
+  {Martinez-Oliveros}, J., {McComas}, D.~J., {Meyer-Vernet}, N., {Moncuquet},
+  M., {Mozer}, F.~S., {Phan}, T.~D., {Pulupa}, M., {Raouafi}, N.~E., {Salem},
+  C., {Stansby}, D., {Stevens}, M., {Szabo}, A., {Velli}, M., {Woolley}, T.
+  \harvardand\ {Wygant}, J.~R.  \harvardyearleft 2019\harvardyearright ,
+  `{Highly structured slow solar wind emerging from an equatorial coronal
+  hole}', {\em \nat} {\bf 576}(7786),~237--242.
+
+\harvarditem{{Beckers}}{1963}{Beckers1963ApJ138648B}
+{Beckers}, J.~M.  \harvardyearleft 1963\harvardyearright , `{Study of the
+  Undisturbed Chromosphere from Ha-DISK Filtergrams, with Particular Reference
+  to the Indentification of Spicules.}', {\em \apj} {\bf 138},~648.
+
+\harvarditem{{Beckers}}{1968}{Beckers1968}
+{Beckers}, J.~M.  \harvardyearleft 1968\harvardyearright , `{Solar spicules}',
+  {\em Solar Physic} {\bf 3}(3),~367--433.
+
+\harvarditem{{Beckers}}{1972}{Beckers1972ARA&A}
+{Beckers}, J.~M.  \harvardyearleft 1972\harvardyearright , `{Solar Spicules}',
+  {\em \araa} {\bf 10},~73.
+
+\harvarditem{{Bennett} \harvardand\ {Erd{\'e}lyi}}{2015}{Bennett2015ApJ808135B}
+{Bennett}, S.~M. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2015\harvardyearright , `{On the Statistics of Macrospicules}', {\em \apj}
+  {\bf 808}(2),~135.
+
+\harvarditem[{Bogdan} et~al.]{{Bogdan}, {Carlsson}, {Hansteen}, {McMurry},
+  {Rosenthal}, {Johnson}, {Petty-Powell}, {Zita}, {Stein}, {McIntosh}
+  \harvardand\ {Nordlund}}{2003}{Bogdan2003ApJ599626B}
+{Bogdan}, T.~J., {Carlsson}, M., {Hansteen}, V.~H., {McMurry}, A., {Rosenthal},
+  C.~S., {Johnson}, M., {Petty-Powell}, S., {Zita}, E.~J., {Stein}, R.~F.,
+  {McIntosh}, S.~W. \harvardand\ {Nordlund}, {\r{A}}.  \harvardyearleft
+  2003\harvardyearright , `{Waves in the Magnetized Solar Atmosphere. II. Waves
+  from Localized Sources in Magnetic Flux Concentrations}', {\em \apj} {\bf
+  599}(1),~626--660.
+
+\harvarditem[{Bohlin} et~al.]{{Bohlin}, {Vogel}, {Purcell}, {Sheeley}, {Tousey}
+  \harvardand\ {Vanhoosier}}{1975}{Bohlin1975ApJ197L133B}
+{Bohlin}, J.~D., {Vogel}, S.~N., {Purcell}, J.~D., {Sheeley}, N.~R., J.,
+  {Tousey}, R. \harvardand\ {Vanhoosier}, M.~E.  \harvardyearleft
+  1975\harvardyearright , `{A newly observed solar feature: macrospicules in He
+  II 304 {\r{A}}.}', {\em \apjl} {\bf 197},~L133--L135.
+
+\harvarditem{{Brueckner}}{1980}{Brueckner1980HiA}
+{Brueckner}, G.~E.  \harvardyearleft 1980\harvardyearright , `{A
+  high-resolution view of the solar chromosphere and corona.}', {\em Highlights
+  of Astronomy} {\bf 5},~557--569.
+
+\harvarditem{{\v{C}}ada \harvardand\ Torrilhon}{2009}{CADA20094118}
+{\v{C}}ada, M. \harvardand\ Torrilhon, M.  \harvardyearleft
+  2009\harvardyearright , `{Compact third-order limiter functions for finite
+  volume methods}', {\em Journal of Computational Physics} {\bf
+  228}(11),~4118--4145.
+\newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S0021999109000953}
+
+\harvarditem{{Cally} \harvardand\ {Goossens}}{2008}{Cally2008SoPh251251C}
+{Cally}, P.~S. \harvardand\ {Goossens}, M.  \harvardyearleft
+  2008\harvardyearright , `{Three-Dimensional MHD Wave Propagation and
+  Conversion to Alfv{\'e}n Waves near the Solar Surface. I. Direct Numerical
+  Solution}', {\em \solphys} {\bf 251}(1-2),~251--265.
+
+\harvarditem{{Cargill}}{1993}{Cargill1993SoPh147263C}
+{Cargill}, P.~J.  \harvardyearleft 1993\harvardyearright , `{The Fine Structure
+  of a Nanoflare-Heated Corona}', {\em \solphys} {\bf 147}(2),~263--268.
+
+\harvarditem{{Cargill} \harvardand\ {Klimchuk}}{2004}{Cargill2004ApJ605911C}
+{Cargill}, P.~J. \harvardand\ {Klimchuk}, J.~A.  \harvardyearleft
+  2004\harvardyearright , `{Nanoflare Heating of the Corona Revisited}', {\em
+  \apj} {\bf 605}(2),~911--920.
+
+\harvarditem{{Cheng}}{1992{\em a}}{Cheng1992AA266549C}
+{Cheng}, Q.~Q.  \harvardyearleft 1992{\em a}\harvardyearright , `{Fluid Motions
+  in the Solar Atmosphere - Part Two - a Spicule Model with Emission Lines}',
+  {\em \aap} {\bf 266},~549.
+
+\harvarditem{{Cheng}}{1992{\em b}}{Cheng1992AA266537C}
+{Cheng}, Q.-Q.  \harvardyearleft 1992{\em b}\harvardyearright , `{Fluid motions
+  in the solar atmosphere. I - On the origin and decay of spicules. II - A
+  spicule model with emission lines}', {\em \aap} {\bf 266}(1),~537--559.
+
+\harvarditem{{Cheng}}{1992{\em c}}{Cheng1992AA262581C}
+{Cheng}, Q.-Q.  \harvardyearleft 1992{\em c}\harvardyearright , `{Fluid motions
+  in the solar atmosphere. III - A possible explanation of the downflows}',
+  {\em \aap} {\bf 262}(2),~581--586.
+
+\harvarditem[{Chintzoglou} et~al.]{{Chintzoglou}, {De Pontieu},
+  {Mart{\'\i}nez-Sykora}, {Hansteen}, {de la Cruz Rodr{\'\i}guez},
+  {Szydlarski}, {Jafarzadeh}, {Wedemeyer}, {Bastian} \harvardand\ {Sainz
+  Dalda}}{2021}{Chintzoglou2021ApJ90682C}
+{Chintzoglou}, G., {De Pontieu}, B., {Mart{\'\i}nez-Sykora}, J., {Hansteen},
+  V., {de la Cruz Rodr{\'\i}guez}, J., {Szydlarski}, M., {Jafarzadeh}, S.,
+  {Wedemeyer}, S., {Bastian}, T.~S. \harvardand\ {Sainz Dalda}, A.
+  \harvardyearleft 2021\harvardyearright , `{ALMA and IRIS Observations of the
+  Solar Chromosphere. I. An On-disk Type II Spicule}', {\em \apj} {\bf
+  906}(2),~82.
+
+\harvarditem[{Chintzoglou} et~al.]{{Chintzoglou}, {De Pontieu},
+  {Mart{\'\i}nez-Sykora}, {Pereira}, {Vourlidas} \harvardand\ {Tun
+  Beltran}}{2018}{Chintzoglou2018ApJ85773C}
+{Chintzoglou}, G., {De Pontieu}, B., {Mart{\'\i}nez-Sykora}, J., {Pereira}, T.
+  M.~D., {Vourlidas}, A. \harvardand\ {Tun Beltran}, S.  \harvardyearleft
+  2018\harvardyearright , `{Bridging the Gap: Capturing the
+  Ly{\ensuremath{\alpha}} Counterpart of a Type-II Spicule and Its Heating
+  Evolution with VAULT2.0 and IRIS Observations}', {\em \apj} {\bf 857}(1),~73.
+
+\harvarditem[{Cho} et~al.]{{Cho}, {Moon}, {Cho}, {Nakariakov}, {Lee}
+  \harvardand\ {Kim}}{2019}{Cho2019ApJ884L38C}
+{Cho}, I.-H., {Moon}, Y.-J., {Cho}, K.-S., {Nakariakov}, V.~M., {Lee}, J.-Y.
+  \harvardand\ {Kim}, Y.-H.  \harvardyearleft 2019\harvardyearright , `{A New
+  Type of Jet in a Polar Limb of the Solar Coronal Hole}', {\em \apjl} {\bf
+  884}(2),~L38.
+
+\harvarditem[{Christopoulou} et~al.]{{Christopoulou}, {Georgakilas}
+  \harvardand\ {Koutchmy}}{2001}{Christopoulou2001SoPh19961C}
+{Christopoulou}, E.~B., {Georgakilas}, A.~A. \harvardand\ {Koutchmy}, S.
+  \harvardyearleft 2001\harvardyearright , `{Fine Structure of the Magnetic
+  Chromosphere: Near-Limb Imaging, Data Processing and Analysis of Spicules and
+  Mottles}', {\em \solphys} {\bf 199}(1),~61--80.
+
+\harvarditem[{Cook} et~al.]{{Cook}, {Brueckner}, {Bartoe} \harvardand\
+  {Socker}}{1984}{Cook1984AdSpR459C}
+{Cook}, J.~W., {Brueckner}, G.~E., {Bartoe}, J. D.~F. \harvardand\ {Socker},
+  D.~G.  \harvardyearleft 1984\harvardyearright , `{HRTS observations of
+  spicular emission at transition region temperatures above the solar limb}',
+  {\em Advances in Space Research} {\bf 4}(8),~59--62.
+
+\harvarditem[{Cragg} et~al.]{{Cragg}, {Howard} \harvardand\
+  {Zirin}}{1963}{Cragg1963ApJ138303C}
+{Cragg}, T., {Howard}, R. \harvardand\ {Zirin}, H.  \harvardyearleft
+  1963\harvardyearright , `{Vertical Structures in the Chromosphere.}', {\em
+  \apj} {\bf 138},~303.
+
+\harvarditem{{De Gouveia Dal Pino}}{2005}{DeGouveiaDalPino2005}
+{De Gouveia Dal Pino}, E.~M.  \harvardyearleft 2005\harvardyearright ,
+  {Astrophysical jets and outflows}, {\em in} `Advances in Space Research',
+  Vol.~35, Elsevier Ltd, pp.~908--924.
+
+\harvarditem[{De Moortel} et~al.]{{De Moortel}, {Parnell} \harvardand\
+  {Hood}}{2003}{De_Moortel_2003SoPh}
+{De Moortel}, I., {Parnell}, C.~E. \harvardand\ {Hood}, A.~W.  \harvardyearleft
+  2003\harvardyearright , `{Determination of coronal loop properties from trace
+  observations}', {\em \solphys} {\bf 215},~69--86.
+
+\harvarditem{{De Pontieu}}{2007}{Pontieu2007ASPC}
+{De Pontieu}, B.  \harvardyearleft 2007\harvardyearright , {\em {Chromospheric
+  Dynamics: Spicules and Waves}}, Vol. 369 of {\em Astronomical Society of the
+  Pacific Conference Series}, p.~231.
+
+\harvarditem[{De Pontieu} et~al.]{{De Pontieu}, {De Moortel}, {Martinez-Sykora}
+  \harvardand\ {McIntosh}}{2017}{Pontieu2017ApJ}
+{De Pontieu}, B., {De Moortel}, I., {Martinez-Sykora}, J. \harvardand\
+  {McIntosh}, S.~W.  \harvardyearleft 2017\harvardyearright , `{Observations
+  and Numerical Models of Solar Coronal Heating Associated with Spicules}',
+  {\em \apjl} {\bf 845}(2),~L18.
+
+\harvarditem[{De Pontieu} et~al.]{{De Pontieu}, {Erd{\'e}lyi} \harvardand\ {De
+  Moortel}}{2005}{Pontieu2005ApJ624L61D}
+{De Pontieu}, B., {Erd{\'e}lyi}, R. \harvardand\ {De Moortel}, I.
+  \harvardyearleft 2005\harvardyearright , `{How to Channel Photospheric
+  Oscillations into the Corona}', {\em \apjl} {\bf 624}(1),~L61--L64.
+
+\harvarditem[{De Pontieu} et~al.]{{De Pontieu}, {Erd{\'e}lyi} \harvardand\
+  {James}}{2004}{Pontieu2004Natur}
+{De Pontieu}, B., {Erd{\'e}lyi}, R. \harvardand\ {James}, S.~P.
+  \harvardyearleft 2004\harvardyearright , `{Solar chromospheric spicules from
+  the leakage of photospheric oscillations and flows}', {\em \nat} {\bf
+  430},~536--539.
+
+\harvarditem{{De Pontieu}, {Hansteen}, {Rouppe van der Voort}, {van Noort}
+  \harvardand\ {Carlsson}}{2007{\em a}}{De_Pontieu2007ApJ}
+{De Pontieu}, B., {Hansteen}, V.~H., {Rouppe van der Voort}, L., {van Noort},
+  M. \harvardand\ {Carlsson}, M.  \harvardyearleft 2007{\em a}\harvardyearright
+  , `{High-Resolution Observations and Modeling of Dynamic Fibrils}', {\em
+  \apj} {\bf 655}(1),~624--641.
+
+\harvarditem{{De Pontieu}, {Hansteen}, {Rouppe van der Voort}, {van Noort}
+  \harvardand\ {Carlsson}}{2007{\em b}}{Pontieu2007astroph2081D}
+{De Pontieu}, B., {Hansteen}, V.~H., {Rouppe van der Voort}, L., {van Noort},
+  M. \harvardand\ {Carlsson}, M.  \harvardyearleft 2007{\em b}\harvardyearright
+  , `{Observations and Simulations of Fibrils and Mottles}', {\em ArXiv
+  e-prints} pp.~astro--ph/0702081.
+
+\harvarditem{{De Pontieu}, {McIntosh}, {Hansteen}, {Carlsson}, {Schrijver},
+  {Tarbell}, {Title}, {Shine}, {Suematsu}, {Tsuneta}, {Katsukawa}, {Ichimoto},
+  {Shimizu} \harvardand\ {Nagata}}{2007}{Pontieu2007PASJ}
+{De Pontieu}, B., {McIntosh}, S., {Hansteen}, V.~H., {Carlsson}, M.,
   {Schrijver}, C.~J., {Tarbell}, T.~D., {Title}, A.~M., {Shine}, R.~A.,
   {Suematsu}, Y., {Tsuneta}, S., {Katsukawa}, Y., {Ichimoto}, K., {Shimizu}, T.
   \harvardand\ {Nagata}, S.  \harvardyearleft 2007\harvardyearright , `{A Tale
   of Two Spicules: The Impact of Spicules on the Magnetic Chromosphere}', {\em
-  Publications of the Astronomical Society of Japan} {\bf 59},~S655--S662.
+  \pasj} {\bf 59},~S655--S662.
 
-\harvarditem{Nakariakov \harvardand\ Roberts}{1995}{nakariakov1995}
-Nakariakov, V.~M. \harvardand\ Roberts, B.  \harvardyearleft
-  1995\harvardyearright , `{Magnetosonic Waves in Structured Atmospheres with
-  Steady Flows, I}', {\em Solar Physics} {\bf 159},~213--228.
+\harvarditem[{De Pontieu} et~al.]{{De Pontieu}, {McIntosh}, {Carlsson},
+  {Hansteen}, {Tarbell}, {Boerner}, {Martinez-Sykora}, {Schrijver} \harvardand\
+  {Title}}{2011}{Pontieu2011Sci}
+{De Pontieu}, B., {McIntosh}, S.~W., {Carlsson}, M., {Hansteen}, V.~H.,
+  {Tarbell}, T.~D., {Boerner}, P., {Martinez-Sykora}, J., {Schrijver}, C.~J.
+  \harvardand\ {Title}, A.~M.  \harvardyearleft 2011\harvardyearright , `{The
+  Origins of Hot Plasma in the Solar Corona}', {\em Science} {\bf
+  331}(6013),~55.
 
-\harvarditem{{Ruderman}}{2010}{Ruderman2010}
-{Ruderman}, M.~S.  \harvardyearleft 2010\harvardyearright , `{The Effect of
-  Flows on Transverse Oscillations of Coronal Loops}', {\em Solar Physics} {\bf
-  267},~377--391.
+\harvarditem{{De Pontieu}, {McIntosh}, {Carlsson}, {Hansteen}, {Tarbell},
+  {Schrijver}, {Title}, {Shine}, {Tsuneta}, {Katsukawa}, {Ichimoto},
+  {Suematsu}, {Shimizu} \harvardand\ {Nagata}}{2007}{De_Pontieu2007}
+{De Pontieu}, B., {McIntosh}, S.~W., {Carlsson}, M., {Hansteen}, V.~H.,
+  {Tarbell}, T.~D., {Schrijver}, C.~J., {Title}, A.~M., {Shine}, R.~A.,
+  {Tsuneta}, S., {Katsukawa}, Y., {Ichimoto}, K., {Suematsu}, Y., {Shimizu}, T.
+  \harvardand\ {Nagata}, S.  \harvardyearleft 2007\harvardyearright ,
+  `{Chromospheric Alfv{\'e}nic Waves Strong Enough to Power the Solar Wind}',
+  {\em Science} {\bf 318},~1574.
+
+\harvarditem[Dedner et~al.]{Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer
+  \harvardand\ Wesenberg}{2002}{DEDNER2002645}
+Dedner, A., Kemm, F., Kr{\"{o}}ner, D., Munz, C.-D., Schnitzer, T. \harvardand\
+  Wesenberg, M.  \harvardyearleft 2002\harvardyearright , `{Hyperbolic
+  Divergence Cleaning for the MHD Equations}', {\em Journal of Computational
+  Physics} {\bf 175}(2),~645--673.
+\newline\harvardurl{http://www.sciencedirect.com/science/article/pii/S002199910196961X}
+
+\harvarditem{{Demarque} \harvardand\ {Guenther}}{1999}{Demarque1999PNAS965356D}
+{Demarque}, P. \harvardand\ {Guenther}, D.~B.  \harvardyearleft
+  1999\harvardyearright , `{Helioseismology: Probing the Interior of a Star}',
+  {\em Proceedings of the National Academy of Science} {\bf
+  96}(10),~5356--5359.
+
+\harvarditem[{Demastus} et~al.]{{Demastus}, {Wagner} \harvardand\
+  {Robinson}}{1973}{Demastus1973}
+{Demastus}, H.~L., {Wagner}, W.~J. \harvardand\ {Robinson}, R.~D.
+  \harvardyearleft 1973\harvardyearright , `{Coronal Disturbances. I: Fast
+  Transient Events Observed in the Green Coronal Emission Line During the Last
+  Solar Cycle}', {\em \solphys} {\bf 31}(2),~449--459.
+
+\harvarditem[{Dunn} et~al.]{{Dunn}, {Jefferies} \harvardand\
+  {Orrall}}{1960}{Dunn1960Obs8031D}
+{Dunn}, R.~B., {Jefferies}, J.~T. \harvardand\ {Orrall}, F.~Q.
+  \harvardyearleft 1960\harvardyearright , `{The line and continuous emission
+  observed in two limb flares}', {\em The Observatory} {\bf 80},~31--33.
+
+\harvarditem[{Edgington-Mitchell} et~al.]{{Edgington-Mitchell}, {Honnery}
+  \harvardand\ {Soria}}{2014}{Edgington-Mitchell2014}
+{Edgington-Mitchell}, D., {Honnery}, D.~R. \harvardand\ {Soria}, J.
+  \harvardyearleft 2014\harvardyearright , `{The underexpanded jet Mach disk
+  and its associated shear layer}', {\em Physics of Fluids} {\bf
+  26}(9),~096101.
+
+\harvarditem{{Edl{\'e}n}}{1943}{Edl1943}
+{Edl{\'e}n}, B.  \harvardyearleft 1943\harvardyearright , `{Die Deutung der
+  Emissionslinien im Spektrum der Sonnenkorona. Mit 6 Abbildungen.}', {\em
+  \zap} {\bf 22},~30.
+
+\harvarditem{{Edwin} \harvardand\ {Roberts}}{1982}{Edwin1982SoPh76239E}
+{Edwin}, P.~M. \harvardand\ {Roberts}, B.  \harvardyearleft
+  1982\harvardyearright , `{Wave Propagation in a Magnetically Structured
+  Atmosphere - Part Three - the Slab in a Magnetic Environment}', {\em
+  \solphys} {\bf 76}(2),~239--259.
+
+\harvarditem{{Erd{\'e}lyi}}{2004}{Robert2004AG45d34E}
+{Erd{\'e}lyi}, R.  \harvardyearleft 2004\harvardyearright , `{Coronal heating:
+  Heating in the solar atmosphere}', {\em Astronomy and Geophysics} {\bf
+  45}(4),~4.34--4.37.
+
+\harvarditem[{Escande} et~al.]{{Escande}, {Gondret} \harvardand\
+  {Sattin}}{2019}{Escande2019NatSR914274E}
+{Escande}, D.~F., {Gondret}, V. \harvardand\ {Sattin}, F.  \harvardyearleft
+  2019\harvardyearright , `{Relevant heating of the quiet solar corona by
+  Alfv{\'e}n waves: a result of adiabaticity breakdown}', {\em Scientific
+  Reports} {\bf 9},~14274.
+
+\harvarditem[{Fossat} et~al.]{{Fossat}, {Boumier}, {Corbard}, {Provost},
+  {Salabert}, {Schmider}, {Gabriel}, {Grec}, {Renaud}, {Robillot},
+  {Roca-Cort{\'e}s}, {Turck-Chi{\`e}ze}, {Ulrich} \harvardand\
+  {Lazrek}}{2017}{Fossat2017AA604A40F}
+{Fossat}, E., {Boumier}, P., {Corbard}, T., {Provost}, J., {Salabert}, D.,
+  {Schmider}, F.~X., {Gabriel}, A.~H., {Grec}, G., {Renaud}, C., {Robillot},
+  J.~M., {Roca-Cort{\'e}s}, T., {Turck-Chi{\`e}ze}, S., {Ulrich}, R.~K.
+  \harvardand\ {Lazrek}, M.  \harvardyearleft 2017\harvardyearright ,
+  `{Asymptotic g modes: Evidence for a rapid rotation of the solar core}', {\em
+  \aap} {\bf 604},~A40.
+
+\harvarditem{{Fossat} \harvardand\ {Schmider}}{2018}{Fossat2018AA612L1F}
+{Fossat}, E. \harvardand\ {Schmider}, F.~X.  \harvardyearleft
+  2018\harvardyearright , `{More about solar g modes}', {\em \aap} {\bf
+  612},~L1.
+
+\harvarditem{{Foukal}}{1971{\em a}}{Foukal1971SoPh20298F}
+{Foukal}, P.  \harvardyearleft 1971{\em a}\harvardyearright ,
+  `{H{\ensuremath{\alpha}} Fine Structure and the Chromospheric Field}', {\em
+  \solphys} {\bf 20}(2),~298--309.
+
+\harvarditem{{Foukal}}{1971{\em b}}{Foukal1971SoPh1959F}
+{Foukal}, P.  \harvardyearleft 1971{\em b}\harvardyearright , `{Morphological
+  Relationships in the Chromospheric H{\ensuremath{\alpha}} Fine Structure}',
+  {\em \solphys} {\bf 19}(1),~59--71.
+
+\harvarditem{{Gafeira}, {Jafarzadeh}, {Solanki}, {Lagg}, {van Noort},
+  {Barthol}, {Blanco Rodr{\'\i}guez}, {del Toro Iniesta}, {Gandorfer}, {Gizon},
+  {Hirzberger}, {Kn{\"o}lker}, {Orozco Su{\'a}rez}, {Riethm{\"u}ller}
+  \harvardand\ {Schmidt}}{2017}{Gafeira2017ApJS2297G}
+{Gafeira}, R., {Jafarzadeh}, S., {Solanki}, S.~K., {Lagg}, A., {van Noort}, M.,
+  {Barthol}, P., {Blanco Rodr{\'\i}guez}, J., {del Toro Iniesta}, J.~C.,
+  {Gandorfer}, A., {Gizon}, L., {Hirzberger}, J., {Kn{\"o}lker}, M., {Orozco
+  Su{\'a}rez}, D., {Riethm{\"u}ller}, T.~L. \harvardand\ {Schmidt}, W.
+  \harvardyearleft 2017\harvardyearright , `{Oscillations on Width and
+  Intensity of Slender Ca II H Fibrils from Sunrise/SuFI}', {\em \apjs} {\bf
+  229}(1),~7.
+
+\harvarditem{{Gafeira}, {Lagg}, {Solanki}, {Jafarzadeh}, {van Noort},
+  {Barthol}, {Blanco Rodr{\'\i}guez}, {del Toro Iniesta}, {Gandorfer}, {Gizon},
+  {Hirzberger}, {Kn{\"o}lker}, {Orozco Su{\'a}rez}, {Riethm{\"u}ller}
+  \harvardand\ {Schmidt}}{2017}{Gafeira2017ApJS2296G}
+{Gafeira}, R., {Lagg}, A., {Solanki}, S.~K., {Jafarzadeh}, S., {van Noort}, M.,
+  {Barthol}, P., {Blanco Rodr{\'\i}guez}, J., {del Toro Iniesta}, J.~C.,
+  {Gandorfer}, A., {Gizon}, L., {Hirzberger}, J., {Kn{\"o}lker}, M., {Orozco
+  Su{\'a}rez}, D., {Riethm{\"u}ller}, T.~L. \harvardand\ {Schmidt}, W.
+  \harvardyearleft 2017\harvardyearright , `{Morphological Properties of
+  Slender Ca II H Fibrils Observed by SUNRISE II}', {\em \apjs} {\bf
+  229}(1),~6.
+
+\harvarditem[{Garc{\'\i}a} et~al.]{{Garc{\'\i}a}, {Turck-Chi{\`e}ze},
+  {Jim{\'e}nez-Reyes}, {Ballot}, {Pall{\'e}}, {Eff-Darwich}, {Mathur}
+  \harvardand\ {Provost}}{2007}{Garc2007Sci3161591G}
+{Garc{\'\i}a}, R.~A., {Turck-Chi{\`e}ze}, S., {Jim{\'e}nez-Reyes}, S.~J.,
+  {Ballot}, J., {Pall{\'e}}, P.~L., {Eff-Darwich}, A., {Mathur}, S.
+  \harvardand\ {Provost}, J.  \harvardyearleft 2007\harvardyearright ,
+  `{Tracking Solar Gravity Modes: The Dynamics of the Solar Core}', {\em
+  Science} {\bf 316}(5831),~1591.
+
+\harvarditem{{Gary}}{2001}{Gary2001SoPh20371G}
+{Gary}, G.~A.  \harvardyearleft 2001\harvardyearright , `{Plasma Beta above a
+  Solar Active Region: Rethinking the Paradigm}', {\em \solphys} {\bf
+  203}(1),~71--86.
+
+\harvarditem[{Georgakilas} et~al.]{{Georgakilas}, {Koutchmy} \harvardand\
+  {Alissandrakis}}{1999}{Georgakilas1999AA341610G}
+{Georgakilas}, A.~A., {Koutchmy}, S. \harvardand\ {Alissandrakis}, C.~E.
+  \harvardyearleft 1999\harvardyearright , `{Polar surges and macrospicules:
+  simultaneous H{\ensuremath{\alpha}} and He BT II 304 Angstroms
+  observations}', {\em \aap} {\bf 341},~610--616.
+
+\harvarditem{Goedbloed \harvardand\ Poedts}{2004}{goedbloed2004principles}
+Goedbloed, J.~P. \harvardand\ Poedts, S.  \harvardyearleft
+  2004\harvardyearright , {\em Principles of magnetohydrodynamics: with
+  applications to laboratory and astrophysical plasmas}, Cambridge university
+  press.
+
+\harvarditem[{Gonz{\'a}lez-Avil{\'e}s} et~al.]{{Gonz{\'a}lez-Avil{\'e}s},
+  {Guzm{\'a}n} \harvardand\ {Fedun}}{2017}{Gonz2017ApJ}
+{Gonz{\'a}lez-Avil{\'e}s}, J.~J., {Guzm{\'a}n}, F.~S. \harvardand\ {Fedun}, V.
+  \harvardyearleft 2017\harvardyearright , `{Jet Formation in Solar Atmosphere
+  due to Magnetic Reconnection}', {\em \apj} {\bf 836},~24.
+
+\harvarditem[{Gonz{\'a}lez-Avil{\'e}s} et~al.]{{Gonz{\'a}lez-Avil{\'e}s},
+  {Guzm{\'a}n}, {Fedun}, {Verth}, {Sharma}, {Shelyag} \harvardand\
+  {Regnier}}{2019}{Gonz2018arXiv180704224G}
+{Gonz{\'a}lez-Avil{\'e}s}, J.~J., {Guzm{\'a}n}, F.~S., {Fedun}, V., {Verth},
+  G., {Sharma}, R., {Shelyag}, S. \harvardand\ {Regnier}, S.  \harvardyearleft
+  2019\harvardyearright , `{In situ generation of coronal Alfv{\'e}n waves by
+  jets}', {\em \mnras} {\bf 484}(2),~1936--1945.
+
+\harvarditem[{Gonz{\'a}lez-Avil{\'e}s} et~al.]{{Gonz{\'a}lez-Avil{\'e}s},
+  {Guzm{\'a}n}, {Fedun}, {Verth}, {Shelyag} \harvardand\
+  {Regnier}}{2018}{Gonz2018ApJ856176G}
+{Gonz{\'a}lez-Avil{\'e}s}, J.~J., {Guzm{\'a}n}, F.~S., {Fedun}, V., {Verth},
+  G., {Shelyag}, S. \harvardand\ {Regnier}, S.  \harvardyearleft
+  2018\harvardyearright , `{I. Jet Formation and Evolution Due to 3D Magnetic
+  Reconnection}', {\em \apj} {\bf 856}(2),~176.
+
+\harvarditem[{Goossens} et~al.]{{Goossens}, {Hollweg} \harvardand\
+  {Sakurai}}{1992}{Goossens1992SoPh138233G}
+{Goossens}, M., {Hollweg}, J.~V. \harvardand\ {Sakurai}, T.  \harvardyearleft
+  1992\harvardyearright , `{Resonant Behaviour of Magnetohydrodynamic Waves on
+  Magnetic Flux Tubes - Part Three}', {\em \solphys} {\bf 138}(2),~233--255.
+
+\harvarditem[{Goossens} et~al.]{{Goossens}, {Terradas}, {Andries}, {Arregui}
+  \harvardand\ {Ballester}}{2009}{Goossens2009AA503213G}
+{Goossens}, M., {Terradas}, J., {Andries}, J., {Arregui}, I. \harvardand\
+  {Ballester}, J.~L.  \harvardyearleft 2009\harvardyearright , `{On the nature
+  of kink MHD waves in magnetic flux tubes}', {\em \aap} {\bf
+  503}(1),~213--223.
+
+\harvarditem{{Grossmann-Doerth} \harvardand\
+  {Schmidt}}{1992}{Grossmann1992AA264236G}
+{Grossmann-Doerth}, U. \harvardand\ {Schmidt}, W.  \harvardyearleft
+  1992\harvardyearright , `{Chromospheric fine structure revisited}', {\em
+  \aap} {\bf 264}(1),~236--242.
+
+\harvarditem{{Grossmann-Doerth} \harvardand\ {von
+  Uexk{\"u}ll}}{1973}{Grossmann1973SoPh28319G}
+{Grossmann-Doerth}, U. \harvardand\ {von Uexk{\"u}ll}, M.  \harvardyearleft
+  1973\harvardyearright , `{Spectral Investigation of the Chromosphere. II. The
+  Nature of the Mottles and a Model of the Overall Structure}', {\em \solphys}
+  {\bf 28}(2),~319--332.
+
+\harvarditem{{Grotrian}}{1939}{Grotrian1939}
+{Grotrian}, W.  \harvardyearleft 1939\harvardyearright , `{Zur Frage der
+  Deutung der Linien im Spektrum der Sonnenkorona}', {\em Naturwissenschaften}
+  {\bf 27}(13),~214--214.
+
+\harvarditem{{Haerendel}}{1992}{Haerendel1992Natur360241H}
+{Haerendel}, G.  \harvardyearleft 1992\harvardyearright , `{Weakly damped
+  Alfv{\'e}n waves as drivers of solar chromospheric spicules}', {\em \nat}
+  {\bf 360}(6401),~241--243.
+
+\harvarditem{{Hansteen}}{2007}{Hansteen2007ASPC369193H}
+{Hansteen}, V.~H.  \harvardyearleft 2007\harvardyearright , {Waves and Shocks
+  in the Solar Atmosphere}, {\em in} K.~{Shibata}, S.~{Nagata} \harvardand\
+  T.~{Sakurai}, eds, `New Solar Physics with Solar-B Mission', Vol. 369 of {\em
+  Astronomical Society of the Pacific Conference Series}, p.~193.
+
+\harvarditem[{Hansteen} et~al.]{{Hansteen}, {De Pontieu}, {Rouppe van der
+  Voort}, {van Noort} \harvardand\ {Carlsson}}{2006}{Hansteen2006ApJ}
+{Hansteen}, V.~H., {De Pontieu}, B., {Rouppe van der Voort}, L., {van Noort},
+  M. \harvardand\ {Carlsson}, M.  \harvardyearleft 2006\harvardyearright ,
+  `{Dynamic Fibrils Are Driven by Magnetoacoustic Shocks}', {\em \apjl} {\bf
+  647}(1),~L73--L76.
+
+\harvarditem[Harten et~al.]{Harten, Lax \harvardand\ van. Leer}{1983}{hll_1983}
+Harten, A., Lax, P.~D. \harvardand\ van. Leer, B.  \harvardyearleft
+  1983\harvardyearright , `{On Upstream Differencing and Godunov-Type Schemes
+  for Hyperbolic Conservation Laws}', {\em SIAM Review} {\bf 25}(1),~35--61.
+\newline\harvardurl{https://doi.org/10.1137/1025002}
+
+\harvarditem[{Heggland} et~al.]{{Heggland}, {De Pontieu} \harvardand\
+  {Hansteen}}{2007}{Heggland2007ApJ6661277H}
+{Heggland}, L., {De Pontieu}, B. \harvardand\ {Hansteen}, V.~H.
+  \harvardyearleft 2007\harvardyearright , `{Numerical Simulations of Shock
+  Wave-driven Chromospheric Jets}', {\em \apj} {\bf 666}(2),~1277--1283.
+
+\harvarditem[{Henriques} et~al.]{{Henriques}, {Kuridze}, {Mathioudakis}
+  \harvardand\ {Keenan}}{2016}{Henriques2016}
+{Henriques}, V.~M.~J., {Kuridze}, D., {Mathioudakis}, M. \harvardand\ {Keenan},
+  F.~P.  \harvardyearleft 2016\harvardyearright , `{Quiet-Sun H{$\alpha$}
+  Transients and Corresponding Small-scale Transition Region and Coronal
+  Heating}', {\em \apj} {\bf 820},~124.
+
+\harvarditem{{Hollweg}}{1982}{Hollweg1982ApJ257345H}
+{Hollweg}, J.~V.  \harvardyearleft 1982\harvardyearright , `{On the origin of
+  solar spicules}', {\em \apj} {\bf 257},~345--353.
+
+\harvarditem{{Hollweg}}{1992}{Hollweg1992ApJ389731H}
+{Hollweg}, J.~V.  \harvardyearleft 1992\harvardyearright , `{Alfvenically
+  Driven Slow Shocks in the Solar Chromosphere and Corona}', {\em \apj} {\bf
+  389},~731.
+
+\harvarditem[{Hollweg} et~al.]{{Hollweg}, {Jackson} \harvardand\
+  {Galloway}}{1982}{Hollweg1982SoPh7535H}
+{Hollweg}, J.~V., {Jackson}, S. \harvardand\ {Galloway}, D.  \harvardyearleft
+  1982\harvardyearright , `{Alfven Waves in the Solar Atmospheres - Part Three
+  - Nonlinear Waves on Open Flux Tubes}', {\em \solphys} {\bf 75}(1-2),~35--61.
+
+\harvarditem[{Hou} et~al.]{{Hou}, {Huang}, {Xia}, {Li} \harvardand\
+  {Fu}}{2018}{Zhenyong2018ApJ85565H}
+{Hou}, Z., {Huang}, Z., {Xia}, L., {Li}, B. \harvardand\ {Fu}, H.
+  \harvardyearleft 2018\harvardyearright , `{Observations of Upward Propagating
+  Waves in the Transition Region and Corona above Sunspots}', {\em \apj} {\bf
+  855}(1),~65.
+
+\harvarditem[{Ichimoto} et~al.]{{Ichimoto}, {Lites}, {Elmore}, {Suematsu},
+  {Tsuneta}, {Katsukawa}, {Shimizu}, {Shine}, {Tarbell}, {Title}, {Kiyohara},
+  {Shinoda}, {Card}, {Lecinski}, {Streander}, {Nakagiri}, {Miyashita},
+  {Noguchi}, {Hoffmann} \harvardand\ {Cruz}}{2008}{Ichimoto2008SoPh}
+{Ichimoto}, K., {Lites}, B., {Elmore}, D., {Suematsu}, Y., {Tsuneta}, S.,
+  {Katsukawa}, Y., {Shimizu}, T., {Shine}, R., {Tarbell}, T., {Title}, A.,
+  {Kiyohara}, J., {Shinoda}, K., {Card}, G., {Lecinski}, A., {Streander}, K.,
+  {Nakagiri}, M., {Miyashita}, M., {Noguchi}, M., {Hoffmann}, C. \harvardand\
+  {Cruz}, T.  \harvardyearleft 2008\harvardyearright , `{Polarization
+  Calibration of the Solar Optical Telescope onboard Hinode}', {\em \solphys}
+  {\bf 249}(2),~233--261.
+
+\harvarditem{{Iijima} \harvardand\ {Yokoyama}}{2017}{Iijima2017ApJ}
+{Iijima}, H. \harvardand\ {Yokoyama}, T.  \harvardyearleft
+  2017\harvardyearright , `{A Three-dimensional Magnetohydrodynamic Simulation
+  of the Formation of Solar Chromospheric Jets with Twisted Magnetic Field
+  Lines}', {\em \apj} {\bf 848}(1),~38.
+
+\harvarditem[{Isobe} et~al.]{{Isobe}, {Proctor} \harvardand\
+  {Weiss}}{2008}{Isobe2008ApJ679L57I}
+{Isobe}, H., {Proctor}, M.~R.~E. \harvardand\ {Weiss}, N.~O.  \harvardyearleft
+  2008\harvardyearright , `{Convection-driven Emergence of Small-Scale Magnetic
+  Fields and their Role in Coronal Heating and Solar Wind Acceleration}', {\em
+  \apjl} {\bf 679}(1),~L57.
+
+\harvarditem[{James} et~al.]{{James}, {Erd{\'e}lyi} \harvardand\ {De
+  Pontieu}}{2003}{James2003AA}
+{James}, S.~P., {Erd{\'e}lyi}, R. \harvardand\ {De Pontieu}, B.
+  \harvardyearleft 2003\harvardyearright , `{Can ion-neutral damping help to
+  form spicules?}', {\em \aap} {\bf 406},~715--724.
+
+\harvarditem[{Jess} et~al.]{{Jess}, {Mathioudakis}, {Erd{\'e}lyi}, {Crockett},
+  {Keenan} \harvardand\ {Christian}}{2009}{jess_alfven_2009}
+{Jess}, D.~B., {Mathioudakis}, M., {Erd{\'e}lyi}, R., {Crockett}, P.~J.,
+  {Keenan}, F.~P. \harvardand\ {Christian}, D.~J.  \harvardyearleft
+  2009\harvardyearright , `{Alfv{\'e}n Waves in the Lower Solar Atmosphere}',
+  {\em Science} {\bf 323}(5921),~1582.
+
+\harvarditem[{Jess} et~al.]{{Jess}, {Pascoe}, {Christian}, {Mathioudakis},
+  {Keys} \harvardand\ {Keenan}}{2012}{Jess2012ApJ744L5J}
+{Jess}, D.~B., {Pascoe}, D.~J., {Christian}, D.~J., {Mathioudakis}, M., {Keys},
+  P.~H. \harvardand\ {Keenan}, F.~P.  \harvardyearleft 2012\harvardyearright ,
+  `{The Origin of Type I Spicule Oscillations}', {\em \apjl} {\bf 744}(1),~L5.
+
+\harvarditem{{Judge} \harvardand\ {Carlsson}}{2010}{Judge_2010ApJ}
+{Judge}, P.~G. \harvardand\ {Carlsson}, M.  \harvardyearleft
+  2010\harvardyearright , `{On the Solar Chromosphere Observed at the LIMB with
+  Hinode}', {\em \apj} {\bf 719},~469--473.
+
+\harvarditem{{Karovska} \harvardand\ {Habbal}}{1994}{Karovska1994ApJ}
+{Karovska}, M. \harvardand\ {Habbal}, S.~R.  \harvardyearleft
+  1994\harvardyearright , `{Dynamical Structure of Extreme Ultraviolet
+  Macrospicules}', {\em \apjl} {\bf 431},~L59.
+
+\harvarditem[{Keppens} et~al.]{{Keppens}, {Meliani}, {van Marle}, {Delmont},
+  {Vlasis} \harvardand\ {van der Holst}}{2012}{Keppens_2012}
+{Keppens}, R., {Meliani}, Z., {van Marle}, A.~J., {Delmont}, P., {Vlasis}, A.
+  \harvardand\ {van der Holst}, B.  \harvardyearleft 2012\harvardyearright ,
+  `{Parallel, grid-adaptive approaches for relativistic hydro and
+  magnetohydrodynamics}', {\em Journal of Computational Physics} {\bf
+  231},~718--744.
+
+\harvarditem[{Kiss} et~al.]{{Kiss}, {Gyenge} \harvardand\
+  {Erd{\'e}lyi}}{2017}{Kiss2017ApJ83547K}
+{Kiss}, T.~S., {Gyenge}, N. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2017\harvardyearright , `{Systematic Variations of Macrospicule Properties
+  Observed by SDO/AIA over Half a Decade}', {\em \apj} {\bf 835}(1),~47.
+
+\harvarditem[{Kjeldseth Moe} et~al.]{{Kjeldseth Moe}, {Engvold} \harvardand\
+  {Beckers}}{1975}{Moe1975SoPh4065K}
+{Kjeldseth Moe}, O., {Engvold}, O.~O. \harvardand\ {Beckers}, J.~M.
+  \harvardyearleft 1975\harvardyearright , `{A Comparison of Spicules in the
+  H{\ensuremath{\alpha}} and He II (304 {\r{A}}) Lines}', {\em \solphys} {\bf
+  40}(1),~65--68.
+
+\harvarditem{{Klimchuk} \harvardand\ {Cargill}}{2001}{Klimchuk2001ApJ553440K}
+{Klimchuk}, J.~A. \harvardand\ {Cargill}, P.~J.  \harvardyearleft
+  2001\harvardyearright , `{Spectroscopic Diagnostics of Nanoflare-heated
+  Loops}', {\em \apj} {\bf 553}(1),~440--448.
+
+\harvarditem{{Kudoh}}{2008}{Kudoh2008IAUS247195K}
+{Kudoh}, T.  \harvardyearleft 2008\harvardyearright , {Nonlinear Alfv{\'e}n
+  wave model of spicules and coronal heating}, {\em in} R.~{Erd{\'e}lyi}
+  \harvardand\ C.~A. {Mendoza-Briceno}, eds, `Waves \& Oscillations in the
+  Solar Atmosphere: Heating and Magneto-Seismology', Vol. 247, pp.~195--200.
+
+\harvarditem{{Kudoh} \harvardand\ {Shibata}}{1999}{Kudoh1999ApJ514493K}
+{Kudoh}, T. \harvardand\ {Shibata}, K.  \harvardyearleft 1999\harvardyearright
+  , `{Alfv{\'e}n Wave Model of Spicules and Coronal Heating}', {\em \apj} {\bf
+  514}(1),~493--505.
+
+\harvarditem[{Kukhianidze} et~al.]{{Kukhianidze}, {Zaqarashvili} \harvardand\
+  {Khutsishvili}}{2006}{Kukhianidze2006AA}
+{Kukhianidze}, V., {Zaqarashvili}, T.~V. \harvardand\ {Khutsishvili}, E.
+  \harvardyearleft 2006\harvardyearright , `{Observation of kink waves in solar
+  spicules}', {\em \aap} {\bf 449}(2),~L35--L38.
+
+\harvarditem[{Kuridze} et~al.]{{Kuridze}, {Henriques}, {Mathioudakis},
+  {Erd{\'e}lyi}, {Zaqarashvili}, {Shelyag}, {Keys} \harvardand\
+  {Keenan}}{2015}{Kuridze2015ApJ80226K}
+{Kuridze}, D., {Henriques}, V., {Mathioudakis}, M., {Erd{\'e}lyi}, R.,
+  {Zaqarashvili}, T.~V., {Shelyag}, S., {Keys}, P.~H. \harvardand\ {Keenan},
+  F.~P.  \harvardyearleft 2015\harvardyearright , `{The Dynamics of Rapid
+  Redshifted and Blueshifted Excursions in the Solar H{\ensuremath{\alpha}}
+  Line}', {\em \apj} {\bf 802}(1),~26.
+
+\harvarditem{{Ku{\'z}ma}, {Murawski}, {Kayshap}, {W{\'o}jcik}, {Srivastava}
+  \harvardand\ {Dwivedi}}{2017}{kuzma2017ApJ84978K}
+{Ku{\'z}ma}, B., {Murawski}, K., {Kayshap}, P., {W{\'o}jcik}, D., {Srivastava},
+  A.~K. \harvardand\ {Dwivedi}, B.~N.  \harvardyearleft 2017\harvardyearright ,
+  `{Two-fluid Numerical Simulations of Solar Spicules}', {\em \apj} {\bf
+  849},~78.
+
+\harvarditem{{Ku{\'z}ma}, {Murawski}, {Zaqarashvili}, {Konkol} \harvardand\
+  {Mignone}}{2017}{Kuzma2017AA597A133K}
+{Ku{\'z}ma}, B., {Murawski}, K., {Zaqarashvili}, T.~V., {Konkol}, P.
+  \harvardand\ {Mignone}, A.  \harvardyearleft 2017\harvardyearright ,
+  `{Numerical simulations of solar spicules: Adiabatic and non-adiabatic
+  studies}', {\em \aap} {\bf 597},~A133.
+
+\harvarditem{{Labonte}}{1979}{Labonte1979SoPh61283L}
+{Labonte}, B.~J.  \harvardyearleft 1979\harvardyearright , `{Activity in the
+  quiet sun. I. Observations of macrospicules in Halpha and D$_{3}$.}', {\em
+  \solphys} {\bf 61}(2),~283--296.
+
+\harvarditem{{Lang}}{2006}{Lang_2006ses}
+{Lang}, K.~R.  \harvardyearleft 2006\harvardyearright , {\em {Sun, Earth and
+  Sky}}.
+
+\harvarditem{{Langangen}, {Carlsson}, {Rouppe van der Voort}, {Hansteen}
+  \harvardand\ {De Pontieu}}{2008}{Langangen2008ApJ6731194L}
+{Langangen}, {\O}., {Carlsson}, M., {Rouppe van der Voort}, L., {Hansteen}, V.
+  \harvardand\ {De Pontieu}, B.  \harvardyearleft 2008\harvardyearright ,
+  `{Spectroscopic Measurements of Dynamic Fibrils in the Ca II
+  {\ensuremath{\lambda}}8662 Line}', {\em \apj} {\bf 673}(2),~1194--1200.
+
+\harvarditem{{Langangen}, {De Pontieu}, {Carlsson}, {Hansteen}, {Cauzzi}
+  \harvardand\ {Reardon}}{2008}{Langangen2008ApJ}
+{Langangen}, {\O}., {De Pontieu}, B., {Carlsson}, M., {Hansteen}, V.~H.,
+  {Cauzzi}, G. \harvardand\ {Reardon}, K.  \harvardyearleft
+  2008\harvardyearright , `{Search for High Velocities in the Disk Counterpart
+  of Type II Spicules}', {\em \apjl} {\bf 679}(2),~L167.
+
+\harvarditem{{Lehmann}}{1936}{Lehmann1936}
+{Lehmann}, I.  \harvardyearleft 1936\harvardyearright , `{P'}', {\em Bur.
+  Centr. Seismol. Int. A} {\bf 14},~87--115.
+
+\harvarditem[{Leighton} et~al.]{{Leighton}, {Noyes} \harvardand\
+  {Simon}}{1962}{Leighton1962ApJ135474L}
+{Leighton}, R.~B., {Noyes}, R.~W. \harvardand\ {Simon}, G.~W.  \harvardyearleft
+  1962\harvardyearright , `{Velocity Fields in the Solar Atmosphere. I.
+  Preliminary Report.}', {\em \apj} {\bf 135},~474.
+
+\harvarditem[{Lemen} et~al.]{{Lemen}, {Title}, {Akin}, {Boerner}, {Chou},
+  {Drake}, {Duncan}, {Edwards}, {Friedlaender}, {Heyman}, {Hurlburt}, {Katz},
+  {Kushner}, {Levay}, {Lindgren}, {Mathur}, {McFeaters}, {Mitchell}, {Rehse},
+  {Schrijver}, {Springer}, {Stern}, {Tarbell}, {Wuelser}, {Wolfson}, {Yanari},
+  {Bookbinder}, {Cheimets}, {Caldwell}, {Deluca}, {Gates}, {Golub}, {Park},
+  {Podgorski}, {Bush}, {Scherrer}, {Gummin}, {Smith}, {Auker}, {Jerram},
+  {Pool}, {Soufli}, {Windt}, {Beardsley}, {Clapp}, {Lang} \harvardand\
+  {Waltham}}{2012}{Lemen2012SoPh27517L}
+{Lemen}, J.~R., {Title}, A.~M., {Akin}, D.~J., {Boerner}, P.~F., {Chou}, C.,
+  {Drake}, J.~F., {Duncan}, D.~W., {Edwards}, C.~G., {Friedlaender}, F.~M.,
+  {Heyman}, G.~F., {Hurlburt}, N.~E., {Katz}, N.~L., {Kushner}, G.~D., {Levay},
+  M., {Lindgren}, R.~W., {Mathur}, D.~P., {McFeaters}, E.~L., {Mitchell}, S.,
+  {Rehse}, R.~A., {Schrijver}, C.~J., {Springer}, L.~A., {Stern}, R.~A.,
+  {Tarbell}, T.~D., {Wuelser}, J.-P., {Wolfson}, C.~J., {Yanari}, C.,
+  {Bookbinder}, J.~A., {Cheimets}, P.~N., {Caldwell}, D., {Deluca}, E.~E.,
+  {Gates}, R., {Golub}, L., {Park}, S., {Podgorski}, W.~A., {Bush}, R.~I.,
+  {Scherrer}, P.~H., {Gummin}, M.~A., {Smith}, P., {Auker}, G., {Jerram}, P.,
+  {Pool}, P., {Soufli}, R., {Windt}, D.~L., {Beardsley}, S., {Clapp}, M.,
+  {Lang}, J. \harvardand\ {Waltham}, N.  \harvardyearleft 2012\harvardyearright
+  , `{The Atmospheric Imaging Assembly (AIA) on the Solar Dynamics Observatory
+  (SDO)}', {\em \solphys} {\bf 275}(1-2),~17--40.
+
+\harvarditem{{Lippincott}}{1957}{Lippincott1957SCoA215L}
+{Lippincott}, S.~L.  \harvardyearleft 1957\harvardyearright , `{Chromospheric
+  Spicules}', {\em Smithsonian Contributions to Astrophysics} {\bf 2},~15.
+
+\harvarditem{{Loboda} \harvardand\ {Bogachev}}{2019}{Loboda2019ApJ871230L}
+{Loboda}, I.~P. \harvardand\ {Bogachev}, S.~A.  \harvardyearleft
+  2019\harvardyearright , `{What is a Macrospicule?}', {\em \apj} {\bf
+  871}(2),~230.
+
+\harvarditem[{Lynch} et~al.]{{Lynch}, {Beckers} \harvardand\
+  {Dunn}}{1973}{Lynch1973SoPh3063L}
+{Lynch}, D.~K., {Beckers}, J.~M. \harvardand\ {Dunn}, R.~B.  \harvardyearleft
+  1973\harvardyearright , `{A Morphological Study of Solar Spicules}', {\em
+  \solphys} {\bf 30}(1),~63--70.
+
+\harvarditem{{Mariska}}{1992}{Mariska1992strbookM}
+{Mariska}, J.~T.  \harvardyearleft 1992\harvardyearright , {\em {The Solar
+  Transition Region}}.
+
+\harvarditem[{Mart{\'\i}nez-Sykora} et~al.]{{Mart{\'\i}nez-Sykora}, {De
+  Pontieu}, {Hansteen}, {Rouppe van der Voort}, {Carlsson} \harvardand\
+  {Pereira}}{2017}{Mart2017Sci3561269M}
+{Mart{\'\i}nez-Sykora}, J., {De Pontieu}, B., {Hansteen}, V.~H., {Rouppe van
+  der Voort}, L., {Carlsson}, M. \harvardand\ {Pereira}, T.~M.~D.
+  \harvardyearleft 2017\harvardyearright , `{On the generation of solar
+  spicules and Alfv{\'e}nic waves}', {\em Science} {\bf 356}(6344),~1269--1272.
+
+\harvarditem[{Mart{\'\i}nez-Sykora} et~al.]{{Mart{\'\i}nez-Sykora}, {Hansteen},
+  {De Pontieu} \harvardand\ {Carlsson}}{2009}{Mart2009ApJ7011569M}
+{Mart{\'\i}nez-Sykora}, J., {Hansteen}, V., {De Pontieu}, B. \harvardand\
+  {Carlsson}, M.  \harvardyearleft 2009\harvardyearright , `{Spicule-Like
+  Structures Observed in Three-Dimensional Realistic Magnetohydrodynamic
+  Simulations}', {\em \apj} {\bf 701}(2),~1569--1581.
+
+\harvarditem{{Matsumoto} \harvardand\
+  {Shibata}}{2010}{Matsumoto2010ApJ7101857M}
+{Matsumoto}, T. \harvardand\ {Shibata}, K.  \harvardyearleft
+  2010\harvardyearright , `{Nonlinear Propagation of Alfv{\'e}n Waves Driven by
+  Observed Photospheric Motions: Application to the Coronal Heating and Spicule
+  Formation}', {\em \apj} {\bf 710}(2),~1857--1867.
+
+\harvarditem{{Menon} \harvardand\ {Skews}}{2010}{Menon2010}
+{Menon}, N. \harvardand\ {Skews}, B.~W.  \harvardyearleft 2010\harvardyearright
+  , `{Shock wave configurations and flow structures in non-axisymmetric
+  underexpanded sonic jets}', {\em Shock Waves} {\bf 20}(3),~175--190.
+
+\harvarditem[{Moore} et~al.]{{Moore}, {Sterling}, {Cirtain} \harvardand\
+  {Falconer}}{2011}{Moore2011ApJ731L18M}
+{Moore}, R.~L., {Sterling}, A.~C., {Cirtain}, J.~W. \harvardand\ {Falconer},
+  D.~A.  \harvardyearleft 2011\harvardyearright , `{Solar X-ray Jets, Type-II
+  Spicules, Granule-size Emerging Bipoles, and the Genesis of the
+  Heliosphere}', {\em \apjl} {\bf 731}(1),~L18.
+
+\harvarditem[{Moreno-Insertis} et~al.]{{Moreno-Insertis}, {Galsgaard}
+  \harvardand\ {Ugarte-Urra}}{2008}{Moreno2008ApJ673L211M}
+{Moreno-Insertis}, F., {Galsgaard}, K. \harvardand\ {Ugarte-Urra}, I.
+  \harvardyearleft 2008\harvardyearright , `{Jets in Coronal Holes: Hinode
+  Observations and Three-dimensional Computer Modeling}', {\em \apjl} {\bf
+  673}(2),~L211.
+
+\harvarditem[{Morton} et~al.]{{Morton}, {Verth}, {Jess}, {Kuridze}, {Ruderman},
+  {Mathioudakis} \harvardand\ {Erd{\'e}lyi}}{2012}{Morton2012NatCo31315M}
+{Morton}, R.~J., {Verth}, G., {Jess}, D.~B., {Kuridze}, D., {Ruderman}, M.~S.,
+  {Mathioudakis}, M. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2012\harvardyearright , `{Observations of ubiquitous compressive waves in the
+  Sun's chromosphere}', {\em Nature Communications} {\bf 3},~1315.
+
+\harvarditem[{Murawski} et~al.]{{Murawski}, {Solov'ev}, {Musielak},
+  {Srivastava} \harvardand\ {Kra{\'s}kiewicz}}{2015}{Murawski2015AA577A126M}
+{Murawski}, K., {Solov'ev}, A., {Musielak}, Z.~E., {Srivastava}, A.~K.
+  \harvardand\ {Kra{\'s}kiewicz}, J.  \harvardyearleft 2015\harvardyearright ,
+  `{Torsional Alfv{\'e}n waves in solar magnetic flux tubes of axial
+  symmetry}', {\em \aap} {\bf 577},~A126.
+
+\harvarditem{{Murawski} \harvardand\
+  {Zaqarashvili}}{2010}{Murawski2010AA519A8M}
+{Murawski}, K. \harvardand\ {Zaqarashvili}, T.~V.  \harvardyearleft
+  2010\harvardyearright , `{Numerical simulations of spicule formation in the
+  solar atmosphere}', {\em \aap} {\bf 519},~A8.
+
+\harvarditem{{Nakariakov} \harvardand\ {Ofman}}{2001}{Nakariakov_2001}
+{Nakariakov}, V.~M. \harvardand\ {Ofman}, L.  \harvardyearleft
+  2001\harvardyearright , `{Determination of the coronal magnetic field by
+  coronal loop oscillations}', {\em \aap} {\bf 372},~L53--L56.
+
+\harvarditem{Narayanan}{2014}{narayanan2014introduction}
+Narayanan, A.  \harvardyearleft 2014\harvardyearright , {\em An Introduction to
+  Waves and Oscillations in the Sun}, Astronomy and Astrophysics Library,
+  Springer New York.
+\newline\harvardurl{https://books.google.be/books?id=Wm3woQEACAAJ}
+
+\harvarditem[{Nishizuka} et~al.]{{Nishizuka}, {Shimizu}, {Nakamura}, {Otsuji},
+  {Okamoto}, {Katsukawa} \harvardand\ {Shibata}}{2008}{Nishizuka2008ApJ683L83N}
+{Nishizuka}, N., {Shimizu}, M., {Nakamura}, T., {Otsuji}, K., {Okamoto}, T.~J.,
+  {Katsukawa}, Y. \harvardand\ {Shibata}, K.  \harvardyearleft
+  2008\harvardyearright , `{Giant Chromospheric Anemone Jet Observed with
+  Hinode and Comparison with Magnetohydrodynamic Simulations: Evidence of
+  Propagating Alfv{\'e}n Waves and Magnetic Reconnection}', {\em \apjl} {\bf
+  683}(1),~L83.
+
+\harvarditem[{Norman} et~al.]{{Norman}, {Winkler}, {Smarr} \harvardand\
+  {Smith}}{1982}{Norman1982}
+{Norman}, M.~L., {Winkler}, K. H.~A., {Smarr}, L. \harvardand\ {Smith}, M.~D.
+  \harvardyearleft 1982\harvardyearright , `{Structure and dynamics of
+  supersonic jets.}', {\em \aap} {\bf 113},~285--302.
+
+\harvarditem{{Okamoto} \harvardand\ {De Pontieu}}{2011}{Okamoto2011ApJ736L24O}
+{Okamoto}, T.~J. \harvardand\ {De Pontieu}, B.  \harvardyearleft
+  2011\harvardyearright , `{Propagating Waves Along Spicules}', {\em \apjl}
+  {\bf 736}(2),~L24.
+
+\harvarditem[Ono et~al.]{Ono, Yamamoto \harvardand\ Koike}{2014}{Ono2014}
+Ono, N., Yamamoto, M. \harvardand\ Koike, K.  \harvardyearleft
+  2014\harvardyearright , `{Detection of shock structure around Mach disk in
+  axisymmetric plasma jet}', {\em Vacuum} {\bf 110},~149--153.
+
+\harvarditem[{Oxley} et~al.]{{Oxley}, {Scalisi}, {Ruderman} \harvardand\
+  {Erd{\'e}lyi}}{2020}{Oxley_2020ApJ905168O}
+{Oxley}, W., {Scalisi}, J., {Ruderman}, M.~S. \harvardand\ {Erd{\'e}lyi}, R.
+  \harvardyearleft 2020\harvardyearright , `{Formation of Chromospheric
+  Spicules in Magnetic Bright Points: An Analytical Approach Using Cartesian
+  Slab Geometry}', {\em \apj} {\bf 905}(2),~168.
+
+\harvarditem[{Parenti} et~al.]{{Parenti}, {Bromage} \harvardand\
+  {Bromage}}{2002}{Parenti2002AA384303P}
+{Parenti}, S., {Bromage}, B.~J.~I. \harvardand\ {Bromage}, G.~E.
+  \harvardyearleft 2002\harvardyearright , `{An erupting macrospicule.
+  Characteristics derived from SOHO-CDS spectroscopic observations}', {\em
+  \aap} {\bf 384},~303--316.
+
+\harvarditem{{Parker}}{1988}{Parker1988ApJ330474P}
+{Parker}, E.~N.  \harvardyearleft 1988\harvardyearright , `{Nanoflares and the
+  Solar X-Ray Corona}', {\em \apj} {\bf 330},~474.
+
+\harvarditem{{Parnell} \harvardand\ {De
+  Moortel}}{2012}{Parnell2012RSPTA3703217P}
+{Parnell}, C.~E. \harvardand\ {De Moortel}, I.  \harvardyearleft
+  2012\harvardyearright , `{A contemporary view of coronal heating}', {\em
+  Philosophical Transactions of the Royal Society of London Series A} {\bf
+  370}(1970),~3217--3240.
+
+\harvarditem{{Parnell} \harvardand\ {Jupp}}{2000}{Parnell2000ApJ529554P}
+{Parnell}, C.~E. \harvardand\ {Jupp}, P.~E.  \harvardyearleft
+  2000\harvardyearright , `{Statistical Analysis of the Energy Distribution of
+  Nanoflares in the Quiet Sun}', {\em \apj} {\bf 529}(1),~554--569.
+
+\harvarditem[{Pasachoff} et~al.]{{Pasachoff}, {Jacobson} \harvardand\
+  {Sterling}}{2009}{Pasachoff2009SoPh26059P}
+{Pasachoff}, J.~M., {Jacobson}, W.~A. \harvardand\ {Sterling}, A.~C.
+  \harvardyearleft 2009\harvardyearright , `{Limb Spicules from the Ground and
+  from Space}', {\em \solphys} {\bf 260}(1),~59--82.
+
+\harvarditem[{Pereira} et~al.]{{Pereira}, {De Pontieu} \harvardand\
+  {Carlsson}}{2012}{Pereira2012}
+{Pereira}, T. M.~D., {De Pontieu}, B. \harvardand\ {Carlsson}, M.
+  \harvardyearleft 2012\harvardyearright , `{Quantifying Spicules}', {\em \apj}
+  {\bf 759}(1),~18.
+
+\harvarditem[{Pereira} et~al.]{{Pereira}, {De Pontieu} \harvardand\
+  {Carlsson}}{2013}{Pereira2013ApJ76469P}
+{Pereira}, T. M.~D., {De Pontieu}, B. \harvardand\ {Carlsson}, M.
+  \harvardyearleft 2013\harvardyearright , `{The Effects of Spatio-temporal
+  Resolution on Deduced Spicule Properties}', {\em \apj} {\bf 764}(1),~69.
+
+\harvarditem[{Pereira} et~al.]{{Pereira}, {De Pontieu}, {Carlsson}, {Hansteen},
+  {Tarbell}, {Lemen}, {Title}, {Boerner}, {Hurlburt}, {W{\"u}lser},
+  {Mart{\'\i}nez-Sykora}, {Kleint}, {Golub}, {McKillop}, {Reeves}, {Saar},
+  {Testa}, {Tian}, {Jaeggli} \harvardand\ {Kankelborg}}{2014}{Pereira2014ApJ}
+{Pereira}, T.~M.~D., {De Pontieu}, B., {Carlsson}, M., {Hansteen}, V.,
+  {Tarbell}, T.~D., {Lemen}, J., {Title}, A., {Boerner}, P., {Hurlburt}, N.,
+  {W{\"u}lser}, J.~P., {Mart{\'\i}nez-Sykora}, J., {Kleint}, L., {Golub}, L.,
+  {McKillop}, S., {Reeves}, K.~K., {Saar}, S., {Testa}, P., {Tian}, H.,
+  {Jaeggli}, S. \harvardand\ {Kankelborg}, C.  \harvardyearleft
+  2014\harvardyearright , `{An Interface Region Imaging Spectrograph First View
+  on Solar Spicules}', {\em \apjl} {\bf 792}(1),~L15.
+
+\harvarditem[{Pereira} et~al.]{{Pereira}, {Rouppe van der Voort} \harvardand\
+  {Carlsson}}{2016}{Pereira2016ApJ82465P}
+{Pereira}, T. M.~D., {Rouppe van der Voort}, L. \harvardand\ {Carlsson}, M.
+  \harvardyearleft 2016\harvardyearright , `{The Appearance of Spicules in High
+  Resolution Observations of Ca II H and H{\ensuremath{\alpha}}}', {\em \apj}
+  {\bf 824}(2),~65.
+
+\harvarditem{{Pike} \harvardand\ {Harrison}}{1997}{Pike1997SoPh175457P}
+{Pike}, C.~D. \harvardand\ {Harrison}, R.~A.  \harvardyearleft
+  1997\harvardyearright , `{EUV Observations of a Macrospicule: Evidence for
+  Solar Wind Acceleration?}', {\em \solphys} {\bf 175}(2),~457--465.
+
+\harvarditem{{Pike} \harvardand\ {Mason}}{1998}{Pike1998SoPh182333P}
+{Pike}, C.~D. \harvardand\ {Mason}, H.~E.  \harvardyearleft
+  1998\harvardyearright , `{Rotating Transition Region Features Observed with
+  the SOHO Coronal Diagnostic Spectrometer}', {\em \solphys} {\bf
+  182}(2),~333--348.
+
+\harvarditem{{Pneuman} \harvardand\ {Kopp}}{1977}{Pneuman1977AA55305P}
+{Pneuman}, G.~W. \harvardand\ {Kopp}, R.~A.  \harvardyearleft
+  1977\harvardyearright , `{Downflow of Spicular Material and Transition Region
+  Models}', {\em \aap} {\bf 55},~305.
+
+\harvarditem{{Pneuman} \harvardand\ {Kopp}}{1978}{Pneuman1978SoPh5749P}
+{Pneuman}, G.~W. \harvardand\ {Kopp}, R.~A.  \harvardyearleft
+  1978\harvardyearright , `{Downflow in the supergranulation network and its
+  implications for transition region models.}', {\em \solphys} {\bf
+  57}(1),~49--64.
+
+\harvarditem{{Porfir'eva} \harvardand\ {Yakunina}}{2016}{Porfir2016A}
+{Porfir'eva}, G.~A. \harvardand\ {Yakunina}, G.~V.  \harvardyearleft
+  2016\harvardyearright , `{Chromospheric spicules and solar corona}', {\em
+  Astronomical and Astrophysical Transactions} {\bf 29}(4),~567--580.
+
+\harvarditem[{Porth} et~al.]{{Porth}, {Xia}, {Hendrix}, {Moschou} \harvardand\
+  {Keppens}}{2014}{Porth_2014}
+{Porth}, O., {Xia}, C., {Hendrix}, T., {Moschou}, S.~P. \harvardand\ {Keppens},
+  R.  \harvardyearleft 2014\harvardyearright , `{MPI-AMRVAC for Solar and
+  Astrophysics}', {\em \apjs} {\bf 214},~4.
+
+\harvarditem{Priest}{2014}{priest2014magnetohydrodynamics}
+Priest, E.  \harvardyearleft 2014\harvardyearright , {\em Magnetohydrodynamics
+  of the Sun}, Cambridge University Press.
+\newline\harvardurl{https://books.google.co.uk/books?id=BrbSAgAAQBAJ}
+
+\harvarditem[{Priest} et~al.]{{Priest}, {Foley}, {Heyvaerts}, {Arber},
+  {Culhane} \harvardand\ {Acton}}{1998}{Priest1998Natur393545P}
+{Priest}, E.~R., {Foley}, C.~R., {Heyvaerts}, J., {Arber}, T.~D., {Culhane},
+  J.~L. \harvardand\ {Acton}, L.~W.  \harvardyearleft 1998\harvardyearright ,
+  `{Nature of the heating mechanism for the diffuse solar corona}', {\em \nat}
+  {\bf 393}(6685),~545--547.
+
+\harvarditem[{Raouafi} et~al.]{{Raouafi}, {Patsourakos}, {Pariat}, {Young},
+  {Sterling}, {Savcheva}, {Shimojo}, {Moreno-Insertis}, {DeVore}, {Archontis},
+  {T{\"o}r{\"o}k}, {Mason}, {Curdt}, {Meyer}, {Dalmasse} \harvardand\
+  {Matsui}}{2016}{Raouafi2016}
+{Raouafi}, N.~E., {Patsourakos}, S., {Pariat}, E., {Young}, P.~R., {Sterling},
+  A.~C., {Savcheva}, A., {Shimojo}, M., {Moreno-Insertis}, F., {DeVore}, C.~R.,
+  {Archontis}, V., {T{\"o}r{\"o}k}, T., {Mason}, H., {Curdt}, W., {Meyer}, K.,
+  {Dalmasse}, K. \harvardand\ {Matsui}, Y.  \harvardyearleft
+  2016\harvardyearright , `{Solar Coronal Jets: Observations, Theory, and
+  Modeling}', {\em \ssr} {\bf 201}(1-4),~1--53.
+
+\harvarditem{{Rimmele}}{2000}{Rimmele2000SPIE4007218R}
+{Rimmele}, T.~R.  \harvardyearleft 2000\harvardyearright , {\em {Solar adaptive
+  optics}}, Vol. 4007 of {\em Society of Photo-Optical Instrumentation
+  Engineers (SPIE) Conference Series}, pp.~218--231.
+
+\harvarditem{{Roberts}}{1979}{Roberts1979SoPh6123R}
+{Roberts}, B.  \harvardyearleft 1979\harvardyearright , `{Spicules: The
+  resonant response to granular buffeting?}', {\em \solphys} {\bf
+  61}(1),~23--34.
+
+\harvarditem{{Roberts}}{1981}{Roberts1981SoPh6939R}
+{Roberts}, B.  \harvardyearleft 1981\harvardyearright , `{Wave Propagation in a
+  Magnetically Structured Atmosphere - Part Two - Waves in a Magnetic Slab}',
+  {\em \solphys} {\bf 69}(1),~39--56.
+
+\harvarditem{{Roberts}}{1990}{Roberts1990IAUS142159R}
+{Roberts}, B.  \harvardyearleft 1990\harvardyearright , {Waves in Magnetic Flux
+  Tubes}, {\em in} E.~R. {Priest} \harvardand\ V.~{Krishan}, eds, `Basic Plasma
+  Processes on the Sun', Vol. 142, p.~159.
+
+\harvarditem{{Roberts}}{1945}{Roberts1945ApJ}
+{Roberts}, W.~O.  \harvardyearleft 1945\harvardyearright , `{A Preliminary
+  Report on Chromospheric Spicules of Extremely Short Lifetime.}', {\em \apj}
+  {\bf 101},~136.
+
+\harvarditem[{Rosenthal} et~al.]{{Rosenthal}, {Bogdan}, {Carlsson}, {Dorch},
+  {Hansteen}, {McIntosh}, {McMurry}, {Nordlund} \harvardand\
+  {Stein}}{2002}{Rosenthal2002ApJ564508R}
+{Rosenthal}, C.~S., {Bogdan}, T.~J., {Carlsson}, M., {Dorch}, S.~B.~F.,
+  {Hansteen}, V., {McIntosh}, S.~W., {McMurry}, A., {Nordlund}, {\r{A}}.
+  \harvardand\ {Stein}, R.~F.  \harvardyearleft 2002\harvardyearright , `{Waves
+  in the Magnetized Solar Atmosphere. I. Basic Processes and Internetwork
+  Oscillations}', {\em \apj} {\bf 564}(1),~508--524.
+
+\harvarditem{{Rouppe van der Voort} \harvardand\ {de la Cruz
+  Rodr{\'\i}guez}}{2013}{Rouppe2013ApJ77656R}
+{Rouppe van der Voort}, L. \harvardand\ {de la Cruz Rodr{\'\i}guez}, J.
+  \harvardyearleft 2013\harvardyearright , `{Short Dynamic Fibrils in Sunspot
+  Chromospheres}', {\em \apj} {\bf 776}(1),~56.
+
+\harvarditem[{Rouppe van der Voort} et~al.]{{Rouppe van der Voort}, {De
+  Pontieu}, {Pereira}, {Carlsson} \harvardand\
+  {Hansteen}}{2015}{Rouppe2015ApJ799L3R}
+{Rouppe van der Voort}, L., {De Pontieu}, B., {Pereira}, T.~M.~D., {Carlsson},
+  M. \harvardand\ {Hansteen}, V.  \harvardyearleft 2015\harvardyearright ,
+  `{Heating Signatures in the Disk Counterparts of Solar Spicules in Interface
+  Region Imaging Spectrograph Observations}', {\em \apjl} {\bf 799}(1),~L3.
+
+\harvarditem[{Rouppe van der Voort} et~al.]{{Rouppe van der Voort}, {De
+  Pontieu}, {Hansteen}, {Carlsson} \harvardand\ {van
+  Noort}}{2007}{Rouppe2007ApJ660L169R}
+{Rouppe van der Voort}, L.~H.~M., {De Pontieu}, B., {Hansteen}, V.~H.,
+  {Carlsson}, M. \harvardand\ {van Noort}, M.  \harvardyearleft
+  2007\harvardyearright , `{Magnetoacoustic Shocks as a Driver of Quiet-Sun
+  Mottles}', {\em \apjl} {\bf 660}(2),~L169--L172.
+
+\harvarditem[{Rouppe van der Voort} et~al.]{{Rouppe van der Voort},
+  {Leenaarts}, {De Pontieu}, {Carlsson} \harvardand\
+  {Vissers}}{2009}{Rouppe2009ApJ}
+{Rouppe van der Voort}, L., {Leenaarts}, J., {De Pontieu}, B., {Carlsson}, M.
+  \harvardand\ {Vissers}, G.  \harvardyearleft 2009\harvardyearright ,
+  `{On-disk Counterparts of Type II Spicules in the Ca II 854.2 nm and
+  H{\ensuremath{\alpha}} Lines}', {\em \apj} {\bf 705}(1),~272--284.
+
+\harvarditem{{Rush} \harvardand\ {Roberts}}{1954}{Rush1954AuJPh7230R}
+{Rush}, J.~H. \harvardand\ {Roberts}, W.~O.  \harvardyearleft
+  1954\harvardyearright , `{Recent Studies of Chromospheric Spicules}', {\em
+  Australian Journal of Physics} {\bf 7},~230.
+
+\harvarditem[{Rutten} et~al.]{{Rutten}, {Rouppe van der Voort} \harvardand\ {De
+  Pontieu}}{2019}{Rutten2019AA632A96R}
+{Rutten}, R.~J., {Rouppe van der Voort}, L. H.~M. \harvardand\ {De Pontieu}, B.
+   \harvardyearleft 2019\harvardyearright , `{Solar H{\ensuremath{\alpha}}
+  features with hot onsets. IV. Network fibrils}', {\em \aap} {\bf 632},~A96.
+
+\harvarditem{{Sakurai}}{2017}{Sakurai2017PJAB9387S}
+{Sakurai}, T.  \harvardyearleft 2017\harvardyearright , `{Heating mechanisms of
+  the solar corona}', {\em Proceeding of the Japan Academy, Series B} {\bf
+  93},~87--97.
+
+\harvarditem[{Samanta} et~al.]{{Samanta}, {Pant} \harvardand\
+  {Banerjee}}{2015}{Samanta2015ApJ815L16S}
+{Samanta}, T., {Pant}, V. \harvardand\ {Banerjee}, D.  \harvardyearleft
+  2015\harvardyearright , `{Propagating Disturbances in the Solar Corona and
+  Spicular Connection}', {\em \apjl} {\bf 815}(1),~L16.
+
+\harvarditem[{Samanta} et~al.]{{Samanta}, {Tian}, {Yurchyshyn}, {Peter}, {Cao},
+  {Sterling}, {Erd{\'e}lyi}, {Ahn}, {Feng}, {Utz}, {Banerjee} \harvardand\
+  {Chen}}{2019}{Samanta2019Sci}
+{Samanta}, T., {Tian}, H., {Yurchyshyn}, V., {Peter}, H., {Cao}, W.,
+  {Sterling}, A., {Erd{\'e}lyi}, R., {Ahn}, K., {Feng}, S., {Utz}, D.,
+  {Banerjee}, D. \harvardand\ {Chen}, Y.  \harvardyearleft
+  2019\harvardyearright , `{Generation of solar spicules and subsequent
+  atmospheric heating}', {\em Science} {\bf 366}(6467),~890--894.
+
+\harvarditem{{Scharmer}, {Bjelksjo}, {Korhonen}, {Lindberg} \harvardand\
+  {Petterson}}{2003}{Scharmer2003SPIE}
+{Scharmer}, G.~B., {Bjelksjo}, K., {Korhonen}, T.~K., {Lindberg}, B.
+  \harvardand\ {Petterson}, B.  \harvardyearleft 2003\harvardyearright , {\em
+  {The 1-meter Swedish solar telescope}}, Vol. 4853 of {\em Society of
+  Photo-Optical Instrumentation Engineers (SPIE) Conference Series},
+  pp.~341--350.
+
+\harvarditem{{Scharmer}, {Dettori}, {Lofdahl} \harvardand\
+  {Shand}}{2003}{Scharmer2003SPIE4853370S}
+{Scharmer}, G.~B., {Dettori}, P.~M., {Lofdahl}, M.~G. \harvardand\ {Shand}, M.
+  \harvardyearleft 2003\harvardyearright , {\em {Adaptive optics system for the
+  new Swedish solar telescope}}, Vol. 4853 of {\em Society of Photo-Optical
+  Instrumentation Engineers (SPIE) Conference Series}, pp.~370--380.
+
+\harvarditem{{Scherrer} \harvardand\ {Gough}}{2019}{Scherrer2019ApJ87742S}
+{Scherrer}, P.~H. \harvardand\ {Gough}, D.~O.  \harvardyearleft
+  2019\harvardyearright , `{A Critical Evaluation of Recent Claims Concerning
+  Solar Rotation}', {\em \apj} {\bf 877}(1),~42.
+
+\harvarditem[{Schunker} et~al.]{{Schunker}, {Schou}, {Gaulme} \harvardand\
+  {Gizon}}{2018}{Schunker2018SoPh29395S}
+{Schunker}, H., {Schou}, J., {Gaulme}, P. \harvardand\ {Gizon}, L.
+  \harvardyearleft 2018\harvardyearright , `{Fragile Detection of Solar g-Modes
+  by Fossat et al.}', {\em \solphys} {\bf 293}(6),~95.
+
+\harvarditem[{Scullion} et~al.]{{Scullion}, {Erd{\'e}lyi}, {Fedun} \harvardand\
+  {Doyle}}{2011}{Scullion2011}
+{Scullion}, E., {Erd{\'e}lyi}, R., {Fedun}, V. \harvardand\ {Doyle}, J.~G.
+  \harvardyearleft 2011\harvardyearright , `{The Response of A
+  Three-dimensional Solar Atmosphere to Wave-driven Jets}', {\em \apj} {\bf
+  743},~14.
+
+\harvarditem{{Secchi}}{1877}{Secchi1877}
+{Secchi}, A.  \harvardyearleft 1877\harvardyearright , Vol. 2
+  (Paris:Gauthier-Villas).
+
+\harvarditem{{Sekse}, {Rouppe van der Voort} \harvardand\ {De
+  Pontieu}}{2013}{Sekse2013ApJ764164S}
+{Sekse}, D.~H., {Rouppe van der Voort}, L. \harvardand\ {De Pontieu}, B.
+  \harvardyearleft 2013\harvardyearright , `{On the Temporal Evolution of the
+  Disk Counterpart of Type II Spicules in the Quiet Sun}', {\em \apj} {\bf
+  764}(2),~164.
+
+\harvarditem{{Sekse}, {Rouppe van der Voort}, {De Pontieu} \harvardand\
+  {Scullion}}{2013}{Sekse2013ApJ76944S}
+{Sekse}, D.~H., {Rouppe van der Voort}, L., {De Pontieu}, B. \harvardand\
+  {Scullion}, E.  \harvardyearleft 2013\harvardyearright , `{Interplay of Three
+  Kinds of Motion in the Disk Counterpart of Type II Spicules: Upflow,
+  Transversal, and Torsional Motions}', {\em \apj} {\bf 769}(1),~44.
+
+\harvarditem[{Sharma} et~al.]{{Sharma}, {Verth} \harvardand\
+  {Erd{\'e}lyi}}{2018}{Sharma2018ApJ85361S}
+{Sharma}, R., {Verth}, G. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2018\harvardyearright , `{Evolution of Complex 3D Motions in Spicules}', {\em
+  \apj} {\bf 853}(1),~61.
+
+\harvarditem[{Shetye} et~al.]{{Shetye}, {Doyle}, {Scullion}, {Nelson},
+  {Kuridze}, {Henriques}, {Woeger} \harvardand\
+  {Ray}}{2016}{Shetye2016AA589A3S}
+{Shetye}, J., {Doyle}, J.~G., {Scullion}, E., {Nelson}, C.~J., {Kuridze}, D.,
+  {Henriques}, V., {Woeger}, F. \harvardand\ {Ray}, T.  \harvardyearleft
+  2016\harvardyearright , `{High-cadence observations of spicular-type events
+  on the Sun}', {\em \aap} {\bf 589},~A3.
+
+\harvarditem[{Shibata} et~al.]{{Shibata}, {Ishido}, {Acton}, {Strong},
+  {Hirayama}, {Uchida}, {McAllister}, {Matsumoto}, {Tsuneta}, {Shimizu},
+  {Hara}, {Sakurai}, {Ichimoto}, {Nishino} \harvardand\
+  {Ogawara}}{1992}{Shibata1992PASJ}
+{Shibata}, K., {Ishido}, Y., {Acton}, L.~W., {Strong}, K.~T., {Hirayama}, T.,
+  {Uchida}, Y., {McAllister}, A.~H., {Matsumoto}, R., {Tsuneta}, S., {Shimizu},
+  T., {Hara}, H., {Sakurai}, T., {Ichimoto}, K., {Nishino}, Y. \harvardand\
+  {Ogawara}, Y.  \harvardyearleft 1992\harvardyearright , `{Observations of
+  X-Ray Jets with the YOHKOH Soft X-Ray Telescope}', {\em \pasj} {\bf
+  44},~L173--L179.
+
+\harvarditem[{Shibata} et~al.]{{Shibata}, {Nishikawa}, {Kitai} \harvardand\
+  {Suematsu}}{1982}{Shibata1982}
+{Shibata}, K., {Nishikawa}, T., {Kitai}, R. \harvardand\ {Suematsu}, Y.
+  \harvardyearleft 1982\harvardyearright , `{Numerical Hydrodynamics of the Jet
+  Phenomena in the Solar Atmosphere - Part Two - Surges}', {\em \solphys} {\bf
+  77}(1-2),~121--151.
+
+\harvarditem{{Shibata} \harvardand\ {Suematsu}}{1982}{Shibata1982SoPh78333S}
+{Shibata}, K. \harvardand\ {Suematsu}, Y.  \harvardyearleft
+  1982\harvardyearright , `{Why are spicules absent over plages and long under
+  coronal holes?}', {\em \solphys} {\bf 78}(2),~333--345.
+
+\harvarditem[{Singh} et~al.]{{Singh}, {Sharma} \harvardand\
+  {Srivastava}}{2019}{Singh2019}
+{Singh}, B., {Sharma}, K. \harvardand\ {Srivastava}, A.~K.  \harvardyearleft
+  2019\harvardyearright , `{On modelling the kinematics and evolutionary
+  properties of pressure-pulse-driven impulsive solar jets}', {\em Annales
+  Geophysicae} {\bf 37}(5),~891--902.
+
+\harvarditem[{Skogsrud} et~al.]{{Skogsrud}, {Rouppe van der Voort}, {De
+  Pontieu} \harvardand\ {Pereira}}{2015}{Skogsrud2015ApJ806170S}
+{Skogsrud}, H., {Rouppe van der Voort}, L., {De Pontieu}, B. \harvardand\
+  {Pereira}, T.~M.~D.  \harvardyearleft 2015\harvardyearright , `{On the
+  Temporal Evolution of Spicules Observed with IRIS, SDO, and Hinode}', {\em
+  \apj} {\bf 806}(2),~170.
+
+\harvarditem[{Smirnova} et~al.]{{Smirnova}, {Konkol}, {Solov'ev} \harvardand\
+  {Murawski}}{2016}{Smirnova2016SoPh2913207S}
+{Smirnova}, V., {Konkol}, P.~M., {Solov'ev}, A.~A. \harvardand\ {Murawski}, K.
+  \harvardyearleft 2016\harvardyearright , `{Numerical Simulations of Solar
+  Spicule Jets at a Magnetic Null-Point}', {\em \solphys} {\bf
+  291}(11),~3207--3216.
+
+\harvarditem{{Sterling}}{2000}{Sterling_2000SoPh}
+{Sterling}, A.~C.  \harvardyearleft 2000\harvardyearright , `{Solar Spicules: A
+  Review of Recent Models and Targets for Future Observations - (Invited
+  Review)}', {\em \solphys} {\bf 196},~79--111.
+
+\harvarditem{{Sterling}, {Harra} \harvardand\
+  {Moore}}{2010}{Sterling2010ApJ7221644S}
+{Sterling}, A.~C., {Harra}, L.~K. \harvardand\ {Moore}, R.~L.  \harvardyearleft
+  2010\harvardyearright , `{Fibrillar Chromospheric Spicule-like Counterparts
+  to an Extreme-ultraviolet and Soft X-ray Blowout Coronal Jet}', {\em \apj}
+  {\bf 722}(2),~1644--1653.
+
+\harvarditem{{Sterling} \harvardand\ {Hollweg}}{1988}{Sterling1988ApJ327950S}
+{Sterling}, A.~C. \harvardand\ {Hollweg}, J.~V.  \harvardyearleft
+  1988\harvardyearright , `{The Rebound Shock Model for Solar Spicules:
+  Dynamics at Long Times}', {\em \apj} {\bf 327},~950.
+
+\harvarditem{{Sterling} \harvardand\ {Mariska}}{1990}{Sterling1990ApJ349647S}
+{Sterling}, A.~C. \harvardand\ {Mariska}, J.~T.  \harvardyearleft
+  1990\harvardyearright , `{Numerical Simulations of the Rebound Shock Model
+  for Solar Spicules}', {\em \apj} {\bf 349},~647.
+
+\harvarditem{{Sterling}, {Moore} \harvardand\
+  {DeForest}}{2010}{Sterling2010ApJ}
+{Sterling}, A.~C., {Moore}, R.~L. \harvardand\ {DeForest}, C.~E.
+  \harvardyearleft 2010\harvardyearright , `{Hinode Solar Optical Telescope
+  Observations of the Source Regions and Evolution of ``Type II'' Spicules at
+  the Solar Polar Limb}', {\em \apjl} {\bf 714}(1),~L1--L6.
+
+\harvarditem[{Sterling} et~al.]{{Sterling}, {Moore}, {Samanta} \harvardand\
+  {Yurchyshyn}}{2020}{Sterling2020ApJ893L45S}
+{Sterling}, A.~C., {Moore}, R.~L., {Samanta}, T. \harvardand\ {Yurchyshyn}, V.
+  \harvardyearleft 2020\harvardyearright , `{Possible Production of Solar
+  Spicules by Microfilament Eruptions}', {\em \apjl} {\bf 893}(2),~L45.
+
+\harvarditem[{Strong} et~al.]{{Strong}, {Harvey}, {Hirayama}, {Nitta},
+  {Shimizu} \harvardand\ {Tsuneta}}{1992}{Strong1992PASJ}
+{Strong}, K.~T., {Harvey}, K., {Hirayama}, T., {Nitta}, N., {Shimizu}, T.
+  \harvardand\ {Tsuneta}, S.  \harvardyearleft 1992\harvardyearright ,
+  `{Observations of the Variability of Coronal Bright Points by the Soft X-Ray
+  Telescope on YOHKOH}', {\em \pasj} {\bf 44},~L161--L166.
+
+\harvarditem{{Suematsu}}{1990}{Suematsu1990LNP367211S}
+{Suematsu}, Y.  \harvardyearleft 1990\harvardyearright , {\em {Influence of
+  Photospheric 5-Minute Oscillations on the Formation of Chromospheric Fine
+  Structures}}, Vol. 367, p.~211.
+
+\harvarditem[{Suematsu} et~al.]{{Suematsu}, {Shibata}, {Neshikawa} \harvardand\
+  {Kitai}}{1982}{Suematsu1982SoPh7599S}
+{Suematsu}, Y., {Shibata}, K., {Neshikawa}, T. \harvardand\ {Kitai}, R.
+  \harvardyearleft 1982\harvardyearright , `{Numerical Hydrodynamics of the Jet
+  Phenomena in the Solar Atmosphere - Part One - Spicules}', {\em \solphys}
+  {\bf 75}(1-2),~99--118.
+
+\harvarditem[{Suematsu} et~al.]{{Suematsu}, {Tsuneta}, {Ichimoto}, {Shimizu},
+  {Otsubo}, {Katsukawa}, {Nakagiri}, {Noguchi}, {Tamura}, {Kato}, {Hara},
+  {Kubo}, {Mikami}, {Saito}, {Matsushita}, {Kawaguchi}, {Nakaoji}, {Nagae},
+  {Shimada}, {Takeyama} \harvardand\ {Yamamuro}}{2008}{Suematsu2008SoPh}
+{Suematsu}, Y., {Tsuneta}, S., {Ichimoto}, K., {Shimizu}, T., {Otsubo}, M.,
+  {Katsukawa}, Y., {Nakagiri}, M., {Noguchi}, M., {Tamura}, T., {Kato}, Y.,
+  {Hara}, H., {Kubo}, M., {Mikami}, I., {Saito}, H., {Matsushita}, T.,
+  {Kawaguchi}, N., {Nakaoji}, T., {Nagae}, K., {Shimada}, S., {Takeyama}, N.
+  \harvardand\ {Yamamuro}, T.  \harvardyearleft 2008\harvardyearright , `{The
+  Solar Optical Telescope of Solar-B ( Hinode): The Optical Telescope
+  Assembly}', {\em \solphys} {\bf 249}(2),~197--220.
+
+\harvarditem[{Suematsu} et~al.]{{Suematsu}, {Wang} \harvardand\
+  {Zirin}}{1995}{Suematsu1995ApJ}
+{Suematsu}, Y., {Wang}, H. \harvardand\ {Zirin}, H.  \harvardyearleft
+  1995\harvardyearright , `{High-Resolution Observation of Disk Spicules. I.
+  Evolution and Kinematics of Spicules in the Enhanced Network}', {\em \apj}
+  {\bf 450},~411.
+
+\harvarditem{Thomas \harvardand\ Athay}{1961}{Thomas1961}
+Thomas, R.~N. \harvardand\ Athay, R.~G.  \harvardyearleft 1961\harvardyearright
+  , {\em {Physics of the Solar Chromosphere}}, Vol.~29.
+\newline\harvardurl{https://doi.org/10.1119/1.1937605}
+
+\harvarditem[{Tian} et~al.]{{Tian}, {DeLuca}, {Cranmer}, {De Pontieu}, {Peter},
+  {Mart{\'\i}nez-Sykora}, {Golub}, {McKillop}, {Reeves}, {Miralles},
+  {McCauley}, {Saar}, {Testa}, {Weber}, {Murphy}, {Lemen}, {Title}, {Boerner},
+  {Hurlburt}, {Tarbell}, {Wuelser}, {Kleint}, {Kankelborg}, {Jaeggli},
+  {Carlsson}, {Hansteen} \harvardand\ {McIntosh}}{2014}{Tian2014Sci346A315T}
+{Tian}, H., {DeLuca}, E.~E., {Cranmer}, S.~R., {De Pontieu}, B., {Peter}, H.,
+  {Mart{\'\i}nez-Sykora}, J., {Golub}, L., {McKillop}, S., {Reeves}, K.~K.,
+  {Miralles}, M.~P., {McCauley}, P., {Saar}, S., {Testa}, P., {Weber}, M.,
+  {Murphy}, N., {Lemen}, J., {Title}, A., {Boerner}, P., {Hurlburt}, N.,
+  {Tarbell}, T.~D., {Wuelser}, J.~P., {Kleint}, L., {Kankelborg}, C.,
+  {Jaeggli}, S., {Carlsson}, M., {Hansteen}, V. \harvardand\ {McIntosh}, S.~W.
+  \harvardyearleft 2014\harvardyearright , `{Prevalence of small-scale jets
+  from the networks of the solar transition region and chromosphere}', {\em
+  Science} {\bf 346}(6207),~1255711.
+
+\harvarditem{{Tomczyk} \harvardand\ {McIntosh}}{2009}{Tomczyk2009ApJ6971384T}
+{Tomczyk}, S. \harvardand\ {McIntosh}, S.~W.  \harvardyearleft
+  2009\harvardyearright , `{Time-Distance Seismology of the Solar Corona with
+  CoMP}', {\em \apj} {\bf 697}(2),~1384--1391.
+
+\harvarditem[{Tomczyk} et~al.]{{Tomczyk}, {McIntosh}, {Keil}, {Judge}, {Schad},
+  {Seeley} \harvardand\ {Edmondson}}{2007}{Tomczyk2007Sci3171192T}
+{Tomczyk}, S., {McIntosh}, S.~W., {Keil}, S.~L., {Judge}, P.~G., {Schad}, T.,
+  {Seeley}, D.~H. \harvardand\ {Edmondson}, J.  \harvardyearleft
+  2007\harvardyearright , `{Alfv{\'e}n Waves in the Solar Corona}', {\em
+  Science} {\bf 317}(5842),~1192.
+
+\harvarditem{{T{\'o}th}}{1996}{toth1996ApLC34245T}
+{T{\'o}th}, G.  \harvardyearleft 1996\harvardyearright , `{A General Code for
+  Modeling MHD Flows on Parallel Computers: Versatile Advection Code}', {\em
+  Astrophysical Letters and Communications} {\bf 34},~245.
+
+\harvarditem[{Trujillo Bueno} et~al.]{{Trujillo Bueno}, {Merenda}, {Centeno},
+  {Collados} \harvardand\ {Landi
+  Degl'Innocenti}}{2005}{Trujillo2005ApJ619L191T}
+{Trujillo Bueno}, J., {Merenda}, L., {Centeno}, R., {Collados}, M. \harvardand\
+  {Landi Degl'Innocenti}, E.  \harvardyearleft 2005\harvardyearright , `{The
+  Hanle and Zeeman Effects in Solar Spicules: A Novel Diagnostic Window on
+  Chromospheric Magnetism}', {\em \apjl} {\bf 619}(2),~L191--L194.
+
+\harvarditem[{Tsiropoula} et~al.]{{Tsiropoula}, {Alissandrakis} \harvardand\
+  {Schmieder}}{1993}{Tsiropoula1993A}
+{Tsiropoula}, G., {Alissandrakis}, C.~E. \harvardand\ {Schmieder}, B.
+  \harvardyearleft 1993\harvardyearright , `{The fine structure of a
+  chromospheric rosette}', {\em \aap} {\bf 271},~574.
+
+\harvarditem[{Tsiropoula} et~al.]{{Tsiropoula}, {Tziotziou}, {Kontogiannis},
+  {Madjarska}, {Doyle} \harvardand\ {Suematsu}}{2012}{Tsiropoula2012}
+{Tsiropoula}, G., {Tziotziou}, K., {Kontogiannis}, I., {Madjarska}, M.~S.,
+  {Doyle}, J.~G. \harvardand\ {Suematsu}, Y.  \harvardyearleft
+  2012\harvardyearright , `{Solar Fine-Scale Structures. I. Spicules and Other
+  Small-Scale, Jet-Like Events at the Chromospheric Level: Observations and
+  Physical Parameters}', {\em \ssr} {\bf 169},~181--244.
+
+\harvarditem[{Tsuneta} et~al.]{{Tsuneta}, {Ichimoto}, {Katsukawa}, {Nagata},
+  {Otsubo}, {Shimizu}, {Suematsu}, {Nakagiri}, {Noguchi}, {Tarbell}, {Title},
+  {Shine}, {Rosenberg}, {Hoffmann}, {Jurcevich}, {Kushner}, {Levay}, {Lites},
+  {Elmore}, {Matsushita}, {Kawaguchi}, {Saito}, {Mikami}, {Hill} \harvardand\
+  {Owens}}{2008}{Tsuneta2008SoPh}
+{Tsuneta}, S., {Ichimoto}, K., {Katsukawa}, Y., {Nagata}, S., {Otsubo}, M.,
+  {Shimizu}, T., {Suematsu}, Y., {Nakagiri}, M., {Noguchi}, M., {Tarbell}, T.,
+  {Title}, A., {Shine}, R., {Rosenberg}, W., {Hoffmann}, C., {Jurcevich}, B.,
+  {Kushner}, G., {Levay}, M., {Lites}, B., {Elmore}, D., {Matsushita}, T.,
+  {Kawaguchi}, N., {Saito}, H., {Mikami}, I., {Hill}, L.~D. \harvardand\
+  {Owens}, J.~K.  \harvardyearleft 2008\harvardyearright , `{The Solar Optical
+  Telescope for the Hinode Mission: An Overview}', {\em \solphys} {\bf
+  249}(2),~167--196.
+
+\harvarditem{{Uchida} \harvardand\ {Kaburaki}}{1974}{Uchida1974SoPh35451U}
+{Uchida}, Y. \harvardand\ {Kaburaki}, O.  \harvardyearleft
+  1974\harvardyearright , `{Excess Heating of Corona and Chromosphere Above
+  Magnetic Regions by Non-Linear Alfv{\'e}n Waves}', {\em \solphys} {\bf
+  35}(2),~451--466.
+
+\harvarditem[{Van Doorsselaere} et~al.]{{Van Doorsselaere}, {Srivastava},
+  {Antolin}, {Magyar}, {Vasheghani Farahani}, {Tian}, {Kolotkov}, {Ofman},
+  {Guo}, {Arregui}, {De Moortel} \harvardand\
+  {Pascoe}}{2020}{Doorsselaere2020SSRv216140V}
+{Van Doorsselaere}, T., {Srivastava}, A.~K., {Antolin}, P., {Magyar}, N.,
+  {Vasheghani Farahani}, S., {Tian}, H., {Kolotkov}, D., {Ofman}, L., {Guo},
+  M., {Arregui}, I., {De Moortel}, I. \harvardand\ {Pascoe}, D.
+  \harvardyearleft 2020\harvardyearright , `{Coronal Heating by MHD Waves}',
+  {\em \ssr} {\bf 216}(8),~140.
+
+\harvarditem[{van Noort} et~al.]{{van Noort}, {Rouppe van der Voort}
+  \harvardand\ {L{\"o}fdahl}}{2005}{van2005SoPh228191V}
+{van Noort}, M., {Rouppe van der Voort}, L. \harvardand\ {L{\"o}fdahl}, M.~G.
+  \harvardyearleft 2005\harvardyearright , `{Solar Image Restoration By Use Of
+  Multi-frame Blind De-convolution With Multiple Objects And Phase Diversity}',
+  {\em \solphys} {\bf 228}(1-2),~191--215.
+
+\harvarditem{{Verth} \harvardand\ {Jess}}{2016}{Verth2016GMS216431V}
+{Verth}, G. \harvardand\ {Jess}, D.~B.  \harvardyearleft 2016\harvardyearright
+  , `{MHD Wave Modes Resolved in Fine-Scale Chromospheric Magnetic
+  Structures}', {\em Washington DC American Geophysical Union Geophysical
+  Monograph Series} {\bf 216},~431--448.
+
+\harvarditem[{Verwichte} et~al.]{{Verwichte}, {Van Doorsselaere}, {White}
+  \harvardand\ {Antolin}}{2013}{Verwichte_2013A_A}
+{Verwichte}, E., {Van Doorsselaere}, T., {White}, R.~S. \harvardand\ {Antolin},
+  P.  \harvardyearleft 2013\harvardyearright , `{Statistical seismology of
+  transverse waves in the solar corona}', {\em \aap} {\bf 552},~A138.
+
+\harvarditem{{von der Luehe}}{1993}{von1993AA268374V}
+{von der Luehe}, O.  \harvardyearleft 1993\harvardyearright , `{Speckle imaging
+  of solar small scale structure. I - Methods}', {\em \aap} {\bf
+  268}(1),~374--390.
+
+\harvarditem{{Wang}}{1998}{Wang1998ApJ509461W}
+{Wang}, H.  \harvardyearleft 1998\harvardyearright , `{Comparison of
+  H{\ensuremath{\alpha}} and He II {\ensuremath{\lambda}}304 Macrospicules}',
+  {\em \apj} {\bf 509}(1),~461--470.
+
+\harvarditem{{Wang} \harvardand\ {Yokoyama}}{2020}{Wang2020ApJ891110W}
+{Wang}, Y. \harvardand\ {Yokoyama}, T.  \harvardyearleft 2020\harvardyearright
+  , `{Simulation of Alfv{\'e}n Wave Propagation in the Magnetic Chromosphere
+  with Radiative Loss: Effects of Nonlinear Mode Coupling on Chromospheric
+  Heating}', {\em \apj} {\bf 891}(2),~110.
+
+\harvarditem[{Wedemeyer-B{\"o}hm} et~al.]{{Wedemeyer-B{\"o}hm}, {Lagg}
+  \harvardand\ {Nordlund}}{2009}{Wedemeyer2009SSRv144317W}
+{Wedemeyer-B{\"o}hm}, S., {Lagg}, A. \harvardand\ {Nordlund}, {\r{A}}.
+  \harvardyearleft 2009\harvardyearright , `{Coupling from the Photosphere to
+  the Chromosphere and the Corona}', {\em \ssr} {\bf 144}(1-4),~317--350.
+
+\harvarditem{{Wentzel}}{1974}{Wentzel1974SoPh39129W}
+{Wentzel}, D.~G.  \harvardyearleft 1974\harvardyearright , `{Coronal Heating by
+  Alfv{\'e}n Waves}', {\em \solphys} {\bf 39}(1),~129--140.
+
+\harvarditem{{Withbroe}}{1983}{Withbroe1983ApJ}
+{Withbroe}, G.~L.  \harvardyearleft 1983\harvardyearright , `{The role of
+  spicules in heating the solar atmosphere Implications of EUV observations}',
+  {\em \apj} {\bf 267},~825--836.
+
+\harvarditem[{Withbroe} et~al.]{{Withbroe}, {Jaffe}, {Foukal}, {Huber},
+  {Noyes}, {Reeves}, {Schmahl}, {Timothy} \harvardand\
+  {Vernazza}}{1976}{Withbroe1976ApJ}
+{Withbroe}, G.~L., {Jaffe}, D.~T., {Foukal}, P.~V., {Huber}, M.~C.~E., {Noyes},
+  R.~W., {Reeves}, E.~M., {Schmahl}, E.~J., {Timothy}, J.~G. \harvardand\
+  {Vernazza}, J.~E.  \harvardyearleft 1976\harvardyearright ,
+  `{Extreme-ultraviolet transients observed at the solar pole.}', {\em \apj}
+  {\bf 203},~528--532.
+
+\harvarditem[{Xia} et~al.]{{Xia}, {Teunissen}, {El Mellah}, {Chane}
+  \harvardand\ {Keppens}}{2017}{Xia_2017}
+{Xia}, C., {Teunissen}, J., {El Mellah}, I., {Chane}, E. \harvardand\
+  {Keppens}, R.  \harvardyearleft 2017\harvardyearright , `{MPI-AMRVAC 2.0 for
+  Solar and Astrophysical Applications}', {\em ArXiv e-prints} .
+
+\harvarditem[{Yamauchi} et~al.]{{Yamauchi}, {Wang}, {Jiang}, {Schwadron}
+  \harvardand\ {Moore}}{2005}{Yamauchi2005ApJ629572Y}
+{Yamauchi}, Y., {Wang}, H., {Jiang}, Y., {Schwadron}, N. \harvardand\ {Moore},
+  R.~L.  \harvardyearleft 2005\harvardyearright , `{Study of
+  H{\ensuremath{\alpha}} Macrospicules in Coronal Holes: Magnetic Structure and
+  Evolution in Relation to Photospheric Magnetic Setting}', {\em \apj} {\bf
+  629}(1),~572--581.
+
+\harvarditem{{Yokoyama} \harvardand\ {Shibata}}{1995}{Yokoyama1995Natur37542Y}
+{Yokoyama}, T. \harvardand\ {Shibata}, K.  \harvardyearleft
+  1995\harvardyearright , `{Magnetic reconnection as the origin of X-ray jets
+  and H{\ensuremath{\alpha}} surges on the Sun}', {\em \nat} {\bf
+  375}(6526),~42--44.
+
+\harvarditem{{Yokoyama} \harvardand\ {Shibata}}{1996}{Yokoyama1996PASJ48353Y}
+{Yokoyama}, T. \harvardand\ {Shibata}, K.  \harvardyearleft
+  1996\harvardyearright , `{Numerical Simulation of Solar Coronal X-Ray Jets
+  Based on the Magnetic Reconnection Model}', {\em \pasj} {\bf 48},~353--376.
+
+\harvarditem{{Young}}{2015}{Young2015ApJ801124Y}
+{Young}, P.~R.  \harvardyearleft 2015\harvardyearright , `{Dark Jets in Solar
+  Coronal Holes}', {\em \apj} {\bf 801}(2),~124.
+
+\harvarditem[{Yuan} et~al.]{{Yuan}, {Su}, {Jiao} \harvardand\
+  {Walsh}}{2016}{Yuan_2016ApJS}
+{Yuan}, D., {Su}, J., {Jiao}, F. \harvardand\ {Walsh}, R.~W.  \harvardyearleft
+  2016\harvardyearright , `{Stochastic Transients as a Source of Quasi-periodic
+  Processes in the Solar Atmosphere}', {\em The Astrophysical Journal
+  Supplement Series} {\bf 224},~30.
+
+\harvarditem[{Yurchyshyn} et~al.]{{Yurchyshyn}, {Cao}, {Abramenko}, {Yang}
+  \harvardand\ {Cho}}{2020}{Yurchyshyn2020ApJ891L21Y}
+{Yurchyshyn}, V., {Cao}, W., {Abramenko}, V., {Yang}, X. \harvardand\ {Cho},
+  K.-S.  \harvardyearleft 2020\harvardyearright , `{Rapid Evolution of Type II
+  Spicules Observed in Goode Solar Telescope On-disk
+  H$_{{\ensuremath{\alpha}}}$ Images}', {\em \apjl} {\bf 891}(1),~L21.
+
+\harvarditem{{Zaqarashvili} \harvardand\
+  {Erd{\'e}lyi}}{2009}{Zaqarashvili_2009SSRv}
+{Zaqarashvili}, T.~V. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2009\harvardyearright , `{Oscillations and Waves in Solar Spicules}', {\em
+  \ssr} {\bf 149},~355--388.
+
+\harvarditem[{Zhang} et~al.]{{Zhang}, {Shibata}, {Wang}, {Mao}, {Matsumoto},
+  {Liu} \harvardand\ {Su}}{2012}{Zhang2012ApJ}
+{Zhang}, Y.~Z., {Shibata}, K., {Wang}, J.~X., {Mao}, X.~J., {Matsumoto}, T.,
+  {Liu}, Y. \harvardand\ {Su}, J.~T.  \harvardyearleft 2012\harvardyearright ,
+  `{Revision of Solar Spicule Classification}', {\em \apj} {\bf 750}(1),~16.
+
+\harvarditem[{Zuo} et~al.]{{Zuo}, {Li}, {Sha} \harvardand\
+  {Zhou}}{2019}{Zuo2019AcASn}
+{Zuo}, Z.~H., {Li}, Y., {Sha}, J.~H. \harvardand\ {Zhou}, T.~H.
+  \harvardyearleft 2019\harvardyearright , `{A Solar Jet Triggered by a
+  Decaying Satellite Sunspot}', {\em Acta Astronomica Sinica} {\bf 60}(6),~56.
 
 \end{thebibliography}
