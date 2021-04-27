@@ -330,6 +330,16 @@
   `{Chromospheric Alfv{\'e}nic Waves Strong Enough to Power the Solar Wind}',
   {\em Science} {\bf 318},~1574.
 
+\harvarditem[{De Pontieu} et~al.]{{De Pontieu}, {Title}, {Lemen}, {Wuelser},
+  {Tarbell}, {Schrijver}, {Golub}, {Kankelborg}, {Carlsson}, {Hansteen},
+  {Worden} \harvardand\ {IRIS Team}}{2013}{Pontieu2013SPD4403D}
+{De Pontieu}, B., {Title}, A.~M., {Lemen}, J., {Wuelser}, J., {Tarbell}, T.~D.,
+  {Schrijver}, C.~J., {Golub}, L., {Kankelborg}, C., {Carlsson}, M.,
+  {Hansteen}, V.~H., {Worden}, S. \harvardand\ {IRIS Team}  \harvardyearleft
+  2013\harvardyearright , {The Interface Region Imaging Spectrograph (IRIS)},
+  {\em in} `AAS/Solar Physics Division Abstracts \#44', Vol.~44 of {\em
+  AAS/Solar Physics Division Meeting}, p.~100.03.
+
 \harvarditem[Dedner et~al.]{Dedner, Kemm, Kr{\"{o}}ner, Munz, Schnitzer
   \harvardand\ Wesenberg}{2002}{DEDNER2002645}
 Dedner, A., Kemm, F., Kr{\"{o}}ner, D., Munz, C.-D., Schnitzer, T. \harvardand\
@@ -350,6 +360,12 @@ Dedner, A., Kemm, F., Kr{\"{o}}ner, D., Munz, C.-D., Schnitzer, T. \harvardand\
   \harvardyearleft 1973\harvardyearright , `{Coronal Disturbances. I: Fast
   Transient Events Observed in the Green Coronal Emission Line During the Last
   Solar Cycle}', {\em \solphys} {\bf 31}(2),~449--459.
+
+\harvarditem[{Domingo} et~al.]{{Domingo}, {Fleck} \harvardand\
+  {Poland}}{1995}{Domingo1995SSRv7281D}
+{Domingo}, V., {Fleck}, B. \harvardand\ {Poland}, A.~I.  \harvardyearleft
+  1995\harvardyearright , `{SOHO: The Solar and Heliospheric Observatory}',
+  {\em \ssr} {\bf 72}(1-2),~81--84.
 
 \harvarditem[{Dunn} et~al.]{{Dunn}, {Jefferies} \harvardand\
   {Orrall}}{1960}{Dunn1960Obs8031D}
@@ -554,9 +570,14 @@ Harten, A., Lax, P.~D. \harvardand\ van. Leer, B.  \harvardyearleft
   Transients and Corresponding Small-scale Transition Region and Coronal
   Heating}', {\em \apj} {\bf 820},~124.
 
-\harvarditem{{Hollweg}}{1982}{Hollweg1982ApJ257345H}
-{Hollweg}, J.~V.  \harvardyearleft 1982\harvardyearright , `{On the origin of
-  solar spicules}', {\em \apj} {\bf 257},~345--353.
+\harvarditem{{Hollweg}}{1982{\em a}}{Hollweg1982ApJ254806H}
+{Hollweg}, J.~V.  \harvardyearleft 1982{\em a}\harvardyearright , `{Heating of
+  the corona and solar wind by switch-on shocks}', {\em \apj} {\bf
+  254},~806--813.
+
+\harvarditem{{Hollweg}}{1982{\em b}}{Hollweg1982ApJ257345H}
+{Hollweg}, J.~V.  \harvardyearleft 1982{\em b}\harvardyearright , `{On the
+  origin of solar spicules}', {\em \apj} {\bf 257},~345--353.
 
 \harvarditem{{Hollweg}}{1992}{Hollweg1992ApJ389731H}
 {Hollweg}, J.~V.  \harvardyearleft 1992\harvardyearright , `{Alfvenically
@@ -575,6 +596,11 @@ Harten, A., Lax, P.~D. \harvardand\ van. Leer, B.  \harvardyearleft
   \harvardyearleft 2018\harvardyearright , `{Observations of Upward Propagating
   Waves in the Transition Region and Corona above Sunspots}', {\em \apj} {\bf
   855}(1),~65.
+
+\harvarditem{{Hudson}}{1991}{Hudson1991SoPh133357H}
+{Hudson}, H.~S.  \harvardyearleft 1991\harvardyearright , `{Solar flares,
+  microflares, nanoflares, and coronal heating}', {\em \solphys} {\bf
+  133}(2),~357--369.
 
 \harvarditem[{Ichimoto} et~al.]{{Ichimoto}, {Lites}, {Elmore}, {Suematsu},
   {Tsuneta}, {Katsukawa}, {Shimizu}, {Shine}, {Tarbell}, {Title}, {Kiyohara},
@@ -818,6 +844,14 @@ Harten, A., Lax, P.~D. \harvardand\ van. Leer, B.  \harvardyearleft
   2012\harvardyearright , `{Observations of ubiquitous compressive waves in the
   Sun's chromosphere}', {\em Nature Communications} {\bf 3},~1315.
 
+\harvarditem{{M{\"u}ller} \harvardand\ {St.
+  Cyr}}{2013}{sol_orb_2013SPIE8862E0EM}
+{M{\"u}ller}, D. \harvardand\ {St. Cyr}, O.~C.  \harvardyearleft
+  2013\harvardyearright , {The Solar Orbiter mission}, {\em in} S.~{Fineschi}
+  \harvardand\ J.~{Fennelly}, eds, `Solar Physics and Space Weather
+  Instrumentation V', Vol. 8862 of {\em Society of Photo-Optical
+  Instrumentation Engineers (SPIE) Conference Series}, p.~88620E.
+
 \harvarditem[{Murawski} et~al.]{{Murawski}, {Solov'ev}, {Musielak},
   {Srivastava} \harvardand\ {Kra{\'s}kiewicz}}{2015}{Murawski2015AA577A126M}
 {Murawski}, K., {Solov'ev}, A., {Musielak}, Z.~E., {Srivastava}, A.~K.
@@ -835,12 +869,6 @@ Harten, A., Lax, P.~D. \harvardand\ van. Leer, B.  \harvardyearleft
 {Nakariakov}, V.~M. \harvardand\ {Ofman}, L.  \harvardyearleft
   2001\harvardyearright , `{Determination of the coronal magnetic field by
   coronal loop oscillations}', {\em \aap} {\bf 372},~L53--L56.
-
-\harvarditem{Narayanan}{2014}{narayanan2014introduction}
-Narayanan, A.  \harvardyearleft 2014\harvardyearright , {\em An Introduction to
-  Waves and Oscillations in the Sun}, Astronomy and Astrophysics Library,
-  Springer New York.
-\newline\harvardurl{https://books.google.be/books?id=Wm3woQEACAAJ}
 
 \harvarditem[{Nishizuka} et~al.]{{Nishizuka}, {Shimizu}, {Nakamura}, {Otsuji},
   {Okamoto}, {Katsukawa} \harvardand\ {Shibata}}{2008}{Nishizuka2008ApJ683L83N}
@@ -990,10 +1018,81 @@ Priest, E.  \harvardyearleft 2014\harvardyearright , {\em Magnetohydrodynamics
   2016\harvardyearright , `{Solar Coronal Jets: Observations, Theory, and
   Modeling}', {\em \ssr} {\bf 201}(1-4),~1--53.
 
+\harvarditem[{Rast} et~al.]{{Rast}, {Bello Gonz{\'a}lez}, {Bellot Rubio},
+  {Cao}, {Cauzzi}, {DeLuca}, {De Pontieu}, {Fletcher}, {Gibson}, {Judge},
+  {Katsukawa}, {Kazachenko}, {Khomenko}, {Landi}, {Mart{\'\i}nez Pillet},
+  {Petrie}, {Qiu}, {Rachmeler}, {Rempel}, {Schmidt}, {Scullion}, {Sun},
+  {Welsch}, {Andretta}, {Antolin}, {Ayres}, {Balasubramaniam}, {Ballai},
+  {Berger}, {Bradshaw}, {Carlsson}, {Casini}, {Centeno}, {Cranmer}, {DeForest},
+  {Deng}, {Erd{\'e}lyi}, {Fedun}, {Fischer}, {Gonz{\'a}lez Manrique}, {Hahn},
+  {Harra}, {Henriques}, {Hurlburt}, {Jaeggli}, {Jafarzadeh}, {Jain},
+  {Jefferies}, {Keys}, {Kowalski}, {Kuckein}, {Kuhn}, {Liu}, {Liu}, {Longcope},
+  {McAteer}, {McIntosh}, {McKenzie}, {Miralles}, {Morton}, {Muglach}, {Nelson},
+  {Panesar}, {Parenti}, {Parnell}, {Poduval}, {Reardon}, {Reep}, {Schad},
+  {Schmit}, {Sharma}, {Socas-Navarro}, {Srivastava}, {Sterling}, {Suematsu},
+  {Tarr}, {Tiwari}, {Tritschler}, {Verth}, {Vourlidas}, {Wang}, {Wang}, {NSO},
+  {project}, {instrument scientists}, {the DKIST Science Working Group}
+  \harvardand\ {DKIST Critical Science Plan Community}}{2020}{Rast2020arXiv}
+{Rast}, M.~P., {Bello Gonz{\'a}lez}, N., {Bellot Rubio}, L., {Cao}, W.,
+  {Cauzzi}, G., {DeLuca}, E., {De Pontieu}, B., {Fletcher}, L., {Gibson},
+  S.~E., {Judge}, P.~G., {Katsukawa}, Y., {Kazachenko}, M.~D., {Khomenko}, E.,
+  {Landi}, E., {Mart{\'\i}nez Pillet}, V., {Petrie}, G. J.~D., {Qiu}, J.,
+  {Rachmeler}, L.~A., {Rempel}, M., {Schmidt}, W., {Scullion}, E., {Sun}, X.,
+  {Welsch}, B.~T., {Andretta}, V., {Antolin}, P., {Ayres}, T.~R.,
+  {Balasubramaniam}, K.~S., {Ballai}, I., {Berger}, T.~E., {Bradshaw}, S.~J.,
+  {Carlsson}, M., {Casini}, R., {Centeno}, R., {Cranmer}, S.~R., {DeForest},
+  C., {Deng}, Y., {Erd{\'e}lyi}, R., {Fedun}, V., {Fischer}, C.~E.,
+  {Gonz{\'a}lez Manrique}, S.~J., {Hahn}, M., {Harra}, L., {Henriques}, V.
+  M.~J., {Hurlburt}, N.~E., {Jaeggli}, S., {Jafarzadeh}, S., {Jain}, R.,
+  {Jefferies}, S.~M., {Keys}, P.~H., {Kowalski}, A.~F., {Kuckein}, C., {Kuhn},
+  J.~R., {Liu}, J., {Liu}, W., {Longcope}, D., {McAteer}, R.~T.~J., {McIntosh},
+  S.~W., {McKenzie}, D.~E., {Miralles}, M.~P., {Morton}, R.~J., {Muglach}, K.,
+  {Nelson}, C.~J., {Panesar}, N.~K., {Parenti}, S., {Parnell}, C.~E.,
+  {Poduval}, B., {Reardon}, K.~P., {Reep}, J.~W., {Schad}, T.~A., {Schmit}, D.,
+  {Sharma}, R., {Socas-Navarro}, H., {Srivastava}, A.~K., {Sterling}, A.~C.,
+  {Suematsu}, Y., {Tarr}, L.~A., {Tiwari}, S., {Tritschler}, A., {Verth}, G.,
+  {Vourlidas}, A., {Wang}, H., {Wang}, Y.-M., {NSO}, {project}, D., {instrument
+  scientists}, D., {the DKIST Science Working Group} \harvardand\ {DKIST
+  Critical Science Plan Community}, t.  \harvardyearleft 2020\harvardyearright
+  , `{Critical Science Plan for the Daniel K. Inouye Solar Telescope (DKIST)}',
+  {\em arXiv e-prints} p.~arXiv:2008.08203.
+
 \harvarditem{{Rimmele}}{2000}{Rimmele2000SPIE4007218R}
 {Rimmele}, T.~R.  \harvardyearleft 2000\harvardyearright , {\em {Solar adaptive
   optics}}, Vol. 4007 of {\em Society of Photo-Optical Instrumentation
   Engineers (SPIE) Conference Series}, pp.~218--231.
+
+\harvarditem[{Rimmele} et~al.]{{Rimmele}, {Warner}, {Keil}, {Goode},
+  {Kn{\"o}lker}, {Kuhn}, {Rosner}, {McMullin}, {Casini}, {Lin}, {W{\"o}ger},
+  {von der L{\"u}he}, {Tritschler}, {Davey}, {de Wijn}, {Elmore}, {Fehlmann},
+  {Harrington}, {Jaeggli}, {Rast}, {Schad}, {Schmidt}, {Mathioudakis},
+  {Mickey}, {Anan}, {Beck}, {Marshall}, {Jeffers}, {Oschmann}, {Beard},
+  {Berst}, {Cowan}, {Craig}, {Cross}, {Cummings}, {Donnelly}, {de Vanssay},
+  {Eigenbrot}, {Ferayorni}, {Foster}, {Galapon}, {Gedrites}, {Gonzales},
+  {Goodrich}, {Gregory}, {Guzman}, {Guzzo}, {Hegwer}, {Hubbard}, {Hubbard},
+  {Johansson}, {Johnson}, {Liang}, {Liang}, {McQuillen}, {Mayer}, {Newman},
+  {Onodera}, {Phelps}, {Puentes}, {Richards}, {Rimmele}, {Sekulic}, {Shimko},
+  {Simison}, {Smith}, {Starman}, {Sueoka}, {Summers}, {Szabo}, {Szabo},
+  {Wampler}, {Williams} \harvardand\ {White}}{2020}{Rimmele2020SoPh}
+{Rimmele}, T.~R., {Warner}, M., {Keil}, S.~L., {Goode}, P.~R., {Kn{\"o}lker},
+  M., {Kuhn}, J.~R., {Rosner}, R.~R., {McMullin}, J.~P., {Casini}, R., {Lin},
+  H., {W{\"o}ger}, F., {von der L{\"u}he}, O., {Tritschler}, A., {Davey}, A.,
+  {de Wijn}, A., {Elmore}, D.~F., {Fehlmann}, A., {Harrington}, D.~M.,
+  {Jaeggli}, S.~A., {Rast}, M.~P., {Schad}, T.~A., {Schmidt}, W.,
+  {Mathioudakis}, M., {Mickey}, D.~L., {Anan}, T., {Beck}, C., {Marshall},
+  H.~K., {Jeffers}, P.~F., {Oschmann}, J.~M., {Beard}, A., {Berst}, D.~C.,
+  {Cowan}, B.~A., {Craig}, S.~C., {Cross}, E., {Cummings}, B.~K., {Donnelly},
+  C., {de Vanssay}, J.-B., {Eigenbrot}, A.~D., {Ferayorni}, A., {Foster}, C.,
+  {Galapon}, C.~A., {Gedrites}, C., {Gonzales}, K., {Goodrich}, B.~D.,
+  {Gregory}, B.~S., {Guzman}, S.~S., {Guzzo}, S., {Hegwer}, S., {Hubbard},
+  R.~P., {Hubbard}, J.~R., {Johansson}, E.~M., {Johnson}, L.~C., {Liang}, C.,
+  {Liang}, M., {McQuillen}, I., {Mayer}, C., {Newman}, K., {Onodera}, B.,
+  {Phelps}, L., {Puentes}, M.~M., {Richards}, C., {Rimmele}, L.~M., {Sekulic},
+  P., {Shimko}, S.~R., {Simison}, B.~E., {Smith}, B., {Starman}, E., {Sueoka},
+  S.~R., {Summers}, R.~T., {Szabo}, A., {Szabo}, L., {Wampler}, S.~B.,
+  {Williams}, T.~R. \harvardand\ {White}, C.  \harvardyearleft
+  2020\harvardyearright , `{The Daniel K. Inouye Solar Telescope - Observatory
+  Overview}', {\em \solphys} {\bf 295}(12),~172.
 
 \harvarditem{{Roberts}}{1979}{Roberts1979SoPh6123R}
 {Roberts}, B.  \harvardyearleft 1979\harvardyearright , `{Spicules: The
@@ -1267,6 +1366,15 @@ Priest, E.  \harvardyearleft 2014\harvardyearright , {\em Magnetohydrodynamics
   Evolution and Kinematics of Spicules in the Enhanced Network}', {\em \apj}
   {\bf 450},~411.
 
+\harvarditem[{Tarbell} et~al.]{{Tarbell}, {Bruner}, {Jurcevich}, {Lemen},
+  {Strong}, {Title} \harvardand\ {Wolfson}}{1994}{Tarbell1994ESASP373375T}
+{Tarbell}, T.~D., {Bruner}, M., {Jurcevich}, B., {Lemen}, J., {Strong}, K.,
+  {Title}, A. \harvardand\ {Wolfson}, J.  \harvardyearleft
+  1994\harvardyearright , {The transition region and coronal explorer (TRACE)},
+  {\em in} J.~J. {Hunt}, ed., `Solar Dynamic Phenomena and Solar Wind
+  Consequences, the Third SOHO Workshop', Vol. 373 of {\em ESA Special
+  Publication}, p.~375.
+
 \harvarditem{Thomas \harvardand\ Athay}{1961}{Thomas1961}
 Thomas, R.~N. \harvardand\ Athay, R.~G.  \harvardyearleft 1961\harvardyearright
   , {\em {Physics of the Solar Chromosphere}}, Vol.~29.
@@ -1469,6 +1577,17 @@ Thomas, R.~N. \harvardand\ Athay, R.~G.  \harvardyearleft 1961\harvardyearright
 {Zhang}, Y.~Z., {Shibata}, K., {Wang}, J.~X., {Mao}, X.~J., {Matsumoto}, T.,
   {Liu}, Y. \harvardand\ {Su}, J.~T.  \harvardyearleft 2012\harvardyearright ,
   `{Revision of Solar Spicule Classification}', {\em \apj} {\bf 750}(1),~16.
+
+\harvarditem{{Zirker}}{1993}{Zirker1993SoPh14843Z}
+{Zirker}, J.~B.  \harvardyearleft 1993\harvardyearright , `{Coronal Heating}',
+  {\em \solphys} {\bf 148}(1),~43--60.
+
+\harvarditem{{Zs{\'a}mberger} \harvardand\
+  {Erd{\'e}lyi}}{2021}{zsamberger2021ApJ906122Z}
+{Zs{\'a}mberger}, N.~K. \harvardand\ {Erd{\'e}lyi}, R.  \harvardyearleft
+  2021\harvardyearright , `{Magnetoacoustic Waves in a Magnetic Slab Embedded
+  in an Asymmetric Magnetic Environment. III. Applications to the Solar
+  Atmosphere}', {\em \apj} {\bf 906}(2),~122.
 
 \harvarditem[{Zuo} et~al.]{{Zuo}, {Li}, {Sha} \harvardand\
   {Zhou}}{2019}{Zuo2019AcASn}
