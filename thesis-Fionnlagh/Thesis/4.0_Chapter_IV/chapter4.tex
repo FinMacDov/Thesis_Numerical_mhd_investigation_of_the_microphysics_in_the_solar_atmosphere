@@ -4,9 +4,6 @@
 \section{Introduction}
 \label{sec:c3intro}
 %==============================================================================
-% NEED TO KILL THIS FOR FINAL COMPILATION!!!!!!!!!!
-%\pagenumbering{gobble}
-% ALLOWS TO REMOVE PAGE NUMBERS, WHICH IS BETTER FOR CONVERTING TO WORD DOC
 A basic question one can ask is, do the flows of plasma in the chromosphere trace the magnetic field lines? Often it is assumed that plasma follows the magnetic field lines in the solar atmosphere. The typical length scale for flows on the Sun tend to be large and the magnetic diffusivity is small, which for ideal MHD means that there is a high magnetic Reynolds number (ratio between advection and diffusion). For a perfectly conducting plasma, the magnetic field lines are frozen into the plasma. This means that the plasma flow is channelled along the field lines, but the perpendicular motion of the flow leads to either the magnetic field lines pushing the plasma or being dragged with the plasma. This is the frozen-in condition that is valid for most plasma features in the coronal environment. However, one can question whether this applies to the chromosphere, where gas pressure can play a more important role than in the corona. \cite{delaCruzRodr2011AA527L8D} investigated whether solar chromospheric fibrils or spicular features trace the magnetic fields. In most cases, these dynamic features trace the field lines, but there were a significant number of examples where there was a misalignment between the plasma structure and the magnetic field lines (approx. $40\%$ of a sample of 32). This misalignment in extreme cases can be larger than $45\degs$. The misalignment of magnetic field and spicular jets was studied further numerically by \cite{Mart2016ApJ831L1M} with a 2.5D radiative MHD simulation, which included ion-neutral interaction effects. The results indicate that the majority of the simulated spicules are misaligned with respect to the magnetic field lines. They record misalignment angles up $25\degs$, and in a more extreme case $40\degs$. Even recent simulations of coronal loops have highlighted that misaligned flows could account for observations of dense plasma falling back to the solar surface \citep{Petralia2018AA609A18P}. \np
 %
 Another aspect to consider is that spicules are typically inclined from the vertical. Some recent studies measure an average incline of $23.4\degs$ with a range of $0-55\degs$ \citep{Pasachoff2009SoPh26059P}. \cite{Tavabi2012JMPh31786T} reported that spicule inclination from the vertical is affected by the regions in which they manifest, e.g. $<20\degs$ in polar regions, approximately $10\degs$ for CHs, and in ARs they can range from $\pm 60\degs$. All these results are in agreement with older studies on the average inclination of spicules, which report inclinations ranging between $19-35 \degs$ \citep{Beckers1968, Mosher1977SoPh53375M, Heristchi1992SoPh14221H, Tsiropoula2012}. \np
@@ -23,7 +20,7 @@ Modifications have been made to the jet tracking software to account for this by
 \mfig{0.65}{figures/slit_size_example.png}{Example of widths being increased artificially due to a tilt in flow, where the width is shown by the black line across the orange rectangle. (a) is the width of a straight jet, (b) is the width taken at the same height, but with the tilted flow, and (c) displays the width measures with (a) [(b)] top [bottom] black line.}{slit_example}
 %fffffffffffffffffff
 %fffffffffffffffff
-\mfig{1}{figures/jet_P300_B60A_60T_0039.png}{Example of extended jet tracking software. Solid blue dots mark the jet edges of the original method and the red solid dot marks the jet's apex. The green solid line corrects for the tilt and represents the data sampled to find the edges (solid red squares). The yellow stars give the central axis of the jet. Animation is available: !!??!!.}{imporved_j_track_example}
+\mfig{1}{figures/jet_P300_B60A_60T_0039.png}{Example of extended jet tracking software for $\theta=10\degs$. Solid blue dots mark the jet edges of the original method and the red solid dot marks the jet's apex. The green solid line corrects for the tilt and represents the data sampled to find the edges (solid red squares). The yellow stars give the central axis of the jet. Animation is available: \url{https://drive.google.com/file/d/1wio9np70eYhTbXQeHIwHztQZJjmNCb1g/view?usp=sharing}.}{imporved_j_track_example}
 %fffffffffffffffffff
 %fffffffffffffffff
 \mfig{1}{figures/example_of_tilt_jet_code.png}{Example of a binary image used for the search area (coloured box) used in the jet tracking. Markers have the same representation as Fig.~\ref{imporved_j_track_example}.}{search_box_j_track_example}
@@ -127,7 +124,7 @@ The tilt has an important impact on the structuring of the beam. The main notice
 \captionsetup[subfigure]{labelformat=empty}
 \centering
 \subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_0_5_10.png}}
-\caption{Example of the temporal evolution of different tilt angles for jets from $0,~5,~10^{\circ}$ from top to bottom.}
+\caption{Example of the temporal evolution of different tilt angles for jets from $0,~5,~10^{\circ}$ from top to bottom. Animation available where cases a, e, i are in the top row: \url{https://drive.google.com/file/d/1HbVzpsZc2der4BR0ItXUUd4mxXm-nVSD/view?usp=sharing} }
 \label{tj_morph_1}
 \end{figure}
 %ffffffffffffffffffff
@@ -135,7 +132,7 @@ The tilt has an important impact on the structuring of the beam. The main notice
 \captionsetup[subfigure]{labelformat=empty}
 \centering
 \subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_15_20_25.png}}
-\caption{Example of the temporal evolution of different tilt angles for jets from $15,~20,~25^{\circ}$ from top to bottom.}
+\caption{Example of the temporal evolution of different tilt angles for jets from $15,~20,~25^{\circ}$ from top to bottom. Animation available where cases a, e, i are in the bottom row: \url{https://drive.google.com/file/d/1HbVzpsZc2der4BR0ItXUUd4mxXm-nVSD/view?usp=sharing}}
 \label{tj_morph_2}
 \end{figure}
 %ffffffffffffffffffff
@@ -143,7 +140,7 @@ The tilt has an important impact on the structuring of the beam. The main notice
 \captionsetup[subfigure]{labelformat=empty}
 \centering
 \subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_30_35_40.png}}
-\caption{Example of the temporal evolution of different tilt angles for jets from $30,~35,~40^{\circ}$ from top to bottom.}
+\caption{Example of the temporal evolution of different tilt angles for jets from $30,~35,~40^{\circ}$ from top to bottom. Animation available where cases a, e, i are in the top row: \url{https://drive.google.com/file/d/1xW6KnMehodIazDxL7j4y2uXM8j2v6nBq/view?usp=sharing}}
 \label{tj_morph_3}
 \end{figure}
 %ffffffffffffffffffff
@@ -151,7 +148,7 @@ The tilt has an important impact on the structuring of the beam. The main notice
 \captionsetup[subfigure]{labelformat=empty}
 \centering
 \subfloat[]{\includegraphics[width=\linewidth]{figures/tj_den_plot_45_50_55.png}}
-\caption{Example of the temporal evolution of different tilt angles for jets from $45,~50,~55^{\circ}$ from top to bottom.}
+\caption{Example of the temporal evolution of different tilt angles for jets from $45,~50,~55^{\circ}$ from top to bottom. Animation available where cases a, e, i are in the bottom row: \url{https://drive.google.com/file/d/1xW6KnMehodIazDxL7j4y2uXM8j2v6nBq/view?usp=sharing}}
 \label{tj_morph_4}
 \end{figure}
 %ffffffffffffffffffff
@@ -165,11 +162,11 @@ Using the horizontal slits time-distance plots were created at $1-3~\rm{Mm}$ hei
 %
 The whip motion has been observed in chromospheric jets \citep{Liu2009ApJ707L37L}. In \cite{Liu2009ApJ707L37L}, the observed jet undergoes a transverse disturbance with a whip motion. This jet has length scales (approx. $43.5~\rm{Mm}$), lifetimes (approx. $>1\rm{hr}$), observed speed (approx. $430~\kms$), and proposed origin is magnetic recognition. The whip motion is proposed to be due to the jet being composed of helical threads undergoing untwisting spins, outlined by \cite{Shibata1985PASJ3731S, Shibata1986SoPh103299S} and \cite{Canfield1996ApJ4641016C}. Although the phenomena has very different origins and scale, the overall motion time-distance plots, present in \cite{Liu2009ApJ707L37L}, appear similar to time-distance plots presented in Figs.~\ref{td_plot_1Mm} to~\ref{td_plot_3Mm} that are proposed to be produced by DKI. This whip motion has been shown in simulations of reconnection jets, where material from the chromosphere is ejected by a sling-shot effect due to reconnection and produces a whip motion \citep{Yokoyama1996PASJ48353Y, Kotani2020PASJ7275K}. We do not disagree with these outlined mechanisms, but DKI could be playing a role in the transverse motions. DKI could form as in this reconnection jet scenario there is both curvature and horizontal perturbation to the magnetic field, in addition to a fast flowing jet. \np
 %fffffffffffffffffffff
-\mfig{1}{figures/td_plot_1Mm.png}{Time distant plot with horizontal slit at $1~\rm{Mm}$ for tilt values $0-55^{\circ}$.{\color{green} !!Need to fix labels!!}}{td_plot_1Mm}
+\mfig{1}{figures/td_plot_1Mm.png}{Time distant plot with horizontal slit at $1~\rm{Mm}$ for tilt values $0-55^{\circ}$.}{td_plot_1Mm}
 %fffffffffffffffffffff
 %
-\mfig{1}{figures/td_plot_2Mm.png}{Same as fig.~\ref{td_plot_1Mm}, but at $2~\rm{Mm}$. {\color{green} !!Need to fix labels!!}}{td_plot_2Mm}
-\mfig{1}{figures/td_plot_3Mm.png}{Same as fig.~\ref{td_plot_1Mm}, but at $3~\rm{Mm}$. {\color{green} !!Need to fix labels!!}}{td_plot_3Mm}
+\mfig{1}{figures/td_plot_2Mm.png}{Same as fig.~\ref{td_plot_1Mm}, but at $2~\rm{Mm}$.}{td_plot_2Mm}
+\mfig{1}{figures/td_plot_3Mm.png}{Same as fig.~\ref{td_plot_1Mm}, but at $3~\rm{Mm}$.}{td_plot_3Mm}
 %fffffffffffffffffffff
 %============================================================
 \section{Summary and Discussion}
