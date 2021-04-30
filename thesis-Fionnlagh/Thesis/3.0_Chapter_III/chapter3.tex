@@ -23,21 +23,21 @@ As highlighted in Section~\ref{sec:models}, many theoretical and numerical appro
 %------------------------------------------------------------------------------
 Using the numerical setup as described in Chapter~\ref{chap:Numerical_Recipe}, we have conducted numerous simulations to quantify the effects of three key parameters; magnetic field strength ($B$), driver time ($P$), and initial amplitude ($A$) on spicular jet's journey through the solar atmosphere. The parameter space covers the values from $P=50,~200,~300~\rm{s}$, $B_y=20,~40,~60,~80,~100~\rm{G}$, and $A=20,~40,~60,~80~\kms$ to study the impact on jet morphology (maximum height, width and structure) and kinematics (trajectory, transverse displacement). All ranges are based around typical values for classical spicules (see Section \ref{subsec:Spicules} and Table \ref{solar_jet_table}). The driver time is chosen within range of the $5$-minute oscillations of the p-mode \citep{Leighton1962ApJ135474L}, as they are a potential driver for multiple solar features (spicules, mottles  and dynamic fibrils) \citep{Pontieu2004Natur}. In addition, the driver time is based around the measured lifetime of spicular jets (see Table~\ref{solar_jet_table}). The magnetic field strengths are in the range of observed values for spicules, which is consistent with spectropolarimetric estimates for limb spicules \citep{centeno2010, suarez2015}. The range of velocities is chosen based on projectile motion (ignoring drag) to reach spicules' heights. Based on projectile motion, the maximum height for a launching angle of $90^{\circ}$ is,
 \begin{equation}
-h_{max} = \frac{A^2}{2g_{\odot}}
+h_{max} = \frac{A^2}{2g}
 \end{equation}
-where $A$ is initial amplitude, $g_{\odot}=0.274~\rm{km~s^{-2}}$ is solar gravity. For $A=20-80~\rm{km s^{-1}}$, corresponds to $h_{max}=0.73-11.6~\rm{Mm}$. These values fall in the range of observed speeds (heights) seen in spicules which have a range of $10-150\kms$ ($0.4-12~\rm{Mm}$) (see table \ref{solar_jet_table}). The magnetic field estimates are consistent with reported magnitudes from spectropolarimetric studies for off-limb spicules \citep{centeno2010, suarez2015}.
-% may include a summarry table in the intro that is used in presenations, then we could refere to it in text.
-% to lift near photospheric mass ($2.34\times10^{-4}~\rm{kg~m^{-3}}$)
-%-------------------------
-\subsection{Jet Tracking}
-\label{subsec:jet_tracking}
-%--------------------
+where $A$ is initial amplitude, $g=0.274~\rm{km~s^{-2}}$ is solar gravity. For $A=20-80~\rm{km s^{-1}}$, corresponds to $h_{max}=0.73-11.6~\rm{Mm}$. These values fall in the range of observed speeds (heights) seen in spicular jets which have a range of $10-150\kms$ ($0.4-12~\rm{Mm}$) (see table \ref{solar_jet_table}). The magnetic field estimates are consistent with reported magnitudes from spectropolarimetric studies for off-limb spicules \citep{centeno2010, suarez2015}.
 \begin{figure}
 \centering
 {\includegraphics[width=0.4\linewidth]{figures/jet_P300_B60A_60T_0103.png}}
 \caption{Example of jet tracking software that accurately estimates height and cross-sectional width parameters for the simulated jet structure. The jet-apex is marked with a yellow triangle with blue dots on jet edges providing an estimate of widths for each height during different evolutionary phases (rise/fall) of the jet.  This figure is available as an animation: \url{https://drive.google.com/file/d/1AJKqjWBShuHm-RwgXHoUjclCRrFSEMZK/view?usp=sharing}}
 \label{jet_tracker}
 \end{figure}
+% may include a summarry table in the intro that is used in presenations, then we could refere to it in text.
+% to lift near photospheric mass ($2.34\times10^{-4}~\rm{kg~m^{-3}}$)
+%-------------------------
+\subsection{Jet Tracking}
+\label{subsec:jet_tracking}
+%--------------------
 To understand the jet dynamics, speed, lifetime, trajectory and jet boundary deformation are measured and compared with observational studies. This is achieved by temporally tracking the jet's width (solid blue dots) and apex (yellow triangle), using jet tracking software (see \fref{jet_tracker}). The jet tracking software developed for this thesis uses the tracer quantity first introduced in MPI-AMRVAC by \cite{Porth_2014}. In essence, the tracer is a non-physical quantity, akin to dye injections, which tracks the advection of a selected area of a fluid (in our case flow entering the computational domain). The injected jet material is given a high arbitrary value of $100$ (jet value), while the ambient environment is set to $0$, and using a threshold of $15\%$, any snapshot can be split into cells belonging to the jet and ambient medium. This is converted into a binary array where $1$ belongs to jet cells and $0$ is the ambient medium, which facilitates easy edge detection. The cross-sectional widths are estimated as a function of the distance between the opposite jet cells at edges, taken from a horizontal slice across the simulated jet at specified heights (see blue dots in fig.~\ref{jet_tracker}). By having a high resolution with temporal tracking of edges it is possible to obtain useful information of the jet boundary, such as the evolution of boundary deformation at multiple heights. Furthermore, the visible apex of the jet is selected as the highest index of a jet cell in the simulation, which allows us to track the jet's trajectory, speed, acceleration and deceleration (see a yellow triangle in Fig.~\ref{jet_tracker}).
 %---------------------------
 \subsection{Jet Trajectories}
@@ -47,7 +47,7 @@ The identified apex of the simulated jets shows a parabolic motion over time, as
 \begin{figure}
 \captionsetup[subfigure]{labelformat=empty}
 \centering
-\subfloat[]{\includegraphics[width=\linewidth]{figures/jet_traj.png}}
+\subfloat[]{\includegraphics[width=0.98\linewidth]{figures/jet_traj.png}}
 \caption{Plots show the effects of multiple parameter combinations on maximum apex height attained by the numerical jets'. Results for driver amplitudes with magnitude $A = 20$ km s$^{-1}$ (top-left), $A = 40$ km s$^{-1}$ (top-right), $A = 60$ km s$^{-1}$ (bottom-left), and $A = 80$ km s$^{-1}$ (bottom-right) are shown with jet-apex following a parabolic trajectory. Driver period ($P$), magnetic field strength ($B$) and driver amplitude ($A$) have units in sec, Gauss and km s$^{-1}$ respectively. }
 \label{jet_traj}
 \end{figure}
