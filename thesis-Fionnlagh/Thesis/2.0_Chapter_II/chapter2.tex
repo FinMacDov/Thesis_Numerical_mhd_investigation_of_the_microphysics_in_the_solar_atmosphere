@@ -126,8 +126,22 @@ As the driving mechanisms of spicules is an open question, we assumed that the s
 \begin{equation}
     v_y(x) = \frac{-A\cos{\theta}}{2}\left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left( - \left(\frac{x-x_0}{\Delta x} \right)^2  \right),
 \end{equation}
+%----
+%\begin{equation}
+%   \begin{aligned}
+%    \begin{pmatrix}
+%           v_x \\
+%           v_y
+%    \end{pmatrix} = & \frac{-A}{2}
+%    \begin{pmatrix}
+%           \sin{\theta} \\
+%           \cos{\theta}
+%    \end{pmatrix}
+%    \left( \tanh{\left( \frac{\pi (t-P)}{P}+ \pi \right) +1 } \right) \exp \left(-\left(\frac{x-x_0}{\Delta x} \right)^2  \right),
+%    \end{aligned}
+%\end{equation}
 where $A$ is the amplitude of the driver, $\theta$ is the tilt angle from the vertical, $P$ are the driver time, $t$ is time, $x$ is horizontal position, $x_0$ location of the central jet axis, $\theta$ is the launching angles, and the $\Delta x$ is based on FWHM of the jet width and is given by,
 \begin{equation}
 \Delta x = \dfrac{j_w}{2 \sqrt{2 \log{2}}},
 \end{equation}
-where $j_w$ is the jet width.
+where $j_w$ is the jet width. \textbf{The parameter $\theta$ can have important implication for the jet dynamics as it causes a discrepancy between jets' propagation direction and the direction of magnetic field. This is explored in Chapter \ref{chap:tilted_jets} and shows the jet dynamics are sentsitive to the choice value of $\theta$ as shown where its effects are shown for small ($\theta<5\degs$)  and large ($\theta>40\degs$) angles of tilt. For $\theta\neq0$ it increases transverse motions of the jet beam, but for small tilt angles it causes dramatic whiplash motion and for large angles of tilt the jet beam becomes chaotic and less well defined due large transverse motions.} 
