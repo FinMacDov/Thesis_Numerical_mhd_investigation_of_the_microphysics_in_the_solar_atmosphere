@@ -14,7 +14,7 @@ The aim of this chapter is to investigate what effect misalignment between jet f
 \label{sec:tjt}
 %=============================================================
 %fffffffffffffffff
-\mfig{0.5}{figures/slit_size_example.png}{Example of widths being increased artificially due to a tilt in flow, where the width is shown by the black line across the orange rectangle. (a) is the width of a straight jet, (b) is the width taken at the same height, but with the tilted flow, and (c) displays the width measures with (a) [(b)] top [bottom] black line.}{slit_example}
+\mfig{0.5}{figures/better_slit_size_example.png}{Example of widths being increased artificially due to a tilt in flow, where the width is shown by the black line across the orange rectangle. (a) is the width of a straight jet, (b) is the width taken at the same height, but with the tilted flow, and (c) displays the width measures with (a) [(b)] solid [dashed] black line.}{slit_example}
 %fffffffffffffffffff
 To keep the results comparable over a range of tilted jets, extra steps have been introduced into the jet tracking software. To accurately measure the width of the jet we can no longer take horizontal slits (as done in Section~\ref{subsec:jet_tracking}) as this could artificially alter the width measurements. For example, imagine a rectangle with a slit across it in a fixed position that finishes on the opposite ends (see (a-b) Fig.~\ref{slit_example}); if one rotates this shape as shown in panel (b), the slit would change in size, hence changing the width measurement of the rectangle as displayed in panel (c). In this case, a slit needs to be placed perpendicular to the central axis, of the rectangle to correct this tilt factor. \np
 %
@@ -26,11 +26,23 @@ Modifications have been made to the jet tracking software to account for this by
 %fffffffffffffffff
 \mfig{0.3}{figures/jet_P300_B60A_60T_0039.png}{Example of extended jet tracking software for $\theta=10\degs$. Solid blue dots mark the jet edges of the original method and the red solid dot marks the jet's apex. The green solid line corrects for the tilt and represents the data sampled to find the edges (solid red squares). The yellow stars give the central axis of the jet. Animation is available: \url{https://drive.google.com/file/d/1wio9np70eYhTbXQeHIwHztQZJjmNCb1g/view?usp=sharing}.}{imporved_j_track_example}
 %fffffffffffffffffff
-Based on the results in Chapter~\ref{chap:sj}, two focused parameter spaces (P1 and P2) are carried out to reduce computational cost. The main goal of P1 is to test the trends observed in Chapter~\ref{chap:sj}, and to determine whether they retain, despite the changes in the flow inclination. The range of values used are: lifetimes with $P=300~\rm{s}$, this parameter was found to be less important in determining jet heights over the investigated range, therefore we stick with the standard jet value; initial amplitudes range from $A=20,~40,~60~\kms$, the velocity upper limit matches the standard jet and as $80~\kms$ is near the upper end of observed spicule velocity, it has been omitted; magnetic field strength covers the same range $B=20,~40,~60,~80~\rm{G}$; tilt angles $T=0,5,15^{\circ}$, this range is to show a small tilt and a value closer to typical tilt angles. The purpose of P2 is to study how the trajectories, CSWs and morphology are affected by the tilting angle of the standard jet ($P=300~\rm{s}, ~B=60~\rm{G}, ~A=60~\kms$). A range of tilts $T=0-60^{\circ}$, in increments of $5^{\circ}$ is investigated. Let us summarise both parameters scans:
-\begin{mylist}
-\item  Lifetimes $P=300~\rm{s}$, initial amplitudes $A=20,~40,~60~\kms$, magnetic field strengths $B=20,~40,~60,~80~\rm{G}$ and tilt angles $\sigma=0,5,15^{\circ}$
-\itemp Lifetimes $P=300~\rm{s}$, initial amplitude $A=60~\kms$, magnetic field strength $B=60~\rm{G}$, and range of tilt angles $\theta=0, ~5, ~10, ~15, ~20, ~25, ~30, ~35,$ $~40, 45, ~50, ~55, ~60^{\circ}$.
-\end{mylist}
+Based on the results in Chapter~\ref{chap:sj}, two focused parameter spaces (P1 and P2) are carried out to reduce computational cost. The main goal of P1 is to test the trends observed in Chapter~\ref{chap:sj}, and to determine whether they retain, despite the changes in the flow inclination. The range of values used are: lifetimes with $P=300~\rm{s}$, this parameter was found to be less important in determining jet heights over the investigated range, therefore we stick with the standard jet value; initial amplitudes range from $A=20,~40,~60~\kms$, the velocity upper limit matches the standard jet and as $80~\kms$ is near the upper end of observed spicule velocity, it has been omitted; magnetic field strength covers the same range $B=20,~40,~60,~80~\rm{G}$; tilt angles $T=0,5,15^{\circ}$, this range is to show a small tilt and a value closer to typical tilt angles. The purpose of P2 is to study how the trajectories, CSWs and morphology are affected by the tilting angle of the standard jet ($P=300~\rm{s}, ~B=60~\rm{G}, ~A=60~\kms$). A range of tilts $T=0-60^{\circ}$, in increments of $5^{\circ}$ is investigated. Both parameters scans are sumerised in Table~\ref{scan_table}:
+\begin{table*}[]
+\centering
+\caption{Two sets (P1 \& P2) of parameter magnitudes, including driver lifetimes ($P$), velocity amplitude ($A$), magnetic field strength ($B$) and corresponding inclination angles for simulated jet structure.}
+\begin{tabular}{l|l|l|l|l}
+\hline
+Parameter Scan & P [$\rm{s}$] & A [$\kms$] & B [$\rm{G}$]      & $\theta$ [$\degs$]                                 \\ \hline
+P1             & 300       & 20, 40, 60     & 20, 40, 60, 80 & 0, 5, 15                                         \\
+P2             & 300       & 60             & 60             & 0, 5, 10, \dots, 60
+\\ \hline
+\end{tabular}
+\label{scan_table}
+\end{table*}
+%\begin{mylist}
+%\item  Lifetimes $P=300~\rm{s}$, initial amplitudes $A=20,~40,~60~\kms$, magnetic field strengths $B=20,~40,~60,~80~\rm{G}$ and tilt angles $\sigma=0,5,15^{\circ}$
+%\itemp Lifetimes $P=300~\rm{s}$, initial amplitude $A=60~\kms$, magnetic field strength $B=60~\rm{G}$, and range of tilt angles $\theta=0, ~5, ~10, ~15, ~20, ~25, ~30, ~35,$ $~40, 45, ~50, ~55, ~60^{\circ}$.
+%\end{mylist}
 %
 %-----------------------------------
 \subsection{Parameter Scan P1}
